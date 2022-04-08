@@ -1,4 +1,4 @@
-baseURL  =  "https://blue-isle.github.io"
+baseURL  =  "https://blueisle.cf"
 languageCode = "zh-CN"
 # DefaultContentLanguage = "zh-CN"
 title  =  "明礼至卓"
@@ -37,6 +37,10 @@ rssLimit = 5
   name="关于"
   url="/about/"
   weight="5"
+  [[menu.main]]
+  name="导航"
+  url="https://nav.blueisle.cf/"
+  weight="6"
 
 [params]
   # dir name of your blog content (default is `content/posts`)
