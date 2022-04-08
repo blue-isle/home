@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
+    <generator uri="https://gohugo.io/" version="0.96.0">Hugo</generator><title type="html"><![CDATA[明礼至卓]]></title>
+    
+    
+    
+            <link href="https://blue-isle.github.io/atom.xml" rel="self" type="application/rss+xml" title="atom" />
+            <link href="https://blue-isle.github.io/" rel="alternate" type="text/html" title="HTML" />
+            <link href="https://blue-isle.github.io/index.json" rel="alternate" type="application/json" title="JSON" />
+    <updated>2022-04-08T17:22:42+00:00</updated>
+    
+    
+    
+    
+        <id>https://blue-isle.github.io/atom.xml</id>
+    
+</feed>
