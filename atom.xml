@@ -7,11 +7,340 @@
             <link href="https://blueisle.cf/atom.xml" rel="self" type="application/rss+xml" title="atom" />
             <link href="https://blueisle.cf/" rel="alternate" type="text/html" title="HTML" />
             <link href="https://blueisle.cf/index.json" rel="alternate" type="application/json" title="JSON" />
-    <updated>2022-04-08T17:54:23+00:00</updated>
+    <updated>2022-04-09T02:49:09+00:00</updated>
     
     
     
     
         <id>https://blueisle.cf/atom.xml</id>
+    
+        
+        <entry>
+            <title type="html"><![CDATA[2022-02-05]]></title>
+            <link href="https://blueisle.cf/2022-02-05/" rel="alternate" type="text/html" />
+            
+                <id>https://blueisle.cf/2022-02-05/</id>
+            
+            
+            <published>2022-02-05T23:15:52+08:00</published>
+            <updated>2022-02-05T23:15:52+08:00</updated>
+            
+            
+            <content type="html"><![CDATA[<p>眨眼，大年初五。折腾（踩坑）告一段落，关闭终端、关闭编辑器，打开 Word、PPT……</p>
+<p>最近十几天折腾得有点多：</p>
+<ul>
+<li>博客改用 <a href="https://immmmm.com/hi-cloudflare/">Hugo + Github + Cloudflare</a> ，实现无服务托管，目测稳定性和速度都不错。</li>
+<li>以业余前端LV10改写 <a href="https://immmmm.com/hi-friends-circle/">「友链朋友圈」</a>  ，自我感觉良好，特别是原始 JavaScript + HTMl5 缓存方式。</li>
+<li>群晖采用 <a href="https://freefrp.net/index.html">FRP</a> 方式实现无端口访问，推荐教程 <a href="https://www.ioiox.com/archives/85.html">群晖frpc配置</a>，<a href="https://www.ioiox.com/archives/88.html">群晖 acme.sh 自动申请证书</a>。</li>
+<li>大坑……腾讯云轻量服务器（222元/3年）部署FRP的域名必须备案……</li>
+</ul>]]></content>
+            
+                 
+                    
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://blueisle.cf/tags/%E8%AF%8D%E7%A9%B7" term="%E8%AF%8D%E7%A9%B7" label="词穷" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        
+        <entry>
+            <title type="html"><![CDATA[剁手 2021]]></title>
+            <link href="https://blueisle.cf/buy-buy-buy-2021/" rel="alternate" type="text/html" />
+            
+                <id>https://blueisle.cf/buy-buy-buy-2021/</id>
+            
+            
+            <published>2022-01-08T22:03:41+08:00</published>
+            <updated>2022-01-08T22:03:41+08:00</updated>
+            
+            
+            <content type="html"><![CDATA[<p>看了 <a href="http://laob.me/2419/">@老毕</a> 的博客15年回忆杀，感慨当初 WPer 折腾王子们纷纷转业，美妆的美妆、投资的投机、晒娃的晒娃，消失的消失……无论如何，被记得和记得总是件感动的事，愿下一个15年，我们仍在。</p>
+<p>看到 <a href="https://www.jinbo123.com/7819.html">@佐仔</a> 兄写了去年的败家记录，不经也去看了看已达续费上限的 🐶 东，才有了这篇记录。</p>
+<h3 id="数码">数码</h3>
+<h4 id="海备思-switch-便携底座-224">海备思 Switch 便携底座 ¥224</h4>
+<p><img loading='lazy' src="https://pic.edui.fun/images/2022/01/bs-1.png" alt="bs-1"  /></p>
+<p>可以理解为“GaN充电器”与“扩展坞（USB、HDMI）”的合体，可以把 Switch、平板、手机画面有线投屏，还能让后两者读取 USB 口的内容。重点是“娇小”的身材！</p>
+<h4 id="倍思-氮化镓gan三代65w充电器-120">倍思 氮化镓GaN三代65W充电器 ¥120</h4>
+<p>一下子都三代咯！两个 TypeC 、一个 USB 口，充电够迅猛！</p>
+<h4 id="施耐德-apc-ups-bk650m2-ch390w650va-479">施耐德 APC UPS BK650M2-CH（390W/650VA） ¥479</h4>
+<p>真是，有了群晖才发现家里断电有多频繁……硬盘贵啊，赶紧保命！</p>
+<h4 id="京东京造-k3-84键白光矮茶轴-340">京东京造 K3-84键白光矮茶轴 ¥340</h4>
+<p><img loading='lazy' src="https://pic.edui.fun/images/2022/01/bs-2.png" alt="bs-2"  /></p>
+<p>颜值真在线，声音真不轻，敲字真带感！吐槽，最右侧一列误触机率实在太高，已摘帽。真想一刀切之去之！</p>
+<h4 id="公牛收纳盒插座-gn-f2161宝可梦联名款-109">公牛收纳盒插座 GN-F2161宝可梦联名款 ¥109</h4>
+<p><img loading='lazy' src="https://pic.edui.fun/images/2022/01/bs-3.png" alt="bs-3"  /></p>
+<p>电视下面设备有点多，直接排插有点丑，一个宝可梦排插搞定！</p>
+<h4 id="三星固态硬盘ssd-870evo-500g-489">三星固态硬盘SSD 870EVO 500g ¥489</h4>
+<p>单位配发笔记本支持光驱位硬盘，卸了光驱，果断上 SSD！</p>
+<h4 id="希捷seagate酷狼-2t-5235">希捷（SEAGATE）酷狼 2T ¥523.5</h4>
+<p>买了群晖，吃土买 2T 用到老……</p>
+<h4 id="群晖-220-配官方-6g-内存-3480">群晖 220+ 配官方 6G 内存 ¥3480</h4>
+<p>现在看看，好像一点都不便宜！加内存是明智的，不然开个 docker 就得卡死。</p>
+<h4 id="绿联-usb无线网络打印服务器">绿联 USB无线网络打印服务器</h4>
+<p><img loading='lazy' src="https://pic.edui.fun/images/2022/01/bs-4.png" alt="bs-4"  /></p>
+<p><img loading='lazy' src="https://pic.edui.fun/images/2022/01/bs-5.png" alt="bs-5"  /></p>
+<p>把有线打印机摇身变为无线打印，进后台找一下办公室的 Wifi 连接即可。目测是定制版 openwrt 固件，遗憾只有1个USB口，只能接1台打印机。</p>
+<h4 id="小米路由器4a千兆版-107">小米路由器4A千兆版 ¥107</h4>
+<p>单位公共AP实在是无力吐槽，幸好办公室不缺网口。</p>
+<h4 id="公牛bull20w-pd快充魔方-89">公牛（BULL）20W PD快充魔方 ¥89</h4>
+<p><img loading='lazy' src="https://pic.edui.fun/images/2022/01/bs-6.png" alt="bs-6"  /></p>
+<p>小方块，6个口，特别是有个 Type-C 快冲口，实用！</p>
+<h4 id="爱普生墨仓式-l3153-打印复印扫描一体机-989">爱普生墨仓式 L3153 打印复印扫描一体机 ¥989</h4>
+<p>8月底买的，为新一年级的娃做好准备。这，墨是真省，这大半年的，1/3 的墨都没用到。</p>
+<h4 id="洪恩拼音识字app终身会员-228-201">洪恩拼音、识字APP终身会员 ¥228 ¥201</h4>
+<p>悔，游戏化识字、学拼音只能作为点心，学前识字还是识字卡片直接，拼音还是报个班有效！</p>
+<h4 id="飞利浦电动剃须刀-s5066-486">飞利浦电动剃须刀 S5066 ¥486</h4>
+<p>够用，感觉买太好了。</p>
+<h4 id="apple-airpods-2代-779">Apple AirPods 2代 ¥779</h4>
+<p>真是早买早享受！已和当家的一人一个，什么100几块的真蓝牙无线耳机，都是刷流氓。</p>
+<h4 id="luka-hero-绘本机器人-870">Luka Hero 绘本机器人 ¥870</h4>
+<p>买晚了！Luka 会跟着小朋友翻绘本，读当前页的内容。音质资源足够丰富，基本上大的出版社都有。终于可以让自己的喉咙歇歇啦！</p>
+<h4 id="雷克沙-256gb-tfmicrosd存储卡">雷克沙 256GB TF（MicroSD）存储卡</h4>
+<p>喂饱 Switch</p>
+<h4 id="switch-卡带labo-机器人套装-99-等其它若干">Switch 卡带：LABO 机器人套装 ¥99 等其它若干</h4>
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <style type="text/css">
+      .aspect-ratio {
+        position: relative;
+        width: 100%;
+        height: 0;
+        padding-bottom: 75%;
+      }
+      .aspect-ratio iframe {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="aspect-ratio">
+      <iframe
+              src="https://player.bilibili.com/player.html?bvid=BV12p411f75S&page=1&high_quality=1&danmaku=0"
+              scrolling="no" 
+              border="0" 
+              frameborder="no" 
+              framespacing="0" 
+              allowfullscreen="true"
+              sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"
+              >
+      </iframe>
+      
+      
+    </div>
+  </body>
+
+</html>
+<p>这也太好玩了！这设计也太绝了！自己把一大盒硬纸板拼成个机器人背包，开打！</p>
+<h3 id="生活">生活</h3>
+<h4 id="乐高lego典藏瓶中船92177-522">乐高（LEGO）典藏瓶中船92177 ¥522</h4>
+<p><img loading='lazy' src="https://pic.edui.fun/images/2022/01/bs-7.png" alt="bs-7"  /></p>
+<p>真好看！</p>
+<h4 id="loz-俐智拼装花束">LOZ 俐智拼装花束</h4>
+<p><img loading='lazy' src="https://pic.edui.fun/images/2022/01/bs-10.png" alt="bs-10"  /></p>
+<p>比乐高的好看。</p>
+<h4 id="诗画历2022台历-果麦文化出品-42">诗画历2022台历 果麦文化出品 ¥42</h4>
+<p><img loading='lazy' src="https://pic.edui.fun/images/2022/01/bs-8.png" alt="bs-8"  /></p>
+<p>别人送了一本，自己又买了好多本送人！</p>
+<h4 id="日课2022-读库丰子恺漫画民国老课本-98">日课2022 读库丰子恺漫画民国老课本 ¥98</h4>
+<p><img loading='lazy' src="https://pic.edui.fun/images/2022/01/bs-9.png" alt="bs-9"  /></p>
+<p>给娃当日历涂鸦本用，然后留下来保存。</p>
+<h4 id="illy-咖啡粉--hero-挂耳滤纸">illy 咖啡粉 + hero 挂耳滤纸</h4>
+<p>解决咖啡因焦虑！</p>
+<h3 id="纸书">纸书</h3>
+<p>当下电子书随手可得，仍然买了不少纸质书。</p>
+<p><a href="https://book.douban.com/subject/35143790/">https://book.douban.com/subject/35143790/</a></p>
+<p><a href="https://book.douban.com/subject/35254632/">https://book.douban.com/subject/35254632/</a></p>
+<p><a href="https://book.douban.com/subject/35349438/">https://book.douban.com/subject/35349438/</a></p>
+<p><a href="https://book.douban.com/subject/35390838/">https://book.douban.com/subject/35390838/</a></p>]]></content>
+            
+                 
+                    
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://blueisle.cf/tags/%E6%97%A5%E5%B8%B8" term="%E6%97%A5%E5%B8%B8" label="日常" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        
+        <entry>
+            <title type="html"><![CDATA[二〇二一，还好]]></title>
+            <link href="https://blueisle.cf/right-so-so-2021/" rel="alternate" type="text/html" />
+            
+                <id>https://blueisle.cf/right-so-so-2021/</id>
+            
+            
+            <published>2022-01-02T14:22:57+08:00</published>
+            <updated>2022-01-02T14:22:57+08:00</updated>
+            
+            
+            <content type="html"><![CDATA[<blockquote>
+<p>听闻新冠最初会“味觉丧失”，查询抑郁最初会“丧失兴趣”，如此判别，病得不重也不轻。</p>
+</blockquote>
+<h3 id="十二月">十二月</h3>
+<figure>
+    <img src="https://pic.edui.fun/images/2022/01/hi12.JPG"/><figcaption>自造快乐</figcaption></figure>
+
+<p>两周前本地疫情突发，对管控区外的实际影响不大，除了家里又多了几袋米、几包方便面。这次“平安夜”的朋友圈异常活跃，当家的破天荒买了灯带，小小布置氛围浓烈，收获自造快乐，珍重当下平淡。</p>
+<h3 id="十一月">十一月</h3>
+<figure>
+    <img src="https://pic.edui.fun/images/2022/01/hi11.JPG"/><figcaption>钱湖霞光</figcaption></figure>
+
+<p>东钱湖的四季，每每都有不同的欣喜。韩岭老街里新开的书店，湖边即将建成美术馆，环湖一圈的高端酒店民宿仍待全解锁。</p>
+<h3 id="十月">十月</h3>
+<figure>
+    <img src="https://pic.edui.fun/images/2022/01/hi10-1.JPG" width="50%"/><img src="https://pic.edui.fun/images/2022/01/hi10-2.JPG" width="50%" />
+    <figcaption>天府之行</figcaption>
+  </figure>
+<p>重点当然不是参加装备展，周五晚上到周日下午飞回，抓住两个晚上的逛啊吃啊！成都，果然今夜无人入眠。</p>
+<h3 id="九月">九月</h3>
+<figure>
+    <img src="https://pic.edui.fun/images/2022/01/hi09-1.JPG"/><figcaption>家有读书郎</figcaption></figure>
+
+<p>“我是小学生啦”，一同一早出门，夜深归家。再怎么减，读书总是不轻松的。幼小衔接，更需要适应的是自己，手忙脚乱、苦口婆心、收效甚微、焦躁不安。</p>
+<h3 id="八月">八月</h3>
+<figure>
+    <img src="https://pic.edui.fun/images/2022/01/hi08.JPG"/><figcaption>盛夏放风</figcaption></figure>
+
+<p>主动关闭“空调风”，人工切换“自然风”。城市风光，不输自然。</p>
+<h3 id="七月">七月</h3>
+<figure>
+    <img src="https://pic.edui.fun/images/2022/01/hi07.JPG"/><figcaption>溆浦大山行</figcaption></figure>
+
+<p>越过大河山川，跨过人山人海，历经大巴绿皮火车大巴中巴，整整23个小时。湖南溆浦，少年与山，相遇与你。</p>
+<h3 id="六月">六月</h3>
+<figure>
+    <img src="https://pic.edui.fun/images/2022/01/hi06.JPG"/><figcaption>毕业季</figcaption></figure>
+
+<p>2012 &ndash; 2021，自己第一批带出的学生一下子毕业三年，再见已胜初见。</p>
+<h3 id="五月">五月</h3>
+<figure>
+    <img src="https://pic.edui.fun/images/2022/01/hi05.JPG"/><figcaption>迈开腿</figcaption></figure>
+
+<p>不添堵，三江两岸一日深度游。港口博物馆、万人沙滩、红桥花海……</p>
+<h3 id="四月">四月</h3>
+<figure>
+    <img src="https://pic.edui.fun/images/2022/01/hi04.JPEG"/><figcaption>西湖美景</figcaption></figure>
+
+<p>动次打次，成功解锁打“动的”到西湖，临时起意下午即回，享受城际交通的便利。</p>
+<h3 id="三月">三月</h3>
+<figure>
+    <img src="https://pic.edui.fun/images/2022/01/hi03.jpg"/><figcaption>哈皮时刻</figcaption></figure>
+
+<p>来自 Switch Labo 纸皮人的欢乐！不得不服这设计。</p>
+<h3 id="二月">二月</h3>
+<figure>
+    <img src="https://pic.edui.fun/images/2022/01/hi02-1.JPG" width="50%"/><img src="https://pic.edui.fun/images/2022/01/hi02-2.JPG" width="50%" />
+    <figcaption>烟火年味</figcaption>
+  </figure>
+<p>乡下庭院，燃烟花迎新年。</p>
+<h3 id="一月">一月</h3>
+<figure>
+    <img src="https://pic.edui.fun/images/2022/01/hi01.JPG"/><figcaption>爱在冬季</figcaption></figure>
+
+<p>以热爱换珍惜，铜婚之年。</p>]]></content>
+            
+                 
+                    
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://blueisle.cf/tags/%E6%97%A5%E5%B8%B8" term="%E6%97%A5%E5%B8%B8" label="日常" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        
+        <entry>
+            <title type="html"><![CDATA[这不是演习]]></title>
+            <link href="https://blueisle.cf/2019-2021-ncov/" rel="alternate" type="text/html" />
+            
+                <id>https://blueisle.cf/2019-2021-ncov/</id>
+            
+            
+            <published>2021-12-11T11:02:16+08:00</published>
+            <updated>2021-12-11T11:02:16+08:00</updated>
+            
+            
+            <content type="html"><![CDATA[<p>前一周还在说要进行全员核酸演练，这一周突然就一例本土确诊。一切发展超乎迅猛，唯一庆幸的是确诊者都一个街道，都是轻症。望，年前能恢复如初，至少不影响出行晒个太阳。</p>
+<p><img loading='lazy' src="https://pic.edui.fun/images/2021/12/IMG_6461.JPG" alt="IMG_6461"  /></p>]]></content>
+            
+                 
+                    
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://blueisle.cf/tags/%E6%97%A5%E5%B8%B8" term="%E6%97%A5%E5%B8%B8" label="日常" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        
+        <entry>
+            <title type="html"><![CDATA[胡三元教写字（Web）]]></title>
+            <link href="https://blueisle.cf/shufa-sanyuan/" rel="alternate" type="text/html" />
+            
+                <id>https://blueisle.cf/shufa-sanyuan/</id>
+            
+            
+            <published>2021-10-16T21:02:16+08:00</published>
+            <updated>2021-10-16T21:02:16+08:00</updated>
+            
+            
+            <content type="html"><![CDATA[<p><img loading='lazy' src="https://cdn.jsdelivr.net/gh/lmm214/images@master/logos/shufa.png" alt="shufa"  /></p>
+<p>戳我打开： <a href="https://edui123.com/shufa/">https://edui123.com/shufa/</a></p>
+<p>视频内容来自相应小程序，个人使用 <a href="https://github.com/alibaba/lightproxy/issues/19">LightProxy</a> 抓取视频名，并与文字匹配。目前做了<a href="https://edui.fun/shufa/">一上</a>、<a href="https://edui.fun/shufa/1b/">一下</a>、<a href="https://edui.fun/shufa/2a/">二上</a>和<a href="https://edui.fun/shufa/3a/">三上</a>。</p>
+<p>制作 web 版本的初衷是给老师在教室里用，毕竟小程序还得登录啥的，并非小而美，并非一点即可。</p>
+<p>制作动力，来自已读一个月多一年级的臭小子！</p>]]></content>
+            
+                 
+                    
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://blueisle.cf/tags/%E6%97%A5%E5%B8%B8" term="%E6%97%A5%E5%B8%B8" label="日常" />
+                            
+                        
+                    
+                
+            
+        </entry>
     
 </feed>

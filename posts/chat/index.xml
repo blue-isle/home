@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>词穷 on 明礼至卓</title>
+    <link>https://blueisle.cf/posts/chat/</link>
+    <description>Recent content in 词穷 on 明礼至卓</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 05 Feb 2022 23:15:52 +0800</lastBuildDate><atom:link href="https://blueisle.cf/posts/chat/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2022-02-05</title>
+      <link>https://blueisle.cf/2022-02-05/</link>
+      <pubDate>Sat, 05 Feb 2022 23:15:52 +0800</pubDate>
+      
+      <guid>https://blueisle.cf/2022-02-05/</guid>
+      <description>&lt;p&gt;眨眼，大年初五。折腾（踩坑）告一段落，关闭终端、关闭编辑器，打开 Word、PPT……&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>2021-10-07</title>
+      <link>https://blueisle.cf/2021-10-07/</link>
+      <pubDate>Thu, 07 Oct 2021 15:45:00 +0800</pubDate>
+      
+      <guid>https://blueisle.cf/2021-10-07/</guid>
+      <description>开工前的折腾，群晖 docker 搞定 code-server 并开启 https 打通 GitHub ，试试浏览器发个文～</description>
+    </item>
+    
+    <item>
+      <title>2021-07-26</title>
+      <link>https://blueisle.cf/2021-07-26/</link>
+      <pubDate>Mon, 26 Jul 2021 19:12:22 +0800</pubDate>
+      
+      <guid>https://blueisle.cf/2021-07-26/</guid>
+      <description>&lt;p&gt;为「哔哔点啥」增加了前端搜索功能，原来以为涉及鉴权什么的，试了试，直接 &lt;code&gt;where&lt;/code&gt; 查询即可，搞定！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>2021-05-23</title>
+      <link>https://blueisle.cf/2021-05-23/</link>
+      <pubDate>Sun, 23 May 2021 15:04:55 +0800</pubDate>
+      
+      <guid>https://blueisle.cf/2021-05-23/</guid>
+      <description>越来越觉得不想说话，就算说的话也不是自己的，就算自己的话想想也过去了。本想着把有意义的事情做得有意思，可做着做着却只顾着有意思忘记了最初的意义，甚至只为切热点，乐此不疲，忘乎所以。</description>
+    </item>
+    
+    <item>
+      <title>2021-03-29</title>
+      <link>https://blueisle.cf/2021-03-29/</link>
+      <pubDate>Mon, 29 Mar 2021 22:30:20 +0800</pubDate>
+      
+      <guid>https://blueisle.cf/2021-03-29/</guid>
+      <description>KPW2 越狱成功！（教程）Kindle &amp;lt;= 5.13.3 下载个文件访问本地HTMl搞定，还是装插件花了点时间，最实用还是「USBNetwork Hack – 无线管理 Kindle」，盖着泡面还能传书，香！</description>
+    </item>
+    
+  </channel>
+</rss>
