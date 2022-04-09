@@ -148,13 +148,38 @@
   <div class="posts">
     
     
+    <div class="post on-list chat">
+    
+            <div class="post-meta">
+        
+          <span class="post-date">
+            2017-12-26 00:00:00
+          </span>
+        
+
+        
+        <span class="">
+          
+            #<a href="https://blueisle.cf/tags/%E8%AF%8D%E7%A9%B7/">词穷</a>&nbsp;
+          
+        </span>
+        
+      </div>
+      <div class="post-content $PostCate">
+        <a href="https://blueisle.cf/2017-12-26/" rel="link"><img loading="lazy" class="post-avatar avatar" src=https://gravatar.loli.net/avatar/ba83fa02fc4b2ba621514941307e21be ></a>
+          臭小子竟然又中招发热了！
+      </div>
+    
+    </div>
+    
+    
     <div class="post on-list coding">
     
-      <h1 class="post-title"><a href="https://blueisle.cf/new-tab-external-link/">识别外链并新窗口打开</a></h1>
+      <h1 class="post-title"><a href="https://blueisle.cf/bitcron-show-relative-time/">Bitcron 显示相对时间</a></h1>
       <div class="post-meta">
         
           <span class="post-date">
-            2017-07-25 00:00:00
+            2017-12-26 00:00:00
           </span>
         
 
@@ -171,23 +196,12 @@
 
       <div class="post-content $PostCate">
       
-        <p>注：已对类似 toc 里的链接进行排除。</p>
-<p>markdown 语法链接不支持设置 <code>target='_blank'</code> ，如果要就直接写 html 的链接代码。个人来说，非常反习惯！</p>
-<p>既然 Bitcron 加载了 jQuery ，那就重操旧业来个自动识别内外链！代码如下：</p>
-<pre tabindex="0"><code class="language-jade" data-lang="jade">	script
-		$(document).ready (function() {
-			var parse_url = /^(?:([A-Za-z]+):)?(\/{0,3})([0-9.\-A-Za-z]+)(?::(\d+))?(?:\/([^?#]*))?(?:\?([^#]*))?(?:#(.*))?$/;
-			var location_href = window.location.href.replace(parse_url,&#39;$3&#39;)
-			$(&#39;.post-content a:not(:has(img)),.author-name a&#39;).hover(function() {
-				var this_href = $(this).attr(&#39;href&#39;);
-				var replace_href = this_href.replace(parse_url,&#39;$3&#39;);
-                if ( this_href != replace_href &amp;&amp; location_href != replace_href)
-					$(this).attr(&#39;target&#39;,&#39;_blank&#39;); 
-			});
-		});
-</code></pre><p>一般放 <code>post.jade</code>里，直接放 <code>base.jade</code> 也行。其中 <code>.post-content</code> 和 <code>.author-name</code> 有可能需要匹配自己的主题模板。</p>
-<p>短短代码测试了个把小时，主要耗在“a标签里无img”和“本地和点击的href的正则”，哎，果真代码欺负老新人！</p>
-        <div><a class="read-more button" href="/new-tab-external-link/">阅读全文 →</a></div>
+        <p>已更新下面这货！</p>
+<p><a href="https://tokinx.github.io/lately/">Lately.js</a>：基于jQuery ，仅 800 字节却强大、好用的&rsquo;Timeago&rsquo;插件。</p>
+<p>逻辑：年月相同继续（否，显示“常规日期”），日相同继续（否，显示“发布于几天前”），小时相同继续（否，显示“发布于几小时前”），分相同显示“刚刚发布”（否，显示“发布于几分钟前”）</p>
+<p>BUG也明显，不能跨月，跨了如12月31日23时59秒发的文，1月1日00时01分来看也是显示常规的。找不到时间戳的api及计算，只想到用这个笨办法。</p>
+<p>代码如下：</p>
+        <div><a class="read-more button" href="/bitcron-show-relative-time/">阅读全文 →</a></div>
       
       </div>
     
@@ -196,11 +210,11 @@
     
     <div class="post on-list coding">
     
-      <h1 class="post-title"><a href="https://blueisle.cf/bitcron-template-code/">Bitcron 主题常用的代码片段</a></h1>
+      <h1 class="post-title"><a href="https://blueisle.cf/bitcron-show-last-update/">Bitcron 显示最后更新时间</a></h1>
       <div class="post-meta">
         
           <span class="post-date">
-            2017-07-23 00:00:00
+            2017-12-24 00:00:00
           </span>
         
 
@@ -217,39 +231,219 @@
 
       <div class="post-content $PostCate">
       
-        <h3 id="全站-site">全站 Site</h3>
-<p>标题：<code>site.title</code>，示例：</p>
-<pre tabindex="0"><code class="language-jade" data-lang="jade">a(href=&#34;/&#34;)= site.title
-</code></pre><p>副标题：<code>site.sub_title</code>，示例：</p>
-<pre tabindex="0"><code class="language-jade" data-lang="jade">if site.sub_title
-	h2.site-description= site.sub_title]
-</code></pre><p>关键词：<code>site.keywords</code>
-描述：<code>site.description</code></p>
-<p>站点头像：<code>site.avatar</code>
-背景：<code>site.background_image</code>，示例：</p>
-<pre tabindex="0"><code class="language-jade" data-lang="jade">header#header(style=&#34;background-image:url({{site.background_image}})&#34;)
-</code></pre><p>当下年份：<code>site.now.year</code></p>
-        <div><a class="read-more button" href="/bitcron-template-code/">阅读全文 →</a></div>
+        <blockquote>
+<p>需求点：很多教程文章会多次修改，显示文章最后的修改时间，就显得非常有必要。效果图如下：</p>
+</blockquote>
+<figure>
+    <img src="https://pic.edui.fun/images/2017/12/last-1.png" alt="" />
+    <figcaption>显示最后更新时间</figcaption>
+</figure>
+<p>利用了 <code>sys_date</code> 这属性，格式化为 <code>%Y%j</code>，其中 <code>%j</code> 表示一年中的第几天，所以 <strong>判断发布与修改不是同一日</strong> ，则显示。相关代码如下：</p>
+        <div><a class="read-more button" href="/bitcron-show-last-update/">阅读全文 →</a></div>
       
       </div>
     
     </div>
     
     
-    <div class="post on-list daily">
+    <div class="post on-list coding">
     
-      <h1 class="post-title"><a href="https://blueisle.cf/brotherhood-of-blades-ii/">绣春刀2</a></h1>
+      <h1 class="post-title"><a href="https://blueisle.cf/bitcron-diy-mail-template/">Bitcron 美化评论回复通知</a></h1>
       <div class="post-meta">
         
           <span class="post-date">
-            2017-07-22 00:00:00
+            2017-12-24 00:00:00
           </span>
         
 
         
         <span class="">
           
-            #<a href="https://blueisle.cf/tags/%E6%97%A5%E5%B8%B8/">日常</a>&nbsp;
+            #<a href="https://blueisle.cf/tags/%E6%8A%98%E8%85%BE/">折腾</a>&nbsp;
+          
+        </span>
+        
+      </div>
+
+      
+
+      <div class="post-content $PostCate">
+      
+        <p>之前用 WordPress 的时候，评论的邮件通知也算是个折腾点，PHP的回复样式和内容随便自己写，相比较而言 Bitcron 源码未公布，Jade 都改名 Pug，折腾测试全凭感觉。所幸，没白折腾，效果如下：</p>
+<figure>
+    <img src="https://pic.edui.fun/images/2017/12/mail-1.png" alt="" style="width:30%"/>              <img src="https://pic.edui.fun/images/2017/12/mail-0.png" alt="" style="width:30%"/>
+    <figcaption>样式对比</figcaption>
+</figure>
+<p>官方介绍：<a href="https://api.bitcron.com/read/others#toc_6">https://api.bitcron.com/read/others#toc_6</a></p>
+        <div><a class="read-more button" href="/bitcron-diy-mail-template/">阅读全文 →</a></div>
+      
+      </div>
+    
+    </div>
+    
+    
+    <div class="post on-list coding">
+    
+      <h1 class="post-title"><a href="https://blueisle.cf/bitcron-cool-links-page/">Bitcron 实现个性友情链接页</a></h1>
+      <div class="post-meta">
+        
+          <span class="post-date">
+            2017-12-23 00:00:00
+          </span>
+        
+
+        
+        <span class="">
+          
+            #<a href="https://blueisle.cf/tags/%E6%8A%98%E8%85%BE/">折腾</a>&nbsp;
+          
+        </span>
+        
+      </div>
+
+      
+
+      <div class="post-content $PostCate">
+      
+        <p><img loading='lazy' src="https://pic.edui.fun/images/2017/12/links-1.png" alt="我的朋友们"  /></p>
+<p>具体效果见：<a href="https://immmmm.com/friends">https://immmmm.com/friends</a></p>
+        <div><a class="read-more button" href="/bitcron-cool-links-page/">阅读全文 →</a></div>
+      
+      </div>
+    
+    </div>
+    
+    
+    <div class="post on-list coding">
+    
+      <h1 class="post-title"><a href="https://blueisle.cf/demo-shuiba-co/">为八口打 Call ！！！</a></h1>
+      <div class="post-meta">
+        
+          <span class="post-date">
+            2017-12-21 00:00:00
+          </span>
+        
+
+        
+        <span class="">
+          
+            #<a href="https://blueisle.cf/tags/%E6%8A%98%E8%85%BE/">折腾</a>&nbsp;
+          
+        </span>
+        
+      </div>
+
+      
+
+      <div class="post-content $PostCate">
+      
+        <blockquote>
+<p>一个字：服！</p>
+</blockquote>
+<h3 id="01你好呀">01「你好呀」</h3>
+<p><img loading='lazy' src="https://pic.edui.fun/images/2017/12/shuiba-01.jpg" alt="shuiba-01"  /></p>
+<h5 id="预览httpsdemoshuibacotemplate_prefix0120hello-介绍httpsblogshuibacobitcron-theme-hello"><a href="https://demo.shuiba.co/?template_prefix=01%20hello">[预览]</a> <a href="https://blog.shuiba.co/bitcron-theme-hello">[介绍]</a></h5>
+<h3 id="02庸">02「庸」</h3>
+<p><img loading='lazy' src="https://pic.edui.fun/images/2017/12/shuiba-02.jpg" alt="shuiba-02"  /></p>
+<h5 id="预览httpsdemoshuibacotemplate_prefix0220ordinary-介绍httpsblogshuibacobitcron-theme-ordinary"><a href="https://demo.shuiba.co/?template_prefix=02%20ordinary">[预览]</a> <a href="https://blog.shuiba.co/bitcron-theme-ordinary">[介绍]</a></h5>
+        <div><a class="read-more button" href="/demo-shuiba-co/">阅读全文 →</a></div>
+      
+      </div>
+    
+    </div>
+    
+    
+    <div class="post on-list coding">
+    
+      <h1 class="post-title"><a href="https://blueisle.cf/bitcron-multi-theme-preview/">Bitcron 一站搞定多主题预览</a></h1>
+      <div class="post-meta">
+        
+          <span class="post-date">
+            2017-12-20 00:00:00
+          </span>
+        
+
+        
+        <span class="">
+          
+            #<a href="https://blueisle.cf/tags/%E6%8A%98%E8%85%BE/">折腾</a>&nbsp;
+          
+        </span>
+        
+      </div>
+
+      
+
+      <div class="post-content $PostCate">
+      
+        <p>起源： <a href="https://pi.bitcron.com/post/wen-da/2017-12/2017-12-11-13-32-39#main">网站上适用不同自定义主题</a></p>
+<blockquote>
+<p>假设 /template/a/index.jade
+访问 <a href="http://yourdomain.com/?template_prefix=a">http://yourdomain.com/?template_prefix=a</a>, 会强制模板匹配的时候，访问前缀为 a 的目录路径。</p>
+</blockquote>
+<p>什么意思？就是说我们可以把多个主题放到 template 的子文件夹里，比如 <code>a</code>子文件夹，然后在链接后加上参数 <code>?template_prefix=a</code> 就能用这个模板来渲染呈现主题啦！</p>
+<p>所以，可以这样做:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>/template/a/
+</span></span><span style="display:flex;"><span>/template/b/
+</span></span><span style="display:flex;"><span>/template/c/
+</span></span><span style="display:flex;"><span>/template/d/
+</span></span><span style="display:flex;"><span>/template/e/
+</span></span><span style="display:flex;"><span>/template/f/
+</span></span></code></pre></div><p>来半打子主题，然后用 js 加上参数就好啦~（ 注：template 目录下的总文件要低于 200）</p>
+        <div><a class="read-more button" href="/bitcron-multi-theme-preview/">阅读全文 →</a></div>
+      
+      </div>
+    
+    </div>
+    
+    
+    <div class="post on-list coding">
+    
+      <h1 class="post-title"><a href="https://blueisle.cf/bitcron-article-run-code/">Bitcron 文章内运行代码实例一则</a></h1>
+      <div class="post-meta">
+        
+          <span class="post-date">
+            2017-12-18 00:00:00
+          </span>
+        
+
+        
+        <span class="">
+          
+            #<a href="https://blueisle.cf/tags/%E6%8A%98%E8%85%BE/">折腾</a>&nbsp;
+          
+        </span>
+        
+      </div>
+
+      
+
+      <div class="post-content $PostCate">
+      
+        <p>Bitcron 文章里是可以直接运行代码的，只要把代码高亮类型设置成 <code>code</code> 即可。</p>
+<p>什么用呢？可以当定制页面（Pages）用！文章定制功能So Easy！</p>
+<p>比如，我的友情链接页。按照常规需要新建个 <code>links.jade</code> ，然后再把需要插入的 css 和 js 写入模板调用。</p>
+        <div><a class="read-more button" href="/bitcron-article-run-code/">阅读全文 →</a></div>
+      
+      </div>
+    
+    </div>
+    
+    
+    <div class="post on-list coding">
+    
+      <h1 class="post-title"><a href="https://blueisle.cf/bitcron-auto-article-refer/">Bitcron 文章内链自动优化显示</a></h1>
+      <div class="post-meta">
+        
+          <span class="post-date">
+            2017-12-18 00:00:00
+          </span>
+        
+
+        
+        <span class="">
+          
+            #<a href="https://blueisle.cf/tags/%E6%8A%98%E8%85%BE/">折腾</a>&nbsp;
           
         </span>
         
@@ -257,258 +451,50 @@
 
       
         
-          <img loading='lazy' src="https://pic.edui.fun/images/2017/07/xcd-1.jpg" class="post-cover" />
+          <img loading='lazy' src="https://pic.edui.fun/images/2017/12/refer-1.png" class="post-cover" />
         
+      
+
+      <div class="post-content $PostCate">
+      
+        <p>当我们在文章内引用了一个站内的链接，一般只是超级链接，其实，也可以为这个超级链接提供更好的表现方式。
+这是看起来很简单，但确实一个超赞的想法，来自于 Jimmy。效果如下(中间部分，hello 为标题):</p>
+<p><img loading='lazy' src="https://pic.edui.fun/images/2017/12/refer-1.png" alt="refer 处理页面内的链接"  /></p>
+        <div><a class="read-more button" href="/bitcron-auto-article-refer/">阅读全文 →</a></div>
+      
+      </div>
+    
+    </div>
+    
+    
+    <div class="post on-list coding">
+    
+      <h1 class="post-title"><a href="https://blueisle.cf/bitcron-add-owo-similies/">给 Bitcron 评论添加 OwO 表情</a></h1>
+      <div class="post-meta">
+        
+          <span class="post-date">
+            2017-12-17 00:00:00
+          </span>
+        
+
+        
+        <span class="">
+          
+            #<a href="https://blueisle.cf/tags/%E6%8A%98%E8%85%BE/">折腾</a>&nbsp;
+          
+        </span>
+        
+      </div>
+
       
 
       <div class="post-content $PostCate">
       
         <figure>
-    <img src="https://pic.edui.fun/images/2017/07/xcd-1.jpg" width="50%" /><img src="https://pic.edui.fun/images/2017/07/xcd-2.jpg" width="50%" />
-    <figcaption>辛芷蕾</figcaption>
+    <img src="https://pic.edui.fun/images/2017/12/owo-1.png" />
+    <figcaption>OwO 表情</figcaption>
 </figure>
-<p>哎哟，好好的破案片，成了儿女情长片。直接2星，想想动作设计、想想还有几个角不错，还是3星推荐吧</p>
-
-        
-      
-      </div>
-    
-    </div>
-    
-    
-    <div class="post on-list coding">
-    
-      <h1 class="post-title"><a href="https://blueisle.cf/bitcron-theme-motify/">Bitcron 主题「Motify」</a></h1>
-      <div class="post-meta">
-        
-          <span class="post-date">
-            2017-07-20 00:00:00
-          </span>
-        
-
-        
-        <span class="">
-          
-            #<a href="https://blueisle.cf/tags/%E6%8A%98%E8%85%BE/">折腾</a>&nbsp;
-          
-        </span>
-        
-      </div>
-
-      
-
-      <div class="post-content $PostCate">
-      
-        <figure>
-    <img src="https://pic.edui.fun/images/2017/07/motify.jpg" alt="Bitcron 主题「Motify」" />
-    <figcaption>Github 地址： <a href="https://github.com/lmm214/Bitcron-Theme-Motify">Motify</a> </figcaption>
-</figure>
-<h3 id="主题简介">主题简介</h3>
-<p>自扒 WordPress 同名主题，支持：</p>
-<ul>
-<li>头部背景自定义</li>
-<li>“相册”、“一句话”特色文章样式</li>
-<li>社交图标包含：Twitter、Instagram、Github、Flickr、微博、Facebook。</li>
-<li>自动识别外链并新窗口打开</li>
-</ul>
-        <div><a class="read-more button" href="/bitcron-theme-motify/">阅读全文 →</a></div>
-      
-      </div>
-    
-    </div>
-    
-    
-    <div class="post on-list coding">
-    
-      <h1 class="post-title"><a href="https://blueisle.cf/bitcron-themes/">Bitcron 主题集</a></h1>
-      <div class="post-meta">
-        
-          <span class="post-date">
-            2017-07-14 00:00:00
-          </span>
-        
-
-        
-        <span class="">
-          
-            #<a href="https://blueisle.cf/tags/%E6%8A%98%E8%85%BE/">折腾</a>&nbsp;
-          
-        </span>
-        
-      </div>
-
-      
-
-      <div class="post-content $PostCate">
-      
-        demo-shuiba-co 主题名(-) | 链接(-) Bedford | [预览](https://blog-bedford--theme.bitcron.com/) [源码](https://github.com/pagecho/Bedford) Akina | [预览](https://akina.0x400.bitcron.com/
-        <div><a class="read-more button" href="/bitcron-themes/">阅读全文 →</a></div>
-      
-      </div>
-    
-    </div>
-    
-    
-    <div class="post on-list daily">
-    
-      <h1 class="post-title"><a href="https://blueisle.cf/come-back/">终于回场</a></h1>
-      <div class="post-meta">
-        
-          <span class="post-date">
-            2017-07-08 00:00:00
-          </span>
-        
-
-        
-        <span class="">
-          
-            #<a href="https://blueisle.cf/tags/%E6%97%A5%E5%B8%B8/">日常</a>&nbsp;
-          
-        </span>
-        
-      </div>
-
-      
-
-      <div class="post-content $PostCate">
-      
-        接触静态博客也有些年头，用过 Jekyll、Octopress、Hexo 都是本地书写后命令行生成静态文件同步至 Github。光听这书写流程就别扭，虽然这很酷，但久了就会发现 非书写时间 与 书写 比值常常大于1 随着 Github 被认证半死不活，文章数增多后 Hexo 标榜的生成性能也不复存在，最纠结的是想码字还
-        <div><a class="read-more button" href="/come-back/">阅读全文 →</a></div>
-      
-      </div>
-    
-    </div>
-    
-    
-    <div class="post on-list daily">
-    
-      <h1 class="post-title"><a href="https://blueisle.cf/goodbay-2015/">二〇一五，不见。</a></h1>
-      <div class="post-meta">
-        
-          <span class="post-date">
-            2016-02-07 00:00:00
-          </span>
-        
-
-        
-        <span class="">
-          
-            #<a href="https://blueisle.cf/tags/%E6%97%A5%E5%B8%B8/">日常</a>&nbsp;
-          
-        </span>
-        
-      </div>
-
-      
-
-      <div class="post-content $PostCate">
-      
-        <h3 id="过去">过去</h3>
-<p>过去一年若码流水肯定得码通宵，若只说一件那就是：<strong>为人父</strong>。</p>
-<p>臭小子6个多月咯，全靠长辈特别是奶奶和外婆。当然，最为辛苦的是老婆！经历孕育、当下的哺育以及之后的教育，让我在这个过程中拓宽了对“爱”的定义域，延展了“爱”的峰值。新的一年，想对老婆说：</p>
-<p style="text-align: center;"><strong>你的幸福，我们爷俩全包了！</strong></p>
-<p>若说第二件就是：<strong>成“阿姨”</strong>。</p>
-<p>工作第五年，被任命为一班之主任，成为了43个孩子的“阿姨”。说阿姨真是一点不夸张，准确说应该是 43×2 的阿姨，甚至，还不止。咳，说多了都是泪啊！当然，这份差事虽苦，也有感动与感激，且思且行且珍惜，继续咯。</p>
-<p>若说第三件…这水流得好欢哟，下面说几个关键词吧。</p>
-        <div><a class="read-more button" href="/goodbay-2015/">阅读全文 →</a></div>
-      
-      </div>
-    
-    </div>
-    
-    
-    <div class="post on-list daily">
-    
-      <h1 class="post-title"><a href="https://blueisle.cf/dont-be-trust/">不被信任感</a></h1>
-      <div class="post-meta">
-        
-          <span class="post-date">
-            2014-06-30 00:00:00
-          </span>
-        
-
-        
-        <span class="">
-          
-            #<a href="https://blueisle.cf/tags/%E6%97%A5%E5%B8%B8/">日常</a>&nbsp;
-          
-        </span>
-        
-      </div>
-
-      
-
-      <div class="post-content $PostCate">
-      
-        <p>不知多少人会有这样的想法：如果你觉着我做不好，那就做不好吧，就算自己其实能做好。如果你觉得我肯定做得好，就算自己其实没把握，也尽全力做好。</p>
-<p>当面对别人对自己的信任度时，总显得特别敏感，生怕别人不信任自己，一旦察觉随之也就应验了别人的不信任：你看，他果真不行吧！</p>
-<p>在读书时期很长一段时间里，感受到父母对自己的不信任，特别不信任我能做到超出他们预期的事儿。这种不被自己至亲信任的感觉，真的是好讨厌的感觉，因为感觉受到了伤害，而且施害方是至亲！那段时间一直困扰的问题：明明我是他们孩子，为什么他们会不信任我呢？</p>
-        <div><a class="read-more button" href="/dont-be-trust/">阅读全文 →</a></div>
-      
-      </div>
-    
-    </div>
-    
-    
-    <div class="post on-list daily">
-    
-      <h1 class="post-title"><a href="https://blueisle.cf/overcome-the-grocery-store/">解忧杂货店</a></h1>
-      <div class="post-meta">
-        
-          <span class="post-date">
-            2014-06-14 00:00:00
-          </span>
-        
-
-        
-        <span class="">
-          
-            #<a href="https://blueisle.cf/tags/%E6%97%A5%E5%B8%B8/">日常</a>&nbsp;
-          
-        </span>
-        
-      </div>
-
-      
-
-      <div class="post-content $PostCate">
-      
-        如今回顾写作过程，我发现直接始终再思考一个问题：站在人生的岔路口，人究竟应该怎么做？————东野圭吾 月兔：是参加奥运集训，还是陪身患绝症的男友度过生命最后一程…… 鱼店音乐人：是坚持自己的音乐梦，还是子承父业成为鱼店的接班人…… 约翰·列侬：是否与父母一同走上逃债的不归路，还是坚持让
-        <div><a class="read-more button" href="/overcome-the-grocery-store/">阅读全文 →</a></div>
-      
-      </div>
-    
-    </div>
-    
-    
-    <div class="post on-list coding">
-    
-      <h1 class="post-title"><a href="https://blueisle.cf/slimbox2-js-adaptive/">Slimbox2.js 图片灯箱自适应</a></h1>
-      <div class="post-meta">
-        
-          <span class="post-date">
-            2014-04-19 00:00:00
-          </span>
-        
-
-        
-        <span class="">
-          
-            #<a href="https://blueisle.cf/tags/%E6%8A%98%E8%85%BE/">折腾</a>&nbsp;
-          
-        </span>
-        
-      </div>
-
-      
-
-      <div class="post-content $PostCate">
-      
-        <p>Github： <a href="https://github.com/lmm214/slimbox2-lite">slimbox2-lite</a></p>
-<p>很久很久以前（喂，喂喂），很早很早以前（嘿！），好吧。以前发现只有几KB的图片灯箱特效 slimbox2 就瞬间被它征服了，不过这娃一直有个硬伤：</p>
-<p>图片多大灯箱显示出来的图片就有多大。就是说，一旦图片比较大比如1800<em>1200，显示器只有1280</em>800，那真是赤果果扑面而来啊！</p>
-<p>虽然带着这个硬伤，还是把它作为哥发布的主题的标配！昨 @小黑黑 再一次向我反馈了这个情况，一下决心操起编辑器开试。吼，花了个把小时把 js 从头到尾读了N遍后，顺利搞定！修改部分如下：</p>
-        <div><a class="read-more button" href="/slimbox2-js-adaptive/">阅读全文 →</a></div>
+        <div><a class="read-more button" href="/bitcron-add-owo-similies/">阅读全文 →</a></div>
       
       </div>
     
@@ -922,6 +908,32 @@
 
     
 
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
 
 
 
@@ -933,7 +945,7 @@
 <footer class="footer">
   <div class="footer__inner">
     <div class="copyright copyright-font">
-      <span>共 75227 字 <br/> 写完一本 鲁迅 的</br>《呐喊》了！</span>
+      <span>共 99144 字 <br/> 写完一本 林海音 的</br>《城南旧事》了！</span>
     </div>
     <a class="dark-wormhole" href="https://www.foreverblog.cn/go.html" target="_blank"> <img src="/wormhole_1.gif" alt="" style="width:auto;height:32px;" title="穿梭虫洞-随机访问十年之约友链博客"> </a>
     <a class="light-wormhole" href="https://www.foreverblog.cn/go.html" target="_blank" > <img src="/wormhole_3.gif" alt="" style="width:auto;height:32px;" title="穿梭虫洞-随机访问十年之约友链博客"> </a>
