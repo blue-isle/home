@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+      <title>「哔哔点啥」微信公众号 2.0 :: 明礼至卓</title>
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta charset="UTF-8"/>
+<meta name="renderer" content="webkit"/>
+<meta name="force-rendering" content="webkit"/>
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+<script>if ( false || (!!window.MSInputMethodContext && !!document.documentMode)) document.write('\x3Cscript id="_iealwn_js" data-outver="11" src="https://support.dmeng.net/ie-alert-warning/latest.js">\x3C/script>'); </script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content=" 「哔哔点啥」微信公众号 2.0 原是发到 LeanCloud 平台，现 2.0 是发到 「腾讯 CloudBase」 。目前已支持用户名绑定、解绑、发文字、发图片、追加、合并、删除、替换文字，还有显示哔哔列表、哔哔搜索！
+ /l - 显示最近哔哔
+/s 关键词 - 搜索相关哔哔
+/a 文字 - 追加文字到第1条
+/a数字 文字 - 追加文字到第几条，如 /a2 文字
+/c - 合并前2条
+/c数字 - 合并前几条，如 /c3
+/d - 删除第1条
+/d数字 - 删除第几条，如 /d2
+/e 文字- 编辑替换第1条
+/e数字 文字 - 编辑替换第几条，如 /e2 文字
+/f数字 - 批量删除前几条，如 /f2
+/nobber - 解除绑定
+/bber KEY,HTTP访问地址 - 添加绑定
+ 对，绑定只需要2个信息，一个自定义的 KEY 和 云函数的http访问地址
+"/>
+<meta name="keywords" content=""/>
+<link rel="canonical" href="https://blueisle.cf/bb-by-wechat-pro/" />
+<link rel="stylesheet" href="/main.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:500&display=swap" media="print" onload="this.media='all'">
+<link rel="shortcut icon" href="https://blueisle.cf/favicon.ico">
+
+<meta property="og:title" content="「哔哔点啥」微信公众号 2.0" />
+<meta property="og:description" content="
+    「哔哔点啥」微信公众号 2.0
+
+原是发到 LeanCloud 平台，现 2.0 是发到 「腾讯 CloudBase」 。目前已支持用户名绑定、解绑、发文字、发图片、追加、合并、删除、替换文字，还有显示哔哔列表、哔哔搜索！
+
+/l - 显示最近哔哔
+/s 关键词 - 搜索相关哔哔
+/a 文字 - 追加文字到第1条
+/a数字 文字 - 追加文字到第几条，如 /a2 文字
+/c - 合并前2条
+/c数字 - 合并前几条，如 /c3
+/d - 删除第1条
+/d数字 - 删除第几条，如 /d2
+/e 文字- 编辑替换第1条
+/e数字 文字 - 编辑替换第几条，如 /e2 文字
+/f数字 - 批量删除前几条，如 /f2
+/nobber - 解除绑定
+/bber KEY,HTTP访问地址 - 添加绑定
+
+对，绑定只需要2个信息，一个自定义的 KEY 和 云函数的http访问地址" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blueisle.cf/bb-by-wechat-pro/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-01-06T20:22:49+08:00" />
+<meta property="article:modified_time" content="2021-01-06T20:22:49+08:00" />
+
+
+
+
+    
+  <link rel="prefetch" href="https://blueisle.cf/tx-cloudbase-framework/">
+  <link rel="prefetch" href="https://blueisle.cf/hi-2021/">
+
+  </head>
+  <body class="dark-theme">
+    <div class="container">
+      <header class="header">
+  <span class="header__inner">
+    <a href="https://blueisle.cf" class="logo" style="text-decoration: none;">
+  
+    <span class="logo__text">明礼至卓</span>
+    <span class="logo__cursor"></span>
+  
+</a>
+
+    <span class="header__right">
+      
+        <nav class="menu hidden">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/movies/">电影</a></li>
+        
+      
+        
+          <li><a href="/books/">阅读</a></li>
+        
+      
+        
+          <li><a href="/archives/">归档</a></li>
+        
+      
+        
+          <li><a href="/friends/">友圈</a></li>
+        
+      
+        
+          <li><a href="/about/">关于</a></li>
+        
+      
+        
+          <li><a href="https://nav.blueisle.cf/">导航</a></li>
+        
+      
+    
+
+                <li><a href="/search/"><svg t="1556783211810" class="search-box-icon" class="icon" style="" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2078" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><style type="text/css"></style></defs><path d="M981.39652054 920.86314525L704.56522859 644.0318533a366.65501012 366.65501012 0 1 0-61.73503038 65.64040943L917.55859375 984.40065827z m-856.17925347-493.12920861a284.19142939 284.19142939 0 1 1 283.89101562 284.19142939A284.49184317 284.49184317 0 0 1 125.06706019 427.73393664z" fill="" p-id="2079" data-spm-anchor-id="a313x.7781069.0.i2"></path></svg></a></li>
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/movies/">电影</a></li>
+      
+    
+      
+        <li><a href="/books/">阅读</a></li>
+      
+    
+      
+        <li><a href="/archives/">归档</a></li>
+      
+    
+      
+        <li><a href="/friends/">友圈</a></li>
+      
+    
+      
+        <li><a href="/about/">关于</a></li>
+      
+    
+      
+        <li><a href="https://nav.blueisle.cf/">导航</a></li>
+      
+    
+  </ul>
+</nav>
+
+        <span class="menu-trigger hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+          </svg>
+        </span>
+      
+      <span class="theme-toggle">
+        <svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+
+      </span>
+    </span>
+  </span>
+</header>
+
+
+
+
+      <div class="content">
+        
+  
+  
+  
+  
+  <div class="post coding">
+    <div  class="breadcrumb">
+  
+
+  
+
+  
+
+  
+
+<li>
+  <a href="https://blueisle.cf/">首页</a>
+</li>
+
+
+<li>
+  <a href="https://blueisle.cf/posts/">文章</a>
+</li>
+
+
+<li>
+  <a href="https://blueisle.cf/posts/coding/">折腾</a>
+</li>
+
+
+<li class="active">
+  <a href="https://blueisle.cf/bb-by-wechat-pro/">「哔哔点啥」微信公众号 2.0</a>
+</li>
+
+</div>
+
+
+  
+    <h2 class="post-title"><a href="https://blueisle.cf/bb-by-wechat-pro/">「哔哔点啥」微信公众号 2.0</a></h2>
+    <div class="post-meta">
+      
+        <span class="post-date">2021-01-06 20:22:49</span><span> / <span id="twikoo_visitors">0</span> 阅读</span><span> / <a href="#twikoo"><span id="twikoo_count">0 条评论</span></a></span>
+        
+          
+        
+      
+    </div>
+
+    
+  
+    <div class="post-content">
+      <figure>
+    <img src="https://pic.edui.fun/images/2020/05/bbds.png"/><figcaption>「哔哔点啥」微信公众号 2.0</figcaption></figure>
+
+<p>原是发到 LeanCloud 平台，现 2.0 是发到 <strong>「腾讯 CloudBase」</strong> 。目前已支持用户名绑定、解绑、发文字、<strong>发图片</strong>、追加、合并、删除、替换文字，还有显示<strong>哔哔列表</strong>、<strong>哔哔搜索</strong>！</p>
+<blockquote>
+<p><code>/l</code> - 显示最近哔哔</p>
+<p><code>/s 关键词</code> - 搜索相关哔哔</p>
+<p><code>/a 文字</code> - 追加文字到第1条</p>
+<p><code>/a数字 文字</code> - 追加文字到第几条，如 /a2 文字</p>
+<p><code>/c</code> - 合并前2条</p>
+<p><code>/c数字</code> - 合并前几条，如 /c3</p>
+<p><code>/d</code> - 删除第1条</p>
+<p><code>/d数字</code> - 删除第几条，如 /d2</p>
+<p><code>/e 文字</code>- 编辑替换第1条</p>
+<p><code>/e数字 文字</code> - 编辑替换第几条，如 /e2 文字</p>
+<p><code>/f数字</code> - 批量删除前几条，如 /f2</p>
+<p><code>/nobber</code> - 解除绑定</p>
+<p><code>/bber KEY,HTTP访问地址</code> - 添加绑定</p>
+</blockquote>
+<p>对，绑定只需要2个信息，一个自定义的 <code>KEY</code> 和 <code>云函数的http访问地址</code></p>
+<h3 id="日常使用截图">日常使用截图</h3>
+<blockquote>
+<p>使用 /a 命令给图片追加个文字，真香！</p>
+</blockquote>
+<figure>
+    <img src="https://pic.edui.fun/images/2020/12/bber-1.PNG" width="50%"/><img src="https://pic.edui.fun/images/2020/12/bber-2.PNG" width="50%" />
+    <figcaption>「哔哔点啥」操作截图-1</figcaption>
+  </figure>
+<figure>
+    <img src="https://pic.edui.fun/images/2020/12/bber-3.jpg" width="50%"/><img src="https://pic.edui.fun/images/2020/12/bber-4.jpg" width="50%" />
+    <figcaption>「哔哔点啥」操作截图-2</figcaption>
+  </figure>
+<h3 id="一键部署及绑定">一键部署及绑定</h3>
+<p>1.点击以下按钮将 BBer 一键部署到云开发</p>
+<p><a rel="link" href="https://console.cloud.tencent.com/tcb/env/index?action=CreateAndDeployCloudBaseProject&amp;appUrl=https%3A%2F%2Fgithub.com%2Flmm214%2Fbber&amp;branch=main"><img class="avatar" loading="lazy" src="https://main.qcloudimg.com/raw/67f5a389f1ac6f3b4d04c7256438e44f.svg" alt=""></a></p>
+<p>2.进入<a href="https://console.cloud.tencent.com/tcb/env/login">环境-登录授权</a>，启用“匿名登录”</p>
+<p>3.进入<a href="https://console.cloud.tencent.com/tcb/env/safety">环境-安全配置</a>，将博客网址添加到“WEB安全域名”</p>
+<p>4.进入<a href="https://console.cloud.tencent.com/tcb/env/access">环境-HTTP访问服务</a>，复制链接备用。</p>
+<p><img loading='lazy' src="https://pic.edui.fun/images/2020/12/bber-11.png" alt="bber-11"  /></p>
+<p>5.进入<a href="https://console.cloud.tencent.com/tcb/scf/index">云函数</a>，修改自定义apikey <code>bber</code> 并保存备用。</p>
+<p><img loading='lazy' src="https://pic.edui.fun/images/2020/12/bber-10.png" alt="bber-10"  /></p>
+<p>6.扫码进入公众号，输入命名绑定：</p>
+<pre tabindex="0"><code>/bber bber,https://你的云函数HTTP访问地址/bber
+</code></pre><blockquote>
+<p>注明：一键部署虽然方便，但是仅支持按量计费环境，当然大多数（日访问量10000-）是够用的。如果您希望，当免费资源用尽时，不产生费用请使用手动部署。</p>
+</blockquote>
+<hr>
+<h3 id="前端部署">前端部署</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;bber&#34;</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://imgcache.qq.com/qcloud/cloudbase-js-sdk/1.4.0/cloudbase.full.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdn.jsdelivr.net/gh/buddys/qq-wechat-emotion-parser@master/dist/qq-wechat-emotion-parser.min.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">app</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">tcb</span>.<span style="color:#a6e22e">init</span>({
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">env</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;bb-123xx&#39;</span>, <span style="color:#75715e">//这里是你的环境id
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      <span style="color:#75715e">//region: &#34;ap-guangzhou&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  })
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/javascript&#34;</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdn.jsdelivr.net/gh/lmm214/bber@0.0.5/bber.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">style</span>&gt;
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">timeline</span> <span style="color:#f92672">ul</span> {<span style="color:#66d9ef">margin</span>:<span style="color:#ae81ff">0</span>;}
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">timeline</span> <span style="color:#f92672">ul</span> <span style="color:#f92672">li</span> {<span style="color:#66d9ef">background</span>:<span style="color:#ae81ff">#3b3d42</span>;<span style="color:#66d9ef">list-style-type</span>:<span style="color:#66d9ef">none</span>;<span style="color:#66d9ef">position</span>:<span style="color:#66d9ef">relative</span>;<span style="color:#66d9ef">width</span>:<span style="color:#ae81ff">3</span><span style="color:#66d9ef">px</span>;<span style="color:#66d9ef">margin-left</span>:<span style="color:#ae81ff">2</span><span style="color:#66d9ef">em</span>;<span style="color:#66d9ef">padding</span>:<span style="color:#ae81ff">0.8</span><span style="color:#66d9ef">em</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">2</span><span style="color:#66d9ef">em</span>;}
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">timeline</span> <span style="color:#f92672">ul</span> <span style="color:#f92672">li</span>::<span style="color:#a6e22e">after</span> {<span style="color:#66d9ef">transform</span>: rotate(<span style="color:#ae81ff">45</span><span style="color:#66d9ef">deg</span>);<span style="color:#66d9ef">content</span>:<span style="color:#e6db74">&#39;&#39;</span>;<span style="color:#66d9ef">background-color</span>: <span style="color:#ae81ff">#3b3d42</span>;<span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">block</span>;<span style="color:#66d9ef">position</span>: <span style="color:#66d9ef">absolute</span>;<span style="color:#66d9ef">top</span>: <span style="color:#ae81ff">10</span><span style="color:#66d9ef">px</span>;<span style="color:#66d9ef">left</span>: <span style="color:#ae81ff">-5</span><span style="color:#66d9ef">px</span>;<span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">0.8</span><span style="color:#66d9ef">em</span>;<span style="color:#66d9ef">height</span>: <span style="color:#ae81ff">0.8</span><span style="color:#66d9ef">em</span>;<span style="color:#66d9ef">outline</span>: <span style="color:#ae81ff">15</span><span style="color:#66d9ef">px</span> <span style="color:#66d9ef">solid</span> <span style="color:#ae81ff">#fff</span>;}
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">timeline</span> <span style="color:#f92672">ul</span> <span style="color:#f92672">li</span> <span style="color:#f92672">div</span> {<span style="color:#66d9ef">position</span>:<span style="color:#66d9ef">relative</span>;<span style="color:#66d9ef">top</span>:<span style="color:#ae81ff">-13</span><span style="color:#66d9ef">px</span>;<span style="color:#66d9ef">left</span>:<span style="color:#ae81ff">3</span><span style="color:#66d9ef">em</span>;<span style="color:#66d9ef">width</span>:<span style="color:#ae81ff">670</span><span style="color:#66d9ef">px</span>;<span style="color:#66d9ef">padding</span>:<span style="color:#ae81ff">0</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">16</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">0</span><span style="color:#66d9ef">px</span>;}
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">timeline</span> <span style="color:#f92672">ul</span> <span style="color:#f92672">li</span> <span style="color:#f92672">p</span>.<span style="color:#a6e22e">datatime</span>{<span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#fafafa</span>;<span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">0.75</span><span style="color:#66d9ef">em</span>;<span style="color:#66d9ef">font-style</span>: <span style="color:#66d9ef">italic</span>;<span style="color:#66d9ef">background-color</span>: <span style="color:#ae81ff">#3b3d42</span>;<span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">inline-block</span>;<span style="color:#66d9ef">padding</span>:<span style="color:#ae81ff">0.25</span><span style="color:#66d9ef">em</span> <span style="color:#ae81ff">1</span><span style="color:#66d9ef">em</span> <span style="color:#ae81ff">0.2</span><span style="color:#66d9ef">em</span> <span style="color:#ae81ff">1</span><span style="color:#66d9ef">em</span>;}
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">timeline</span> <span style="color:#f92672">ul</span> <span style="color:#f92672">li</span> <span style="color:#f92672">p</span>.<span style="color:#a6e22e">datacont</span>{<span style="color:#66d9ef">margin</span>:<span style="color:#ae81ff">0.65</span><span style="color:#66d9ef">em</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0.3</span><span style="color:#66d9ef">em</span>;}
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">timeline</span> <span style="color:#f92672">ul</span> <span style="color:#f92672">li</span> <span style="color:#f92672">p</span>.<span style="color:#a6e22e">datacont</span> <span style="color:#f92672">img</span>{<span style="color:#66d9ef">display</span>:<span style="color:#66d9ef">block</span>;<span style="color:#66d9ef">width</span>:<span style="color:#ae81ff">100</span><span style="color:#66d9ef">%</span>;}
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">timeline</span> <span style="color:#f92672">ul</span> <span style="color:#f92672">li</span> <span style="color:#f92672">p</span>.<span style="color:#a6e22e">datacont</span> <span style="color:#f92672">img</span><span style="color:#f92672">[</span><span style="color:#f92672">src</span><span style="color:#f92672">*=</span><span style="color:#e6db74">&#34;emotion&#34;</span><span style="color:#f92672">]</span>{<span style="color:#66d9ef">display</span>:<span style="color:#66d9ef">inline-block</span>;<span style="color:#66d9ef">width</span>:<span style="color:#66d9ef">auto</span>;}
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">timeline</span> <span style="color:#f92672">ul</span> <span style="color:#f92672">li</span> <span style="color:#f92672">p</span>.<span style="color:#a6e22e">datafrom</span>{<span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#aaa</span>;<span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">0.75</span><span style="color:#66d9ef">em</span> <span style="color:#75715e">!important</span>;<span style="color:#66d9ef">font-style</span>: <span style="color:#66d9ef">italic</span>;}
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">timeline</span> <span style="color:#f92672">ul</span> <span style="color:#f92672">li</span> <span style="color:#f92672">p</span>{<span style="color:#66d9ef">margin</span>:<span style="color:#ae81ff">0</span>;<span style="color:#66d9ef">font-size</span>:<span style="color:#ae81ff">16</span><span style="color:#66d9ef">px</span>;<span style="color:#66d9ef">letter-spacing</span>:<span style="color:#ae81ff">1</span><span style="color:#66d9ef">px</span>;<span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#3b3d42</span>;}
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">button</span>{<span style="color:#66d9ef">border-radius</span>:<span style="color:#ae81ff">0</span>;}
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">dark-theme</span> .<span style="color:#a6e22e">timeline</span> <span style="color:#f92672">ul</span> <span style="color:#f92672">li</span> <span style="color:#f92672">div</span> <span style="color:#f92672">p</span>{<span style="color:#66d9ef">color</span>:<span style="color:#ae81ff">#fafafa</span>;}
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">dark-theme</span> .<span style="color:#a6e22e">timeline</span> <span style="color:#f92672">ul</span> <span style="color:#f92672">li</span> <span style="color:#f92672">div</span> <span style="color:#f92672">p</span> <span style="color:#f92672">svg</span>{fill:<span style="color:#ae81ff">#fafafa</span>;}
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">dark-theme</span> .<span style="color:#a6e22e">timeline</span> <span style="color:#f92672">ul</span> <span style="color:#f92672">li</span> <span style="color:#f92672">p</span>.<span style="color:#a6e22e">datafrom</span>{<span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#aaa</span>;}
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">dark-theme</span> .<span style="color:#a6e22e">timeline</span> <span style="color:#f92672">ul</span> <span style="color:#f92672">li</span>{<span style="color:#66d9ef">background</span>:<span style="color:#ae81ff">#3b3d42</span>;}
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">dark-theme</span> .<span style="color:#a6e22e">timeline</span> <span style="color:#f92672">ul</span> <span style="color:#f92672">li</span>::<span style="color:#a6e22e">after</span>{<span style="color:#66d9ef">outline</span>: <span style="color:#ae81ff">15</span><span style="color:#66d9ef">px</span> <span style="color:#66d9ef">solid</span> <span style="color:#ae81ff">#292a2d</span>;}
+</span></span><span style="display:flex;"><span>  @<span style="color:#66d9ef">media</span> <span style="color:#f92672">(</span><span style="color:#f92672">max-width</span>:<span style="color:#a6e22e">860px</span><span style="color:#f92672">)</span> {
+</span></span><span style="display:flex;"><span>    .<span style="color:#a6e22e">timeline</span> <span style="color:#f92672">ul</span> <span style="color:#f92672">li</span>{<span style="color:#66d9ef">margin-left</span>:<span style="color:#ae81ff">0</span>;}
+</span></span><span style="display:flex;"><span>    .<span style="color:#a6e22e">timeline</span> <span style="color:#f92672">ul</span> <span style="color:#f92672">li</span> <span style="color:#f92672">div</span>{<span style="color:#66d9ef">width</span>:calc(<span style="color:#ae81ff">100</span><span style="color:#66d9ef">vw</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">75</span><span style="color:#66d9ef">px</span>);<span style="color:#66d9ef">left</span>:<span style="color:#ae81ff">30</span><span style="color:#66d9ef">px</span>;}
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">style</span>&gt;
+</span></span></code></pre></div><p>具体页面参考 <a href="https://github.com/lmm214/immmmm/blob/master/themes/hello-friend/layouts/_default/bb.html">bb.html</a></p>
+<hr>
+<h3 id="手动部署创建应用">手动部署：创建应用</h3>
+<p>1.<a href="https://curl.qcloud.com/KnnJtUom">注册云开发CloudBase</a></p>
+<p>2.进入<a href="https://console.cloud.tencent.com/tcb/">云开发控制台</a>，新建环境，请按需配置环境</p>
+<blockquote>
+<p>提示：环境名称自由填写，推荐选择计费方式包年包月，套餐版本基础班 1，超出免费额度不会收费，如果提示选择“应用模板”，请选择“空模板”</p>
+</blockquote>
+<blockquote>
+<p>推荐创建上海环境。如选择广州环境，需要在 twikoo.init() 时额外指定环境 region: &ldquo;ap-guangzhou&rdquo;</p>
+</blockquote>
+<p>3.进入<a href="https://console.cloud.tencent.com/tcb/env/login">环境-登录授权</a>，启用“匿名登录”</p>
+<p>4.进入<a href="https://console.cloud.tencent.com/tcb/env/safety">环境-安全配置</a>，将网站域名添加到“WEB安全域名”</p>
+<p>5.进入<a href="https://console.cloud.tencent.com/tcb/db/">数据库</a>，新建数据库集合，命名 <code>talks</code>，权限设置为 “所有用户可读，仅管理员可写”。</p>
+<p><img loading='lazy' src="https://pic.edui.fun/images/2020/12/talks.jpg" alt="talks"  /></p>
+<h3 id="手动部署云函数部署">手动部署：云函数部署</h3>
+<p>1.接着 <a href="https://console.cloud.tencent.com/tcb/scf/index">新建云函数</a></p>
+<p>函数名称 <code>bber</code> （可自定义），进入 <code>函数代码</code> 编辑，复制 <a href="https://github.com/lmm214/bber/blob/main/bber/index.js">index.js</a> 代码丢入 <code>index.js</code>，然后确定。</p>
+<p>2.点击“文件 - 新建文件”，复制 <a href="https://github.com/lmm214/bber/blob/main/bber/package.json">package.json</a> 代码丢入 <code>package.json</code>，点击 <code>保存并安装依赖</code>。</p>
+<p>3.进入<a href="https://console.cloud.tencent.com/tcb/env/access">环境-HTTP访问服务</a>，新建，路径与云函数名匹配。</p>
+<p><img loading='lazy' src="https://pic.edui.fun/images/2020/12/bb-tx-1.png" alt="bb-tx-1"  /></p>
+<p>现在点开看一下，提示 <code>key不匹配</code>，成功！</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>https://你后台显示的.ap-shanghai.app.tcloudbase.com/bber
+</span></span></code></pre></div><p>！！！<strong>注意：第一时间修改云函数中 <code>bber</code> 这个预设的「自定义apikey」</strong>！！！</p>
+<h3 id="扫码绑定">扫码绑定</h3>
+<figure>
+    <img src="https://pic.edui.fun/images/2020/05/bbds.png"/><figcaption>「哔哔点啥」微信公众号 2.0</figcaption></figure>
+
+<pre tabindex="0"><code>/bber bber,https://你的云函数HTTP访问地址/bber
+</code></pre><p><strong>其实公众号仅用作了转发文字内容</strong>，具体功能都是各自的云函数，好处是，直接浏览器访问以下链接、第三方能发起POST工具、iOS的快捷方式等都能调用！</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>https://你后台显示的.ap-shanghai.app.tcloudbase.com/bber?key=云函数里设置的<span style="color:#960050;background-color:#1e0010">&amp;</span>from=自己发挥一个<span style="color:#960050;background-color:#1e0010">&amp;</span>text=哔哔的内容
+</span></span></code></pre></div><h3 id="旧数据转化">旧数据转化</h3>
+<p>把 LC 上的评论导出并进行格式转化，形成如下格式，<code>from</code> 字段是我自己后来加的。</p>
+<pre tabindex="0"><code>{&#34;_id&#34;:&#34;4ec5c2495fe84db1000046a47026ed51&#34;,&#34;from&#34;:&#34;微信公众号&#34;,&#34;content&#34;:&#34;恶果之地得到各“金卡”莫名就通关+1&#34;,&#34;date&#34;:{&#34;$date&#34;:&#34;2020-12-27T07:38:10.844Z&#34;}}
+</code></pre><h3 id="附赠1-alfred-workflow">附赠1: Alfred Workflow</h3>
+<p><a href="https://github.com/lmm214/diybug/raw/main/%E6%B5%AE%E5%93%94%E4%BA%BA%E7%94%9F2.0.alfredworkflow">浮哔人生.alfredworkflow</a></p>
+<p><img loading='lazy' src="https://pic.edui.fun/images/2020/12/fbrs.png" alt="fbrs.png"  /></p>
+<p>输入好对应的 HTTP访问地址、KEY ，输入 <code>b /d</code> 就能删除最新一条哔哔</p>
+<h3 id="附赠2-bber-weixin">附赠2: BBer-weixin</h3>
+<p>点击以下按钮将 BBer-weixin 微信公众号后端，一键部署到云开发</p>
+<p><a rel="link" href="https://console.cloud.tencent.com/tcb/env/index?action=CreateAndDeployCloudBaseProject&amp;appUrl=https%3A%2F%2Fgithub.com%2Flmm214%2Fbber-weixin&amp;branch=main"><img class="avatar" loading="lazy" src="https://main.qcloudimg.com/raw/67f5a389f1ac6f3b4d04c7256438e44f.svg" alt=""></a></p>
+<p>对接的微信公众号简要流程：</p>
+<p>1.点击 <a href="https://console.cloud.tencent.com/tcb/scf/index">bber-weixin</a> 云函数，右上角**【编辑】<strong>，开启</strong>【固定IP】<strong>，留存</strong>公网固定IP**。
+<photos><img loading='lazy' src="https://pic.edui.fun/images/2020/12/bbwx-1.png" alt="bbwx-1"  /><img loading='lazy' src="https://pic.edui.fun/images/2020/12/bbwx-3.png" alt="bbwx-3"  /><img loading='lazy' src="https://pic.edui.fun/images/2020/12/bbwx-2.png" alt="bbwx-2"  /></photos></p>
+<p>2.进入<a href="https://console.cloud.tencent.com/tcb/env/access">环境-HTTP访问服务</a>，获取<code>触发路径链接</code>并留存，如以下格式：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>https://bb-f5c0f-222222.ap-shanghai.app.tcloudbase.com/bber-weixin
+</span></span></code></pre></div><p>3.打开 <a href="https://mp.weixin.qq.com/">微信公众平台</a>，进入开发-基本配置，获取<code>AppID</code>和<code>AppSecret</code>留存，修改<code>IP白名单</code>为上一步的公网固定IP。继续服务器配置：</p>
+<p><img loading='lazy' src="https://pic.edui.fun/images/2020/12/bbwx-4.png" alt="bbwx-4"  /></p>
+<p>一个<code>URL</code>，即第2步留存的触发链接；</p>
+<p>一个<code>Token</code>，预设为 <code>weixin</code></p>
+<p><strong>!!!先不点，不点，不点，不点提交！！！</strong></p>
+<p>4.回 <a href="https://console.cloud.tencent.com/tcb/scf/index">bber-weixin</a> 云函数，填入<code>微信公众号appid</code>、<code>微信公众号appsecret</code> 保存。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">token</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;weixin&#39;</span> <span style="color:#75715e">// 微信公众号的服务器验证用的令牌 token
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">//填入自己的微信公众号appid和appsecret
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">wxappid</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;微信公众号appid&#39;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">wxappsecret</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;微信公众号appsecret&#39;</span>,
+</span></span></code></pre></div><p>5.回 <a href="https://mp.weixin.qq.com/">微信公众平台</a>，提交，验证成功！</p>
+<p>6.回 <a href="https://console.cloud.tencent.com/tcb/scf/index">bber-weixin</a> 云函数，注释第44行代码，保存。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">tmpStr</span> <span style="color:#f92672">==</span> <span style="color:#a6e22e">signature</span>){
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">//请求来源鉴权
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#75715e">//成功后注释下行代码
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#75715e">//return event.queryStringParameters.echostr //成功后注释本行代码
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#75715e">//成功后注释上行代码
+</span></span></span></code></pre></div><p>7.手动配置或更新代码： <a href="https://github.com/lmm214/bber-weixin/tree/main/bber-weixin">https://github.com/lmm214/bber-weixin/tree/main/bber-weixin</a></p>
+      
+    </div>
+  
+    
+      <div class="tocify">目录：
+
+
+
+
+<ul class="toc-h3"><li><a href="/bb-by-wechat-pro/#%e6%97%a5%e5%b8%b8%e4%bd%bf%e7%94%a8%e6%88%aa%e5%9b%be">日常使用截图</a></li>
+            <li><a href="/bb-by-wechat-pro/#%e4%b8%80%e9%94%ae%e9%83%a8%e7%bd%b2%e5%8f%8a%e7%bb%91%e5%ae%9a">一键部署及绑定</a></li>
+            <li><a href="/bb-by-wechat-pro/#%e5%89%8d%e7%ab%af%e9%83%a8%e7%bd%b2">前端部署</a></li>
+            <li><a href="/bb-by-wechat-pro/#%e6%89%8b%e5%8a%a8%e9%83%a8%e7%bd%b2%e5%88%9b%e5%bb%ba%e5%ba%94%e7%94%a8">手动部署：创建应用</a></li>
+            <li><a href="/bb-by-wechat-pro/#%e6%89%8b%e5%8a%a8%e9%83%a8%e7%bd%b2%e4%ba%91%e5%87%bd%e6%95%b0%e9%83%a8%e7%bd%b2">手动部署：云函数部署</a></li>
+            <li><a href="/bb-by-wechat-pro/#%e6%89%ab%e7%a0%81%e7%bb%91%e5%ae%9a">扫码绑定</a></li>
+            <li><a href="/bb-by-wechat-pro/#%e6%97%a7%e6%95%b0%e6%8d%ae%e8%bd%ac%e5%8c%96">旧数据转化</a></li>
+            <li><a href="/bb-by-wechat-pro/#%e9%99%84%e8%b5%a01-alfred-workflow">附赠1: Alfred Workflow</a></li>
+            <li><a href="/bb-by-wechat-pro/#%e9%99%84%e8%b5%a02-bber-weixin">附赠2: BBer-weixin</a></li>
+            </div>
+    
+
+    
+      <span class="post-tags">
+        
+          #<a href="https://blueisle.cf/tags/%E6%8A%98%E8%85%BE/">折腾</a>&nbsp;
+        
+      </span>
+    
+  
+    <div class="clear"></div>
+    
+    
+      
+        <div class="pagination">
+          <div class="pagination__title">
+            
+              <a class="pagination__title-h" href="https://github.com/lmm214/immmmm/edit/master/content/posts/coding/bb-by-wechat-pro.md" target="_blank" rel="noopener">阅读更多</a>
+            
+            <hr />
+          </div>
+          <div class="pagination__buttons">
+            
+              <span class="button previous">
+                <a href="https://blueisle.cf/tx-cloudbase-framework/">
+                  <span class="button__icon">←</span>
+                  <span class="button__text">腾讯 CloudBase ，开启一键部署</span>
+                </a>
+              </span>
+            
+            
+              <span class="button next">
+                <a href="https://blueisle.cf/hi-2021/">
+                  <span class="button__text">二〇二一，你好</span>
+                  <span class="button__icon">→</span>
+                </a>
+              </span>
+            
+          </div>
+        </div>
+      
+    
+
+
+    
+        <div class="pagination__title">
+  <span class="pagination__title-h">欢迎评论</span>
+  <hr />
+</div>
+  <div id="tcomment"></div>
+  <script src="https://cdn.jsdelivr.net/npm/twikoo@1.5.0/dist/twikoo.all.min.js"></script>
+  <script>twikoo.init({ envId: 'twikoo-2g36bkuz88660f27', el: '#tcomment' })</script>
+
+  <script type="text/javascript" src='https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js'></script>
+  <script type="text/javascript">
+    jQuery(document).ready(function($){
+      var checkComments = setInterval(function() {
+        var counts = $('.tk-comments-title').find('span').first().text();
+        if (counts) {
+          $('#twikoo_count').text(counts)
+          clearInterval(checkComments);
+        }
+      }, 1000);
+      if(window.location.hash){
+        var checkExist = setInterval(function() {
+          if ($(window.location.hash).length) {
+            $('html, body').animate({scrollTop: $(window.location.hash).offset().top-90}, 1000);
+            clearInterval(checkExist);
+          }
+        }, 100);
+      }
+    });
+  </script>
+    
+
+    </div>
+
+      </div>
+
+      
+        
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+
+
+
+
+
+
+
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="copyright copyright-font">
+      <span>共 75227 字 <br/> 写完一本 鲁迅 的</br>《呐喊》了！</span>
+    </div>
+    <a class="dark-wormhole" href="https://www.foreverblog.cn/go.html" target="_blank"> <img src="/wormhole_1.gif" alt="" style="width:auto;height:32px;" title="穿梭虫洞-随机访问十年之约友链博客"> </a>
+    <a class="light-wormhole" href="https://www.foreverblog.cn/go.html" target="_blank" > <img src="/wormhole_3.gif" alt="" style="width:auto;height:32px;" title="穿梭虫洞-随机访问十年之约友链博客"> </a>
+    
+      <div class="copyright">
+        <span>© 2022 Powered by <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a> Theme by <a href="https://twitter.com/panr" target="_blank" rel="noopener">Panr</a></span>
+      </div>
+    
+  </div>
+</footer>
+
+<script type="text/javascript" src="/main.js?t=20220124"></script>
+
+<script type="text/javascript" src='https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js'></script>
+<script type="text/javascript" src="/lately2.min.js"></script>
+<script type="text/javascript" src="/jquery.vticker.js"></script>
+<script type="text/javascript" src="/waterfall.min.js"></script>
+<script type="text/javascript" src="/slimbox2.min.js"></script>
+<script type="text/javascript" src="/main-diy-0325.js"></script>
+      
+    </div>
+  </body>
+</html>

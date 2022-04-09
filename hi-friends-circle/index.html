@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+      <title>Hi，My Friends（Public Beta） :: 明礼至卓</title>
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta charset="UTF-8"/>
+<meta name="renderer" content="webkit"/>
+<meta name="force-rendering" content="webkit"/>
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+<script>if ( false || (!!window.MSInputMethodContext && !!document.documentMode)) document.write('\x3Cscript id="_iealwn_js" data-outver="11" src="https://support.dmeng.net/ie-alert-warning/latest.js">\x3C/script>'); </script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content=" 你是否经常烦恼于友链过多但没有时间浏览？那么友链朋友圈将解决这一痛点。你可以随时获取友链网站的更新内容，并了解友链的活跃情况 。 —— 「友链朋友圈」
+ 在线预览：https://immmmm.com/friends/
+快速部署 挂载前端代码 博客新建一个页面，放入以下代码：
+&amp;lt;!-- 挂载友链朋友圈的容器 --&amp;gt; &amp;lt;div id=&amp;#34;cf-container&amp;#34;&amp;gt;与主机通讯中……&amp;lt;/div&amp;gt; &amp;lt;!-- 加样式和功能代码 --&amp;gt; &amp;lt;link rel=&amp;#34;stylesheet&amp;#34; href=&amp;#34;https://cdn.jsdelivr.net/gh/lmm214/immmmm/themes/hello-friend/static/fcircle-beta.css&amp;#34;&amp;gt; &amp;lt;!-- 匹配自己的友链或加载后端数据 &amp;lt;script type=&amp;#34;text/javascript&amp;#34;&amp;gt; var fdataUser = { jsonurl: &amp;#39;https://cdn.edui.fun/lmm.json&amp;#39;, //【推荐】json 匹配模式 //apiurl: &amp;#39;https://hexo-circle-of-friends-lmm214.vercel.app/&amp;#39;, //自部署api } &amp;lt;/script&amp;gt; --&amp;gt; &amp;lt;script type=&amp;#34;text/javascript&amp;#34; src=&amp;#34;https://cdn.jsdelivr.net/gh/lmm214/immmmm/themes/hello-friend/static/fcircle-beta.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; 这样就搞定啦，默认看到的是 750&#43; feeds 的公共库（数据来自 saveweb）。
+"/>
+<meta name="keywords" content=""/>
+<link rel="canonical" href="https://blueisle.cf/hi-friends-circle/" />
+<link rel="stylesheet" href="/main.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:500&display=swap" media="print" onload="this.media='all'">
+<link rel="shortcut icon" href="https://blueisle.cf/favicon.ico">
+
+<meta property="og:title" content="Hi，My Friends（Public Beta）" />
+<meta property="og:description" content="
+你是否经常烦恼于友链过多但没有时间浏览？那么友链朋友圈将解决这一痛点。你可以随时获取友链网站的更新内容，并了解友链的活跃情况 。 —— 「友链朋友圈」
+
+在线预览：https://immmmm.com/friends/
+快速部署
+挂载前端代码
+博客新建一个页面，放入以下代码：
+&lt;!-- 挂载友链朋友圈的容器 --&gt;
+&lt;div id=&#34;cf-container&#34;&gt;与主机通讯中……&lt;/div&gt;
+&lt;!-- 加样式和功能代码 --&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdn.jsdelivr.net/gh/lmm214/immmmm/themes/hello-friend/static/fcircle-beta.css&#34;&gt;
+&lt;!-- 匹配自己的友链或加载后端数据
+&lt;script type=&#34;text/javascript&#34;&gt;
+  var fdataUser = {
+    jsonurl: &#39;https://cdn.edui.fun/lmm.json&#39;,  //【推荐】json 匹配模式
+    //apiurl: &#39;https://hexo-circle-of-friends-lmm214.vercel.app/&#39;,  //自部署api
+  }
+&lt;/script&gt;
+--&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://cdn.jsdelivr.net/gh/lmm214/immmmm/themes/hello-friend/static/fcircle-beta.js&#34;&gt;&lt;/script&gt;
+这样就搞定啦，默认看到的是 750&#43; feeds 的公共库（数据来自 saveweb）。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blueisle.cf/hi-friends-circle/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-02-11T15:12:46+08:00" />
+<meta property="article:modified_time" content="2022-02-11T15:12:46+08:00" />
+
+
+
+
+    
+  <link rel="prefetch" href="https://blueisle.cf/startpage-flare/">
+  <link rel="prefetch" href="https://blueisle.cf/2022-02-05/">
+
+  </head>
+  <body class="dark-theme">
+    <div class="container">
+      <header class="header">
+  <span class="header__inner">
+    <a href="https://blueisle.cf" class="logo" style="text-decoration: none;">
+  
+    <span class="logo__text">明礼至卓</span>
+    <span class="logo__cursor"></span>
+  
+</a>
+
+    <span class="header__right">
+      
+        <nav class="menu hidden">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/movies/">电影</a></li>
+        
+      
+        
+          <li><a href="/books/">阅读</a></li>
+        
+      
+        
+          <li><a href="/archives/">归档</a></li>
+        
+      
+        
+          <li><a href="/friends/">友圈</a></li>
+        
+      
+        
+          <li><a href="/about/">关于</a></li>
+        
+      
+        
+          <li><a href="https://nav.blueisle.cf/">导航</a></li>
+        
+      
+    
+
+                <li><a href="/search/"><svg t="1556783211810" class="search-box-icon" class="icon" style="" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2078" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><style type="text/css"></style></defs><path d="M981.39652054 920.86314525L704.56522859 644.0318533a366.65501012 366.65501012 0 1 0-61.73503038 65.64040943L917.55859375 984.40065827z m-856.17925347-493.12920861a284.19142939 284.19142939 0 1 1 283.89101562 284.19142939A284.49184317 284.49184317 0 0 1 125.06706019 427.73393664z" fill="" p-id="2079" data-spm-anchor-id="a313x.7781069.0.i2"></path></svg></a></li>
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/movies/">电影</a></li>
+      
+    
+      
+        <li><a href="/books/">阅读</a></li>
+      
+    
+      
+        <li><a href="/archives/">归档</a></li>
+      
+    
+      
+        <li><a href="/friends/">友圈</a></li>
+      
+    
+      
+        <li><a href="/about/">关于</a></li>
+      
+    
+      
+        <li><a href="https://nav.blueisle.cf/">导航</a></li>
+      
+    
+  </ul>
+</nav>
+
+        <span class="menu-trigger hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+          </svg>
+        </span>
+      
+      <span class="theme-toggle">
+        <svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+
+      </span>
+    </span>
+  </span>
+</header>
+
+
+
+
+      <div class="content">
+        
+  
+  
+  
+  
+  <div class="post coding">
+    <div  class="breadcrumb">
+  
+
+  
+
+  
+
+  
+
+<li>
+  <a href="https://blueisle.cf/">首页</a>
+</li>
+
+
+<li>
+  <a href="https://blueisle.cf/posts/">文章</a>
+</li>
+
+
+<li>
+  <a href="https://blueisle.cf/posts/coding/">折腾</a>
+</li>
+
+
+<li class="active">
+  <a href="https://blueisle.cf/hi-friends-circle/">Hi，My Friends（Public Beta）</a>
+</li>
+
+</div>
+
+
+  
+    <h2 class="post-title"><a href="https://blueisle.cf/hi-friends-circle/">Hi，My Friends（Public Beta）</a></h2>
+    <div class="post-meta">
+      
+        <span class="post-date">2022-02-11 15:12:46</span><span> / <span id="twikoo_visitors">0</span> 阅读</span><span> / <a href="#twikoo"><span id="twikoo_count">0 条评论</span></a></span>
+        
+          
+        
+      
+    </div>
+
+    
+      
+        <img loading='lazy' src="https://cdn.edui.fun/images/2022/02/myf-12.png" class="post-cover" />
+      
+    
+  
+    <div class="post-content">
+      <blockquote>
+<p>你是否经常烦恼于友链过多但没有时间浏览？那么友链朋友圈将解决这一痛点。你可以随时获取友链网站的更新内容，并了解友链的活跃情况 。 —— <a href="https://hexo-circle-of-friends-doc.vercel.app/">「友链朋友圈」</a></p>
+</blockquote>
+<p>在线预览：<a href="https://immmmm.com/friends/">https://immmmm.com/friends/</a></p>
+<h3 id="快速部署">快速部署</h3>
+<h4 id="挂载前端代码">挂载前端代码</h4>
+<p>博客新建一个页面，放入以下代码：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- 挂载友链朋友圈的容器 --&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;cf-container&#34;</span>&gt;与主机通讯中……&lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- 加样式和功能代码 --&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdn.jsdelivr.net/gh/lmm214/immmmm/themes/hello-friend/static/fcircle-beta.css&#34;</span>&gt;
+</span></span><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- 匹配自己的友链或加载后端数据
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">&lt;script type=&#34;text/javascript&#34;&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">  var fdataUser = {
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">    jsonurl: &#39;https://cdn.edui.fun/lmm.json&#39;,  //【推荐】json 匹配模式
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">    //apiurl: &#39;https://hexo-circle-of-friends-lmm214.vercel.app/&#39;,  //自部署api
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">  }
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">&lt;/script&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">--&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/javascript&#34;</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdn.jsdelivr.net/gh/lmm214/immmmm/themes/hello-friend/static/fcircle-beta.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span></code></pre></div><p>这样就搞定啦，默认看到的是 750+ feeds 的公共库（数据来自 <a href="https://github.com/saveweb/rss-list">saveweb</a>）。</p>
+<h4 id="匹配自己的友链">匹配自己的友链</h4>
+<p>当然，我们也想拥有一个纯自己友联的文章更新情况。来，取消注释，推荐采用第一种 <code>jsonurl</code> 方式。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/javascript&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">fdataUser</span> <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">jsonurl</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;https://cdn.edui.fun/lmm.json&#39;</span>,  <span style="color:#75715e">//【推荐】json 匹配模式
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">//apiurl: &#39;https://hexo-circle-of-friends-lmm214.vercel.app/&#39;,  //自部署api
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">//initnumber: 20,  //首次加载文章数
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">//stepnumber: 10,  //更多加载文章数
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">//article_sort: &#39;created&#39;, //文章排序 updated or created
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">//error_img: &#39;https://sdn.geekzu.org/avatar/57d8260dfb55501c37dde588e7c3852c&#39;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  }
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span></code></pre></div><p>其实 <code>lmm.json</code> 就是个 link 的数组，原理是把这数组与公共库进行匹配，返回对应的文章列表。</p>
+<p>这也是 <a href="https://github.com/Rock-Candy-Tea">「Rock-Candy-Tea」</a> 持之以恒，努力抛弃后端的成果！</p>
+<h3 id="可选后端配置">[可选]后端配置</h3>
+<p>见最新文档：<a href="https://hexo-circle-of-friends-doc.vercel.app/">https://hexo-circle-of-friends-doc.vercel.app/</a></p>
+<h3 id="项目历程">项目历程</h3>
+<blockquote>
+<p>致敬，用爱发电er</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>主页</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>冰老师</td>
+<td><a href="https://zfe.space/">https://zfe.space/</a></td>
+<td>友链朋友圈理念奠基人，初代前后端方案编写者，冰老师YYDS！</td>
+</tr>
+<tr>
+<td>Akilar</td>
+<td><a href="https://akilar.top/">https://akilar.top/</a></td>
+<td>为历代友链朋友圈提供前端方案，npm插件方案编写者</td>
+</tr>
+<tr>
+<td>heo</td>
+<td><a href="https://blog.zhheo.com/">https://blog.zhheo.com/</a></td>
+<td>友链朋友圈前端方案、视觉设计，UI 方案多样化</td>
+</tr>
+<tr>
+<td>贰猹</td>
+<td><a href="https://noionion.top/">https://noionion.top/</a></td>
+<td>历代友链朋友圈后端维护者，3.0方案编写者，多主题友链抓取适配，朋友圈售后中流砥柱，公共库方案、api编写者</td>
+</tr>
+<tr>
+<td>RaXianch</td>
+<td><a href="https://blog.raxianch.moe/">https://blog.raxianch.moe/</a></td>
+<td>友链朋友圈后端维护，多主题友链抓取适配</td>
+</tr>
+<tr>
+<td>yyyz</td>
+<td><a href="https://www.yyyzyyyz.cn/">https://www.yyyzyyyz.cn/</a></td>
+<td>4.0方案编写者，多主题友链抓取适配，服务器部署方案编写者，友链朋友圈现维护者</td>
+</tr>
+<tr>
+<td>林木木</td>
+<td><a href="https://immmmm.com/">https://immmmm.com/</a></td>
+<td>新版友链朋友圈前端方案编写者</td>
+</tr>
+<tr>
+<td>Fox</td>
+<td><a href="https://foolishfox.cn/">https://foolishfox.cn/</a></td>
+<td>提供sql api与sql存储本地化方案</td>
+</tr>
+</tbody>
+</table>
+<p>个人编写的 <a href="https://cdn.jsdelivr.net/gh/lmm214/immmmm/themes/hello-friend/static/fcircle-beta.js">fcircle-beta.js</a> 源自 <a href="https://cdn.jsdelivr.net/gh/Rock-Candy-Tea/hexo-friendcircle-demo@main/js/fetch.js">fetch.js</a> 和 <a href="https://cdn.jsdelivr.net/gh/Rock-Candy-Tea/hexo-friendcircle-demo@main/js/fcircle.js">fcircle.js</a>，从最初的简单合并实现了“第一次打开即能显示相应内容”，之后一天天的 commit 几乎是逼着强力后端 <a href="https://noionion.top/">@贰猹</a> 做了一个全新的 API，实现了很多全新的交互。</p>
+<h3 id="前端交互说明">前端交互说明</h3>
+<h4 id="点击订阅随机显示博客卡片">点击「订阅」，随机显示博客卡片</h4>
+<p><img loading='lazy' src="https://pic.edui.fun/images/2022/02/cf-beta-5.gif" alt="cf-beta-5"  /></p>
+<h4 id="点击活跃切换公共库和个人库">点击「活跃」，切换公共库和个人库</h4>
+<p><img loading='lazy' src="https://pic.edui.fun/images/2022/02/cf-beta-6.gif" alt="cf-beta-6"  /></p>
+<h4 id="点击头像随机此博客卡片">点击头像，随机此博客卡片</h4>
+<p><img loading='lazy' src="https://pic.edui.fun/images/2022/02/cf-beta-7.gif" alt="cf-beta-7"  /></p>
+<h4 id="点击日志清空本地缓存数据">点击「日志」，清空本地缓存数据。</h4>
+<p>更新后端后使用。</p>
+<h3 id="css-样式命名说明">CSS 样式命名说明</h3>
+<p><a href="https://cdn.jsdelivr.net/gh/lmm214/immmmm/themes/hello-friend/static/fcircle-beta.css">fcircle-beta.css</a> 统一命名格式，以 <code>cf-</code> 做标识。</p>
+      
+    </div>
+  
+    
+
+    
+      <span class="post-tags">
+        
+          #<a href="https://blueisle.cf/tags/%E6%8A%98%E8%85%BE/">折腾</a>&nbsp;
+        
+      </span>
+    
+  
+    <div class="clear"></div>
+    
+    
+      
+        <div class="pagination">
+          <div class="pagination__title">
+            
+              <a class="pagination__title-h" href="https://github.com/lmm214/immmmm/edit/master/content/posts/coding/hi-friends-circle.md" target="_blank" rel="noopener">阅读更多</a>
+            
+            <hr />
+          </div>
+          <div class="pagination__buttons">
+            
+              <span class="button previous">
+                <a href="https://blueisle.cf/startpage-flare/">
+                  <span class="button__icon">←</span>
+                  <span class="button__text">书签导航应用：Flare </span>
+                </a>
+              </span>
+            
+            
+              <span class="button next">
+                <a href="https://blueisle.cf/2022-02-05/">
+                  <span class="button__text">2022-02-05</span>
+                  <span class="button__icon">→</span>
+                </a>
+              </span>
+            
+          </div>
+        </div>
+      
+    
+
+
+    
+        <div class="pagination__title">
+  <span class="pagination__title-h">欢迎评论</span>
+  <hr />
+</div>
+  <div id="tcomment"></div>
+  <script src="https://cdn.jsdelivr.net/npm/twikoo@1.5.0/dist/twikoo.all.min.js"></script>
+  <script>twikoo.init({ envId: 'twikoo-2g36bkuz88660f27', el: '#tcomment' })</script>
+
+  <script type="text/javascript" src='https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js'></script>
+  <script type="text/javascript">
+    jQuery(document).ready(function($){
+      var checkComments = setInterval(function() {
+        var counts = $('.tk-comments-title').find('span').first().text();
+        if (counts) {
+          $('#twikoo_count').text(counts)
+          clearInterval(checkComments);
+        }
+      }, 1000);
+      if(window.location.hash){
+        var checkExist = setInterval(function() {
+          if ($(window.location.hash).length) {
+            $('html, body').animate({scrollTop: $(window.location.hash).offset().top-90}, 1000);
+            clearInterval(checkExist);
+          }
+        }, 100);
+      }
+    });
+  </script>
+    
+
+    </div>
+
+      </div>
+
+      
+        
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+
+
+
+
+
+
+
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="copyright copyright-font">
+      <span>共 75227 字 <br/> 写完一本 鲁迅 的</br>《呐喊》了！</span>
+    </div>
+    <a class="dark-wormhole" href="https://www.foreverblog.cn/go.html" target="_blank"> <img src="/wormhole_1.gif" alt="" style="width:auto;height:32px;" title="穿梭虫洞-随机访问十年之约友链博客"> </a>
+    <a class="light-wormhole" href="https://www.foreverblog.cn/go.html" target="_blank" > <img src="/wormhole_3.gif" alt="" style="width:auto;height:32px;" title="穿梭虫洞-随机访问十年之约友链博客"> </a>
+    
+      <div class="copyright">
+        <span>© 2022 Powered by <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a> Theme by <a href="https://twitter.com/panr" target="_blank" rel="noopener">Panr</a></span>
+      </div>
+    
+  </div>
+</footer>
+
+<script type="text/javascript" src="/main.js?t=20220124"></script>
+
+<script type="text/javascript" src='https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js'></script>
+<script type="text/javascript" src="/lately2.min.js"></script>
+<script type="text/javascript" src="/jquery.vticker.js"></script>
+<script type="text/javascript" src="/waterfall.min.js"></script>
+<script type="text/javascript" src="/slimbox2.min.js"></script>
+<script type="text/javascript" src="/main-diy-0325.js"></script>
+      
+    </div>
+  </body>
+</html>

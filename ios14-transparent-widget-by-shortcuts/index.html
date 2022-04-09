@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+      <title>利用「快捷指令」创建“透明”小组件 :: 明礼至卓</title>
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta charset="UTF-8"/>
+<meta name="renderer" content="webkit"/>
+<meta name="force-rendering" content="webkit"/>
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+<script>if ( false || (!!window.MSInputMethodContext && !!document.documentMode)) document.write('\x3Cscript id="_iealwn_js" data-outver="11" src="https://support.dmeng.net/ie-alert-warning/latest.js">\x3C/script>'); </script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="全“透明”占坑图！
+快捷指令：用来切图 一个快捷指令搞定：「透明小组件」(这里)
+其实小组件就3个size，2x2、2x4、4x4，也就是小有6个不同位置、中有3个、大有2个，相对应做了下面3个快捷指令，运行后生成对应位置的背景图片，如小的就把背景图切成6张小图，分别是：上左、上右、中左、中右、下左、下右。
+特别感谢 @小悟空哥 和 @mzeryck 分享的「快捷指令」和「Scriptable」代码。
+"/>
+<meta name="keywords" content=""/>
+<link rel="canonical" href="https://blueisle.cf/ios14-transparent-widget-by-shortcuts/" />
+<link rel="stylesheet" href="/main.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:500&display=swap" media="print" onload="this.media='all'">
+<link rel="shortcut icon" href="https://blueisle.cf/favicon.ico">
+
+<meta property="og:title" content="利用「快捷指令」创建“透明”小组件" />
+<meta property="og:description" content="全“透明”占坑图！
+快捷指令：用来切图
+一个快捷指令搞定：「透明小组件」(这里)
+其实小组件就3个size，2x2、2x4、4x4，也就是小有6个不同位置、中有3个、大有2个，相对应做了下面3个快捷指令，运行后生成对应位置的背景图片，如小的就把背景图切成6张小图，分别是：上左、上右、中左、中右、下左、下右。
+特别感谢 @小悟空哥 和 @mzeryck 分享的「快捷指令」和「Scriptable」代码。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blueisle.cf/ios14-transparent-widget-by-shortcuts/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-10-06T16:27:30+08:00" />
+<meta property="article:modified_time" content="2020-10-06T16:27:30+08:00" />
+
+
+
+
+    
+  <link rel="prefetch" href="https://blueisle.cf/2020-10-18/">
+  <link rel="prefetch" href="https://blueisle.cf/scriptable-widget/">
+
+  </head>
+  <body class="dark-theme">
+    <div class="container">
+      <header class="header">
+  <span class="header__inner">
+    <a href="https://blueisle.cf" class="logo" style="text-decoration: none;">
+  
+    <span class="logo__text">明礼至卓</span>
+    <span class="logo__cursor"></span>
+  
+</a>
+
+    <span class="header__right">
+      
+        <nav class="menu hidden">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/movies/">电影</a></li>
+        
+      
+        
+          <li><a href="/books/">阅读</a></li>
+        
+      
+        
+          <li><a href="/archives/">归档</a></li>
+        
+      
+        
+          <li><a href="/friends/">友圈</a></li>
+        
+      
+        
+          <li><a href="/about/">关于</a></li>
+        
+      
+        
+          <li><a href="https://nav.blueisle.cf/">导航</a></li>
+        
+      
+    
+
+                <li><a href="/search/"><svg t="1556783211810" class="search-box-icon" class="icon" style="" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2078" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><style type="text/css"></style></defs><path d="M981.39652054 920.86314525L704.56522859 644.0318533a366.65501012 366.65501012 0 1 0-61.73503038 65.64040943L917.55859375 984.40065827z m-856.17925347-493.12920861a284.19142939 284.19142939 0 1 1 283.89101562 284.19142939A284.49184317 284.49184317 0 0 1 125.06706019 427.73393664z" fill="" p-id="2079" data-spm-anchor-id="a313x.7781069.0.i2"></path></svg></a></li>
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/movies/">电影</a></li>
+      
+    
+      
+        <li><a href="/books/">阅读</a></li>
+      
+    
+      
+        <li><a href="/archives/">归档</a></li>
+      
+    
+      
+        <li><a href="/friends/">友圈</a></li>
+      
+    
+      
+        <li><a href="/about/">关于</a></li>
+      
+    
+      
+        <li><a href="https://nav.blueisle.cf/">导航</a></li>
+      
+    
+  </ul>
+</nav>
+
+        <span class="menu-trigger hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+          </svg>
+        </span>
+      
+      <span class="theme-toggle">
+        <svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+
+      </span>
+    </span>
+  </span>
+</header>
+
+
+
+
+      <div class="content">
+        
+  
+  
+  
+  
+  <div class="post coding">
+    <div  class="breadcrumb">
+  
+
+  
+
+  
+
+  
+
+<li>
+  <a href="https://blueisle.cf/">首页</a>
+</li>
+
+
+<li>
+  <a href="https://blueisle.cf/posts/">文章</a>
+</li>
+
+
+<li>
+  <a href="https://blueisle.cf/posts/coding/">折腾</a>
+</li>
+
+
+<li class="active">
+  <a href="https://blueisle.cf/ios14-transparent-widget-by-shortcuts/">利用「快捷指令」创建“透明”小组件</a>
+</li>
+
+</div>
+
+
+  
+    <h2 class="post-title"><a href="https://blueisle.cf/ios14-transparent-widget-by-shortcuts/">利用「快捷指令」创建“透明”小组件</a></h2>
+    <div class="post-meta">
+      
+        <span class="post-date">2020-10-06 16:27:30</span><span> / <span id="twikoo_visitors">0</span> 阅读</span><span> / <a href="#twikoo"><span id="twikoo_count">0 条评论</span></a></span>
+        
+          
+        
+      
+    </div>
+
+    
+      
+        <img loading='lazy' src="https://pic.edui.fun/images/2020/10/transparent-widget.JPEG-webp" class="post-cover" />
+      
+    
+  
+    <div class="post-content">
+      <p>全“透明”占坑图！</p>
+<h3 id="快捷指令用来切图">快捷指令：用来切图</h3>
+<p>一个快捷指令搞定：「透明小组件」<a href="https://www.icloud.com/shortcuts/59062aac9ee241f0b14c9190b9ed09f5">(这里)</a></p>
+<p>其实小组件就3个size，2x2、2x4、4x4，也就是小有6个不同位置、中有3个、大有2个，相对应做了下面3个快捷指令，运行后生成对应位置的背景图片，如小的就把背景图切成6张小图，分别是：上左、上右、中左、中右、下左、下右。</p>
+<p>特别感谢 <a href="https://sharecuts.cn/shortcut/8370">@小悟空哥</a> 和 <a href="https://github.com/mzeryck/Transparent-Scriptable-Widget">@mzeryck</a> 分享的「快捷指令」和「Scriptable」代码。</p>
+<h3 id="使用步骤">使用步骤：</h3>
+<p>准备：截个只有背景的图（编辑桌面滑到最右）；运行「快捷指令」切图。</p>
+<p>添加小组件：</p>
+<ul>
+<li>使用 <strong>「Days Matter」</strong> 创建小组件；</li>
+<li>使用 <strong>「Scriptable」</strong> 创建小组件；</li>
+</ul>
+<h3 id="scriptable-代码分享">Scriptable 代码分享</h3>
+<p><a href="https://github.com/lmm214/Scriptables">https://github.com/lmm214/Scriptables</a></p>
+<p><img loading='lazy' src="https://pic.edui.fun/images/2020/10/touming.jpg" alt="touming"  /></p>
+<p><code>TouMing.js</code> 第一次运行会要求选择背景图片，多个位置可通过 <strong>复制、重命名</strong> 再选择。</p>
+<p><code>TouMingWttrInLine</code> 内置了 Wttr.In 天气数据。</p>
+<p><code>TouMingWeiBo</code> 基于 <a href="https://github.com/evilbutcher/Scriptables">@evilbutcher</a> 修改。</p>
+<h3 id="一句啰嗦">一句啰嗦</h3>
+<p>刚发生所有小组件<strong>字体</strong>发虚，点击无法进入对应 APP，重启解决。</p>
+      
+    </div>
+  
+    
+
+    
+      <span class="post-tags">
+        
+          #<a href="https://blueisle.cf/tags/%E6%8A%98%E8%85%BE/">折腾</a>&nbsp;
+        
+      </span>
+    
+  
+    <div class="clear"></div>
+    
+    
+      
+        <div class="pagination">
+          <div class="pagination__title">
+            
+              <a class="pagination__title-h" href="https://github.com/lmm214/immmmm/edit/master/content/posts/coding/ios14-transparent-widget-by-shortcuts.md" target="_blank" rel="noopener">阅读更多</a>
+            
+            <hr />
+          </div>
+          <div class="pagination__buttons">
+            
+              <span class="button previous">
+                <a href="https://blueisle.cf/2020-10-18/">
+                  <span class="button__icon">←</span>
+                  <span class="button__text">2020-10-18</span>
+                </a>
+              </span>
+            
+            
+              <span class="button next">
+                <a href="https://blueisle.cf/scriptable-widget/">
+                  <span class="button__text">初体验 Scriptable 小挂件</span>
+                  <span class="button__icon">→</span>
+                </a>
+              </span>
+            
+          </div>
+        </div>
+      
+    
+
+
+    
+        <div class="pagination__title">
+  <span class="pagination__title-h">欢迎评论</span>
+  <hr />
+</div>
+  <div id="tcomment"></div>
+  <script src="https://cdn.jsdelivr.net/npm/twikoo@1.5.0/dist/twikoo.all.min.js"></script>
+  <script>twikoo.init({ envId: 'twikoo-2g36bkuz88660f27', el: '#tcomment' })</script>
+
+  <script type="text/javascript" src='https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js'></script>
+  <script type="text/javascript">
+    jQuery(document).ready(function($){
+      var checkComments = setInterval(function() {
+        var counts = $('.tk-comments-title').find('span').first().text();
+        if (counts) {
+          $('#twikoo_count').text(counts)
+          clearInterval(checkComments);
+        }
+      }, 1000);
+      if(window.location.hash){
+        var checkExist = setInterval(function() {
+          if ($(window.location.hash).length) {
+            $('html, body').animate({scrollTop: $(window.location.hash).offset().top-90}, 1000);
+            clearInterval(checkExist);
+          }
+        }, 100);
+      }
+    });
+  </script>
+    
+
+    </div>
+
+      </div>
+
+      
+        
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+
+
+
+
+
+
+
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="copyright copyright-font">
+      <span>共 75227 字 <br/> 写完一本 鲁迅 的</br>《呐喊》了！</span>
+    </div>
+    <a class="dark-wormhole" href="https://www.foreverblog.cn/go.html" target="_blank"> <img src="/wormhole_1.gif" alt="" style="width:auto;height:32px;" title="穿梭虫洞-随机访问十年之约友链博客"> </a>
+    <a class="light-wormhole" href="https://www.foreverblog.cn/go.html" target="_blank" > <img src="/wormhole_3.gif" alt="" style="width:auto;height:32px;" title="穿梭虫洞-随机访问十年之约友链博客"> </a>
+    
+      <div class="copyright">
+        <span>© 2022 Powered by <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a> Theme by <a href="https://twitter.com/panr" target="_blank" rel="noopener">Panr</a></span>
+      </div>
+    
+  </div>
+</footer>
+
+<script type="text/javascript" src="/main.js?t=20220124"></script>
+
+<script type="text/javascript" src='https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js'></script>
+<script type="text/javascript" src="/lately2.min.js"></script>
+<script type="text/javascript" src="/jquery.vticker.js"></script>
+<script type="text/javascript" src="/waterfall.min.js"></script>
+<script type="text/javascript" src="/slimbox2.min.js"></script>
+<script type="text/javascript" src="/main-diy-0325.js"></script>
+      
+    </div>
+  </body>
+</html>

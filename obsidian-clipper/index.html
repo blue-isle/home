@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+      <title>Obsidian 一键剪藏 [WEB/iOS] :: 明礼至卓</title>
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta charset="UTF-8"/>
+<meta name="renderer" content="webkit"/>
+<meta name="force-rendering" content="webkit"/>
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+<script>if ( false || (!!window.MSInputMethodContext && !!document.documentMode)) document.write('\x3Cscript id="_iealwn_js" data-outver="11" src="https://support.dmeng.net/ie-alert-warning/latest.js">\x3C/script>'); </script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="效果  Web 浏览到某篇文字时，点击 书签 即可存入 Obsidian 中（ 适用 iOS 的 Safari ）。 iOS 需要粘贴内容、添加标签、语音闪记时，点击 快捷指令 即可存入 Obsidian 当日的日志中。  Obsidian URI obsidian-web-clipper.js 基于自带的 Obsidian URI 实现一键抓取保存，简单来说：复制js代码，修改 库名称 储存位置 和 默认标签，再通过 Bookmarklet Maker 转换并存为浏览器书签。
+详细教程可参考 @scomper 的 OBSIDIAN 网页采集脚本 。
+"/>
+<meta name="keywords" content=""/>
+<link rel="canonical" href="https://blueisle.cf/obsidian-clipper/" />
+<link rel="stylesheet" href="/main.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:500&display=swap" media="print" onload="this.media='all'">
+<link rel="shortcut icon" href="https://blueisle.cf/favicon.ico">
+
+<meta property="og:title" content="Obsidian 一键剪藏 [WEB/iOS]" />
+<meta property="og:description" content="效果
+
+Web 浏览到某篇文字时，点击 书签 即可存入 Obsidian 中（ 适用 iOS 的 Safari ）。
+iOS 需要粘贴内容、添加标签、语音闪记时，点击 快捷指令 即可存入 Obsidian 当日的日志中。
+
+Obsidian URI
+obsidian-web-clipper.js 基于自带的 Obsidian URI 实现一键抓取保存，简单来说：复制js代码，修改 库名称 储存位置 和 默认标签，再通过 Bookmarklet Maker 转换并存为浏览器书签。
+详细教程可参考 @scomper 的 OBSIDIAN 网页采集脚本 。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blueisle.cf/obsidian-clipper/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-08-13T13:32:50+08:00" />
+<meta property="article:modified_time" content="2021-08-13T13:32:50+08:00" />
+
+
+
+
+    
+  <link rel="prefetch" href="https://blueisle.cf/github-push-token/">
+  <link rel="prefetch" href="https://blueisle.cf/hi-obsidian/">
+
+  </head>
+  <body class="dark-theme">
+    <div class="container">
+      <header class="header">
+  <span class="header__inner">
+    <a href="https://blueisle.cf" class="logo" style="text-decoration: none;">
+  
+    <span class="logo__text">明礼至卓</span>
+    <span class="logo__cursor"></span>
+  
+</a>
+
+    <span class="header__right">
+      
+        <nav class="menu hidden">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/movies/">电影</a></li>
+        
+      
+        
+          <li><a href="/books/">阅读</a></li>
+        
+      
+        
+          <li><a href="/archives/">归档</a></li>
+        
+      
+        
+          <li><a href="/friends/">友圈</a></li>
+        
+      
+        
+          <li><a href="/about/">关于</a></li>
+        
+      
+        
+          <li><a href="https://nav.blueisle.cf/">导航</a></li>
+        
+      
+    
+
+                <li><a href="/search/"><svg t="1556783211810" class="search-box-icon" class="icon" style="" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2078" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><style type="text/css"></style></defs><path d="M981.39652054 920.86314525L704.56522859 644.0318533a366.65501012 366.65501012 0 1 0-61.73503038 65.64040943L917.55859375 984.40065827z m-856.17925347-493.12920861a284.19142939 284.19142939 0 1 1 283.89101562 284.19142939A284.49184317 284.49184317 0 0 1 125.06706019 427.73393664z" fill="" p-id="2079" data-spm-anchor-id="a313x.7781069.0.i2"></path></svg></a></li>
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/movies/">电影</a></li>
+      
+    
+      
+        <li><a href="/books/">阅读</a></li>
+      
+    
+      
+        <li><a href="/archives/">归档</a></li>
+      
+    
+      
+        <li><a href="/friends/">友圈</a></li>
+      
+    
+      
+        <li><a href="/about/">关于</a></li>
+      
+    
+      
+        <li><a href="https://nav.blueisle.cf/">导航</a></li>
+      
+    
+  </ul>
+</nav>
+
+        <span class="menu-trigger hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+          </svg>
+        </span>
+      
+      <span class="theme-toggle">
+        <svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+
+      </span>
+    </span>
+  </span>
+</header>
+
+
+
+
+      <div class="content">
+        
+  
+  
+  
+  
+  <div class="post coding">
+    <div  class="breadcrumb">
+  
+
+  
+
+  
+
+  
+
+<li>
+  <a href="https://blueisle.cf/">首页</a>
+</li>
+
+
+<li>
+  <a href="https://blueisle.cf/posts/">文章</a>
+</li>
+
+
+<li>
+  <a href="https://blueisle.cf/posts/coding/">折腾</a>
+</li>
+
+
+<li class="active">
+  <a href="https://blueisle.cf/obsidian-clipper/">Obsidian 一键剪藏 [WEB/iOS]</a>
+</li>
+
+</div>
+
+
+  
+    <h2 class="post-title"><a href="https://blueisle.cf/obsidian-clipper/">Obsidian 一键剪藏 [WEB/iOS]</a></h2>
+    <div class="post-meta">
+      
+        <span class="post-date">2021-08-13 13:32:50</span><span> / <span id="twikoo_visitors">0</span> 阅读</span><span> / <a href="#twikoo"><span id="twikoo_count">0 条评论</span></a></span>
+        
+          
+        
+      
+    </div>
+
+    
+  
+    <div class="post-content">
+      <h3 id="效果">效果</h3>
+<ul>
+<li>Web 浏览到某篇文字时，点击 <code>书签</code> 即可存入 Obsidian 中（ 适用 iOS 的 Safari ）。</li>
+<li>iOS 需要粘贴内容、添加标签、语音闪记时，点击 <code>快捷指令</code> 即可存入 Obsidian 当日的日志中。</li>
+</ul>
+<h3 id="obsidian-uri">Obsidian URI</h3>
+<p><a href="https://gist.github.com/kepano/90c05f162c37cf730abb8ff027987ca3#file-obsidian-web-clipper-js">obsidian-web-clipper.js</a> 基于自带的 <a href="https://publish.obsidian.md/help-zh/%E9%AB%98%E7%BA%A7%E7%94%A8%E6%B3%95/%E4%BD%BF%E7%94%A8+obsidian+URI">Obsidian URI</a> 实现一键抓取保存，简单来说：复制js代码，修改 <code>库名称</code> <code>储存位置</code> 和 <code>默认标签</code>，再通过 <a href="https://caiorss.github.io/bookmarklet-maker/">Bookmarklet Maker</a> 转换并存为浏览器书签。</p>
+<p>详细教程可参考 @scomper 的 <a href="https://pepcn.com/gtd/obsidian-wang-ye-cai-ji-jiao-ben">OBSIDIAN 网页采集脚本</a> 。</p>
+<p>但，自带的 URI 仅支持 <code>new</code> <code>open</code> 和 <code>search</code> 三种模式。以上代码使用的是 <code>new</code>，所以，如果一不小心手抖了几下，就会存几个同样的 md 文件。</p>
+<h3 id="advanced-obsidian-uri">Advanced Obsidian URI</h3>
+<p>上第三方插件 <a href="https://github.com/Vinzent03/obsidian-advanced-uri">Advanced Obsidian URI</a>，利用它的 <code>overwrite</code> 模式解决（支持移动端），修改 <a href="https://gist.github.com/kepano/90c05f162c37cf730abb8ff027987ca3#file-obsidian-web-clipper-js">obsidian-web-clipper.js</a> 最底下 <code>document.location.href</code> 那段。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>    <span style="color:#75715e">/* 基于 Advanced Obsidian URI 插件*/</span>
+</span></span><span style="display:flex;"><span>    document.<span style="color:#a6e22e">location</span>.<span style="color:#a6e22e">href</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;obsidian://advanced-uri?&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;filepath=&#34;</span> <span style="color:#f92672">+</span> encodeURIComponent(<span style="color:#a6e22e">folder</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">fileName</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;&amp;data=&#34;</span> <span style="color:#f92672">+</span> encodeURIComponent(<span style="color:#a6e22e">fileContent</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">+</span> <span style="color:#a6e22e">vaultName</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;&amp;mode=overwrite&#34;</span> ;
+</span></span></code></pre></div><h3 id="ios-端">iOS 端</h3>
+<p><code>全文收录 = 没有收录</code>，其实，大部分的记录都是碎片化的，这也是，移动端的优势。</p>
+<figure>
+    <img src="https://pic.edui.fun/images/2021/08/obtd-1.jpeg" width="33%"/><img src="https://pic.edui.fun/images/2021/08/obtd-2.jpeg" width="33%" /><img src="https://pic.edui.fun/images/2021/08/obtd-3.jpeg" width="33%" />
+    <figcaption>iOS 快捷指令</figcaption>
+  </figure>
+<p>iOS 快捷指令（个人修改版）：<a href="https://www.icloud.com/shortcuts/32e561fa74864666b79d820ad1567687">Obsidian 日志</a></p>
+<p>都是 <code>append</code> 追加到当日的 md 文件，这样的好处是无需预设更通用。</p>
+<p>（源代码参考：<a href="https://sharecuts.cn/shortcut/10357">obsidian一键摘录到今天日记</a>、<a href="https://sharecuts.cn/shortcut/10372">obsidian语音闪录</a>。另同作者作品：<a href="https://sharecuts.cn/shortcut/10366">obsidian摘录到任意笔记</a>。）</p>
+<h3 id="后话">后话</h3>
+<blockquote>
+<p>Knowledge management 的关键是 knowledge，而不是 management。那些上周用印象笔记、这周用 Notion 、下周换成 Obsidian 、再下周换成 DEVONthink 的人，首要的问题不是 management不专精，而是大概率脑子里没啥 knowledge 。</p>
+</blockquote>
+<p>呵，你真对！但，我乐意！</p>
+      
+    </div>
+  
+    
+
+    
+      <span class="post-tags">
+        
+          #<a href="https://blueisle.cf/tags/%E6%8A%98%E8%85%BE/">折腾</a>&nbsp;
+        
+      </span>
+    
+  
+    <div class="clear"></div>
+    
+    
+      
+        <div class="pagination">
+          <div class="pagination__title">
+            
+              <a class="pagination__title-h" href="https://github.com/lmm214/immmmm/edit/master/content/posts/coding/obsidian-clipper.md" target="_blank" rel="noopener">阅读更多</a>
+            
+            <hr />
+          </div>
+          <div class="pagination__buttons">
+            
+              <span class="button previous">
+                <a href="https://blueisle.cf/github-push-token/">
+                  <span class="button__icon">←</span>
+                  <span class="button__text">修复 Github Push 时的两个报错</span>
+                </a>
+              </span>
+            
+            
+              <span class="button next">
+                <a href="https://blueisle.cf/hi-obsidian/">
+                  <span class="button__text">Hi，Obsidian</span>
+                  <span class="button__icon">→</span>
+                </a>
+              </span>
+            
+          </div>
+        </div>
+      
+    
+
+
+    
+        <div class="pagination__title">
+  <span class="pagination__title-h">欢迎评论</span>
+  <hr />
+</div>
+  <div id="tcomment"></div>
+  <script src="https://cdn.jsdelivr.net/npm/twikoo@1.5.0/dist/twikoo.all.min.js"></script>
+  <script>twikoo.init({ envId: 'twikoo-2g36bkuz88660f27', el: '#tcomment' })</script>
+
+  <script type="text/javascript" src='https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js'></script>
+  <script type="text/javascript">
+    jQuery(document).ready(function($){
+      var checkComments = setInterval(function() {
+        var counts = $('.tk-comments-title').find('span').first().text();
+        if (counts) {
+          $('#twikoo_count').text(counts)
+          clearInterval(checkComments);
+        }
+      }, 1000);
+      if(window.location.hash){
+        var checkExist = setInterval(function() {
+          if ($(window.location.hash).length) {
+            $('html, body').animate({scrollTop: $(window.location.hash).offset().top-90}, 1000);
+            clearInterval(checkExist);
+          }
+        }, 100);
+      }
+    });
+  </script>
+    
+
+    </div>
+
+      </div>
+
+      
+        
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+
+
+
+
+
+
+
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="copyright copyright-font">
+      <span>共 75227 字 <br/> 写完一本 鲁迅 的</br>《呐喊》了！</span>
+    </div>
+    <a class="dark-wormhole" href="https://www.foreverblog.cn/go.html" target="_blank"> <img src="/wormhole_1.gif" alt="" style="width:auto;height:32px;" title="穿梭虫洞-随机访问十年之约友链博客"> </a>
+    <a class="light-wormhole" href="https://www.foreverblog.cn/go.html" target="_blank" > <img src="/wormhole_3.gif" alt="" style="width:auto;height:32px;" title="穿梭虫洞-随机访问十年之约友链博客"> </a>
+    
+      <div class="copyright">
+        <span>© 2022 Powered by <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a> Theme by <a href="https://twitter.com/panr" target="_blank" rel="noopener">Panr</a></span>
+      </div>
+    
+  </div>
+</footer>
+
+<script type="text/javascript" src="/main.js?t=20220124"></script>
+
+<script type="text/javascript" src='https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js'></script>
+<script type="text/javascript" src="/lately2.min.js"></script>
+<script type="text/javascript" src="/jquery.vticker.js"></script>
+<script type="text/javascript" src="/waterfall.min.js"></script>
+<script type="text/javascript" src="/slimbox2.min.js"></script>
+<script type="text/javascript" src="/main-diy-0325.js"></script>
+      
+    </div>
+  </body>
+</html>

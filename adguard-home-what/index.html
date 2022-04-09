@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+      <title>Adguard Home，拦的啥？ :: 明礼至卓</title>
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta charset="UTF-8"/>
+<meta name="renderer" content="webkit"/>
+<meta name="force-rendering" content="webkit"/>
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+<script>if ( false || (!!window.MSInputMethodContext && !!document.documentMode)) document.write('\x3Cscript id="_iealwn_js" data-outver="11" src="https://support.dmeng.net/ie-alert-warning/latest.js">\x3C/script>'); </script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="看到 @张洪Heo 发的 《AdGuardHome本地搭建教程》，一试上手，值得拥有！其实其他平台安装也非常简单，具体见官网。
+说说本文的重点，看图，发问：
+ 拦的啥？
+"/>
+<meta name="keywords" content=""/>
+<link rel="canonical" href="https://blueisle.cf/adguard-home-what/" />
+<link rel="stylesheet" href="/main.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:500&display=swap" media="print" onload="this.media='all'">
+<link rel="shortcut icon" href="https://blueisle.cf/favicon.ico">
+
+<meta property="og:title" content="Adguard Home，拦的啥？" />
+<meta property="og:description" content="看到 @张洪Heo 发的 《AdGuardHome本地搭建教程》，一试上手，值得拥有！其实其他平台安装也非常简单，具体见官网。
+说说本文的重点，看图，发问：
+
+拦的啥？
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blueisle.cf/adguard-home-what/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-08-24T00:00:06+08:00" />
+<meta property="article:modified_time" content="2021-08-24T00:00:06+08:00" />
+
+
+
+
+    
+  <link rel="prefetch" href="https://blueisle.cf/hi-synology-ds220/">
+  <link rel="prefetch" href="https://blueisle.cf/obsidian-start-me-page/">
+
+  </head>
+  <body class="dark-theme">
+    <div class="container">
+      <header class="header">
+  <span class="header__inner">
+    <a href="https://blueisle.cf" class="logo" style="text-decoration: none;">
+  
+    <span class="logo__text">明礼至卓</span>
+    <span class="logo__cursor"></span>
+  
+</a>
+
+    <span class="header__right">
+      
+        <nav class="menu hidden">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/movies/">电影</a></li>
+        
+      
+        
+          <li><a href="/books/">阅读</a></li>
+        
+      
+        
+          <li><a href="/archives/">归档</a></li>
+        
+      
+        
+          <li><a href="/friends/">友圈</a></li>
+        
+      
+        
+          <li><a href="/about/">关于</a></li>
+        
+      
+        
+          <li><a href="https://nav.blueisle.cf/">导航</a></li>
+        
+      
+    
+
+                <li><a href="/search/"><svg t="1556783211810" class="search-box-icon" class="icon" style="" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2078" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><style type="text/css"></style></defs><path d="M981.39652054 920.86314525L704.56522859 644.0318533a366.65501012 366.65501012 0 1 0-61.73503038 65.64040943L917.55859375 984.40065827z m-856.17925347-493.12920861a284.19142939 284.19142939 0 1 1 283.89101562 284.19142939A284.49184317 284.49184317 0 0 1 125.06706019 427.73393664z" fill="" p-id="2079" data-spm-anchor-id="a313x.7781069.0.i2"></path></svg></a></li>
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/movies/">电影</a></li>
+      
+    
+      
+        <li><a href="/books/">阅读</a></li>
+      
+    
+      
+        <li><a href="/archives/">归档</a></li>
+      
+    
+      
+        <li><a href="/friends/">友圈</a></li>
+      
+    
+      
+        <li><a href="/about/">关于</a></li>
+      
+    
+      
+        <li><a href="https://nav.blueisle.cf/">导航</a></li>
+      
+    
+  </ul>
+</nav>
+
+        <span class="menu-trigger hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+          </svg>
+        </span>
+      
+      <span class="theme-toggle">
+        <svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+
+      </span>
+    </span>
+  </span>
+</header>
+
+
+
+
+      <div class="content">
+        
+  
+  
+  
+  
+  <div class="post coding">
+    <div  class="breadcrumb">
+  
+
+  
+
+  
+
+  
+
+<li>
+  <a href="https://blueisle.cf/">首页</a>
+</li>
+
+
+<li>
+  <a href="https://blueisle.cf/posts/">文章</a>
+</li>
+
+
+<li>
+  <a href="https://blueisle.cf/posts/coding/">折腾</a>
+</li>
+
+
+<li class="active">
+  <a href="https://blueisle.cf/adguard-home-what/">Adguard Home，拦的啥？</a>
+</li>
+
+</div>
+
+
+  
+    <h2 class="post-title"><a href="https://blueisle.cf/adguard-home-what/">Adguard Home，拦的啥？</a></h2>
+    <div class="post-meta">
+      
+        <span class="post-date">2021-08-24 00:00:06</span><span> / <span id="twikoo_visitors">0</span> 阅读</span><span> / <a href="#twikoo"><span id="twikoo_count">0 条评论</span></a></span>
+        
+          
+        
+      
+    </div>
+
+    
+      
+        <img loading='lazy' src="https://pic.edui.fun/images/2021/08/adguardhome.png" class="post-cover" />
+      
+    
+  
+    <div class="post-content">
+      <p>看到 @张洪Heo 发的 <a href="https://blog.zhheo.com/p/8e295a09.html">《AdGuardHome本地搭建教程》</a>，一试上手，值得拥有！其实其他平台安装也非常简单，具体见<a href="https://adguard.com/zh_cn/adguard-home/overview.html">官网</a>。</p>
+<p>说说本文的重点，看图，发问：</p>
+<blockquote>
+<p>拦的啥？</p>
+</blockquote>
+<h3 id="selfeventsdatamicrosoftcom"><code>self.events.data.microsoft.com</code></h3>
+<p>排第一的是，微，软？</p>
+<p>好吧，使用 Edgo 浏览器的关系。</p>
+<p><img loading='lazy' src="https://pic.edui.fun/images/2021/08/adhome-1.jpg" alt="adhome-1"  /></p>
+<p>Edgo 设置-安全性-Microsoft Defender Smartscreen 关闭！</p>
+<p>好像，成了一个，但依然还有，那就拦着吧，不就多几行日志嘛！</p>
+<h3 id="configpinyinsogoucom"><code>config.pinyin.sogou.com</code></h3>
+<p>要说第1的那位还能理解，毕竟用着人家的产品。可，这gou？</p>
+<p>好吧，是多少年前安装过，虽然没调用它，但它的 service 永在！各种删文件禁服务，依旧。</p>
+<p>最后，还是下了它的安装包，打开安装包，点击卸载……注销生效。哎。</p>
+<h3 id="原来如此">原来如此</h3>
+<p>再看大图，拦截率 <code>37.25%</code>，平均响应 <code>71ms</code>，算是豪华数据！</p>
+<p>但，其实，电脑端干不过一个浏览器里的插件。因为，ADHome 是基于 DNS 解析。什么意思，它只是把一些广告网址解析到了死胡同，所以，就算加了上万条的过滤数据，对于浏览器中的同网址加载的广告毫无能力。</p>
+<p>惊喜，对手机 APP 开屏或内容页广告拦截效果明显！使用也简单，给 Wi-Fi 手动一个部署了 ADHome 的 IP 即可享受。佩服这个脑回路，纯本地、无污染、毫秒级别 DNS 解析，香！</p>
+<p>另外，当做网络监测工具，瞅瞅一天到晚的，揭开网络中“十大劳模”的真面目！</p>
+      
+    </div>
+  
+    
+
+    
+      <span class="post-tags">
+        
+          #<a href="https://blueisle.cf/tags/%E6%8A%98%E8%85%BE/">折腾</a>&nbsp;
+        
+      </span>
+    
+  
+    <div class="clear"></div>
+    
+    
+      
+        <div class="pagination">
+          <div class="pagination__title">
+            
+              <a class="pagination__title-h" href="https://github.com/lmm214/immmmm/edit/master/content/posts/coding/adguard-home-what.md" target="_blank" rel="noopener">阅读更多</a>
+            
+            <hr />
+          </div>
+          <div class="pagination__buttons">
+            
+              <span class="button previous">
+                <a href="https://blueisle.cf/hi-synology-ds220/">
+                  <span class="button__icon">←</span>
+                  <span class="button__text">Hi,Synology DS220&#43;</span>
+                </a>
+              </span>
+            
+            
+              <span class="button next">
+                <a href="https://blueisle.cf/obsidian-start-me-page/">
+                  <span class="button__text">给 Obsidian 来个起始页</span>
+                  <span class="button__icon">→</span>
+                </a>
+              </span>
+            
+          </div>
+        </div>
+      
+    
+
+
+    
+        <div class="pagination__title">
+  <span class="pagination__title-h">欢迎评论</span>
+  <hr />
+</div>
+  <div id="tcomment"></div>
+  <script src="https://cdn.jsdelivr.net/npm/twikoo@1.5.0/dist/twikoo.all.min.js"></script>
+  <script>twikoo.init({ envId: 'twikoo-2g36bkuz88660f27', el: '#tcomment' })</script>
+
+  <script type="text/javascript" src='https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js'></script>
+  <script type="text/javascript">
+    jQuery(document).ready(function($){
+      var checkComments = setInterval(function() {
+        var counts = $('.tk-comments-title').find('span').first().text();
+        if (counts) {
+          $('#twikoo_count').text(counts)
+          clearInterval(checkComments);
+        }
+      }, 1000);
+      if(window.location.hash){
+        var checkExist = setInterval(function() {
+          if ($(window.location.hash).length) {
+            $('html, body').animate({scrollTop: $(window.location.hash).offset().top-90}, 1000);
+            clearInterval(checkExist);
+          }
+        }, 100);
+      }
+    });
+  </script>
+    
+
+    </div>
+
+      </div>
+
+      
+        
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+
+
+
+
+
+
+
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="copyright copyright-font">
+      <span>共 75227 字 <br/> 写完一本 鲁迅 的</br>《呐喊》了！</span>
+    </div>
+    <a class="dark-wormhole" href="https://www.foreverblog.cn/go.html" target="_blank"> <img src="/wormhole_1.gif" alt="" style="width:auto;height:32px;" title="穿梭虫洞-随机访问十年之约友链博客"> </a>
+    <a class="light-wormhole" href="https://www.foreverblog.cn/go.html" target="_blank" > <img src="/wormhole_3.gif" alt="" style="width:auto;height:32px;" title="穿梭虫洞-随机访问十年之约友链博客"> </a>
+    
+      <div class="copyright">
+        <span>© 2022 Powered by <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a> Theme by <a href="https://twitter.com/panr" target="_blank" rel="noopener">Panr</a></span>
+      </div>
+    
+  </div>
+</footer>
+
+<script type="text/javascript" src="/main.js?t=20220124"></script>
+
+<script type="text/javascript" src='https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js'></script>
+<script type="text/javascript" src="/lately2.min.js"></script>
+<script type="text/javascript" src="/jquery.vticker.js"></script>
+<script type="text/javascript" src="/waterfall.min.js"></script>
+<script type="text/javascript" src="/slimbox2.min.js"></script>
+<script type="text/javascript" src="/main-diy-0325.js"></script>
+      
+    </div>
+  </body>
+</html>

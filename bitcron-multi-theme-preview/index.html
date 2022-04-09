@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+      <title>Bitcron 一站搞定多主题预览 :: 明礼至卓</title>
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta charset="UTF-8"/>
+<meta name="renderer" content="webkit"/>
+<meta name="force-rendering" content="webkit"/>
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+<script>if ( false || (!!window.MSInputMethodContext && !!document.documentMode)) document.write('\x3Cscript id="_iealwn_js" data-outver="11" src="https://support.dmeng.net/ie-alert-warning/latest.js">\x3C/script>'); </script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="起源： 网站上适用不同自定义主题
+ 假设 /template/a/index.jade 访问 http://yourdomain.com/?template_prefix=a, 会强制模板匹配的时候，访问前缀为 a 的目录路径。
+ 什么意思？就是说我们可以把多个主题放到 template 的子文件夹里，比如 a子文件夹，然后在链接后加上参数 ?template_prefix=a 就能用这个模板来渲染呈现主题啦！
+所以，可以这样做:
+/template/a/ /template/b/ /template/c/ /template/d/ /template/e/ /template/f/ 来半打子主题，然后用 js 加上参数就好啦~（ 注：template 目录下的总文件要低于 200）
+"/>
+<meta name="keywords" content=""/>
+<link rel="canonical" href="https://blueisle.cf/bitcron-multi-theme-preview/" />
+<link rel="stylesheet" href="/main.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:500&display=swap" media="print" onload="this.media='all'">
+<link rel="shortcut icon" href="https://blueisle.cf/favicon.ico">
+
+<meta property="og:title" content="Bitcron 一站搞定多主题预览" />
+<meta property="og:description" content="起源： 网站上适用不同自定义主题
+
+假设 /template/a/index.jade
+访问 http://yourdomain.com/?template_prefix=a, 会强制模板匹配的时候，访问前缀为 a 的目录路径。
+
+什么意思？就是说我们可以把多个主题放到 template 的子文件夹里，比如 a子文件夹，然后在链接后加上参数 ?template_prefix=a 就能用这个模板来渲染呈现主题啦！
+所以，可以这样做:
+/template/a/
+/template/b/
+/template/c/
+/template/d/
+/template/e/
+/template/f/
+来半打子主题，然后用 js 加上参数就好啦~（ 注：template 目录下的总文件要低于 200）" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blueisle.cf/bitcron-multi-theme-preview/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2017-12-20T00:00:00+00:00" />
+<meta property="article:modified_time" content="2017-12-20T00:00:00+00:00" />
+
+
+
+
+    
+  <link rel="prefetch" href="https://blueisle.cf/demo-shuiba-co/">
+  <link rel="prefetch" href="https://blueisle.cf/bitcron-article-run-code/">
+
+  </head>
+  <body class="dark-theme">
+    <div class="container">
+      <header class="header">
+  <span class="header__inner">
+    <a href="https://blueisle.cf" class="logo" style="text-decoration: none;">
+  
+    <span class="logo__text">明礼至卓</span>
+    <span class="logo__cursor"></span>
+  
+</a>
+
+    <span class="header__right">
+      
+        <nav class="menu hidden">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/movies/">电影</a></li>
+        
+      
+        
+          <li><a href="/books/">阅读</a></li>
+        
+      
+        
+          <li><a href="/archives/">归档</a></li>
+        
+      
+        
+          <li><a href="/friends/">友圈</a></li>
+        
+      
+        
+          <li><a href="/about/">关于</a></li>
+        
+      
+        
+          <li><a href="https://nav.blueisle.cf/">导航</a></li>
+        
+      
+    
+
+                <li><a href="/search/"><svg t="1556783211810" class="search-box-icon" class="icon" style="" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2078" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><style type="text/css"></style></defs><path d="M981.39652054 920.86314525L704.56522859 644.0318533a366.65501012 366.65501012 0 1 0-61.73503038 65.64040943L917.55859375 984.40065827z m-856.17925347-493.12920861a284.19142939 284.19142939 0 1 1 283.89101562 284.19142939A284.49184317 284.49184317 0 0 1 125.06706019 427.73393664z" fill="" p-id="2079" data-spm-anchor-id="a313x.7781069.0.i2"></path></svg></a></li>
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/movies/">电影</a></li>
+      
+    
+      
+        <li><a href="/books/">阅读</a></li>
+      
+    
+      
+        <li><a href="/archives/">归档</a></li>
+      
+    
+      
+        <li><a href="/friends/">友圈</a></li>
+      
+    
+      
+        <li><a href="/about/">关于</a></li>
+      
+    
+      
+        <li><a href="https://nav.blueisle.cf/">导航</a></li>
+      
+    
+  </ul>
+</nav>
+
+        <span class="menu-trigger hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+          </svg>
+        </span>
+      
+      <span class="theme-toggle">
+        <svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+
+      </span>
+    </span>
+  </span>
+</header>
+
+
+
+
+      <div class="content">
+        
+  
+  
+  
+  
+  <div class="post coding">
+    <div  class="breadcrumb">
+  
+
+  
+
+  
+
+  
+
+<li>
+  <a href="https://blueisle.cf/">首页</a>
+</li>
+
+
+<li>
+  <a href="https://blueisle.cf/posts/">文章</a>
+</li>
+
+
+<li>
+  <a href="https://blueisle.cf/posts/coding/">折腾</a>
+</li>
+
+
+<li class="active">
+  <a href="https://blueisle.cf/bitcron-multi-theme-preview/">Bitcron 一站搞定多主题预览</a>
+</li>
+
+</div>
+
+
+  
+    <h2 class="post-title"><a href="https://blueisle.cf/bitcron-multi-theme-preview/">Bitcron 一站搞定多主题预览</a></h2>
+    <div class="post-meta">
+      
+        <span class="post-date">2017-12-20 00:00:00</span><span> / <span id="twikoo_visitors">0</span> 阅读</span><span> / <a href="#twikoo"><span id="twikoo_count">0 条评论</span></a></span>
+        
+          
+        
+      
+    </div>
+
+    
+  
+    <div class="post-content">
+      <p>起源： <a href="https://pi.bitcron.com/post/wen-da/2017-12/2017-12-11-13-32-39#main">网站上适用不同自定义主题</a></p>
+<blockquote>
+<p>假设 /template/a/index.jade
+访问 <a href="http://yourdomain.com/?template_prefix=a">http://yourdomain.com/?template_prefix=a</a>, 会强制模板匹配的时候，访问前缀为 a 的目录路径。</p>
+</blockquote>
+<p>什么意思？就是说我们可以把多个主题放到 template 的子文件夹里，比如 <code>a</code>子文件夹，然后在链接后加上参数 <code>?template_prefix=a</code> 就能用这个模板来渲染呈现主题啦！</p>
+<p>所以，可以这样做:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>/template/a/
+</span></span><span style="display:flex;"><span>/template/b/
+</span></span><span style="display:flex;"><span>/template/c/
+</span></span><span style="display:flex;"><span>/template/d/
+</span></span><span style="display:flex;"><span>/template/e/
+</span></span><span style="display:flex;"><span>/template/f/
+</span></span></code></pre></div><p>来半打子主题，然后用 js 加上参数就好啦~（ 注：template 目录下的总文件要低于 200）</p>
+<p>当然，思路是正确的，实现的时候还是会出现问题，经两个晚上，收了 @八口 三个大红包，终于实现需求！</p>
+<h3 id="取消隐藏日志前缀">取消隐藏日志前缀</h3>
+<p>dashboard-常规-隐藏日志前缀URL里设置成“否”</p>
+<h3 id="文章链接加参数">文章链接加参数</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">prefix</span> <span style="color:#f92672">=</span> window.<span style="color:#a6e22e">location</span>.<span style="color:#a6e22e">href</span>.<span style="color:#a6e22e">replace</span>(<span style="color:#e6db74">/^.*prefix=(.*)$/</span>,<span style="color:#e6db74">&#39;$1&#39;</span>) <span style="color:#75715e">//获取到这个子文件夹名
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">$</span>(document).<span style="color:#a6e22e">ready</span> (<span style="color:#66d9ef">function</span>() {
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">$</span>(<span style="color:#e6db74">&#34;body&#34;</span>).<span style="color:#a6e22e">on</span>(<span style="color:#e6db74">&#34;click&#34;</span>, <span style="color:#e6db74">&#39;.site_nav a,a.prefix&#39;</span>, <span style="color:#66d9ef">function</span>(){  <span style="color:#75715e">//使用 on 绑定 click 点击事件，能实现滚动加载的也有效
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">this_href</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">$</span>(<span style="color:#66d9ef">this</span>).<span style="color:#a6e22e">attr</span>(<span style="color:#e6db74">&#39;href&#39;</span>).<span style="color:#a6e22e">replace</span>(<span style="color:#e6db74">/^(.*)\?template_prefix.*$/</span>,<span style="color:#e6db74">&#39;$1&#39;</span>) <span style="color:#75715e">//获取到原始最初链接
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">prefix_href</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">this_href</span> <span style="color:#f92672">+</span><span style="color:#e6db74">&#39;?template_prefix=&#39;</span><span style="color:#f92672">+</span><span style="color:#a6e22e">prefix</span>;  <span style="color:#75715e">//加上参数
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#a6e22e">$</span>(<span style="color:#66d9ef">this</span>).<span style="color:#a6e22e">attr</span>(<span style="color:#e6db74">&#39;href&#39;</span>,<span style="color:#a6e22e">prefix_href</span>);   <span style="color:#75715e">//设置 href
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  	});
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div><h3 id="搜索提交加参数">搜索提交加参数</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">prefix</span> <span style="color:#f92672">=</span> window.<span style="color:#a6e22e">location</span>.<span style="color:#a6e22e">href</span>.<span style="color:#a6e22e">replace</span>(<span style="color:#e6db74">/^.*prefix=(.*)$/</span>,<span style="color:#e6db74">&#39;$1&#39;</span>) <span style="color:#75715e">//获取到这个子文件夹名
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">$</span>(document).<span style="color:#a6e22e">ready</span> (<span style="color:#66d9ef">function</span>() {
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">search_posts_dom</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">$</span>(<span style="color:#e6db74">&#39;#search_posts_keywords&#39;</span>);
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">search_posts</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(){
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">keywords</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">search_posts_dom</span>.<span style="color:#a6e22e">val</span>();
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">url_to_jump</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">location</span>.<span style="color:#a6e22e">protocol</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;//&#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">location</span>.<span style="color:#a6e22e">host</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;/posts&#39;</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;?s=&#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">keywords</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;&amp;template_prefix=&#39;</span><span style="color:#f92672">+</span><span style="color:#a6e22e">prefix</span>;  <span style="color:#75715e">// /posts 看主题，尾巴 &#39;&amp;template_prefix=&#39;+prefix
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#a6e22e">location</span>.<span style="color:#a6e22e">href</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">url_to_jump</span>;
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span>	};
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">search_posts_dom</span>.<span style="color:#a6e22e">keyup</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">event</span>) {
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">which</span> <span style="color:#f92672">===</span> <span style="color:#ae81ff">13</span>) {<span style="color:#a6e22e">search_posts</span>()}
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
+</span></span><span style="display:flex;"><span>	});
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">$</span>(<span style="color:#e6db74">&#39;.search_in_html_button&#39;</span>).<span style="color:#a6e22e">click</span>(<span style="color:#a6e22e">search_posts</span>);
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div>
+      
+    </div>
+  
+    
+
+    
+      <span class="post-tags">
+        
+          #<a href="https://blueisle.cf/tags/%E6%8A%98%E8%85%BE/">折腾</a>&nbsp;
+        
+      </span>
+    
+  
+    <div class="clear"></div>
+    
+    
+      
+        <div class="pagination">
+          <div class="pagination__title">
+            
+              <a class="pagination__title-h" href="https://github.com/lmm214/immmmm/edit/master/content/posts/coding/bitcron-multi-theme-preview.md" target="_blank" rel="noopener">阅读更多</a>
+            
+            <hr />
+          </div>
+          <div class="pagination__buttons">
+            
+              <span class="button previous">
+                <a href="https://blueisle.cf/demo-shuiba-co/">
+                  <span class="button__icon">←</span>
+                  <span class="button__text">为八口打 Call ！！！</span>
+                </a>
+              </span>
+            
+            
+              <span class="button next">
+                <a href="https://blueisle.cf/bitcron-article-run-code/">
+                  <span class="button__text">Bitcron 文章内运行代码实例一则</span>
+                  <span class="button__icon">→</span>
+                </a>
+              </span>
+            
+          </div>
+        </div>
+      
+    
+
+
+    
+        <div class="pagination__title">
+  <span class="pagination__title-h">欢迎评论</span>
+  <hr />
+</div>
+  <div id="tcomment"></div>
+  <script src="https://cdn.jsdelivr.net/npm/twikoo@1.5.0/dist/twikoo.all.min.js"></script>
+  <script>twikoo.init({ envId: 'twikoo-2g36bkuz88660f27', el: '#tcomment' })</script>
+
+  <script type="text/javascript" src='https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js'></script>
+  <script type="text/javascript">
+    jQuery(document).ready(function($){
+      var checkComments = setInterval(function() {
+        var counts = $('.tk-comments-title').find('span').first().text();
+        if (counts) {
+          $('#twikoo_count').text(counts)
+          clearInterval(checkComments);
+        }
+      }, 1000);
+      if(window.location.hash){
+        var checkExist = setInterval(function() {
+          if ($(window.location.hash).length) {
+            $('html, body').animate({scrollTop: $(window.location.hash).offset().top-90}, 1000);
+            clearInterval(checkExist);
+          }
+        }, 100);
+      }
+    });
+  </script>
+    
+
+    </div>
+
+      </div>
+
+      
+        
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+
+
+
+
+
+
+
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="copyright copyright-font">
+      <span>共 75227 字 <br/> 写完一本 鲁迅 的</br>《呐喊》了！</span>
+    </div>
+    <a class="dark-wormhole" href="https://www.foreverblog.cn/go.html" target="_blank"> <img src="/wormhole_1.gif" alt="" style="width:auto;height:32px;" title="穿梭虫洞-随机访问十年之约友链博客"> </a>
+    <a class="light-wormhole" href="https://www.foreverblog.cn/go.html" target="_blank" > <img src="/wormhole_3.gif" alt="" style="width:auto;height:32px;" title="穿梭虫洞-随机访问十年之约友链博客"> </a>
+    
+      <div class="copyright">
+        <span>© 2022 Powered by <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a> Theme by <a href="https://twitter.com/panr" target="_blank" rel="noopener">Panr</a></span>
+      </div>
+    
+  </div>
+</footer>
+
+<script type="text/javascript" src="/main.js?t=20220124"></script>
+
+<script type="text/javascript" src='https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js'></script>
+<script type="text/javascript" src="/lately2.min.js"></script>
+<script type="text/javascript" src="/jquery.vticker.js"></script>
+<script type="text/javascript" src="/waterfall.min.js"></script>
+<script type="text/javascript" src="/slimbox2.min.js"></script>
+<script type="text/javascript" src="/main-diy-0325.js"></script>
+      
+    </div>
+  </body>
+</html>

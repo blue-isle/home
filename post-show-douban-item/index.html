@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+      <title>文章内显示豆瓣条目 :: 明礼至卓</title>
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta charset="UTF-8"/>
+<meta name="renderer" content="webkit"/>
+<meta name="force-rendering" content="webkit"/>
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+<script>if ( false || (!!window.MSInputMethodContext && !!document.documentMode)) document.write('\x3Cscript id="_iealwn_js" data-outver="11" src="https://support.dmeng.net/ie-alert-warning/latest.js">\x3C/script>'); </script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="小众豆瓣已成刚需，电影、图书看完都会标记下，写日志时常会提到，老想着在文章内「优雅」地展示，官方 API 已废，幸好还有给力的 @mufeng 兄，以下功能就使用其提供的轮子。
+换用轮子：https://github.com/cxfksword/douban-api-rs
+效果如下 https://movie.douban.com/subject/34953719/
+https://book.douban.com/subject/35254632/
+"/>
+<meta name="keywords" content=""/>
+<link rel="canonical" href="https://blueisle.cf/post-show-douban-item/" />
+<link rel="stylesheet" href="/main.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:500&display=swap" media="print" onload="this.media='all'">
+<link rel="shortcut icon" href="https://blueisle.cf/favicon.ico">
+
+<meta property="og:title" content="文章内显示豆瓣条目" />
+<meta property="og:description" content="小众豆瓣已成刚需，电影、图书看完都会标记下，写日志时常会提到，老想着在文章内「优雅」地展示，官方 API 已废，幸好还有给力的 @mufeng 兄，以下功能就使用其提供的轮子。
+换用轮子：https://github.com/cxfksword/douban-api-rs
+效果如下
+https://movie.douban.com/subject/34953719/
+https://book.douban.com/subject/35254632/" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blueisle.cf/post-show-douban-item/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-03-24T23:16:34+08:00" />
+<meta property="article:modified_time" content="2022-03-24T23:16:34+08:00" />
+
+
+
+
+    
+  
+  <link rel="prefetch" href="https://blueisle.cf/doumark-action/">
+
+  </head>
+  <body class="dark-theme">
+    <div class="container">
+      <header class="header">
+  <span class="header__inner">
+    <a href="https://blueisle.cf" class="logo" style="text-decoration: none;">
+  
+    <span class="logo__text">明礼至卓</span>
+    <span class="logo__cursor"></span>
+  
+</a>
+
+    <span class="header__right">
+      
+        <nav class="menu hidden">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/movies/">电影</a></li>
+        
+      
+        
+          <li><a href="/books/">阅读</a></li>
+        
+      
+        
+          <li><a href="/archives/">归档</a></li>
+        
+      
+        
+          <li><a href="/friends/">友圈</a></li>
+        
+      
+        
+          <li><a href="/about/">关于</a></li>
+        
+      
+        
+          <li><a href="https://nav.blueisle.cf/">导航</a></li>
+        
+      
+    
+
+                <li><a href="/search/"><svg t="1556783211810" class="search-box-icon" class="icon" style="" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2078" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><style type="text/css"></style></defs><path d="M981.39652054 920.86314525L704.56522859 644.0318533a366.65501012 366.65501012 0 1 0-61.73503038 65.64040943L917.55859375 984.40065827z m-856.17925347-493.12920861a284.19142939 284.19142939 0 1 1 283.89101562 284.19142939A284.49184317 284.49184317 0 0 1 125.06706019 427.73393664z" fill="" p-id="2079" data-spm-anchor-id="a313x.7781069.0.i2"></path></svg></a></li>
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/movies/">电影</a></li>
+      
+    
+      
+        <li><a href="/books/">阅读</a></li>
+      
+    
+      
+        <li><a href="/archives/">归档</a></li>
+      
+    
+      
+        <li><a href="/friends/">友圈</a></li>
+      
+    
+      
+        <li><a href="/about/">关于</a></li>
+      
+    
+      
+        <li><a href="https://nav.blueisle.cf/">导航</a></li>
+      
+    
+  </ul>
+</nav>
+
+        <span class="menu-trigger hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+          </svg>
+        </span>
+      
+      <span class="theme-toggle">
+        <svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+
+      </span>
+    </span>
+  </span>
+</header>
+
+
+
+
+      <div class="content">
+        
+  
+  
+  
+  
+  <div class="post coding">
+    <div  class="breadcrumb">
+  
+
+  
+
+  
+
+  
+
+<li>
+  <a href="https://blueisle.cf/">首页</a>
+</li>
+
+
+<li>
+  <a href="https://blueisle.cf/posts/">文章</a>
+</li>
+
+
+<li>
+  <a href="https://blueisle.cf/posts/coding/">折腾</a>
+</li>
+
+
+<li class="active">
+  <a href="https://blueisle.cf/post-show-douban-item/">文章内显示豆瓣条目</a>
+</li>
+
+</div>
+
+
+  
+    <h2 class="post-title"><a href="https://blueisle.cf/post-show-douban-item/">文章内显示豆瓣条目</a></h2>
+    <div class="post-meta">
+      
+        <span class="post-date">2022-03-24 23:16:34</span><span> / <span id="twikoo_visitors">0</span> 阅读</span><span> / <a href="#twikoo"><span id="twikoo_count">0 条评论</span></a></span>
+        
+          
+        
+      
+    </div>
+
+    
+  
+    <div class="post-content">
+      <p>小众豆瓣已成刚需，电影、图书看完都会标记下，写日志时常会提到，老想着在文章内「优雅」地展示，官方 API 已废，<del>幸好还有给力的 <a href="https://mufeng.me/">@mufeng</a> 兄，以下功能就使用其提供的轮子。</del></p>
+<p>换用轮子：<a href="https://github.com/cxfksword/douban-api-rs">https://github.com/cxfksword/douban-api-rs</a></p>
+<h3 id="效果如下">效果如下</h3>
+<p><a href="https://movie.douban.com/subject/34953719/">https://movie.douban.com/subject/34953719/</a></p>
+<p><a href="https://book.douban.com/subject/35254632/">https://book.douban.com/subject/35254632/</a></p>
+<h3 id="使用方式">使用方式</h3>
+<p>如果是md的话之间输入以下格式，其他输入a标签链接，注意链接以 <code>/</code> 斜杠结尾。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">https:</span><span style="color:#960050;background-color:#1e0010">//</span><span style="color:#a6e22e">movie</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#a6e22e">douban</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#a6e22e">com</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#a6e22e">subject</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#a6e22e">34953719</span>/&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">https:</span><span style="color:#960050;background-color:#1e0010">//</span><span style="color:#a6e22e">book</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#a6e22e">douban</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#a6e22e">com</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#a6e22e">subject</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#a6e22e">35254632</span>/&gt;
+</span></span></code></pre></div><h3 id="相关代码">相关代码</h3>
+<p>head 头部添加 meta ：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;referrer&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;no-referrer&#34;</span>&gt;
+</span></span></code></pre></div><p>基于 jQuery 的功能代码，内置自建 API 不保证稳定（瞬间被502，哎……）：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">//豆瓣图书电影条目
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">$</span>(<span style="color:#e6db74">&#34;.post-content a[href*=&#39;douban.com/subject/&#39;]&#34;</span>).<span style="color:#a6e22e">each</span>(<span style="color:#66d9ef">function</span>(){<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">_this</span><span style="color:#f92672">=</span><span style="color:#a6e22e">$</span>(<span style="color:#66d9ef">this</span>);<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">str</span><span style="color:#f92672">=</span><span style="color:#a6e22e">_this</span>.<span style="color:#a6e22e">attr</span>(<span style="color:#e6db74">&#34;href&#34;</span>);<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">db_reg</span><span style="color:#f92672">=</span><span style="color:#e6db74">/^https\:\/\/(movie|book)\.douban\.com\/subject\/([0-9]+)\/?/</span>;<span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">db_reg</span>.<span style="color:#a6e22e">test</span>(<span style="color:#a6e22e">str</span>)){<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">db_type</span><span style="color:#f92672">=</span><span style="color:#a6e22e">str</span>.<span style="color:#a6e22e">replace</span>(<span style="color:#a6e22e">db_reg</span>,<span style="color:#e6db74">&#34;$1&#34;</span>);<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">db_id</span><span style="color:#f92672">=</span><span style="color:#a6e22e">str</span>.<span style="color:#a6e22e">replace</span>(<span style="color:#a6e22e">db_reg</span>,<span style="color:#e6db74">&#34;$2&#34;</span>).<span style="color:#a6e22e">toString</span>();<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">db_api</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://douban.edui.fun/&#34;</span>;<span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">db_type</span><span style="color:#f92672">==</span><span style="color:#e6db74">&#39;movie&#39;</span>){<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">ls_item</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;movie&#39;</span><span style="color:#f92672">+</span><span style="color:#a6e22e">db_id</span>;<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">url</span><span style="color:#f92672">=</span><span style="color:#a6e22e">db_api</span><span style="color:#f92672">+</span><span style="color:#e6db74">&#34;movies/&#34;</span><span style="color:#f92672">+</span><span style="color:#a6e22e">db_id</span>;<span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">getItem</span>(<span style="color:#a6e22e">ls_item</span>)<span style="color:#f92672">==</span><span style="color:#66d9ef">null</span><span style="color:#f92672">||</span><span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">getItem</span>(<span style="color:#a6e22e">ls_item</span>)<span style="color:#f92672">==</span><span style="color:#e6db74">&#39;undefined&#39;</span>){<span style="color:#a6e22e">$</span>.<span style="color:#a6e22e">ajax</span>({<span style="color:#a6e22e">url</span><span style="color:#f92672">:</span><span style="color:#a6e22e">url</span>,<span style="color:#a6e22e">type</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#39;GET&#39;</span>,<span style="color:#a6e22e">dataType</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#34;json&#34;</span>,<span style="color:#a6e22e">success</span><span style="color:#f92672">:</span><span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">data</span>){<span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">setItem</span>(<span style="color:#a6e22e">ls_item</span>,<span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>(<span style="color:#a6e22e">data</span>));<span style="color:#a6e22e">moiveShow</span>(<span style="color:#a6e22e">_this</span>,<span style="color:#a6e22e">ls_item</span>)}})}<span style="color:#66d9ef">else</span>{<span style="color:#a6e22e">moiveShow</span>(<span style="color:#a6e22e">_this</span>,<span style="color:#a6e22e">ls_item</span>)}}<span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">db_type</span><span style="color:#f92672">==</span><span style="color:#e6db74">&#39;book&#39;</span>){<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">ls_item</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;book&#39;</span><span style="color:#f92672">+</span><span style="color:#a6e22e">db_id</span>;<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">url</span><span style="color:#f92672">=</span><span style="color:#a6e22e">db_api</span><span style="color:#f92672">+</span><span style="color:#e6db74">&#34;v2/book/id/&#34;</span><span style="color:#f92672">+</span><span style="color:#a6e22e">db_id</span>;<span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">getItem</span>(<span style="color:#a6e22e">ls_item</span>)<span style="color:#f92672">==</span><span style="color:#66d9ef">null</span><span style="color:#f92672">||</span><span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">getItem</span>(<span style="color:#a6e22e">ls_item</span>)<span style="color:#f92672">==</span><span style="color:#e6db74">&#39;undefined&#39;</span>){<span style="color:#a6e22e">$</span>.<span style="color:#a6e22e">ajax</span>({<span style="color:#a6e22e">url</span><span style="color:#f92672">:</span><span style="color:#a6e22e">url</span>,<span style="color:#a6e22e">type</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#39;GET&#39;</span>,<span style="color:#a6e22e">dataType</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#39;json&#39;</span>,<span style="color:#a6e22e">success</span><span style="color:#f92672">:</span><span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">data</span>){<span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">setItem</span>(<span style="color:#e6db74">&#39;book&#39;</span><span style="color:#f92672">+</span><span style="color:#a6e22e">db_id</span>,<span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>(<span style="color:#a6e22e">data</span>));<span style="color:#a6e22e">bookShow</span>(<span style="color:#a6e22e">_this</span>,<span style="color:#a6e22e">ls_item</span>)}})}<span style="color:#66d9ef">else</span>{<span style="color:#a6e22e">bookShow</span>(<span style="color:#a6e22e">_this</span>,<span style="color:#a6e22e">ls_item</span>)}}}});<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">moiveShow</span>(<span style="color:#a6e22e">_this</span>,<span style="color:#a6e22e">ls_item</span>){<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">storage</span><span style="color:#f92672">=</span><span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">getItem</span>(<span style="color:#a6e22e">ls_item</span>);<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">data</span><span style="color:#f92672">=</span><span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">parse</span>(<span style="color:#a6e22e">storage</span>);<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">str</span><span style="color:#f92672">=</span><span style="color:#a6e22e">_this</span>.<span style="color:#a6e22e">attr</span>(<span style="color:#e6db74">&#34;href&#34;</span>);<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">data</span>)<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">db_star</span><span style="color:#f92672">=</span>Math.<span style="color:#a6e22e">ceil</span>(<span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">rating</span>);<span style="color:#a6e22e">$</span>(<span style="color:#e6db74">&#34;&lt;div class=&#39;post-preview&#39;&gt;&lt;div class=&#39;post-preview--meta&#39;&gt;&lt;div class=&#39;post-preview--middle&#39;&gt;&lt;h4 class=&#39;post-preview--title&#39;&gt;&lt;a target=&#39;_blank&#39; href=&#39;&#34;</span><span style="color:#f92672">+</span><span style="color:#a6e22e">str</span><span style="color:#f92672">+</span><span style="color:#e6db74">&#34;&#39;&gt;《&#34;</span><span style="color:#f92672">+</span><span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">name</span><span style="color:#f92672">+</span><span style="color:#e6db74">&#34;》&lt;/a&gt;&lt;/h4&gt;&lt;div class=&#39;rating&#39;&gt;&lt;div class=&#39;rating-star allstar&#34;</span><span style="color:#f92672">+</span><span style="color:#a6e22e">db_star</span><span style="color:#f92672">+</span><span style="color:#e6db74">&#34;&#39;&gt;&lt;/div&gt;&lt;div class=&#39;rating-average&#39;&gt;&#34;</span><span style="color:#f92672">+</span><span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">rating</span><span style="color:#f92672">+</span><span style="color:#e6db74">&#34;&lt;/div&gt;&lt;/div&gt;&lt;time class=&#39;post-preview--date&#39;&gt;导演：&#34;</span><span style="color:#f92672">+</span><span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">director</span><span style="color:#f92672">+</span><span style="color:#e6db74">&#34; / 类型：&#34;</span><span style="color:#f92672">+</span><span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">genre</span><span style="color:#f92672">+</span><span style="color:#e6db74">&#34; / &#34;</span><span style="color:#f92672">+</span><span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">year</span><span style="color:#f92672">+</span><span style="color:#e6db74">&#34;&lt;/time&gt;&lt;section style=&#39;max-height:75px;overflow:hidden;&#39; class=&#39;post-preview--excerpt&#39;&gt;&#34;</span><span style="color:#f92672">+</span><span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">intro</span>.<span style="color:#a6e22e">replace</span>(<span style="color:#e6db74">/\s*/g</span>,<span style="color:#e6db74">&#34;&#34;</span>)<span style="color:#f92672">+</span><span style="color:#e6db74">&#34;&lt;/section&gt;&lt;/div&gt;&lt;/div&gt;&lt;img referrer-policy=&#39;no-referrer&#39; loading=&#39;lazy&#39; class=&#39;post-preview--image&#39; src=&#34;</span><span style="color:#f92672">+</span><span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">img</span><span style="color:#f92672">+</span><span style="color:#e6db74">&#34;&gt;&lt;/div&gt;&#34;</span>).<span style="color:#a6e22e">replaceAll</span>(<span style="color:#a6e22e">_this</span>)}<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">bookShow</span>(<span style="color:#a6e22e">_this</span>,<span style="color:#a6e22e">ls_item</span>){<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">storage</span><span style="color:#f92672">=</span><span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">getItem</span>(<span style="color:#a6e22e">ls_item</span>);<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">data</span><span style="color:#f92672">=</span><span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">parse</span>(<span style="color:#a6e22e">storage</span>);<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">str</span><span style="color:#f92672">=</span><span style="color:#a6e22e">_this</span>.<span style="color:#a6e22e">attr</span>(<span style="color:#e6db74">&#34;href&#34;</span>);<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">db_star</span><span style="color:#f92672">=</span>Math.<span style="color:#a6e22e">ceil</span>(<span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">rating</span>.<span style="color:#a6e22e">average</span>);<span style="color:#a6e22e">$</span>(<span style="color:#e6db74">&#34;&lt;div class=&#39;post-preview&#39;&gt;&lt;div class=&#39;post-preview--meta&#39;&gt;&lt;div class=&#39;post-preview--middle&#39;&gt;&lt;h4 class=&#39;post-preview--title&#39;&gt;&lt;a target=&#39;_blank&#39; href=&#39;&#34;</span><span style="color:#f92672">+</span><span style="color:#a6e22e">str</span><span style="color:#f92672">+</span><span style="color:#e6db74">&#34;&#39;&gt;《&#34;</span><span style="color:#f92672">+</span><span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">title</span><span style="color:#f92672">+</span><span style="color:#e6db74">&#34;》&lt;/a&gt;&lt;/h4&gt;&lt;div class=&#39;rating&#39;&gt;&lt;div class=&#39;rating-star allstar&#34;</span><span style="color:#f92672">+</span><span style="color:#a6e22e">db_star</span><span style="color:#f92672">+</span><span style="color:#e6db74">&#34;&#39;&gt;&lt;/div&gt;&lt;div class=&#39;rating-average&#39;&gt;&#34;</span><span style="color:#f92672">+</span><span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">rating</span>.<span style="color:#a6e22e">average</span><span style="color:#f92672">+</span><span style="color:#e6db74">&#34;&lt;/div&gt;&lt;/div&gt;&lt;time class=&#39;post-preview--date&#39;&gt;作者：&#34;</span><span style="color:#f92672">+</span><span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">author</span><span style="color:#f92672">+</span><span style="color:#e6db74">&#34; &lt;/time&gt;&lt;section style=&#39;max-height:75px;overflow:hidden;&#39; class=&#39;post-preview--excerpt&#39;&gt;&#34;</span><span style="color:#f92672">+</span><span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">summary</span>.<span style="color:#a6e22e">replace</span>(<span style="color:#e6db74">/\s*/g</span>,<span style="color:#e6db74">&#34;&#34;</span>)<span style="color:#f92672">+</span><span style="color:#e6db74">&#34;&lt;/section&gt;&lt;/div&gt;&lt;/div&gt;&lt;img referrer-policy=&#39;no-referrer&#39; loading=&#39;lazy&#39; class=&#39;post-preview--image&#39; src=&#34;</span><span style="color:#f92672">+</span><span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">images</span>.<span style="color:#a6e22e">medium</span><span style="color:#f92672">+</span><span style="color:#e6db74">&#34;&gt;&lt;/div&gt;&#34;</span>).<span style="color:#a6e22e">replaceAll</span>(<span style="color:#a6e22e">_this</span>)}
+</span></span></code></pre></div><p>样式代码：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>.<span style="color:#a6e22e">post-preview</span>{<span style="color:#66d9ef">max-width</span>:<span style="color:#ae81ff">780</span><span style="color:#66d9ef">px</span>;<span style="color:#66d9ef">height</span>:<span style="color:#ae81ff">210</span><span style="color:#66d9ef">px</span>;<span style="color:#66d9ef">margin</span>:<span style="color:#ae81ff">1</span><span style="color:#66d9ef">em</span> <span style="color:#66d9ef">auto</span>;<span style="color:#66d9ef">position</span>:<span style="color:#66d9ef">relative</span>;<span style="color:#66d9ef">display</span>:<span style="color:#66d9ef">flex</span>;<span style="color:#66d9ef">background</span>:<span style="color:#ae81ff">#fff</span>;<span style="color:#66d9ef">border-radius</span>:<span style="color:#ae81ff">4</span><span style="color:#66d9ef">px</span>;<span style="color:#66d9ef">box-shadow</span>:<span style="color:#ae81ff">0</span> <span style="color:#ae81ff">1</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">2</span><span style="color:#66d9ef">px</span> rgba(<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">.25</span>),<span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">1</span><span style="color:#66d9ef">px</span> rgba(<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">.25</span>);}.<span style="color:#a6e22e">post-preview--meta</span>{<span style="color:#66d9ef">width</span>:<span style="color:#ae81ff">75</span><span style="color:#66d9ef">%</span>;<span style="color:#66d9ef">padding</span>:<span style="color:#ae81ff">25</span><span style="color:#66d9ef">px</span>;<span style="color:#66d9ef">overflow</span>:<span style="color:#66d9ef">hidden</span>;}.<span style="color:#a6e22e">post-preview--middle</span> {<span style="color:#66d9ef">line-height</span>:<span style="color:#ae81ff">28</span><span style="color:#66d9ef">px</span>;}.<span style="color:#a6e22e">post-preview--title</span> {<span style="color:#66d9ef">font-size</span>:<span style="color:#ae81ff">18</span><span style="color:#66d9ef">px</span>;<span style="color:#66d9ef">margin</span>:<span style="color:#ae81ff">0</span><span style="color:#75715e">!important</span>;}.<span style="color:#a6e22e">post-preview--title</span> <span style="color:#f92672">a</span>{<span style="color:#66d9ef">text-decoration</span>:<span style="color:#66d9ef">none</span>;}.<span style="color:#a6e22e">post-preview--date</span>{<span style="color:#66d9ef">font-size</span>:<span style="color:#ae81ff">14</span><span style="color:#66d9ef">px</span>;<span style="color:#66d9ef">color</span>:<span style="color:#ae81ff">#999</span>;}.<span style="color:#a6e22e">post-preview--excerpt</span>{<span style="color:#66d9ef">font-size</span>:<span style="color:#ae81ff">14</span><span style="color:#66d9ef">px</span>;<span style="color:#66d9ef">line-height</span>:<span style="color:#ae81ff">1.825</span>;}.<span style="color:#a6e22e">post-preview--excerpt</span> <span style="color:#f92672">p</span>{<span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">inline</span>;<span style="color:#66d9ef">margin</span>: <span style="color:#ae81ff">0</span>;}  .<span style="color:#a6e22e">post-preview--image</span> {<span style="color:#66d9ef">height</span>:<span style="color:#ae81ff">210</span><span style="color:#66d9ef">px</span><span style="color:#75715e">!important</span>;<span style="color:#66d9ef">width</span>:<span style="color:#66d9ef">auto</span>;<span style="color:#66d9ef">float</span>:<span style="color:#66d9ef">right</span>;<span style="color:#66d9ef">border-top-right-radius</span>: <span style="color:#ae81ff">2</span><span style="color:#66d9ef">px</span><span style="color:#75715e">!important</span>;<span style="color:#66d9ef">border-bottom-right-radius</span>:<span style="color:#ae81ff">2</span><span style="color:#66d9ef">px</span><span style="color:#75715e">!important</span>;<span style="color:#66d9ef">border-top-left-radius</span>:<span style="color:#ae81ff">0</span><span style="color:#75715e">!important</span>;<span style="color:#66d9ef">border-bottom-left-radius</span>:<span style="color:#ae81ff">0</span><span style="color:#75715e">!important</span>;}
+</span></span><span style="display:flex;"><span>@<span style="color:#66d9ef">media</span> <span style="color:#f92672">(</span><span style="color:#f92672">max-width</span>:<span style="color:#a6e22e">550px</span><span style="color:#f92672">)</span> {.<span style="color:#a6e22e">post-preview</span> {<span style="color:#66d9ef">width</span>:<span style="color:#ae81ff">95</span><span style="color:#66d9ef">%</span>;}.<span style="color:#a6e22e">post-preview--excerpt</span>{<span style="color:#66d9ef">display</span>:<span style="color:#66d9ef">none</span>;}.<span style="color:#a6e22e">post-preview--middle</span> {<span style="color:#66d9ef">line-height</span>:<span style="color:#ae81ff">19</span><span style="color:#66d9ef">px</span>;}}
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">rating</span>{<span style="color:#66d9ef">display</span>:<span style="color:#66d9ef">block</span>;<span style="color:#66d9ef">line-height</span>:<span style="color:#ae81ff">15</span><span style="color:#66d9ef">px</span>;}.<span style="color:#a6e22e">rating-star</span>{<span style="color:#66d9ef">display</span>:<span style="color:#66d9ef">inline-block</span>;<span style="color:#66d9ef">width</span>:<span style="color:#ae81ff">75</span><span style="color:#66d9ef">px</span>;<span style="color:#66d9ef">height</span>:<span style="color:#ae81ff">15</span><span style="color:#66d9ef">px</span>;<span style="color:#66d9ef">background-repeat</span>:<span style="color:#66d9ef">no-repeat</span>;<span style="color:#66d9ef">background-image</span>:url(<span style="color:#e6db74">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEsAAAClCAYAAAAUAAAYAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA5xJREFUeNrs3T9rFEEcxvG7qEQIglaCICKkin9AUEtBKxU7wS61VlYivgWj70TtNFj5BqzE7qxEWwsxKIoYn4UtluFmbm8nczvzm+/BjxyuDwNzu3uXD0+46f7LC5PA45Hm+WTYw1x2LRDc0jzTXB+wqMlsaLPutz8fDFjYZHYauAz3NBvt83XNnyUWNpn1nVm3OsHmsb3EomazzZnVXKMPNcc0xzUnNKc0Rzv/77fms+Z7O3vt9b1eU7bZrNN68l5zcolX4ofmsuZXTdnmMvyi2dR86Bmcac62P6vKrnVubpc0bxYE32nOab45N8YqsvPeDfcD4SOav4HjprPuu+H5BTt9LXDMfNbdLPfT678Fx6vKupt1o/O8+R3pkOaJ5/iktqx7z/qp+aq5q/nY+fczmheaK03Gs7D5rLtZdzSvA6/Ebc2u55j57HQB0TzW7AzkjiKzny6+2hlKNE8juMNcFqKBaIZndRlCNBBNgmx7ZkE0fbLtZkE0EA1EM17WuQwhGogGooFoss6296y52cNO+J6HLJoPaFdbsvA9zGerIxrPh85eWYgGooFoDiQbuAxp0UA0EVmdWbRo+ma1WbRoIBqIZtzsnHdDWjQQDUQD0WSbde5ZS2UhmtqJJtSEiVkXooFoIJre2VATJmZdiKZ2ogk1YSb8oVMvDeUPnSAaiCaPJkzMuhANRAPRQDQpsqEmTMy6EI11oolpwkA0EA1EcyDZmCYMRAPR+LMxTZjqiCamCQPRQDQQzehNGIgGooFoIJpVZ2OaMBBN7USTqgkD0UA0EE3vbKomDERTO9GkasKYJJpUTRiIBqKBaEZvwkA0EA1EA9GkyKZqwkA01olmrCYMRAPRQDR9LkO+0QmiKbAJUyTRjNWEgWggGohm9CYMRAPRQDQQzZDsWE0YiMYC0eTYhIFoIJrKiCbHJgxEY4FocmzCZEs0OTZhIBqIpjKiybEJA9FANBANROPL5tiEgWhKIJoSmzAQDURjjGhKbMJANCUQTYlNmNGIpsQmDEQD0RgjmhKbMBANRAPR1Es0JTZhIJpciMZaEwaigWgKJBprTRiIJheisdaESUo01powEA1EUyDRWGvCQDQQDURjm2isNWEgmlURzWw2q4pZIBqIJkOiCVyGJpkFolkV0ejMMvel28mIRptl7ku3IRqIpjCimfNuaJpZIBqIBqIpm2ice5Z5ZonJupvVkMRu4JW4qXnrOWY++1+AAQBw9BJSCTeN9wAAAABJRU5ErkJggg==</span>);<span style="color:#66d9ef">overflow</span>:<span style="color:#66d9ef">hidden</span>;}.<span style="color:#a6e22e">allstar10</span>{<span style="color:#66d9ef">background-position</span>:<span style="color:#ae81ff">0</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">0</span><span style="color:#66d9ef">px</span>;}.<span style="color:#a6e22e">allstar9</span>{<span style="color:#66d9ef">background-position</span>:<span style="color:#ae81ff">0</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">-15</span><span style="color:#66d9ef">px</span>;}.<span style="color:#a6e22e">allstar8</span>{<span style="color:#66d9ef">background-position</span>:<span style="color:#ae81ff">0</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">-30</span><span style="color:#66d9ef">px</span>;}.<span style="color:#a6e22e">allstar7</span>{<span style="color:#66d9ef">background-position</span>:<span style="color:#ae81ff">0</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">-45</span><span style="color:#66d9ef">px</span>;}.<span style="color:#a6e22e">allstar6</span>{<span style="color:#66d9ef">background-position</span>:<span style="color:#ae81ff">0</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">-60</span><span style="color:#66d9ef">px</span>;}.<span style="color:#a6e22e">allstar5</span>{<span style="color:#66d9ef">background-position</span>:<span style="color:#ae81ff">0</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">-75</span><span style="color:#66d9ef">px</span>;}.<span style="color:#a6e22e">allstar4</span>{<span style="color:#66d9ef">background-position</span>:<span style="color:#ae81ff">0</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">-90</span><span style="color:#66d9ef">px</span>;}.<span style="color:#a6e22e">allstar3</span>{<span style="color:#66d9ef">background-position</span>:<span style="color:#ae81ff">0</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">-105</span><span style="color:#66d9ef">px</span>;}.<span style="color:#a6e22e">allstar2</span>{<span style="color:#66d9ef">background-position</span>:<span style="color:#ae81ff">0</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">-120</span><span style="color:#66d9ef">px</span>;}.<span style="color:#a6e22e">allstar1</span>{<span style="color:#66d9ef">background-position</span>:<span style="color:#ae81ff">0</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">-135</span><span style="color:#66d9ef">px</span>;}.<span style="color:#a6e22e">allstar0</span>{<span style="color:#66d9ef">background-position</span>:<span style="color:#ae81ff">0</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">-150</span><span style="color:#66d9ef">px</span>;}.<span style="color:#a6e22e">rating-average</span>{<span style="color:#66d9ef">color</span>:<span style="color:#ae81ff">#777</span>;<span style="color:#66d9ef">display</span>:<span style="color:#66d9ef">inline-block</span>;<span style="color:#66d9ef">font-size</span>:<span style="color:#ae81ff">13</span><span style="color:#66d9ef">px</span>;<span style="color:#66d9ef">margin-left</span>:<span style="color:#ae81ff">10</span><span style="color:#66d9ef">px</span>;}
+</span></span></code></pre></div><h3 id="其它-api-收集">其它 api 收集</h3>
+<p><a href="https://github.com/iiiiiii1/douban-imdb-api">https://github.com/iiiiiii1/douban-imdb-api</a></p>
+      
+    </div>
+  
+    
+
+    
+      <span class="post-tags">
+        
+          #<a href="https://blueisle.cf/tags/%E6%8A%98%E8%85%BE/">折腾</a>&nbsp;
+        
+      </span>
+    
+  
+    <div class="clear"></div>
+    
+    
+      
+        <div class="pagination">
+          <div class="pagination__title">
+            
+              <a class="pagination__title-h" href="https://github.com/lmm214/immmmm/edit/master/content/posts/coding/post-show-douban-item.md" target="_blank" rel="noopener">阅读更多</a>
+            
+            <hr />
+          </div>
+          <div class="pagination__buttons">
+            
+            
+              <span class="button next">
+                <a href="https://blueisle.cf/doumark-action/">
+                  <span class="button__text">「电影 / 阅读」页面，顶！</span>
+                  <span class="button__icon">→</span>
+                </a>
+              </span>
+            
+          </div>
+        </div>
+      
+    
+
+
+    
+        <div class="pagination__title">
+  <span class="pagination__title-h">欢迎评论</span>
+  <hr />
+</div>
+  <div id="tcomment"></div>
+  <script src="https://cdn.jsdelivr.net/npm/twikoo@1.5.0/dist/twikoo.all.min.js"></script>
+  <script>twikoo.init({ envId: 'twikoo-2g36bkuz88660f27', el: '#tcomment' })</script>
+
+  <script type="text/javascript" src='https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js'></script>
+  <script type="text/javascript">
+    jQuery(document).ready(function($){
+      var checkComments = setInterval(function() {
+        var counts = $('.tk-comments-title').find('span').first().text();
+        if (counts) {
+          $('#twikoo_count').text(counts)
+          clearInterval(checkComments);
+        }
+      }, 1000);
+      if(window.location.hash){
+        var checkExist = setInterval(function() {
+          if ($(window.location.hash).length) {
+            $('html, body').animate({scrollTop: $(window.location.hash).offset().top-90}, 1000);
+            clearInterval(checkExist);
+          }
+        }, 100);
+      }
+    });
+  </script>
+    
+
+    </div>
+
+      </div>
+
+      
+        
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+
+
+
+
+
+
+
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="copyright copyright-font">
+      <span>共 75227 字 <br/> 写完一本 鲁迅 的</br>《呐喊》了！</span>
+    </div>
+    <a class="dark-wormhole" href="https://www.foreverblog.cn/go.html" target="_blank"> <img src="/wormhole_1.gif" alt="" style="width:auto;height:32px;" title="穿梭虫洞-随机访问十年之约友链博客"> </a>
+    <a class="light-wormhole" href="https://www.foreverblog.cn/go.html" target="_blank" > <img src="/wormhole_3.gif" alt="" style="width:auto;height:32px;" title="穿梭虫洞-随机访问十年之约友链博客"> </a>
+    
+      <div class="copyright">
+        <span>© 2022 Powered by <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a> Theme by <a href="https://twitter.com/panr" target="_blank" rel="noopener">Panr</a></span>
+      </div>
+    
+  </div>
+</footer>
+
+<script type="text/javascript" src="/main.js?t=20220124"></script>
+
+<script type="text/javascript" src='https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js'></script>
+<script type="text/javascript" src="/lately2.min.js"></script>
+<script type="text/javascript" src="/jquery.vticker.js"></script>
+<script type="text/javascript" src="/waterfall.min.js"></script>
+<script type="text/javascript" src="/slimbox2.min.js"></script>
+<script type="text/javascript" src="/main-diy-0325.js"></script>
+      
+    </div>
+  </body>
+</html>

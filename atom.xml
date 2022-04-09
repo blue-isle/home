@@ -7,7 +7,7 @@
             <link href="https://blueisle.cf/atom.xml" rel="self" type="application/rss+xml" title="atom" />
             <link href="https://blueisle.cf/" rel="alternate" type="text/html" title="HTML" />
             <link href="https://blueisle.cf/index.json" rel="alternate" type="application/json" title="JSON" />
-    <updated>2022-04-09T02:49:09+00:00</updated>
+    <updated>2022-04-09T02:51:31+00:00</updated>
     
     
     
@@ -16,157 +16,37 @@
     
         
         <entry>
-            <title type="html"><![CDATA[2022-02-05]]></title>
-            <link href="https://blueisle.cf/2022-02-05/" rel="alternate" type="text/html" />
+            <title type="html"><![CDATA[文章内显示豆瓣条目]]></title>
+            <link href="https://blueisle.cf/post-show-douban-item/" rel="alternate" type="text/html" />
             
-                <id>https://blueisle.cf/2022-02-05/</id>
-            
-            
-            <published>2022-02-05T23:15:52+08:00</published>
-            <updated>2022-02-05T23:15:52+08:00</updated>
+                <id>https://blueisle.cf/post-show-douban-item/</id>
             
             
-            <content type="html"><![CDATA[<p>眨眼，大年初五。折腾（踩坑）告一段落，关闭终端、关闭编辑器，打开 Word、PPT……</p>
-<p>最近十几天折腾得有点多：</p>
-<ul>
-<li>博客改用 <a href="https://immmmm.com/hi-cloudflare/">Hugo + Github + Cloudflare</a> ，实现无服务托管，目测稳定性和速度都不错。</li>
-<li>以业余前端LV10改写 <a href="https://immmmm.com/hi-friends-circle/">「友链朋友圈」</a>  ，自我感觉良好，特别是原始 JavaScript + HTMl5 缓存方式。</li>
-<li>群晖采用 <a href="https://freefrp.net/index.html">FRP</a> 方式实现无端口访问，推荐教程 <a href="https://www.ioiox.com/archives/85.html">群晖frpc配置</a>，<a href="https://www.ioiox.com/archives/88.html">群晖 acme.sh 自动申请证书</a>。</li>
-<li>大坑……腾讯云轻量服务器（222元/3年）部署FRP的域名必须备案……</li>
-</ul>]]></content>
-            
-                 
-                    
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://blueisle.cf/tags/%E8%AF%8D%E7%A9%B7" term="%E8%AF%8D%E7%A9%B7" label="词穷" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-        
-        <entry>
-            <title type="html"><![CDATA[剁手 2021]]></title>
-            <link href="https://blueisle.cf/buy-buy-buy-2021/" rel="alternate" type="text/html" />
-            
-                <id>https://blueisle.cf/buy-buy-buy-2021/</id>
+            <published>2022-03-24T23:16:34+08:00</published>
+            <updated>2022-03-24T23:16:34+08:00</updated>
             
             
-            <published>2022-01-08T22:03:41+08:00</published>
-            <updated>2022-01-08T22:03:41+08:00</updated>
-            
-            
-            <content type="html"><![CDATA[<p>看了 <a href="http://laob.me/2419/">@老毕</a> 的博客15年回忆杀，感慨当初 WPer 折腾王子们纷纷转业，美妆的美妆、投资的投机、晒娃的晒娃，消失的消失……无论如何，被记得和记得总是件感动的事，愿下一个15年，我们仍在。</p>
-<p>看到 <a href="https://www.jinbo123.com/7819.html">@佐仔</a> 兄写了去年的败家记录，不经也去看了看已达续费上限的 🐶 东，才有了这篇记录。</p>
-<h3 id="数码">数码</h3>
-<h4 id="海备思-switch-便携底座-224">海备思 Switch 便携底座 ¥224</h4>
-<p><img loading='lazy' src="https://pic.edui.fun/images/2022/01/bs-1.png" alt="bs-1"  /></p>
-<p>可以理解为“GaN充电器”与“扩展坞（USB、HDMI）”的合体，可以把 Switch、平板、手机画面有线投屏，还能让后两者读取 USB 口的内容。重点是“娇小”的身材！</p>
-<h4 id="倍思-氮化镓gan三代65w充电器-120">倍思 氮化镓GaN三代65W充电器 ¥120</h4>
-<p>一下子都三代咯！两个 TypeC 、一个 USB 口，充电够迅猛！</p>
-<h4 id="施耐德-apc-ups-bk650m2-ch390w650va-479">施耐德 APC UPS BK650M2-CH（390W/650VA） ¥479</h4>
-<p>真是，有了群晖才发现家里断电有多频繁……硬盘贵啊，赶紧保命！</p>
-<h4 id="京东京造-k3-84键白光矮茶轴-340">京东京造 K3-84键白光矮茶轴 ¥340</h4>
-<p><img loading='lazy' src="https://pic.edui.fun/images/2022/01/bs-2.png" alt="bs-2"  /></p>
-<p>颜值真在线，声音真不轻，敲字真带感！吐槽，最右侧一列误触机率实在太高，已摘帽。真想一刀切之去之！</p>
-<h4 id="公牛收纳盒插座-gn-f2161宝可梦联名款-109">公牛收纳盒插座 GN-F2161宝可梦联名款 ¥109</h4>
-<p><img loading='lazy' src="https://pic.edui.fun/images/2022/01/bs-3.png" alt="bs-3"  /></p>
-<p>电视下面设备有点多，直接排插有点丑，一个宝可梦排插搞定！</p>
-<h4 id="三星固态硬盘ssd-870evo-500g-489">三星固态硬盘SSD 870EVO 500g ¥489</h4>
-<p>单位配发笔记本支持光驱位硬盘，卸了光驱，果断上 SSD！</p>
-<h4 id="希捷seagate酷狼-2t-5235">希捷（SEAGATE）酷狼 2T ¥523.5</h4>
-<p>买了群晖，吃土买 2T 用到老……</p>
-<h4 id="群晖-220-配官方-6g-内存-3480">群晖 220+ 配官方 6G 内存 ¥3480</h4>
-<p>现在看看，好像一点都不便宜！加内存是明智的，不然开个 docker 就得卡死。</p>
-<h4 id="绿联-usb无线网络打印服务器">绿联 USB无线网络打印服务器</h4>
-<p><img loading='lazy' src="https://pic.edui.fun/images/2022/01/bs-4.png" alt="bs-4"  /></p>
-<p><img loading='lazy' src="https://pic.edui.fun/images/2022/01/bs-5.png" alt="bs-5"  /></p>
-<p>把有线打印机摇身变为无线打印，进后台找一下办公室的 Wifi 连接即可。目测是定制版 openwrt 固件，遗憾只有1个USB口，只能接1台打印机。</p>
-<h4 id="小米路由器4a千兆版-107">小米路由器4A千兆版 ¥107</h4>
-<p>单位公共AP实在是无力吐槽，幸好办公室不缺网口。</p>
-<h4 id="公牛bull20w-pd快充魔方-89">公牛（BULL）20W PD快充魔方 ¥89</h4>
-<p><img loading='lazy' src="https://pic.edui.fun/images/2022/01/bs-6.png" alt="bs-6"  /></p>
-<p>小方块，6个口，特别是有个 Type-C 快冲口，实用！</p>
-<h4 id="爱普生墨仓式-l3153-打印复印扫描一体机-989">爱普生墨仓式 L3153 打印复印扫描一体机 ¥989</h4>
-<p>8月底买的，为新一年级的娃做好准备。这，墨是真省，这大半年的，1/3 的墨都没用到。</p>
-<h4 id="洪恩拼音识字app终身会员-228-201">洪恩拼音、识字APP终身会员 ¥228 ¥201</h4>
-<p>悔，游戏化识字、学拼音只能作为点心，学前识字还是识字卡片直接，拼音还是报个班有效！</p>
-<h4 id="飞利浦电动剃须刀-s5066-486">飞利浦电动剃须刀 S5066 ¥486</h4>
-<p>够用，感觉买太好了。</p>
-<h4 id="apple-airpods-2代-779">Apple AirPods 2代 ¥779</h4>
-<p>真是早买早享受！已和当家的一人一个，什么100几块的真蓝牙无线耳机，都是刷流氓。</p>
-<h4 id="luka-hero-绘本机器人-870">Luka Hero 绘本机器人 ¥870</h4>
-<p>买晚了！Luka 会跟着小朋友翻绘本，读当前页的内容。音质资源足够丰富，基本上大的出版社都有。终于可以让自己的喉咙歇歇啦！</p>
-<h4 id="雷克沙-256gb-tfmicrosd存储卡">雷克沙 256GB TF（MicroSD）存储卡</h4>
-<p>喂饱 Switch</p>
-<h4 id="switch-卡带labo-机器人套装-99-等其它若干">Switch 卡带：LABO 机器人套装 ¥99 等其它若干</h4>
-<!DOCTYPE HTML>
-<html>
-  <head>
-    <style type="text/css">
-      .aspect-ratio {
-        position: relative;
-        width: 100%;
-        height: 0;
-        padding-bottom: 75%;
-      }
-      .aspect-ratio iframe {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        left: 0;
-        top: 0;
-      }
-    </style>
-  </head>
-
-  <body>
-    <div class="aspect-ratio">
-      <iframe
-              src="https://player.bilibili.com/player.html?bvid=BV12p411f75S&page=1&high_quality=1&danmaku=0"
-              scrolling="no" 
-              border="0" 
-              frameborder="no" 
-              framespacing="0" 
-              allowfullscreen="true"
-              sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"
-              >
-      </iframe>
-      
-      
-    </div>
-  </body>
-
-</html>
-<p>这也太好玩了！这设计也太绝了！自己把一大盒硬纸板拼成个机器人背包，开打！</p>
-<h3 id="生活">生活</h3>
-<h4 id="乐高lego典藏瓶中船92177-522">乐高（LEGO）典藏瓶中船92177 ¥522</h4>
-<p><img loading='lazy' src="https://pic.edui.fun/images/2022/01/bs-7.png" alt="bs-7"  /></p>
-<p>真好看！</p>
-<h4 id="loz-俐智拼装花束">LOZ 俐智拼装花束</h4>
-<p><img loading='lazy' src="https://pic.edui.fun/images/2022/01/bs-10.png" alt="bs-10"  /></p>
-<p>比乐高的好看。</p>
-<h4 id="诗画历2022台历-果麦文化出品-42">诗画历2022台历 果麦文化出品 ¥42</h4>
-<p><img loading='lazy' src="https://pic.edui.fun/images/2022/01/bs-8.png" alt="bs-8"  /></p>
-<p>别人送了一本，自己又买了好多本送人！</p>
-<h4 id="日课2022-读库丰子恺漫画民国老课本-98">日课2022 读库丰子恺漫画民国老课本 ¥98</h4>
-<p><img loading='lazy' src="https://pic.edui.fun/images/2022/01/bs-9.png" alt="bs-9"  /></p>
-<p>给娃当日历涂鸦本用，然后留下来保存。</p>
-<h4 id="illy-咖啡粉--hero-挂耳滤纸">illy 咖啡粉 + hero 挂耳滤纸</h4>
-<p>解决咖啡因焦虑！</p>
-<h3 id="纸书">纸书</h3>
-<p>当下电子书随手可得，仍然买了不少纸质书。</p>
-<p><a href="https://book.douban.com/subject/35143790/">https://book.douban.com/subject/35143790/</a></p>
+            <content type="html"><![CDATA[<p>小众豆瓣已成刚需，电影、图书看完都会标记下，写日志时常会提到，老想着在文章内「优雅」地展示，官方 API 已废，<del>幸好还有给力的 <a href="https://mufeng.me/">@mufeng</a> 兄，以下功能就使用其提供的轮子。</del></p>
+<p>换用轮子：<a href="https://github.com/cxfksword/douban-api-rs">https://github.com/cxfksword/douban-api-rs</a></p>
+<h3 id="效果如下">效果如下</h3>
+<p><a href="https://movie.douban.com/subject/34953719/">https://movie.douban.com/subject/34953719/</a></p>
 <p><a href="https://book.douban.com/subject/35254632/">https://book.douban.com/subject/35254632/</a></p>
-<p><a href="https://book.douban.com/subject/35349438/">https://book.douban.com/subject/35349438/</a></p>
-<p><a href="https://book.douban.com/subject/35390838/">https://book.douban.com/subject/35390838/</a></p>]]></content>
+<h3 id="使用方式">使用方式</h3>
+<p>如果是md的话之间输入以下格式，其他输入a标签链接，注意链接以 <code>/</code> 斜杠结尾。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">https:</span><span style="color:#960050;background-color:#1e0010">//</span><span style="color:#a6e22e">movie</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#a6e22e">douban</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#a6e22e">com</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#a6e22e">subject</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#a6e22e">34953719</span>/&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">https:</span><span style="color:#960050;background-color:#1e0010">//</span><span style="color:#a6e22e">book</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#a6e22e">douban</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#a6e22e">com</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#a6e22e">subject</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#a6e22e">35254632</span>/&gt;
+</span></span></code></pre></div><h3 id="相关代码">相关代码</h3>
+<p>head 头部添加 meta ：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;referrer&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;no-referrer&#34;</span>&gt;
+</span></span></code></pre></div><p>基于 jQuery 的功能代码，内置自建 API 不保证稳定（瞬间被502，哎……）：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">//豆瓣图书电影条目
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">$</span>(<span style="color:#e6db74">&#34;.post-content a[href*=&#39;douban.com/subject/&#39;]&#34;</span>).<span style="color:#a6e22e">each</span>(<span style="color:#66d9ef">function</span>(){<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">_this</span><span style="color:#f92672">=</span><span style="color:#a6e22e">$</span>(<span style="color:#66d9ef">this</span>);<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">str</span><span style="color:#f92672">=</span><span style="color:#a6e22e">_this</span>.<span style="color:#a6e22e">attr</span>(<span style="color:#e6db74">&#34;href&#34;</span>);<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">db_reg</span><span style="color:#f92672">=</span><span style="color:#e6db74">/^https\:\/\/(movie|book)\.douban\.com\/subject\/([0-9]+)\/?/</span>;<span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">db_reg</span>.<span style="color:#a6e22e">test</span>(<span style="color:#a6e22e">str</span>)){<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">db_type</span><span style="color:#f92672">=</span><span style="color:#a6e22e">str</span>.<span style="color:#a6e22e">replace</span>(<span style="color:#a6e22e">db_reg</span>,<span style="color:#e6db74">&#34;$1&#34;</span>);<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">db_id</span><span style="color:#f92672">=</span><span style="color:#a6e22e">str</span>.<span style="color:#a6e22e">replace</span>(<span style="color:#a6e22e">db_reg</span>,<span style="color:#e6db74">&#34;$2&#34;</span>).<span style="color:#a6e22e">toString</span>();<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">db_api</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://douban.edui.fun/&#34;</span>;<span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">db_type</span><span style="color:#f92672">==</span><span style="color:#e6db74">&#39;movie&#39;</span>){<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">ls_item</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;movie&#39;</span><span style="color:#f92672">+</span><span style="color:#a6e22e">db_id</span>;<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">url</span><span style="color:#f92672">=</span><span style="color:#a6e22e">db_api</span><span style="color:#f92672">+</span><span style="color:#e6db74">&#34;movies/&#34;</span><span style="color:#f92672">+</span><span style="color:#a6e22e">db_id</span>;<span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">getItem</span>(<span style="color:#a6e22e">ls_item</span>)<span style="color:#f92672">==</span><span style="color:#66d9ef">null</span><span style="color:#f92672">||</span><span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">getItem</span>(<span style="color:#a6e22e">ls_item</span>)<span style="color:#f92672">==</span><span style="color:#e6db74">&#39;undefined&#39;</span>){<span style="color:#a6e22e">$</span>.<span style="color:#a6e22e">ajax</span>({<span style="color:#a6e22e">url</span><span style="color:#f92672">:</span><span style="color:#a6e22e">url</span>,<span style="color:#a6e22e">type</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#39;GET&#39;</span>,<span style="color:#a6e22e">dataType</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#34;json&#34;</span>,<span style="color:#a6e22e">success</span><span style="color:#f92672">:</span><span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">data</span>){<span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">setItem</span>(<span style="color:#a6e22e">ls_item</span>,<span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>(<span style="color:#a6e22e">data</span>));<span style="color:#a6e22e">moiveShow</span>(<span style="color:#a6e22e">_this</span>,<span style="color:#a6e22e">ls_item</span>)}})}<span style="color:#66d9ef">else</span>{<span style="color:#a6e22e">moiveShow</span>(<span style="color:#a6e22e">_this</span>,<span style="color:#a6e22e">ls_item</span>)}}<span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">db_type</span><span style="color:#f92672">==</span><span style="color:#e6db74">&#39;book&#39;</span>){<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">ls_item</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;book&#39;</span><span style="color:#f92672">+</span><span style="color:#a6e22e">db_id</span>;<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">url</span><span style="color:#f92672">=</span><span style="color:#a6e22e">db_api</span><span style="color:#f92672">+</span><span style="color:#e6db74">&#34;v2/book/id/&#34;</span><span style="color:#f92672">+</span><span style="color:#a6e22e">db_id</span>;<span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">getItem</span>(<span style="color:#a6e22e">ls_item</span>)<span style="color:#f92672">==</span><span style="color:#66d9ef">null</span><span style="color:#f92672">||</span><span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">getItem</span>(<span style="color:#a6e22e">ls_item</span>)<span style="color:#f92672">==</span><span style="color:#e6db74">&#39;undefined&#39;</span>){<span style="color:#a6e22e">$</span>.<span style="color:#a6e22e">ajax</span>({<span style="color:#a6e22e">url</span><span style="color:#f92672">:</span><span style="color:#a6e22e">url</span>,<span style="color:#a6e22e">type</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#39;GET&#39;</span>,<span style="color:#a6e22e">dataType</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#39;json&#39;</span>,<span style="color:#a6e22e">success</span><span style="color:#f92672">:</span><span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">data</span>){<span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">setItem</span>(<span style="color:#e6db74">&#39;book&#39;</span><span style="color:#f92672">+</span><span style="color:#a6e22e">db_id</span>,<span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>(<span style="color:#a6e22e">data</span>));<span style="color:#a6e22e">bookShow</span>(<span style="color:#a6e22e">_this</span>,<span style="color:#a6e22e">ls_item</span>)}})}<span style="color:#66d9ef">else</span>{<span style="color:#a6e22e">bookShow</span>(<span style="color:#a6e22e">_this</span>,<span style="color:#a6e22e">ls_item</span>)}}}});<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">moiveShow</span>(<span style="color:#a6e22e">_this</span>,<span style="color:#a6e22e">ls_item</span>){<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">storage</span><span style="color:#f92672">=</span><span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">getItem</span>(<span style="color:#a6e22e">ls_item</span>);<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">data</span><span style="color:#f92672">=</span><span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">parse</span>(<span style="color:#a6e22e">storage</span>);<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">str</span><span style="color:#f92672">=</span><span style="color:#a6e22e">_this</span>.<span style="color:#a6e22e">attr</span>(<span style="color:#e6db74">&#34;href&#34;</span>);<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">data</span>)<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">db_star</span><span style="color:#f92672">=</span>Math.<span style="color:#a6e22e">ceil</span>(<span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">rating</span>);<span style="color:#a6e22e">$</span>(<span style="color:#e6db74">&#34;&lt;div class=&#39;post-preview&#39;&gt;&lt;div class=&#39;post-preview--meta&#39;&gt;&lt;div class=&#39;post-preview--middle&#39;&gt;&lt;h4 class=&#39;post-preview--title&#39;&gt;&lt;a target=&#39;_blank&#39; href=&#39;&#34;</span><span style="color:#f92672">+</span><span style="color:#a6e22e">str</span><span style="color:#f92672">+</span><span style="color:#e6db74">&#34;&#39;&gt;《&#34;</span><span style="color:#f92672">+</span><span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">name</span><span style="color:#f92672">+</span><span style="color:#e6db74">&#34;》&lt;/a&gt;&lt;/h4&gt;&lt;div class=&#39;rating&#39;&gt;&lt;div class=&#39;rating-star allstar&#34;</span><span style="color:#f92672">+</span><span style="color:#a6e22e">db_star</span><span style="color:#f92672">+</span><span style="color:#e6db74">&#34;&#39;&gt;&lt;/div&gt;&lt;div class=&#39;rating-average&#39;&gt;&#34;</span><span style="color:#f92672">+</span><span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">rating</span><span style="color:#f92672">+</span><span style="color:#e6db74">&#34;&lt;/div&gt;&lt;/div&gt;&lt;time class=&#39;post-preview--date&#39;&gt;导演：&#34;</span><span style="color:#f92672">+</span><span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">director</span><span style="color:#f92672">+</span><span style="color:#e6db74">&#34; / 类型：&#34;</span><span style="color:#f92672">+</span><span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">genre</span><span style="color:#f92672">+</span><span style="color:#e6db74">&#34; / &#34;</span><span style="color:#f92672">+</span><span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">year</span><span style="color:#f92672">+</span><span style="color:#e6db74">&#34;&lt;/time&gt;&lt;section style=&#39;max-height:75px;overflow:hidden;&#39; class=&#39;post-preview--excerpt&#39;&gt;&#34;</span><span style="color:#f92672">+</span><span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">intro</span>.<span style="color:#a6e22e">replace</span>(<span style="color:#e6db74">/\s*/g</span>,<span style="color:#e6db74">&#34;&#34;</span>)<span style="color:#f92672">+</span><span style="color:#e6db74">&#34;&lt;/section&gt;&lt;/div&gt;&lt;/div&gt;&lt;img referrer-policy=&#39;no-referrer&#39; loading=&#39;lazy&#39; class=&#39;post-preview--image&#39; src=&#34;</span><span style="color:#f92672">+</span><span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">img</span><span style="color:#f92672">+</span><span style="color:#e6db74">&#34;&gt;&lt;/div&gt;&#34;</span>).<span style="color:#a6e22e">replaceAll</span>(<span style="color:#a6e22e">_this</span>)}<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">bookShow</span>(<span style="color:#a6e22e">_this</span>,<span style="color:#a6e22e">ls_item</span>){<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">storage</span><span style="color:#f92672">=</span><span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">getItem</span>(<span style="color:#a6e22e">ls_item</span>);<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">data</span><span style="color:#f92672">=</span><span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">parse</span>(<span style="color:#a6e22e">storage</span>);<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">str</span><span style="color:#f92672">=</span><span style="color:#a6e22e">_this</span>.<span style="color:#a6e22e">attr</span>(<span style="color:#e6db74">&#34;href&#34;</span>);<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">db_star</span><span style="color:#f92672">=</span>Math.<span style="color:#a6e22e">ceil</span>(<span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">rating</span>.<span style="color:#a6e22e">average</span>);<span style="color:#a6e22e">$</span>(<span style="color:#e6db74">&#34;&lt;div class=&#39;post-preview&#39;&gt;&lt;div class=&#39;post-preview--meta&#39;&gt;&lt;div class=&#39;post-preview--middle&#39;&gt;&lt;h4 class=&#39;post-preview--title&#39;&gt;&lt;a target=&#39;_blank&#39; href=&#39;&#34;</span><span style="color:#f92672">+</span><span style="color:#a6e22e">str</span><span style="color:#f92672">+</span><span style="color:#e6db74">&#34;&#39;&gt;《&#34;</span><span style="color:#f92672">+</span><span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">title</span><span style="color:#f92672">+</span><span style="color:#e6db74">&#34;》&lt;/a&gt;&lt;/h4&gt;&lt;div class=&#39;rating&#39;&gt;&lt;div class=&#39;rating-star allstar&#34;</span><span style="color:#f92672">+</span><span style="color:#a6e22e">db_star</span><span style="color:#f92672">+</span><span style="color:#e6db74">&#34;&#39;&gt;&lt;/div&gt;&lt;div class=&#39;rating-average&#39;&gt;&#34;</span><span style="color:#f92672">+</span><span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">rating</span>.<span style="color:#a6e22e">average</span><span style="color:#f92672">+</span><span style="color:#e6db74">&#34;&lt;/div&gt;&lt;/div&gt;&lt;time class=&#39;post-preview--date&#39;&gt;作者：&#34;</span><span style="color:#f92672">+</span><span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">author</span><span style="color:#f92672">+</span><span style="color:#e6db74">&#34; &lt;/time&gt;&lt;section style=&#39;max-height:75px;overflow:hidden;&#39; class=&#39;post-preview--excerpt&#39;&gt;&#34;</span><span style="color:#f92672">+</span><span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">summary</span>.<span style="color:#a6e22e">replace</span>(<span style="color:#e6db74">/\s*/g</span>,<span style="color:#e6db74">&#34;&#34;</span>)<span style="color:#f92672">+</span><span style="color:#e6db74">&#34;&lt;/section&gt;&lt;/div&gt;&lt;/div&gt;&lt;img referrer-policy=&#39;no-referrer&#39; loading=&#39;lazy&#39; class=&#39;post-preview--image&#39; src=&#34;</span><span style="color:#f92672">+</span><span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">images</span>.<span style="color:#a6e22e">medium</span><span style="color:#f92672">+</span><span style="color:#e6db74">&#34;&gt;&lt;/div&gt;&#34;</span>).<span style="color:#a6e22e">replaceAll</span>(<span style="color:#a6e22e">_this</span>)}
+</span></span></code></pre></div><p>样式代码：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>.<span style="color:#a6e22e">post-preview</span>{<span style="color:#66d9ef">max-width</span>:<span style="color:#ae81ff">780</span><span style="color:#66d9ef">px</span>;<span style="color:#66d9ef">height</span>:<span style="color:#ae81ff">210</span><span style="color:#66d9ef">px</span>;<span style="color:#66d9ef">margin</span>:<span style="color:#ae81ff">1</span><span style="color:#66d9ef">em</span> <span style="color:#66d9ef">auto</span>;<span style="color:#66d9ef">position</span>:<span style="color:#66d9ef">relative</span>;<span style="color:#66d9ef">display</span>:<span style="color:#66d9ef">flex</span>;<span style="color:#66d9ef">background</span>:<span style="color:#ae81ff">#fff</span>;<span style="color:#66d9ef">border-radius</span>:<span style="color:#ae81ff">4</span><span style="color:#66d9ef">px</span>;<span style="color:#66d9ef">box-shadow</span>:<span style="color:#ae81ff">0</span> <span style="color:#ae81ff">1</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">2</span><span style="color:#66d9ef">px</span> rgba(<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">.25</span>),<span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">1</span><span style="color:#66d9ef">px</span> rgba(<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">.25</span>);}.<span style="color:#a6e22e">post-preview--meta</span>{<span style="color:#66d9ef">width</span>:<span style="color:#ae81ff">75</span><span style="color:#66d9ef">%</span>;<span style="color:#66d9ef">padding</span>:<span style="color:#ae81ff">25</span><span style="color:#66d9ef">px</span>;<span style="color:#66d9ef">overflow</span>:<span style="color:#66d9ef">hidden</span>;}.<span style="color:#a6e22e">post-preview--middle</span> {<span style="color:#66d9ef">line-height</span>:<span style="color:#ae81ff">28</span><span style="color:#66d9ef">px</span>;}.<span style="color:#a6e22e">post-preview--title</span> {<span style="color:#66d9ef">font-size</span>:<span style="color:#ae81ff">18</span><span style="color:#66d9ef">px</span>;<span style="color:#66d9ef">margin</span>:<span style="color:#ae81ff">0</span><span style="color:#75715e">!important</span>;}.<span style="color:#a6e22e">post-preview--title</span> <span style="color:#f92672">a</span>{<span style="color:#66d9ef">text-decoration</span>:<span style="color:#66d9ef">none</span>;}.<span style="color:#a6e22e">post-preview--date</span>{<span style="color:#66d9ef">font-size</span>:<span style="color:#ae81ff">14</span><span style="color:#66d9ef">px</span>;<span style="color:#66d9ef">color</span>:<span style="color:#ae81ff">#999</span>;}.<span style="color:#a6e22e">post-preview--excerpt</span>{<span style="color:#66d9ef">font-size</span>:<span style="color:#ae81ff">14</span><span style="color:#66d9ef">px</span>;<span style="color:#66d9ef">line-height</span>:<span style="color:#ae81ff">1.825</span>;}.<span style="color:#a6e22e">post-preview--excerpt</span> <span style="color:#f92672">p</span>{<span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">inline</span>;<span style="color:#66d9ef">margin</span>: <span style="color:#ae81ff">0</span>;}  .<span style="color:#a6e22e">post-preview--image</span> {<span style="color:#66d9ef">height</span>:<span style="color:#ae81ff">210</span><span style="color:#66d9ef">px</span><span style="color:#75715e">!important</span>;<span style="color:#66d9ef">width</span>:<span style="color:#66d9ef">auto</span>;<span style="color:#66d9ef">float</span>:<span style="color:#66d9ef">right</span>;<span style="color:#66d9ef">border-top-right-radius</span>: <span style="color:#ae81ff">2</span><span style="color:#66d9ef">px</span><span style="color:#75715e">!important</span>;<span style="color:#66d9ef">border-bottom-right-radius</span>:<span style="color:#ae81ff">2</span><span style="color:#66d9ef">px</span><span style="color:#75715e">!important</span>;<span style="color:#66d9ef">border-top-left-radius</span>:<span style="color:#ae81ff">0</span><span style="color:#75715e">!important</span>;<span style="color:#66d9ef">border-bottom-left-radius</span>:<span style="color:#ae81ff">0</span><span style="color:#75715e">!important</span>;}
+</span></span><span style="display:flex;"><span>@<span style="color:#66d9ef">media</span> <span style="color:#f92672">(</span><span style="color:#f92672">max-width</span>:<span style="color:#a6e22e">550px</span><span style="color:#f92672">)</span> {.<span style="color:#a6e22e">post-preview</span> {<span style="color:#66d9ef">width</span>:<span style="color:#ae81ff">95</span><span style="color:#66d9ef">%</span>;}.<span style="color:#a6e22e">post-preview--excerpt</span>{<span style="color:#66d9ef">display</span>:<span style="color:#66d9ef">none</span>;}.<span style="color:#a6e22e">post-preview--middle</span> {<span style="color:#66d9ef">line-height</span>:<span style="color:#ae81ff">19</span><span style="color:#66d9ef">px</span>;}}
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">rating</span>{<span style="color:#66d9ef">display</span>:<span style="color:#66d9ef">block</span>;<span style="color:#66d9ef">line-height</span>:<span style="color:#ae81ff">15</span><span style="color:#66d9ef">px</span>;}.<span style="color:#a6e22e">rating-star</span>{<span style="color:#66d9ef">display</span>:<span style="color:#66d9ef">inline-block</span>;<span style="color:#66d9ef">width</span>:<span style="color:#ae81ff">75</span><span style="color:#66d9ef">px</span>;<span style="color:#66d9ef">height</span>:<span style="color:#ae81ff">15</span><span style="color:#66d9ef">px</span>;<span style="color:#66d9ef">background-repeat</span>:<span style="color:#66d9ef">no-repeat</span>;<span style="color:#66d9ef">background-image</span>:url(<span style="color:#e6db74">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEsAAAClCAYAAAAUAAAYAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA5xJREFUeNrs3T9rFEEcxvG7qEQIglaCICKkin9AUEtBKxU7wS61VlYivgWj70TtNFj5BqzE7qxEWwsxKIoYn4UtluFmbm8nczvzm+/BjxyuDwNzu3uXD0+46f7LC5PA45Hm+WTYw1x2LRDc0jzTXB+wqMlsaLPutz8fDFjYZHYauAz3NBvt83XNnyUWNpn1nVm3OsHmsb3EomazzZnVXKMPNcc0xzUnNKc0Rzv/77fms+Z7O3vt9b1eU7bZrNN68l5zcolX4ofmsuZXTdnmMvyi2dR86Bmcac62P6vKrnVubpc0bxYE32nOab45N8YqsvPeDfcD4SOav4HjprPuu+H5BTt9LXDMfNbdLPfT678Fx6vKupt1o/O8+R3pkOaJ5/iktqx7z/qp+aq5q/nY+fczmheaK03Gs7D5rLtZdzSvA6/Ebc2u55j57HQB0TzW7AzkjiKzny6+2hlKNE8juMNcFqKBaIZndRlCNBBNgmx7ZkE0fbLtZkE0EA1EM17WuQwhGogGooFoss6296y52cNO+J6HLJoPaFdbsvA9zGerIxrPh85eWYgGooFoDiQbuAxp0UA0EVmdWbRo+ma1WbRoIBqIZtzsnHdDWjQQDUQD0WSbde5ZS2UhmtqJJtSEiVkXooFoIJre2VATJmZdiKZ2ogk1YSb8oVMvDeUPnSAaiCaPJkzMuhANRAPRQDQpsqEmTMy6EI11oolpwkA0EA1EcyDZmCYMRAPR+LMxTZjqiCamCQPRQDQQzehNGIgGooFoIJpVZ2OaMBBN7USTqgkD0UA0EE3vbKomDERTO9GkasKYJJpUTRiIBqKBaEZvwkA0EA1EA9GkyKZqwkA01olmrCYMRAPRQDR9LkO+0QmiKbAJUyTRjNWEgWggGohm9CYMRAPRQDQQzZDsWE0YiMYC0eTYhIFoIJrKiCbHJgxEY4FocmzCZEs0OTZhIBqIpjKiybEJA9FANBANROPL5tiEgWhKIJoSmzAQDURjjGhKbMJANCUQTYlNmNGIpsQmDEQD0RgjmhKbMBANRAPR1Es0JTZhIJpciMZaEwaigWgKJBprTRiIJheisdaESUo01powEA1EUyDRWGvCQDQQDURjm2isNWEgmlURzWw2q4pZIBqIJkOiCVyGJpkFolkV0ejMMvel28mIRptl7ku3IRqIpjCimfNuaJpZIBqIBqIpm2ice5Z5ZonJupvVkMRu4JW4qXnrOWY++1+AAQBw9BJSCTeN9wAAAABJRU5ErkJggg==</span>);<span style="color:#66d9ef">overflow</span>:<span style="color:#66d9ef">hidden</span>;}.<span style="color:#a6e22e">allstar10</span>{<span style="color:#66d9ef">background-position</span>:<span style="color:#ae81ff">0</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">0</span><span style="color:#66d9ef">px</span>;}.<span style="color:#a6e22e">allstar9</span>{<span style="color:#66d9ef">background-position</span>:<span style="color:#ae81ff">0</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">-15</span><span style="color:#66d9ef">px</span>;}.<span style="color:#a6e22e">allstar8</span>{<span style="color:#66d9ef">background-position</span>:<span style="color:#ae81ff">0</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">-30</span><span style="color:#66d9ef">px</span>;}.<span style="color:#a6e22e">allstar7</span>{<span style="color:#66d9ef">background-position</span>:<span style="color:#ae81ff">0</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">-45</span><span style="color:#66d9ef">px</span>;}.<span style="color:#a6e22e">allstar6</span>{<span style="color:#66d9ef">background-position</span>:<span style="color:#ae81ff">0</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">-60</span><span style="color:#66d9ef">px</span>;}.<span style="color:#a6e22e">allstar5</span>{<span style="color:#66d9ef">background-position</span>:<span style="color:#ae81ff">0</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">-75</span><span style="color:#66d9ef">px</span>;}.<span style="color:#a6e22e">allstar4</span>{<span style="color:#66d9ef">background-position</span>:<span style="color:#ae81ff">0</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">-90</span><span style="color:#66d9ef">px</span>;}.<span style="color:#a6e22e">allstar3</span>{<span style="color:#66d9ef">background-position</span>:<span style="color:#ae81ff">0</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">-105</span><span style="color:#66d9ef">px</span>;}.<span style="color:#a6e22e">allstar2</span>{<span style="color:#66d9ef">background-position</span>:<span style="color:#ae81ff">0</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">-120</span><span style="color:#66d9ef">px</span>;}.<span style="color:#a6e22e">allstar1</span>{<span style="color:#66d9ef">background-position</span>:<span style="color:#ae81ff">0</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">-135</span><span style="color:#66d9ef">px</span>;}.<span style="color:#a6e22e">allstar0</span>{<span style="color:#66d9ef">background-position</span>:<span style="color:#ae81ff">0</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">-150</span><span style="color:#66d9ef">px</span>;}.<span style="color:#a6e22e">rating-average</span>{<span style="color:#66d9ef">color</span>:<span style="color:#ae81ff">#777</span>;<span style="color:#66d9ef">display</span>:<span style="color:#66d9ef">inline-block</span>;<span style="color:#66d9ef">font-size</span>:<span style="color:#ae81ff">13</span><span style="color:#66d9ef">px</span>;<span style="color:#66d9ef">margin-left</span>:<span style="color:#ae81ff">10</span><span style="color:#66d9ef">px</span>;}
+</span></span></code></pre></div><h3 id="其它-api-收集">其它 api 收集</h3>
+<p><a href="https://github.com/iiiiiii1/douban-imdb-api">https://github.com/iiiiiii1/douban-imdb-api</a></p>]]></content>
             
                  
                     
@@ -176,7 +56,7 @@
                         
                             
                              
-                                <category scheme="https://blueisle.cf/tags/%E6%97%A5%E5%B8%B8" term="%E6%97%A5%E5%B8%B8" label="日常" />
+                                <category scheme="https://blueisle.cf/tags/%E6%8A%98%E8%85%BE" term="%E6%8A%98%E8%85%BE" label="折腾" />
                             
                         
                     
@@ -186,81 +66,113 @@
     
         
         <entry>
-            <title type="html"><![CDATA[二〇二一，还好]]></title>
-            <link href="https://blueisle.cf/right-so-so-2021/" rel="alternate" type="text/html" />
+            <title type="html"><![CDATA[「电影 / 阅读」页面，顶！]]></title>
+            <link href="https://blueisle.cf/doumark-action/" rel="alternate" type="text/html" />
             
-                <id>https://blueisle.cf/right-so-so-2021/</id>
+                <id>https://blueisle.cf/doumark-action/</id>
             
             
-            <published>2022-01-02T14:22:57+08:00</published>
-            <updated>2022-01-02T14:22:57+08:00</updated>
+            <published>2022-03-22T23:32:16+08:00</published>
+            <updated>2022-03-22T23:32:16+08:00</updated>
+            
+            
+            <content type="html"><![CDATA[<p>来自于 <a href="https://imnerd.org/doumark.html">@怡红公子</a> 的自制轮子：<a href="https://github.com/lizheming/doumark-action">doumark-action</a> ，豆瓣书影音同步 GitHub Action。</p>
+<p>如果你也使用 Hugo + GitHub Action，那就能直接用上。</p>
+<p>个人相关代码如下： <a href="https://github.com/lmm214/immmmm/blob/master/.github/workflows/douban.yml">.github/workflows/douban.yml</a>、<a href="https://github.com/lmm214/immmmm/blob/master/themes/hello-friend/layouts/_default/movies.html">hello-friend/layouts/_default/movies.html</a>、<a href="https://github.com/lmm214/immmmm/blob/master/themes/hello-friend/layouts/_default/books.html">hello-friend/layouts/_default/books.html</a>。</p>
+<p>折腾不息，生命不止。赶在明天前，码字发了先！</p>]]></content>
+            
+                 
+                    
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://blueisle.cf/tags/%E6%8A%98%E8%85%BE" term="%E6%8A%98%E8%85%BE" label="折腾" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        
+        <entry>
+            <title type="html"><![CDATA[获取图片主色脚本：Rgbaster.js]]></title>
+            <link href="https://blueisle.cf/rgbaster-js/" rel="alternate" type="text/html" />
+            
+                <id>https://blueisle.cf/rgbaster-js/</id>
+            
+            
+            <published>2022-03-06T11:10:11+08:00</published>
+            <updated>2022-03-06T11:10:11+08:00</updated>
+            
+            
+            <content type="html"><![CDATA[<figure>
+    <img src="https://cdn.edui.fun/images/2022/03/rgbaster-rili.png" width="50%"/><img src="https://cdn.edui.fun/images/2022/03/rgbaster-rili2.png" width="50%" />
+    <figcaption>单向历</figcaption>
+  </figure>
+<p>之前做了一个 <a href="https://edui123.com/rili/">单向历</a> 的单页面，通过 js 请求 api 加载当天的图片。有点小矛盾，当天图片大部分是白色，个别是黑色，那背景色怎么设置都会违和。</p>
+<p>真是只有想不到没有做不到，而且很多还是别人已经做过的！</p>
+<p>Github 项目主页：<a href="https://github.com/briangonzalez/rgbaster.js">https://github.com/briangonzalez/rgbaster.js</a></p>
+<p>详细使用参考： <a href="https://www.zhangxinxu.com/wordpress/2014/08/image-dominant-color-get-rgbaster-js/">https://www.zhangxinxu.com/wordpress/2014/08/image-dominant-color-get-rgbaster-js/</a></p>
+<p>自己加了一个 rgba 的透明度。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>https://edui123.com/rili/rgbaster.min.js
+</span></span></code></pre></div>]]></content>
+            
+                 
+                    
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://blueisle.cf/tags/%E6%8A%98%E8%85%BE" term="%E6%8A%98%E8%85%BE" label="折腾" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        
+        <entry>
+            <title type="html"><![CDATA[书签导航应用：Flare ]]></title>
+            <link href="https://blueisle.cf/startpage-flare/" rel="alternate" type="text/html" />
+            
+                <id>https://blueisle.cf/startpage-flare/</id>
+            
+            
+            <published>2022-02-26T16:11:24+08:00</published>
+            <updated>2022-02-26T16:11:24+08:00</updated>
             
             
             <content type="html"><![CDATA[<blockquote>
-<p>听闻新冠最初会“味觉丧失”，查询抑郁最初会“丧失兴趣”，如此判别，病得不重也不轻。</p>
+<p>Flame 是服务器的自托管起始页。使用内置编辑器轻松管理您的应用程序和书签。 —— <a href="https://github.com/pawelmalak/flame">Flame</a></p>
 </blockquote>
-<h3 id="十二月">十二月</h3>
-<figure>
-    <img src="https://pic.edui.fun/images/2022/01/hi12.JPG"/><figcaption>自造快乐</figcaption></figure>
-
-<p>两周前本地疫情突发，对管控区外的实际影响不大，除了家里又多了几袋米、几包方便面。这次“平安夜”的朋友圈异常活跃，当家的破天荒买了灯带，小小布置氛围浓烈，收获自造快乐，珍重当下平淡。</p>
-<h3 id="十一月">十一月</h3>
-<figure>
-    <img src="https://pic.edui.fun/images/2022/01/hi11.JPG"/><figcaption>钱湖霞光</figcaption></figure>
-
-<p>东钱湖的四季，每每都有不同的欣喜。韩岭老街里新开的书店，湖边即将建成美术馆，环湖一圈的高端酒店民宿仍待全解锁。</p>
-<h3 id="十月">十月</h3>
-<figure>
-    <img src="https://pic.edui.fun/images/2022/01/hi10-1.JPG" width="50%"/><img src="https://pic.edui.fun/images/2022/01/hi10-2.JPG" width="50%" />
-    <figcaption>天府之行</figcaption>
-  </figure>
-<p>重点当然不是参加装备展，周五晚上到周日下午飞回，抓住两个晚上的逛啊吃啊！成都，果然今夜无人入眠。</p>
-<h3 id="九月">九月</h3>
-<figure>
-    <img src="https://pic.edui.fun/images/2022/01/hi09-1.JPG"/><figcaption>家有读书郎</figcaption></figure>
-
-<p>“我是小学生啦”，一同一早出门，夜深归家。再怎么减，读书总是不轻松的。幼小衔接，更需要适应的是自己，手忙脚乱、苦口婆心、收效甚微、焦躁不安。</p>
-<h3 id="八月">八月</h3>
-<figure>
-    <img src="https://pic.edui.fun/images/2022/01/hi08.JPG"/><figcaption>盛夏放风</figcaption></figure>
-
-<p>主动关闭“空调风”，人工切换“自然风”。城市风光，不输自然。</p>
-<h3 id="七月">七月</h3>
-<figure>
-    <img src="https://pic.edui.fun/images/2022/01/hi07.JPG"/><figcaption>溆浦大山行</figcaption></figure>
-
-<p>越过大河山川，跨过人山人海，历经大巴绿皮火车大巴中巴，整整23个小时。湖南溆浦，少年与山，相遇与你。</p>
-<h3 id="六月">六月</h3>
-<figure>
-    <img src="https://pic.edui.fun/images/2022/01/hi06.JPG"/><figcaption>毕业季</figcaption></figure>
-
-<p>2012 &ndash; 2021，自己第一批带出的学生一下子毕业三年，再见已胜初见。</p>
-<h3 id="五月">五月</h3>
-<figure>
-    <img src="https://pic.edui.fun/images/2022/01/hi05.JPG"/><figcaption>迈开腿</figcaption></figure>
-
-<p>不添堵，三江两岸一日深度游。港口博物馆、万人沙滩、红桥花海……</p>
-<h3 id="四月">四月</h3>
-<figure>
-    <img src="https://pic.edui.fun/images/2022/01/hi04.JPEG"/><figcaption>西湖美景</figcaption></figure>
-
-<p>动次打次，成功解锁打“动的”到西湖，临时起意下午即回，享受城际交通的便利。</p>
-<h3 id="三月">三月</h3>
-<figure>
-    <img src="https://pic.edui.fun/images/2022/01/hi03.jpg"/><figcaption>哈皮时刻</figcaption></figure>
-
-<p>来自 Switch Labo 纸皮人的欢乐！不得不服这设计。</p>
-<h3 id="二月">二月</h3>
-<figure>
-    <img src="https://pic.edui.fun/images/2022/01/hi02-1.JPG" width="50%"/><img src="https://pic.edui.fun/images/2022/01/hi02-2.JPG" width="50%" />
-    <figcaption>烟火年味</figcaption>
-  </figure>
-<p>乡下庭院，燃烟花迎新年。</p>
-<h3 id="一月">一月</h3>
-<figure>
-    <img src="https://pic.edui.fun/images/2022/01/hi01.JPG"/><figcaption>爱在冬季</figcaption></figure>
-
-<p>以热爱换珍惜，铜婚之年。</p>]]></content>
+<p>在线预览：<a href="https://edui.fun/">https://edui.fun/</a></p>
+<p>推荐 <a href="https://soulteary.com/">@soulteary</a> 做的中文化优化版本 <a href="https://soulteary.com/2022/02/23/building-a-personal-bookmark-navigation-app-from-scratch-flare.html">Flare</a>，Docker 一键部署，内存占用小到忽略不计，重点是可以直接前端编辑。比  <a href="https://edui123.com/">Edui123.com</a> 采用的 <a href="https://immmmm.com/hugo-theme-webstack/">Hugo Theme Webstack</a> 更灵活些。</p>
+<p>采用 <code>docker-compose.yml</code> 部署更是一键三连，镜像启用更新部署丝滑！</p>
+<pre tabindex="0"><code># docker-compose.yml
+version: &#39;3.6&#39;
+services:
+  flare:
+    image: soulteary/flare:latest
+    restart: always
+    command: flare --nologin=0
+    environment:
+      - FLARE_USER=flare
+      - FLARE_PASS=flare123456
+    ports:
+      - 5005:5005
+    volumes:
+      - /www/wwwroot/edui.fun/app:/app
+</code></pre><pre tabindex="0"><code>docker-compose pull
+docker-compose down
+docker-compose up -d
+</code></pre>]]></content>
             
                  
                     
@@ -270,7 +182,7 @@
                         
                             
                              
-                                <category scheme="https://blueisle.cf/tags/%E6%97%A5%E5%B8%B8" term="%E6%97%A5%E5%B8%B8" label="日常" />
+                                <category scheme="https://blueisle.cf/tags/%E6%8A%98%E8%85%BE" term="%E6%8A%98%E8%85%BE" label="折腾" />
                             
                         
                     
@@ -280,18 +192,120 @@
     
         
         <entry>
-            <title type="html"><![CDATA[这不是演习]]></title>
-            <link href="https://blueisle.cf/2019-2021-ncov/" rel="alternate" type="text/html" />
+            <title type="html"><![CDATA[Hi，My Friends（Public Beta）]]></title>
+            <link href="https://blueisle.cf/hi-friends-circle/" rel="alternate" type="text/html" />
             
-                <id>https://blueisle.cf/2019-2021-ncov/</id>
-            
-            
-            <published>2021-12-11T11:02:16+08:00</published>
-            <updated>2021-12-11T11:02:16+08:00</updated>
+                <id>https://blueisle.cf/hi-friends-circle/</id>
             
             
-            <content type="html"><![CDATA[<p>前一周还在说要进行全员核酸演练，这一周突然就一例本土确诊。一切发展超乎迅猛，唯一庆幸的是确诊者都一个街道，都是轻症。望，年前能恢复如初，至少不影响出行晒个太阳。</p>
-<p><img loading='lazy' src="https://pic.edui.fun/images/2021/12/IMG_6461.JPG" alt="IMG_6461"  /></p>]]></content>
+            <published>2022-02-11T15:12:46+08:00</published>
+            <updated>2022-02-11T15:12:46+08:00</updated>
+            
+            
+            <content type="html"><![CDATA[<blockquote>
+<p>你是否经常烦恼于友链过多但没有时间浏览？那么友链朋友圈将解决这一痛点。你可以随时获取友链网站的更新内容，并了解友链的活跃情况 。 —— <a href="https://hexo-circle-of-friends-doc.vercel.app/">「友链朋友圈」</a></p>
+</blockquote>
+<p>在线预览：<a href="https://immmmm.com/friends/">https://immmmm.com/friends/</a></p>
+<h3 id="快速部署">快速部署</h3>
+<h4 id="挂载前端代码">挂载前端代码</h4>
+<p>博客新建一个页面，放入以下代码：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- 挂载友链朋友圈的容器 --&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;cf-container&#34;</span>&gt;与主机通讯中……&lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- 加样式和功能代码 --&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdn.jsdelivr.net/gh/lmm214/immmmm/themes/hello-friend/static/fcircle-beta.css&#34;</span>&gt;
+</span></span><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- 匹配自己的友链或加载后端数据
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">&lt;script type=&#34;text/javascript&#34;&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">  var fdataUser = {
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">    jsonurl: &#39;https://cdn.edui.fun/lmm.json&#39;,  //【推荐】json 匹配模式
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">    //apiurl: &#39;https://hexo-circle-of-friends-lmm214.vercel.app/&#39;,  //自部署api
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">  }
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">&lt;/script&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">--&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/javascript&#34;</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdn.jsdelivr.net/gh/lmm214/immmmm/themes/hello-friend/static/fcircle-beta.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span></code></pre></div><p>这样就搞定啦，默认看到的是 750+ feeds 的公共库（数据来自 <a href="https://github.com/saveweb/rss-list">saveweb</a>）。</p>
+<h4 id="匹配自己的友链">匹配自己的友链</h4>
+<p>当然，我们也想拥有一个纯自己友联的文章更新情况。来，取消注释，推荐采用第一种 <code>jsonurl</code> 方式。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/javascript&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">fdataUser</span> <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">jsonurl</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;https://cdn.edui.fun/lmm.json&#39;</span>,  <span style="color:#75715e">//【推荐】json 匹配模式
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">//apiurl: &#39;https://hexo-circle-of-friends-lmm214.vercel.app/&#39;,  //自部署api
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">//initnumber: 20,  //首次加载文章数
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">//stepnumber: 10,  //更多加载文章数
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">//article_sort: &#39;created&#39;, //文章排序 updated or created
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">//error_img: &#39;https://sdn.geekzu.org/avatar/57d8260dfb55501c37dde588e7c3852c&#39;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  }
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span></code></pre></div><p>其实 <code>lmm.json</code> 就是个 link 的数组，原理是把这数组与公共库进行匹配，返回对应的文章列表。</p>
+<p>这也是 <a href="https://github.com/Rock-Candy-Tea">「Rock-Candy-Tea」</a> 持之以恒，努力抛弃后端的成果！</p>
+<h3 id="可选后端配置">[可选]后端配置</h3>
+<p>见最新文档：<a href="https://hexo-circle-of-friends-doc.vercel.app/">https://hexo-circle-of-friends-doc.vercel.app/</a></p>
+<h3 id="项目历程">项目历程</h3>
+<blockquote>
+<p>致敬，用爱发电er</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>主页</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>冰老师</td>
+<td><a href="https://zfe.space/">https://zfe.space/</a></td>
+<td>友链朋友圈理念奠基人，初代前后端方案编写者，冰老师YYDS！</td>
+</tr>
+<tr>
+<td>Akilar</td>
+<td><a href="https://akilar.top/">https://akilar.top/</a></td>
+<td>为历代友链朋友圈提供前端方案，npm插件方案编写者</td>
+</tr>
+<tr>
+<td>heo</td>
+<td><a href="https://blog.zhheo.com/">https://blog.zhheo.com/</a></td>
+<td>友链朋友圈前端方案、视觉设计，UI 方案多样化</td>
+</tr>
+<tr>
+<td>贰猹</td>
+<td><a href="https://noionion.top/">https://noionion.top/</a></td>
+<td>历代友链朋友圈后端维护者，3.0方案编写者，多主题友链抓取适配，朋友圈售后中流砥柱，公共库方案、api编写者</td>
+</tr>
+<tr>
+<td>RaXianch</td>
+<td><a href="https://blog.raxianch.moe/">https://blog.raxianch.moe/</a></td>
+<td>友链朋友圈后端维护，多主题友链抓取适配</td>
+</tr>
+<tr>
+<td>yyyz</td>
+<td><a href="https://www.yyyzyyyz.cn/">https://www.yyyzyyyz.cn/</a></td>
+<td>4.0方案编写者，多主题友链抓取适配，服务器部署方案编写者，友链朋友圈现维护者</td>
+</tr>
+<tr>
+<td>林木木</td>
+<td><a href="https://immmmm.com/">https://immmmm.com/</a></td>
+<td>新版友链朋友圈前端方案编写者</td>
+</tr>
+<tr>
+<td>Fox</td>
+<td><a href="https://foolishfox.cn/">https://foolishfox.cn/</a></td>
+<td>提供sql api与sql存储本地化方案</td>
+</tr>
+</tbody>
+</table>
+<p>个人编写的 <a href="https://cdn.jsdelivr.net/gh/lmm214/immmmm/themes/hello-friend/static/fcircle-beta.js">fcircle-beta.js</a> 源自 <a href="https://cdn.jsdelivr.net/gh/Rock-Candy-Tea/hexo-friendcircle-demo@main/js/fetch.js">fetch.js</a> 和 <a href="https://cdn.jsdelivr.net/gh/Rock-Candy-Tea/hexo-friendcircle-demo@main/js/fcircle.js">fcircle.js</a>，从最初的简单合并实现了“第一次打开即能显示相应内容”，之后一天天的 commit 几乎是逼着强力后端 <a href="https://noionion.top/">@贰猹</a> 做了一个全新的 API，实现了很多全新的交互。</p>
+<h3 id="前端交互说明">前端交互说明</h3>
+<h4 id="点击订阅随机显示博客卡片">点击「订阅」，随机显示博客卡片</h4>
+<p><img loading='lazy' src="https://pic.edui.fun/images/2022/02/cf-beta-5.gif" alt="cf-beta-5"  /></p>
+<h4 id="点击活跃切换公共库和个人库">点击「活跃」，切换公共库和个人库</h4>
+<p><img loading='lazy' src="https://pic.edui.fun/images/2022/02/cf-beta-6.gif" alt="cf-beta-6"  /></p>
+<h4 id="点击头像随机此博客卡片">点击头像，随机此博客卡片</h4>
+<p><img loading='lazy' src="https://pic.edui.fun/images/2022/02/cf-beta-7.gif" alt="cf-beta-7"  /></p>
+<h4 id="点击日志清空本地缓存数据">点击「日志」，清空本地缓存数据。</h4>
+<p>更新后端后使用。</p>
+<h3 id="css-样式命名说明">CSS 样式命名说明</h3>
+<p><a href="https://cdn.jsdelivr.net/gh/lmm214/immmmm/themes/hello-friend/static/fcircle-beta.css">fcircle-beta.css</a> 统一命名格式，以 <code>cf-</code> 做标识。</p>]]></content>
             
                  
                     
@@ -301,41 +315,7 @@
                         
                             
                              
-                                <category scheme="https://blueisle.cf/tags/%E6%97%A5%E5%B8%B8" term="%E6%97%A5%E5%B8%B8" label="日常" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-        
-        <entry>
-            <title type="html"><![CDATA[胡三元教写字（Web）]]></title>
-            <link href="https://blueisle.cf/shufa-sanyuan/" rel="alternate" type="text/html" />
-            
-                <id>https://blueisle.cf/shufa-sanyuan/</id>
-            
-            
-            <published>2021-10-16T21:02:16+08:00</published>
-            <updated>2021-10-16T21:02:16+08:00</updated>
-            
-            
-            <content type="html"><![CDATA[<p><img loading='lazy' src="https://cdn.jsdelivr.net/gh/lmm214/images@master/logos/shufa.png" alt="shufa"  /></p>
-<p>戳我打开： <a href="https://edui123.com/shufa/">https://edui123.com/shufa/</a></p>
-<p>视频内容来自相应小程序，个人使用 <a href="https://github.com/alibaba/lightproxy/issues/19">LightProxy</a> 抓取视频名，并与文字匹配。目前做了<a href="https://edui.fun/shufa/">一上</a>、<a href="https://edui.fun/shufa/1b/">一下</a>、<a href="https://edui.fun/shufa/2a/">二上</a>和<a href="https://edui.fun/shufa/3a/">三上</a>。</p>
-<p>制作 web 版本的初衷是给老师在教室里用，毕竟小程序还得登录啥的，并非小而美，并非一点即可。</p>
-<p>制作动力，来自已读一个月多一年级的臭小子！</p>]]></content>
-            
-                 
-                    
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://blueisle.cf/tags/%E6%97%A5%E5%B8%B8" term="%E6%97%A5%E5%B8%B8" label="日常" />
+                                <category scheme="https://blueisle.cf/tags/%E6%8A%98%E8%85%BE" term="%E6%8A%98%E8%85%BE" label="折腾" />
                             
                         
                     

@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+      <title>Hugo 主题常用的代码片段 :: 明礼至卓</title>
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta charset="UTF-8"/>
+<meta name="renderer" content="webkit"/>
+<meta name="force-rendering" content="webkit"/>
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+<script>if ( false || (!!window.MSInputMethodContext && !!document.documentMode)) document.write('\x3Cscript id="_iealwn_js" data-outver="11" src="https://support.dmeng.net/ie-alert-warning/latest.js">\x3C/script>'); </script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="全站 Site 网址：.Site.BaseURL
+标题：.Site.Title，示例：
+&amp;lt;a href=&amp;#34;{{ $.Site.BaseURL }}&amp;#34;&amp;gt;{{ $.Site.Title }}&amp;lt;/a&amp;gt; 副标题：.Site.Params.description
+关键词：.Site.Params.keywords
+头部菜单：
+{{ range $.Site.Menus.main }} 	&amp;lt;li&amp;gt;&amp;lt;a href=&amp;#34;{{ .URL }}&amp;#34;&amp;gt;{{ .Name }}&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; {{ end }} "/>
+<meta name="keywords" content=""/>
+<link rel="canonical" href="https://blueisle.cf/hugo-template-code/" />
+<link rel="stylesheet" href="/main.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:500&display=swap" media="print" onload="this.media='all'">
+<link rel="shortcut icon" href="https://blueisle.cf/favicon.ico">
+
+<meta property="og:title" content="Hugo 主题常用的代码片段" />
+<meta property="og:description" content="全站 Site
+网址：.Site.BaseURL
+标题：.Site.Title，示例：
+&lt;a href=&#34;{{ $.Site.BaseURL }}&#34;&gt;{{ $.Site.Title }}&lt;/a&gt;
+副标题：.Site.Params.description
+关键词：.Site.Params.keywords
+头部菜单：
+{{ range $.Site.Menus.main }}
+	&lt;li&gt;&lt;a href=&#34;{{ .URL }}&#34;&gt;{{ .Name }}&lt;/a&gt;&lt;/li&gt;
+{{ end }}
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blueisle.cf/hugo-template-code/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-04-01T09:46:00+08:00" />
+<meta property="article:modified_time" content="2020-04-01T09:46:00+08:00" />
+
+
+
+
+    
+  <link rel="prefetch" href="https://blueisle.cf/2020-04-04/">
+  <link rel="prefetch" href="https://blueisle.cf/hugo-add-breadcrumb/">
+
+  </head>
+  <body class="dark-theme">
+    <div class="container">
+      <header class="header">
+  <span class="header__inner">
+    <a href="https://blueisle.cf" class="logo" style="text-decoration: none;">
+  
+    <span class="logo__text">明礼至卓</span>
+    <span class="logo__cursor"></span>
+  
+</a>
+
+    <span class="header__right">
+      
+        <nav class="menu hidden">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/movies/">电影</a></li>
+        
+      
+        
+          <li><a href="/books/">阅读</a></li>
+        
+      
+        
+          <li><a href="/archives/">归档</a></li>
+        
+      
+        
+          <li><a href="/friends/">友圈</a></li>
+        
+      
+        
+          <li><a href="/about/">关于</a></li>
+        
+      
+        
+          <li><a href="https://nav.blueisle.cf/">导航</a></li>
+        
+      
+    
+
+                <li><a href="/search/"><svg t="1556783211810" class="search-box-icon" class="icon" style="" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2078" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><style type="text/css"></style></defs><path d="M981.39652054 920.86314525L704.56522859 644.0318533a366.65501012 366.65501012 0 1 0-61.73503038 65.64040943L917.55859375 984.40065827z m-856.17925347-493.12920861a284.19142939 284.19142939 0 1 1 283.89101562 284.19142939A284.49184317 284.49184317 0 0 1 125.06706019 427.73393664z" fill="" p-id="2079" data-spm-anchor-id="a313x.7781069.0.i2"></path></svg></a></li>
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/movies/">电影</a></li>
+      
+    
+      
+        <li><a href="/books/">阅读</a></li>
+      
+    
+      
+        <li><a href="/archives/">归档</a></li>
+      
+    
+      
+        <li><a href="/friends/">友圈</a></li>
+      
+    
+      
+        <li><a href="/about/">关于</a></li>
+      
+    
+      
+        <li><a href="https://nav.blueisle.cf/">导航</a></li>
+      
+    
+  </ul>
+</nav>
+
+        <span class="menu-trigger hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+          </svg>
+        </span>
+      
+      <span class="theme-toggle">
+        <svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+
+      </span>
+    </span>
+  </span>
+</header>
+
+
+
+
+      <div class="content">
+        
+  
+  
+  
+  
+  <div class="post coding">
+    <div  class="breadcrumb">
+  
+
+  
+
+  
+
+  
+
+<li>
+  <a href="https://blueisle.cf/">首页</a>
+</li>
+
+
+<li>
+  <a href="https://blueisle.cf/posts/">文章</a>
+</li>
+
+
+<li>
+  <a href="https://blueisle.cf/posts/coding/">折腾</a>
+</li>
+
+
+<li class="active">
+  <a href="https://blueisle.cf/hugo-template-code/">Hugo 主题常用的代码片段</a>
+</li>
+
+</div>
+
+
+  
+    <h2 class="post-title"><a href="https://blueisle.cf/hugo-template-code/">Hugo 主题常用的代码片段</a></h2>
+    <div class="post-meta">
+      
+        <span class="post-date">2020-04-01 09:46:00</span><span> / <span id="twikoo_visitors">0</span> 阅读</span><span> / <a href="#twikoo"><span id="twikoo_count">0 条评论</span></a></span>
+        
+          
+        
+      
+    </div>
+
+    
+  
+    <div class="post-content">
+      <h3 id="全站-site">全站 Site</h3>
+<p>网址：<code>.Site.BaseURL</code></p>
+<p>标题：<code>.Site.Title</code>，示例：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ $.Site.BaseURL }}&#34;</span>&gt;{{ $.Site.Title }}&lt;/<span style="color:#f92672">a</span>&gt;
+</span></span></code></pre></div><p>副标题：<code>.Site.Params.description</code></p>
+<p>关键词：<code>.Site.Params.keywords</code></p>
+<p>头部菜单：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>{{ range $.Site.Menus.main }}
+</span></span><span style="display:flex;"><span>	&lt;<span style="color:#f92672">li</span>&gt;&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .URL }}&#34;</span>&gt;{{ .Name }}&lt;/<span style="color:#f92672">a</span>&gt;&lt;/<span style="color:#f92672">li</span>&gt;
+</span></span><span style="display:flex;"><span>{{ end }}
+</span></span></code></pre></div><p><code>config.toml</code>配置示例：</p>
+<pre tabindex="0"><code>baseURL  =  &#34;https://immmmm.com&#34;
+title  =  &#34;木木木木木&#34;
+[params]
+	description = &#34;不问明天，悠然浪费&#34;
+	keywords = &#34;博客、主题、折腾、生活&#34;
+[menu]
+	[[menu.main]]
+		name=&#34;首页&#34;
+		url=&#34;/&#34;
+		weight=&#34;1&#34;
+	[[menu.main]]
+		name=&#34;关于&#34;
+		url=&#34;/about&#34;
+		weight=&#34;2&#34;
+</code></pre><p>全站标签列表及文章数量：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>{{- range $name, $taxonomy := .Site.Taxonomies.tags -}}
+</span></span><span style="display:flex;"><span>	&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/tags/{{ $name | urlize }}&#34;</span>&gt;#{{ $name }}&lt;<span style="color:#f92672">small</span>&gt;({{ .Count }})&lt;/<span style="color:#f92672">small</span>&gt;&lt;/<span style="color:#f92672">a</span>&gt;
+</span></span><span style="display:flex;"><span>{{- end -}}
+</span></span></code></pre></div><p>全站文章数：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>共 {{ len (where .Site.RegularPages &#34;Section&#34; &#34;posts&#34;) }} 篇日志
+</span></span></code></pre></div><h3 id="文章列表-list">文章列表 List</h3>
+<p>文章摘要：<code>.Summary</code> 文章列表会显示 <code>&lt;!--more--&gt;</code> 前的内容或自动截断。</p>
+<pre tabindex="0"><code>{{ .Summary | plainify }}
+</code></pre><p><code>config.toml</code>配置阶段字符，默认 70 个：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>summaryLength = 140
+</span></span></code></pre></div><p>截断判断：<code>.Truncated</code> 如果有 more 标签，则 true，显示“阅读全文”字样。</p>
+<p>指定 <code>content/posts</code> 为文章内容，且自动截断：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>{{  $paginator := .Paginate (where .Site.RegularPages &#34;Type&#34; &#34;posts&#34;) }}
+</span></span><span style="display:flex;"><span>{{ range $paginator.Pages }}
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">article</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;post&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">h1</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;post-title&#34;</span>&gt;&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Permalink }}&#34;</span>&gt;{{ .Title }}&lt;/<span style="color:#f92672">a</span>&gt;&lt;/<span style="color:#f92672">h1</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">time</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;post-date&#34;</span>&gt;{{ .Date.Format &#34;2006-01-02T15:04:05&#34; }}&lt;/<span style="color:#f92672">time</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;post-content&#34;</span>&gt;
+</span></span><span style="display:flex;"><span> 	 {{ .Summary }}
+</span></span><span style="display:flex;"><span>   &lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>  {{ if .Truncated }}
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;read-more&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Permalink }}&#34;</span>&gt;阅读全文…&lt;/<span style="color:#f92672">a</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>  {{ end }}
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">article</span>&gt;
+</span></span><span style="display:flex;"><span>{{- end }}
+</span></span></code></pre></div><p>神奇的日期格式化：<code>&quot;2006-01-02 15:04:05&quot;</code> 表示显示年月日时分秒</p>
+<p>文章列表分页：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;pagination&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  {{ if .Paginator.HasPrev }}
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Paginator.Prev.URL }}&#34;</span>&gt;上一页&lt;/<span style="color:#f92672">a</span>&gt;
+</span></span><span style="display:flex;"><span>  {{ end }}
+</span></span><span style="display:flex;"><span>  {{ if .Paginator.HasNext }}
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Paginator.Next.URL }}&#34;</span>&gt;下一页&lt;/<span style="color:#f92672">a</span>&gt;
+</span></span><span style="display:flex;"><span>  {{ end }}
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">div</span>&gt;
+</span></span></code></pre></div><h3 id="文章-single">文章 Single</h3>
+<p>标题、链接、时间，同上。</p>
+<p>全文内容：<code>.Content</code></p>
+<p>文字数：<code>.WordCount</code>，配合<code>config.toml</code>中文统计更准确：</p>
+<pre tabindex="0"><code>hasCJKLanguage = true
+</code></pre><p>阅读时间：<code>.ReadingTime</code>，示例：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>约{{ .ReadingTime }}分钟读完
+</span></span></code></pre></div><p>分类 <code>.Params.categories</code>
+标签 <code>.Params.tags</code>，示例：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>{{ if .Params.tags }}
+</span></span><span style="display:flex;"><span>	&lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;post-tags&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>	{{ range .Params.tags }}
+</span></span><span style="display:flex;"><span>		#&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ (urlize (printf &#34;</span><span style="color:#a6e22e">tags</span><span style="color:#960050;background-color:#1e0010">/%</span><span style="color:#a6e22e">s</span><span style="color:#960050;background-color:#1e0010">&#34;</span> <span style="color:#960050;background-color:#1e0010">.</span> <span style="color:#960050;background-color:#1e0010">))</span> <span style="color:#960050;background-color:#1e0010">|</span> <span style="color:#a6e22e">absURL</span> <span style="color:#960050;background-color:#1e0010">}}/&#34;</span>&gt;{{ . }}&lt;/<span style="color:#f92672">a</span>&gt;&amp;nbsp;
+</span></span><span style="display:flex;"><span>	{{ end }}
+</span></span><span style="display:flex;"><span>	&lt;/<span style="color:#f92672">span</span>&gt;
+</span></span><span style="display:flex;"><span>{{ end }}
+</span></span></code></pre></div><p>上、下文章链接标题，示例：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;pagination&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>	{{ if .NextInSection }}
+</span></span><span style="display:flex;"><span>		&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .NextInSection.Permalink }}&#34;</span>&gt;{{ .NextInSection.Title }}&lt;/<span style="color:#f92672">a</span>&gt;
+</span></span><span style="display:flex;"><span>	{{ end }}
+</span></span><span style="display:flex;"><span>	{{ if .PrevInSection }}
+</span></span><span style="display:flex;"><span>		&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .PrevInSection.Permalink }}&#34;</span>&gt;{{ .PrevInSection.Title }}&lt;/<span style="color:#f92672">a</span>&gt;
+</span></span><span style="display:flex;"><span>	{{ end }}
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">div</span>&gt;
+</span></span></code></pre></div><h3 id="其他片段">其他片段</h3>
+<p>当前年份，示例：<code>{{ now.Year }}</code></p>
+<p>页面类型：<code>{{ .Section }}</code></p>
+<p>首页判断：</p>
+<pre tabindex="0"><code>{{ if .IsHome }}
+	……
+{{ end }}
+</code></pre><pre tabindex="0"><code>{{ if not .IsHome }}……{{ end }}
+</code></pre><p>定义变量：</p>
+<pre tabindex="0"><code>{{ $address := &#34;123 Main St.&#34; }}
+{{ $address }}
+</code></pre><p>定义模块，如 layouts/_default/baseof.html</p>
+<pre tabindex="0"><code>{{ block &#34;main&#34; . }}
+{{ end }}
+</code></pre><p>layouts/_default/list.html</p>
+<pre tabindex="0"><code>{{ define &#34;main&#34; }}
+  ……
+{{ end }}
+</code></pre><h3 id="短代码-shortcodes">短代码 Shortcodes</h3>
+<p>LoveIt 主题内置数十种短代码：<a href="https://hugoloveit.com/zh-cn/theme-documentation-shortcodes/">https://hugoloveit.com/zh-cn/theme-documentation-shortcodes/</a></p>
+<h3 id="未完">未完</h3>
+<p>待更…… 🤷‍♂️</p>
+      
+    </div>
+  
+    
+
+    
+      <span class="post-tags">
+        
+          #<a href="https://blueisle.cf/tags/%E6%8A%98%E8%85%BE/">折腾</a>&nbsp;
+        
+      </span>
+    
+  
+    <div class="clear"></div>
+    
+    
+      
+        <div class="pagination">
+          <div class="pagination__title">
+            
+              <a class="pagination__title-h" href="https://github.com/lmm214/immmmm/edit/master/content/posts/coding/hugo-template-code.md" target="_blank" rel="noopener">阅读更多</a>
+            
+            <hr />
+          </div>
+          <div class="pagination__buttons">
+            
+              <span class="button previous">
+                <a href="https://blueisle.cf/2020-04-04/">
+                  <span class="button__icon">←</span>
+                  <span class="button__text">2020-04-04</span>
+                </a>
+              </span>
+            
+            
+              <span class="button next">
+                <a href="https://blueisle.cf/hugo-add-breadcrumb/">
+                  <span class="button__text">Hugo 添加面包屑导航</span>
+                  <span class="button__icon">→</span>
+                </a>
+              </span>
+            
+          </div>
+        </div>
+      
+    
+
+
+    
+        <div class="pagination__title">
+  <span class="pagination__title-h">欢迎评论</span>
+  <hr />
+</div>
+  <div id="tcomment"></div>
+  <script src="https://cdn.jsdelivr.net/npm/twikoo@1.5.0/dist/twikoo.all.min.js"></script>
+  <script>twikoo.init({ envId: 'twikoo-2g36bkuz88660f27', el: '#tcomment' })</script>
+
+  <script type="text/javascript" src='https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js'></script>
+  <script type="text/javascript">
+    jQuery(document).ready(function($){
+      var checkComments = setInterval(function() {
+        var counts = $('.tk-comments-title').find('span').first().text();
+        if (counts) {
+          $('#twikoo_count').text(counts)
+          clearInterval(checkComments);
+        }
+      }, 1000);
+      if(window.location.hash){
+        var checkExist = setInterval(function() {
+          if ($(window.location.hash).length) {
+            $('html, body').animate({scrollTop: $(window.location.hash).offset().top-90}, 1000);
+            clearInterval(checkExist);
+          }
+        }, 100);
+      }
+    });
+  </script>
+    
+
+    </div>
+
+      </div>
+
+      
+        
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+
+
+
+
+
+
+
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="copyright copyright-font">
+      <span>共 75227 字 <br/> 写完一本 鲁迅 的</br>《呐喊》了！</span>
+    </div>
+    <a class="dark-wormhole" href="https://www.foreverblog.cn/go.html" target="_blank"> <img src="/wormhole_1.gif" alt="" style="width:auto;height:32px;" title="穿梭虫洞-随机访问十年之约友链博客"> </a>
+    <a class="light-wormhole" href="https://www.foreverblog.cn/go.html" target="_blank" > <img src="/wormhole_3.gif" alt="" style="width:auto;height:32px;" title="穿梭虫洞-随机访问十年之约友链博客"> </a>
+    
+      <div class="copyright">
+        <span>© 2022 Powered by <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a> Theme by <a href="https://twitter.com/panr" target="_blank" rel="noopener">Panr</a></span>
+      </div>
+    
+  </div>
+</footer>
+
+<script type="text/javascript" src="/main.js?t=20220124"></script>
+
+<script type="text/javascript" src='https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js'></script>
+<script type="text/javascript" src="/lately2.min.js"></script>
+<script type="text/javascript" src="/jquery.vticker.js"></script>
+<script type="text/javascript" src="/waterfall.min.js"></script>
+<script type="text/javascript" src="/slimbox2.min.js"></script>
+<script type="text/javascript" src="/main-diy-0325.js"></script>
+      
+    </div>
+  </body>
+</html>

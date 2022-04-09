@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+      <title>给 Obsidian 来个起始页 :: 明礼至卓</title>
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta charset="UTF-8"/>
+<meta name="renderer" content="webkit"/>
+<meta name="force-rendering" content="webkit"/>
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+<script>if ( false || (!!window.MSInputMethodContext && !!document.documentMode)) document.write('\x3Cscript id="_iealwn_js" data-outver="11" src="https://support.dmeng.net/ie-alert-warning/latest.js">\x3C/script>'); </script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="为 Dataview 插件献上鸡腿，利用其检索功能，让一切 OB 的使用情况「一目了然」！ 起始页 By Dataview 代码块复制时删除 dataview 前的 -。 行代码 显示今天和去年当天日期，点击可快速跳转/创建日志。 今日 `= &amp;#34;[[&amp;#34;&#43;date(today)&#43;&amp;#34;]]&amp;#34;` ，去年 `= &amp;#34;[[&amp;#34;&#43;(date(today) - dur(1 years))&#43;&amp;#34;]]&amp;#34;` 列表 list 显示文件夹 0 收集 文档列表，并按创建时间倒序排列。显示标签 #doing 文档列表。 ## 待读 -```dataview list from &amp;#34;0 收集&amp;#3"/>
+<meta name="keywords" content=""/>
+<link rel="canonical" href="https://blueisle.cf/obsidian-start-me-page/" />
+<link rel="stylesheet" href="/main.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:500&display=swap" media="print" onload="this.media='all'">
+<link rel="shortcut icon" href="https://blueisle.cf/favicon.ico">
+
+<meta property="og:title" content="给 Obsidian 来个起始页" />
+<meta property="og:description" content="为 Dataview 插件献上鸡腿，利用其检索功能，让一切 OB 的使用情况「一目了然」！ 起始页 By Dataview 代码块复制时删除 dataview 前的 -。 行代码 显示今天和去年当天日期，点击可快速跳转/创建日志。 今日 `= &#34;[[&#34;&#43;date(today)&#43;&#34;]]&#34;` ，去年 `= &#34;[[&#34;&#43;(date(today) - dur(1 years))&#43;&#34;]]&#34;` 列表 list 显示文件夹 0 收集 文档列表，并按创建时间倒序排列。显示标签 #doing 文档列表。 ## 待读 -```dataview list from &#34;0 收集&#3" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blueisle.cf/obsidian-start-me-page/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-08-21T10:30:03+08:00" />
+<meta property="article:modified_time" content="2021-08-21T10:30:03+08:00" />
+
+
+
+
+    
+  <link rel="prefetch" href="https://blueisle.cf/adguard-home-what/">
+  <link rel="prefetch" href="https://blueisle.cf/github-push-token/">
+
+  </head>
+  <body class="dark-theme">
+    <div class="container">
+      <header class="header">
+  <span class="header__inner">
+    <a href="https://blueisle.cf" class="logo" style="text-decoration: none;">
+  
+    <span class="logo__text">明礼至卓</span>
+    <span class="logo__cursor"></span>
+  
+</a>
+
+    <span class="header__right">
+      
+        <nav class="menu hidden">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/movies/">电影</a></li>
+        
+      
+        
+          <li><a href="/books/">阅读</a></li>
+        
+      
+        
+          <li><a href="/archives/">归档</a></li>
+        
+      
+        
+          <li><a href="/friends/">友圈</a></li>
+        
+      
+        
+          <li><a href="/about/">关于</a></li>
+        
+      
+        
+          <li><a href="https://nav.blueisle.cf/">导航</a></li>
+        
+      
+    
+
+                <li><a href="/search/"><svg t="1556783211810" class="search-box-icon" class="icon" style="" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2078" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><style type="text/css"></style></defs><path d="M981.39652054 920.86314525L704.56522859 644.0318533a366.65501012 366.65501012 0 1 0-61.73503038 65.64040943L917.55859375 984.40065827z m-856.17925347-493.12920861a284.19142939 284.19142939 0 1 1 283.89101562 284.19142939A284.49184317 284.49184317 0 0 1 125.06706019 427.73393664z" fill="" p-id="2079" data-spm-anchor-id="a313x.7781069.0.i2"></path></svg></a></li>
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/movies/">电影</a></li>
+      
+    
+      
+        <li><a href="/books/">阅读</a></li>
+      
+    
+      
+        <li><a href="/archives/">归档</a></li>
+      
+    
+      
+        <li><a href="/friends/">友圈</a></li>
+      
+    
+      
+        <li><a href="/about/">关于</a></li>
+      
+    
+      
+        <li><a href="https://nav.blueisle.cf/">导航</a></li>
+      
+    
+  </ul>
+</nav>
+
+        <span class="menu-trigger hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+          </svg>
+        </span>
+      
+      <span class="theme-toggle">
+        <svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+
+      </span>
+    </span>
+  </span>
+</header>
+
+
+
+
+      <div class="content">
+        
+  
+  
+  
+  
+  <div class="post coding">
+    <div  class="breadcrumb">
+  
+
+  
+
+  
+
+  
+
+<li>
+  <a href="https://blueisle.cf/">首页</a>
+</li>
+
+
+<li>
+  <a href="https://blueisle.cf/posts/">文章</a>
+</li>
+
+
+<li>
+  <a href="https://blueisle.cf/posts/coding/">折腾</a>
+</li>
+
+
+<li class="active">
+  <a href="https://blueisle.cf/obsidian-start-me-page/">给 Obsidian 来个起始页</a>
+</li>
+
+</div>
+
+
+  
+    <h2 class="post-title"><a href="https://blueisle.cf/obsidian-start-me-page/">给 Obsidian 来个起始页</a></h2>
+    <div class="post-meta">
+      
+        <span class="post-date">2021-08-21 10:30:03</span><span> / <span id="twikoo_visitors">0</span> 阅读</span><span> / <a href="#twikoo"><span id="twikoo_count">0 条评论</span></a></span>
+        
+          
+        
+      
+    </div>
+
+    
+      
+        <img loading='lazy' src="https://pic.edui.fun/images/2021/08/obsidian-start-1.jpeg" class="post-cover" />
+      
+    
+  
+    <div class="post-content">
+      <p>为 <a href="https://github.com/blacksmithgu/obsidian-dataview">Dataview</a> 插件献上鸡腿，利用其检索功能，让一切 OB 的使用情况「一目了然」！</p>
+<!-- more -->
+<figure>
+    <img src="https://pic.edui.fun/images/2021/08/obsidian-start-1.jpeg" width="50%"/><img src="https://pic.edui.fun/images/2021/08/obsidian-start-2.jpeg" width="50%" />
+    <figcaption>起始页 By Dataview</figcaption>
+  </figure>
+<p>代码块复制时删除 <code>dataview</code> 前的 <code>-</code>。</p>
+<h3 id="行代码">行代码</h3>
+<p>显示今天和去年当天日期，点击可快速跳转/创建日志。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">今日</span> <span style="color:#e6db74">`= &#34;[[&#34;+date(today)+&#34;]]&#34;`</span> <span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">去年</span> <span style="color:#e6db74">`= &#34;[[&#34;+(date(today) - dur(1 years))+&#34;]]&#34;`</span>
+</span></span></code></pre></div><h3 id="列表-list">列表 list</h3>
+<p>显示文件夹 <code>0 收集</code> 文档列表，并按创建时间倒序排列。显示标签 <code>#doing</code> 文档列表。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">##</span> <span style="color:#a6e22e">待读</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">-</span><span style="color:#e6db74">```dataview
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">list
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">from &#34;0 收集&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">sort file.ctime desc
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">-```</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">##</span> <span style="color:#a6e22e">进行中</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">-</span><span style="color:#e6db74">```dataview
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">list
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">from #doing
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">sort file.ctime desc
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">-```</span>
+</span></span></code></pre></div><h3 id="表格-table">表格 table</h3>
+<p>显示 5条 最新编辑/创建的文档，并排除文件夹 <code>&quot;10 归档&quot;</code> 和 <code>&quot;1 看板&quot;</code> 按编辑/创建时间倒序排列。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">##</span> <span style="color:#a6e22e">最近编辑</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">-</span><span style="color:#e6db74">```dataview
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">table WITHOUT ID file.link AS &#34;标题&#34;,file.mtime as &#34;时间&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">from !&#34;10 归档&#34; and !&#34;1 看板&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">sort file.mtime desc
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">limit 5
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">-```</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">##</span> <span style="color:#a6e22e">最近创建</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">-</span><span style="color:#e6db74">```dataview
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">table WITHOUT ID file.link AS &#34;标题&#34;,file.ctime as &#34;时间&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">from !&#34;10 归档&#34; and !&#34;1 看板&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">sort file.ctime desc
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">limit 5
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">-```</span>
+</span></span></code></pre></div><h3 id="高阶代码-dataviewjs">高阶代码 dataviewjs</h3>
+<p>显示使用时间。代码思路：查询最早一篇文章日期，计算与当下的日期差。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">##</span> <span style="color:#a6e22e">归档</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">-</span><span style="color:#e6db74">```dataviewjs
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">let ftMd = dv.pages(&#34;&#34;).file.sort(t =&gt; t.cday)[0]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">let total = parseInt([new Date() - ftMd.ctime] / (60*60*24*1000))
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">dv.paragraph(
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">	&#34;距今已使用 &#34;+total+&#34; 天&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">)
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">-```</span>
+</span></span></code></pre></div><p>统计文档、标签、任务数。代码说明，排除文件夹 <code>10 归档/Template</code> 。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#f92672">-</span><span style="color:#e6db74">```dataviewjs
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">let nofold = &#39;!&#34;10 归档/Template&#34;&#39;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">let allFile = dv.pages(nofold).file
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">let totalMd = &#34;共创建 &#34;+
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">	allFile.length+&#34; 篇文档&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">let totalTag = allFile.etags.distinct().length+&#34; 个标签&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">let totalTask = allFile.tasks.length+&#34; 个待办 &lt;br&gt;&lt;br&gt;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">dv.paragraph(
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">	totalMd+&#34;、&#34;+totalTag+&#34;、&#34;+totalTask
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">)
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">-```</span>
+</span></span></code></pre></div><p>汇总全站标签和数量。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#f92672">-</span><span style="color:#e6db74">```dataviewjs
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">dv.paragraph(
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  dv.pages(&#34;&#34;).file.etags.distinct()
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  .sort(t =&gt; dv.pages(t).length , &#39;desc&#39;)
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  .map(
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  	t =&gt; {
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">		return `</span>[<span style="color:#a6e22e">$</span>{<span style="color:#a6e22e">t</span>}](<span style="color:#a6e22e">$</span>{<span style="color:#a6e22e">t</span>})<span style="color:#e6db74">`+&#34;(&#34;+dv.pages(t).length+&#34;)&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">	}
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  ).array().join(&#34; &#34;)
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">)
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">-```</span>
+</span></span></code></pre></div><p>归档每月文章数。排除文件夹 <code>Template</code> 和 <code>1 看板</code>。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#f92672">-</span><span style="color:#e6db74">```dataview
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">table WITHOUT ID rows.file[0].day.year+&#34;年&#34;+rows.file[0].day.month+&#34;月&#34; as 月份,length(rows)+&#34;篇&#34; as 数量
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">where !contains(file.folder, &#34;Template&#34;) and !contains(file.folder, &#34;1 看板&#34;)
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">group by file.day.month
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">-```</span>
+</span></span></code></pre></div><p>显示近2个月生日的人，从文件夹 <code>10 归档/People</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">##</span> <span style="color:#a6e22e">近期生日</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">-</span><span style="color:#e6db74">```dataview
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">table WITHOUT ID file.link AS &#34;姓名&#34;,birthday as &#34;出生日期&#34;, ((date(today)-birthday).month + &#34;天后&#34;) as 倒计, ((date(today)-birthday).year+1 + &#34;岁&#34;) as 年龄
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">from &#34;10 归档/People&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">where birthday &lt; date(today) + dur(2 months)
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">-```</span>
+</span></span></code></pre></div>
+      
+    </div>
+  
+    
+
+    
+      <span class="post-tags">
+        
+          #<a href="https://blueisle.cf/tags/%E6%8A%98%E8%85%BE/">折腾</a>&nbsp;
+        
+      </span>
+    
+  
+    <div class="clear"></div>
+    
+    
+      
+        <div class="pagination">
+          <div class="pagination__title">
+            
+              <a class="pagination__title-h" href="https://github.com/lmm214/immmmm/edit/master/content/posts/coding/obsidian-start-me-page.md" target="_blank" rel="noopener">阅读更多</a>
+            
+            <hr />
+          </div>
+          <div class="pagination__buttons">
+            
+              <span class="button previous">
+                <a href="https://blueisle.cf/adguard-home-what/">
+                  <span class="button__icon">←</span>
+                  <span class="button__text">Adguard Home，拦的啥？</span>
+                </a>
+              </span>
+            
+            
+              <span class="button next">
+                <a href="https://blueisle.cf/github-push-token/">
+                  <span class="button__text">修复 Github Push 时的两个报错</span>
+                  <span class="button__icon">→</span>
+                </a>
+              </span>
+            
+          </div>
+        </div>
+      
+    
+
+
+    
+        <div class="pagination__title">
+  <span class="pagination__title-h">欢迎评论</span>
+  <hr />
+</div>
+  <div id="tcomment"></div>
+  <script src="https://cdn.jsdelivr.net/npm/twikoo@1.5.0/dist/twikoo.all.min.js"></script>
+  <script>twikoo.init({ envId: 'twikoo-2g36bkuz88660f27', el: '#tcomment' })</script>
+
+  <script type="text/javascript" src='https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js'></script>
+  <script type="text/javascript">
+    jQuery(document).ready(function($){
+      var checkComments = setInterval(function() {
+        var counts = $('.tk-comments-title').find('span').first().text();
+        if (counts) {
+          $('#twikoo_count').text(counts)
+          clearInterval(checkComments);
+        }
+      }, 1000);
+      if(window.location.hash){
+        var checkExist = setInterval(function() {
+          if ($(window.location.hash).length) {
+            $('html, body').animate({scrollTop: $(window.location.hash).offset().top-90}, 1000);
+            clearInterval(checkExist);
+          }
+        }, 100);
+      }
+    });
+  </script>
+    
+
+    </div>
+
+      </div>
+
+      
+        
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+
+
+
+
+
+
+
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="copyright copyright-font">
+      <span>共 75227 字 <br/> 写完一本 鲁迅 的</br>《呐喊》了！</span>
+    </div>
+    <a class="dark-wormhole" href="https://www.foreverblog.cn/go.html" target="_blank"> <img src="/wormhole_1.gif" alt="" style="width:auto;height:32px;" title="穿梭虫洞-随机访问十年之约友链博客"> </a>
+    <a class="light-wormhole" href="https://www.foreverblog.cn/go.html" target="_blank" > <img src="/wormhole_3.gif" alt="" style="width:auto;height:32px;" title="穿梭虫洞-随机访问十年之约友链博客"> </a>
+    
+      <div class="copyright">
+        <span>© 2022 Powered by <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a> Theme by <a href="https://twitter.com/panr" target="_blank" rel="noopener">Panr</a></span>
+      </div>
+    
+  </div>
+</footer>
+
+<script type="text/javascript" src="/main.js?t=20220124"></script>
+
+<script type="text/javascript" src='https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js'></script>
+<script type="text/javascript" src="/lately2.min.js"></script>
+<script type="text/javascript" src="/jquery.vticker.js"></script>
+<script type="text/javascript" src="/waterfall.min.js"></script>
+<script type="text/javascript" src="/slimbox2.min.js"></script>
+<script type="text/javascript" src="/main-diy-0325.js"></script>
+      
+    </div>
+  </body>
+</html>

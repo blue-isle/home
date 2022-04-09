@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+      <title>Hi , Cloudflare Pages :: 明礼至卓</title>
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta charset="UTF-8"/>
+<meta name="renderer" content="webkit"/>
+<meta name="force-rendering" content="webkit"/>
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+<script>if ( false || (!!window.MSInputMethodContext && !!document.documentMode)) document.write('\x3Cscript id="_iealwn_js" data-outver="11" src="https://support.dmeng.net/ie-alert-warning/latest.js">\x3C/script>'); </script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="其实 Github Actions &#43; Pages 真的好用，可惜被关小黑屋。只能曲线，拉到自己的服务器或第三方托管平台，比如昨晚折腾的 Cloudflare Pages ，目前感觉良好。
+ Cloudflare Pages 的免费政策：每月 500 次提交、不限站点、请求、带宽，每个项目最多 10 个自定义域名、每个站点最多 20000 个文件、单个文件最大 25 MB，同一时间只能部署一个 Pages（实测大概是 2~3 分钟）
+ 放几个博客、静态站点，绰绰有余！
+"/>
+<meta name="keywords" content=""/>
+<link rel="canonical" href="https://blueisle.cf/hi-cloudflare/" />
+<link rel="stylesheet" href="/main.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:500&display=swap" media="print" onload="this.media='all'">
+<link rel="shortcut icon" href="https://blueisle.cf/favicon.ico">
+
+<meta property="og:title" content="Hi , Cloudflare Pages" />
+<meta property="og:description" content="其实 Github Actions &#43; Pages 真的好用，可惜被关小黑屋。只能曲线，拉到自己的服务器或第三方托管平台，比如昨晚折腾的 Cloudflare Pages ，目前感觉良好。
+
+Cloudflare Pages 的免费政策：每月 500 次提交、不限站点、请求、带宽，每个项目最多 10 个自定义域名、每个站点最多 20000 个文件、单个文件最大 25 MB，同一时间只能部署一个 Pages（实测大概是 2~3 分钟）
+
+放几个博客、静态站点，绰绰有余！" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blueisle.cf/hi-cloudflare/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-01-24T00:38:32+08:00" />
+<meta property="article:modified_time" content="2022-01-24T00:38:32+08:00" />
+
+
+
+
+    
+  <link rel="prefetch" href="https://blueisle.cf/hugo-github-cloudflare/">
+  <link rel="prefetch" href="https://blueisle.cf/dan-xiang-li-page/">
+
+  </head>
+  <body class="dark-theme">
+    <div class="container">
+      <header class="header">
+  <span class="header__inner">
+    <a href="https://blueisle.cf" class="logo" style="text-decoration: none;">
+  
+    <span class="logo__text">明礼至卓</span>
+    <span class="logo__cursor"></span>
+  
+</a>
+
+    <span class="header__right">
+      
+        <nav class="menu hidden">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/movies/">电影</a></li>
+        
+      
+        
+          <li><a href="/books/">阅读</a></li>
+        
+      
+        
+          <li><a href="/archives/">归档</a></li>
+        
+      
+        
+          <li><a href="/friends/">友圈</a></li>
+        
+      
+        
+          <li><a href="/about/">关于</a></li>
+        
+      
+        
+          <li><a href="https://nav.blueisle.cf/">导航</a></li>
+        
+      
+    
+
+                <li><a href="/search/"><svg t="1556783211810" class="search-box-icon" class="icon" style="" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2078" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><style type="text/css"></style></defs><path d="M981.39652054 920.86314525L704.56522859 644.0318533a366.65501012 366.65501012 0 1 0-61.73503038 65.64040943L917.55859375 984.40065827z m-856.17925347-493.12920861a284.19142939 284.19142939 0 1 1 283.89101562 284.19142939A284.49184317 284.49184317 0 0 1 125.06706019 427.73393664z" fill="" p-id="2079" data-spm-anchor-id="a313x.7781069.0.i2"></path></svg></a></li>
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/movies/">电影</a></li>
+      
+    
+      
+        <li><a href="/books/">阅读</a></li>
+      
+    
+      
+        <li><a href="/archives/">归档</a></li>
+      
+    
+      
+        <li><a href="/friends/">友圈</a></li>
+      
+    
+      
+        <li><a href="/about/">关于</a></li>
+      
+    
+      
+        <li><a href="https://nav.blueisle.cf/">导航</a></li>
+      
+    
+  </ul>
+</nav>
+
+        <span class="menu-trigger hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+          </svg>
+        </span>
+      
+      <span class="theme-toggle">
+        <svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+
+      </span>
+    </span>
+  </span>
+</header>
+
+
+
+
+      <div class="content">
+        
+  
+  
+  
+  
+  <div class="post coding">
+    <div  class="breadcrumb">
+  
+
+  
+
+  
+
+  
+
+<li>
+  <a href="https://blueisle.cf/">首页</a>
+</li>
+
+
+<li>
+  <a href="https://blueisle.cf/posts/">文章</a>
+</li>
+
+
+<li>
+  <a href="https://blueisle.cf/posts/coding/">折腾</a>
+</li>
+
+
+<li class="active">
+  <a href="https://blueisle.cf/hi-cloudflare/">Hi , Cloudflare Pages</a>
+</li>
+
+</div>
+
+
+  
+    <h2 class="post-title"><a href="https://blueisle.cf/hi-cloudflare/">Hi , Cloudflare Pages</a></h2>
+    <div class="post-meta">
+      
+        <span class="post-date">2022-01-24 00:38:32</span><span> / <span id="twikoo_visitors">0</span> 阅读</span><span> / <a href="#twikoo"><span id="twikoo_count">0 条评论</span></a></span>
+        
+          
+        
+      
+    </div>
+
+    
+      
+        <img loading='lazy' src="https://pic.edui.fun/images/2022/01/cf-1.png" class="post-cover" />
+      
+    
+  
+    <div class="post-content">
+      <p>其实 Github Actions + Pages 真的好用，可惜被关小黑屋。只能曲线，拉到自己的服务器或第三方托管平台，比如昨晚折腾的 Cloudflare Pages ，目前感觉良好。</p>
+<blockquote>
+<p>Cloudflare Pages 的免费政策：每月 500 次提交、不限站点、请求、带宽，每个项目最多 10 个自定义域名、每个站点最多 20000 个文件、单个文件最大 25 MB，同一时间只能部署一个 Pages（实测大概是 2~3 分钟）</p>
+</blockquote>
+<p>放几个博客、静态站点，绰绰有余！</p>
+<h3 id="启用">启用</h3>
+<p>启用也非常简便，<a href="https://dash.cloudflare.com/">Cloudflare Dash</a> 导航栏 <code>Pages</code> ，点 <code>创建项目</code>，授权 Github 项目。</p>
+<p><img loading='lazy' src="https://pic.edui.fun/images/2022/01/cf-2.png" alt="cf-2"  /></p>
+<p>部署方式 「二选一」 即可！</p>
+<h4 id="部署设置一">部署设置一：</h4>
+<p><img loading='lazy' src="https://pic.edui.fun/images/2022/01/cf-3.png" alt="cf-3"  /></p>
+<p><code>生产环境</code> 直接选为 <code>gh-pages</code> 分支，构建命令选 <code>none</code>。</p>
+<p>同时去 Github 项目里去除 <code>.github/workflows/main.yml</code> 里推送到服务器的 webhook 钩子。</p>
+<p>这样仍然保留 Github Action ，CF 只是拉取静态文件。</p>
+<h4 id="部署设置二">部署设置二：</h4>
+<p>删掉 <code>gh-pages</code> 分支，删除 <code>.github/workflows/main.yml</code>， 让 CF 构建 Hugo ，这里需要加个环境变量，指定高版本 <code>HUGO_VERSION</code> 为 <code>0.92.0</code></p>
+<p><img loading='lazy' src="https://pic.edui.fun/images/2022/01/cf-5.png" alt="cf-5"  /></p>
+<p><img loading='lazy' src="https://pic.edui.fun/images/2022/01/cf-4.png" alt="cf-4"  /></p>
+<h4 id="部署一二差别">部署一二差别</h4>
+<p>前者几乎不用动 Github 但 CF 会默认构建所有分支（gh-pages 和 marter），所以更新一次要等 3min x2 时间才构建完成。</p>
+<p><img loading='lazy' src="https://pic.edui.fun/images/2022/01/cf-6.png" alt="cf-6"  /></p>
+<p>后者完全抛弃了 Github Actions + Pages ，算省下 1/500 的免费构建次数？主要是省下一个 3min 。</p>
+<h3 id="参考">参考</h3>
+<p>迁移到Cloudflare Pages，再见Github Pages ： <a href="https://aozaki.cc/migrating-from-github-pages-to-cloudflare-pages">https://aozaki.cc/migrating-from-github-pages-to-cloudflare-pages</a></p>
+<p>使用Cloudflare Pages部署静态网站 ： <a href="https://wbuntu.com/deploy-static-site-with-cloudflare-pages/">https://wbuntu.com/deploy-static-site-with-cloudflare-pages/</a></p>
+      
+    </div>
+  
+    
+
+    
+      <span class="post-tags">
+        
+          #<a href="https://blueisle.cf/tags/%E6%8A%98%E8%85%BE/">折腾</a>&nbsp;
+        
+      </span>
+    
+  
+    <div class="clear"></div>
+    
+    
+      
+        <div class="pagination">
+          <div class="pagination__title">
+            
+              <a class="pagination__title-h" href="https://github.com/lmm214/immmmm/edit/master/content/posts/coding/hi-cloudflare.md" target="_blank" rel="noopener">阅读更多</a>
+            
+            <hr />
+          </div>
+          <div class="pagination__buttons">
+            
+              <span class="button previous">
+                <a href="https://blueisle.cf/hugo-github-cloudflare/">
+                  <span class="button__icon">←</span>
+                  <span class="button__text">Hugo by Github with Cloudflare Pages</span>
+                </a>
+              </span>
+            
+            
+              <span class="button next">
+                <a href="https://blueisle.cf/dan-xiang-li-page/">
+                  <span class="button__text">自制「单向历」网页版</span>
+                  <span class="button__icon">→</span>
+                </a>
+              </span>
+            
+          </div>
+        </div>
+      
+    
+
+
+    
+        <div class="pagination__title">
+  <span class="pagination__title-h">欢迎评论</span>
+  <hr />
+</div>
+  <div id="tcomment"></div>
+  <script src="https://cdn.jsdelivr.net/npm/twikoo@1.5.0/dist/twikoo.all.min.js"></script>
+  <script>twikoo.init({ envId: 'twikoo-2g36bkuz88660f27', el: '#tcomment' })</script>
+
+  <script type="text/javascript" src='https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js'></script>
+  <script type="text/javascript">
+    jQuery(document).ready(function($){
+      var checkComments = setInterval(function() {
+        var counts = $('.tk-comments-title').find('span').first().text();
+        if (counts) {
+          $('#twikoo_count').text(counts)
+          clearInterval(checkComments);
+        }
+      }, 1000);
+      if(window.location.hash){
+        var checkExist = setInterval(function() {
+          if ($(window.location.hash).length) {
+            $('html, body').animate({scrollTop: $(window.location.hash).offset().top-90}, 1000);
+            clearInterval(checkExist);
+          }
+        }, 100);
+      }
+    });
+  </script>
+    
+
+    </div>
+
+      </div>
+
+      
+        
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+
+
+
+
+
+
+
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="copyright copyright-font">
+      <span>共 75227 字 <br/> 写完一本 鲁迅 的</br>《呐喊》了！</span>
+    </div>
+    <a class="dark-wormhole" href="https://www.foreverblog.cn/go.html" target="_blank"> <img src="/wormhole_1.gif" alt="" style="width:auto;height:32px;" title="穿梭虫洞-随机访问十年之约友链博客"> </a>
+    <a class="light-wormhole" href="https://www.foreverblog.cn/go.html" target="_blank" > <img src="/wormhole_3.gif" alt="" style="width:auto;height:32px;" title="穿梭虫洞-随机访问十年之约友链博客"> </a>
+    
+      <div class="copyright">
+        <span>© 2022 Powered by <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a> Theme by <a href="https://twitter.com/panr" target="_blank" rel="noopener">Panr</a></span>
+      </div>
+    
+  </div>
+</footer>
+
+<script type="text/javascript" src="/main.js?t=20220124"></script>
+
+<script type="text/javascript" src='https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js'></script>
+<script type="text/javascript" src="/lately2.min.js"></script>
+<script type="text/javascript" src="/jquery.vticker.js"></script>
+<script type="text/javascript" src="/waterfall.min.js"></script>
+<script type="text/javascript" src="/slimbox2.min.js"></script>
+<script type="text/javascript" src="/main-diy-0325.js"></script>
+      
+    </div>
+  </body>
+</html>

@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+      <title>哔哔 Pro :: 明礼至卓</title>
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta charset="UTF-8"/>
+<meta name="renderer" content="webkit"/>
+<meta name="force-rendering" content="webkit"/>
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+<script>if ( false || (!!window.MSInputMethodContext && !!document.documentMode)) document.write('\x3Cscript id="_iealwn_js" data-outver="11" src="https://support.dmeng.net/ie-alert-warning/latest.js">\x3C/script>'); </script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="Pro N0.1 前端支持链接、图片显示。发哔哔的时候插入图片链接或网址链接，会自动识别显示。核心代码来自 @黑石 : function urlToLink(str) { var re =/\bhttps?:\/\/(?!\S&#43;(?:jpe?g|png|bmp|gif|webp|gif))\S&#43;/g; var re_forpic =/\bhttps?:\/\/.*?(\.gif|\.jpeg|\.png|\.jpg|\.bmp|\.webp)/g; str =str.replace(re,function (website) { return &amp;#34;&amp;lt;a href=&amp;#39;&amp;#34; &#43; website &#43; &amp;#34;&amp;#39; target=&amp;#39;_blank&amp;#39;&amp;gt; &amp;lt;i class=&amp;#39;iconfont icon-lianjie-copy&amp;#39;&amp;gt;&amp;lt;/i&amp;gt;链接 &amp;lt;/a&amp;gt;&amp;#34;; }); str =str.replace(re_forpic,function (imgurl) { return &amp;#34;&amp;lt;img src=&amp;#39;&amp;#34; &#43; imgurl &#43; &amp;#34;&amp;#39; /&amp;gt; &amp;#34;; }); return str; } 完整代码参考本主题 bb.html"/>
+<meta name="keywords" content=""/>
+<link rel="canonical" href="https://blueisle.cf/bb-pro/" />
+<link rel="stylesheet" href="/main.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:500&display=swap" media="print" onload="this.media='all'">
+<link rel="shortcut icon" href="https://blueisle.cf/favicon.ico">
+
+<meta property="og:title" content="哔哔 Pro" />
+<meta property="og:description" content="Pro N0.1 前端支持链接、图片显示。发哔哔的时候插入图片链接或网址链接，会自动识别显示。核心代码来自 @黑石 : function urlToLink(str) { var re =/\bhttps?:\/\/(?!\S&#43;(?:jpe?g|png|bmp|gif|webp|gif))\S&#43;/g; var re_forpic =/\bhttps?:\/\/.*?(\.gif|\.jpeg|\.png|\.jpg|\.bmp|\.webp)/g; str =str.replace(re,function (website) { return &#34;&lt;a href=&#39;&#34; &#43; website &#43; &#34;&#39; target=&#39;_blank&#39;&gt; &lt;i class=&#39;iconfont icon-lianjie-copy&#39;&gt;&lt;/i&gt;链接 &lt;/a&gt;&#34;; }); str =str.replace(re_forpic,function (imgurl) { return &#34;&lt;img src=&#39;&#34; &#43; imgurl &#43; &#34;&#39; /&gt; &#34;; }); return str; } 完整代码参考本主题 bb.html" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blueisle.cf/bb-pro/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-12-28T23:39:12+08:00" />
+<meta property="article:modified_time" content="2020-12-28T23:39:12+08:00" />
+
+
+
+
+    
+  <link rel="prefetch" href="https://blueisle.cf/hi-2021/">
+  <link rel="prefetch" href="https://blueisle.cf/bugs-wx-minapp/">
+
+  </head>
+  <body class="dark-theme">
+    <div class="container">
+      <header class="header">
+  <span class="header__inner">
+    <a href="https://blueisle.cf" class="logo" style="text-decoration: none;">
+  
+    <span class="logo__text">明礼至卓</span>
+    <span class="logo__cursor"></span>
+  
+</a>
+
+    <span class="header__right">
+      
+        <nav class="menu hidden">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/movies/">电影</a></li>
+        
+      
+        
+          <li><a href="/books/">阅读</a></li>
+        
+      
+        
+          <li><a href="/archives/">归档</a></li>
+        
+      
+        
+          <li><a href="/friends/">友圈</a></li>
+        
+      
+        
+          <li><a href="/about/">关于</a></li>
+        
+      
+        
+          <li><a href="https://nav.blueisle.cf/">导航</a></li>
+        
+      
+    
+
+                <li><a href="/search/"><svg t="1556783211810" class="search-box-icon" class="icon" style="" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2078" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><style type="text/css"></style></defs><path d="M981.39652054 920.86314525L704.56522859 644.0318533a366.65501012 366.65501012 0 1 0-61.73503038 65.64040943L917.55859375 984.40065827z m-856.17925347-493.12920861a284.19142939 284.19142939 0 1 1 283.89101562 284.19142939A284.49184317 284.49184317 0 0 1 125.06706019 427.73393664z" fill="" p-id="2079" data-spm-anchor-id="a313x.7781069.0.i2"></path></svg></a></li>
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/movies/">电影</a></li>
+      
+    
+      
+        <li><a href="/books/">阅读</a></li>
+      
+    
+      
+        <li><a href="/archives/">归档</a></li>
+      
+    
+      
+        <li><a href="/friends/">友圈</a></li>
+      
+    
+      
+        <li><a href="/about/">关于</a></li>
+      
+    
+      
+        <li><a href="https://nav.blueisle.cf/">导航</a></li>
+      
+    
+  </ul>
+</nav>
+
+        <span class="menu-trigger hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+          </svg>
+        </span>
+      
+      <span class="theme-toggle">
+        <svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+
+      </span>
+    </span>
+  </span>
+</header>
+
+
+
+
+      <div class="content">
+        
+  
+  
+  
+  
+  <div class="post coding">
+    <div  class="breadcrumb">
+  
+
+  
+
+  
+
+  
+
+<li>
+  <a href="https://blueisle.cf/">首页</a>
+</li>
+
+
+<li>
+  <a href="https://blueisle.cf/posts/">文章</a>
+</li>
+
+
+<li>
+  <a href="https://blueisle.cf/posts/coding/">折腾</a>
+</li>
+
+
+<li class="active">
+  <a href="https://blueisle.cf/bb-pro/">哔哔 Pro</a>
+</li>
+
+</div>
+
+
+  
+    <h2 class="post-title"><a href="https://blueisle.cf/bb-pro/">哔哔 Pro</a></h2>
+    <div class="post-meta">
+      
+        <span class="post-date">2020-12-28 23:39:12</span><span> / <span id="twikoo_visitors">0</span> 阅读</span><span> / <a href="#twikoo"><span id="twikoo_count">0 条评论</span></a></span>
+        
+          
+        
+      
+    </div>
+
+    
+      
+        <img loading='lazy' src="https://pic.edui.fun/images/2020/12/bbpro-5.jpeg" class="post-cover" />
+      
+    
+  
+    <div class="post-content">
+      <h3 id="pro-n01">Pro N0.1</h3>
+<p>前端支持链接、图片显示。发哔哔的时候插入图片链接或网址链接，会自动识别显示。核心代码来自 <a href="https://www.heson10.com/">@黑石</a> :</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">urlToLink</span>(<span style="color:#a6e22e">str</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">re</span> <span style="color:#f92672">=</span><span style="color:#e6db74">/\bhttps?:\/\/(?!\S+(?:jpe?g|png|bmp|gif|webp|gif))\S+/g</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">re_forpic</span> <span style="color:#f92672">=</span><span style="color:#e6db74">/\bhttps?:\/\/.*?(\.gif|\.jpeg|\.png|\.jpg|\.bmp|\.webp)/g</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">str</span> <span style="color:#f92672">=</span><span style="color:#a6e22e">str</span>.<span style="color:#a6e22e">replace</span>(<span style="color:#a6e22e">re</span>,<span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">website</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;&lt;a href=&#39;&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">website</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;&#39; target=&#39;_blank&#39;&gt; &lt;i class=&#39;iconfont icon-lianjie-copy&#39;&gt;&lt;/i&gt;链接 &lt;/a&gt;&#34;</span>;
+</span></span><span style="display:flex;"><span>  });
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">str</span> <span style="color:#f92672">=</span><span style="color:#a6e22e">str</span>.<span style="color:#a6e22e">replace</span>(<span style="color:#a6e22e">re_forpic</span>,<span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">imgurl</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;&lt;img src=&#39;&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">imgurl</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;&#39;  /&gt; &#34;</span>;
+</span></span><span style="display:flex;"><span>  });
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">str</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>完整代码参考本主题 <a href="https://github.com/lmm214/immmmm/blob/master/themes/hello-friend/layouts/_default/bb.html">bb.html</a> ，主要加了上面的过滤正则 <code>urlToLink(item.content)</code> 。</p>
+<h3 id="pro-n02">Pro N0.2</h3>
+<p>接入 <a href="https://7bu.top/">去不图床</a> ，注册之后访问：</p>
+<p><code>https://7bu.top/api/token?email=你的邮箱&amp;password=你的密码</code> 记下 <code>token</code> 值。</p>
+<p><a href="https://7bu.top/index/api.html">图片上传API</a> 异常直接，post <code>https://7bu.top/api/upload</code> ，header 带上自己的 <code>token</code>，不带则匿名上传。用表单的请求参数 <code>image</code> 提交 <code>File</code>。</p>
+<p>相关教程：<a href="https://dusays.com/241/">去不图床PicGo上传插件的使用</a>、<a href="https://blog.svend.cc/upic/tutorials/custom/">uPic 图床配置教程 - 自定义</a></p>
+<h3 id="pro-n03">Pro N0.3</h3>
+<p>iOS 快捷指令上传图片后返回链接，到哔哔输入框。</p>
+<p><photos><img loading='lazy' src="https://pic.edui.fun/images/2020/12/bbpro-1.jpeg" alt="bbpro-1"  /><img loading='lazy' src="https://pic.edui.fun/images/2020/12/bbpro-2.jpeg" alt="bbpro-2"  /><img loading='lazy' src="https://pic.edui.fun/images/2020/12/bbpro-3.png" alt="bbpro-3"  /><img loading='lazy' src="https://pic.edui.fun/images/2020/12/bbpro-4.png" alt="bbpro-4"  /></photos></p>
+<p>甚至用“快捷指令调用其他指令”实现同步发哔哔和Flomo。</p>
+<p><img loading='lazy' src="https://pic.edui.fun/images/2020/12/bbpro-5.jpeg" alt="bbpro-5"  /></p>
+<p>具体其他平台发布方式，改日改日再琢磨～</p>
+
+      
+    </div>
+  
+    
+
+    
+      <span class="post-tags">
+        
+          #<a href="https://blueisle.cf/tags/%E6%8A%98%E8%85%BE/">折腾</a>&nbsp;
+        
+      </span>
+    
+  
+    <div class="clear"></div>
+    
+    
+      
+        <div class="pagination">
+          <div class="pagination__title">
+            
+              <a class="pagination__title-h" href="https://github.com/lmm214/immmmm/edit/master/content/posts/coding/bb-pro.md" target="_blank" rel="noopener">阅读更多</a>
+            
+            <hr />
+          </div>
+          <div class="pagination__buttons">
+            
+              <span class="button previous">
+                <a href="https://blueisle.cf/hi-2021/">
+                  <span class="button__icon">←</span>
+                  <span class="button__text">二〇二一，你好</span>
+                </a>
+              </span>
+            
+            
+              <span class="button next">
+                <a href="https://blueisle.cf/bugs-wx-minapp/">
+                  <span class="button__text">微信小程序评论开发踩坑记</span>
+                  <span class="button__icon">→</span>
+                </a>
+              </span>
+            
+          </div>
+        </div>
+      
+    
+
+
+    
+        <div class="pagination__title">
+  <span class="pagination__title-h">欢迎评论</span>
+  <hr />
+</div>
+  <div id="tcomment"></div>
+  <script src="https://cdn.jsdelivr.net/npm/twikoo@1.5.0/dist/twikoo.all.min.js"></script>
+  <script>twikoo.init({ envId: 'twikoo-2g36bkuz88660f27', el: '#tcomment' })</script>
+
+  <script type="text/javascript" src='https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js'></script>
+  <script type="text/javascript">
+    jQuery(document).ready(function($){
+      var checkComments = setInterval(function() {
+        var counts = $('.tk-comments-title').find('span').first().text();
+        if (counts) {
+          $('#twikoo_count').text(counts)
+          clearInterval(checkComments);
+        }
+      }, 1000);
+      if(window.location.hash){
+        var checkExist = setInterval(function() {
+          if ($(window.location.hash).length) {
+            $('html, body').animate({scrollTop: $(window.location.hash).offset().top-90}, 1000);
+            clearInterval(checkExist);
+          }
+        }, 100);
+      }
+    });
+  </script>
+    
+
+    </div>
+
+      </div>
+
+      
+        
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+
+
+
+
+
+
+
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="copyright copyright-font">
+      <span>共 75227 字 <br/> 写完一本 鲁迅 的</br>《呐喊》了！</span>
+    </div>
+    <a class="dark-wormhole" href="https://www.foreverblog.cn/go.html" target="_blank"> <img src="/wormhole_1.gif" alt="" style="width:auto;height:32px;" title="穿梭虫洞-随机访问十年之约友链博客"> </a>
+    <a class="light-wormhole" href="https://www.foreverblog.cn/go.html" target="_blank" > <img src="/wormhole_3.gif" alt="" style="width:auto;height:32px;" title="穿梭虫洞-随机访问十年之约友链博客"> </a>
+    
+      <div class="copyright">
+        <span>© 2022 Powered by <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a> Theme by <a href="https://twitter.com/panr" target="_blank" rel="noopener">Panr</a></span>
+      </div>
+    
+  </div>
+</footer>
+
+<script type="text/javascript" src="/main.js?t=20220124"></script>
+
+<script type="text/javascript" src='https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js'></script>
+<script type="text/javascript" src="/lately2.min.js"></script>
+<script type="text/javascript" src="/jquery.vticker.js"></script>
+<script type="text/javascript" src="/waterfall.min.js"></script>
+<script type="text/javascript" src="/slimbox2.min.js"></script>
+<script type="text/javascript" src="/main-diy-0325.js"></script>
+      
+    </div>
+  </body>
+</html>

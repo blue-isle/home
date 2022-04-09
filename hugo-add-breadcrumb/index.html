@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+      <title>Hugo 添加面包屑导航 :: 明礼至卓</title>
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta charset="UTF-8"/>
+<meta name="renderer" content="webkit"/>
+<meta name="force-rendering" content="webkit"/>
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+<script>if ( false || (!!window.MSInputMethodContext && !!document.documentMode)) document.write('\x3Cscript id="_iealwn_js" data-outver="11" src="https://support.dmeng.net/ie-alert-warning/latest.js">\x3C/script>'); </script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content=" 黑&#43;白，疗效好  「不问明天，悠然浪费」，多少年前看到的一句话，一直作为博客的 Slogan ，如同“谶语”般的存在！ 😷
+说回正题，折腾流程如下：
+"/>
+<meta name="keywords" content=""/>
+<link rel="canonical" href="https://blueisle.cf/hugo-add-breadcrumb/" />
+<link rel="stylesheet" href="/main.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:500&display=swap" media="print" onload="this.media='all'">
+<link rel="shortcut icon" href="https://blueisle.cf/favicon.ico">
+
+<meta property="og:title" content="Hugo 添加面包屑导航" />
+<meta property="og:description" content="
+    
+    黑&#43;白，疗效好
+  
+「不问明天，悠然浪费」，多少年前看到的一句话，一直作为博客的 Slogan ，如同“谶语”般的存在！ 😷
+说回正题，折腾流程如下：" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blueisle.cf/hugo-add-breadcrumb/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-03-31T21:59:00+08:00" />
+<meta property="article:modified_time" content="2020-03-31T21:59:00+08:00" />
+
+
+
+
+    
+  <link rel="prefetch" href="https://blueisle.cf/hugo-template-code/">
+  <link rel="prefetch" href="https://blueisle.cf/noto-serif-sc-by-google-fonts/">
+
+  </head>
+  <body class="dark-theme">
+    <div class="container">
+      <header class="header">
+  <span class="header__inner">
+    <a href="https://blueisle.cf" class="logo" style="text-decoration: none;">
+  
+    <span class="logo__text">明礼至卓</span>
+    <span class="logo__cursor"></span>
+  
+</a>
+
+    <span class="header__right">
+      
+        <nav class="menu hidden">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/movies/">电影</a></li>
+        
+      
+        
+          <li><a href="/books/">阅读</a></li>
+        
+      
+        
+          <li><a href="/archives/">归档</a></li>
+        
+      
+        
+          <li><a href="/friends/">友圈</a></li>
+        
+      
+        
+          <li><a href="/about/">关于</a></li>
+        
+      
+        
+          <li><a href="https://nav.blueisle.cf/">导航</a></li>
+        
+      
+    
+
+                <li><a href="/search/"><svg t="1556783211810" class="search-box-icon" class="icon" style="" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2078" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><style type="text/css"></style></defs><path d="M981.39652054 920.86314525L704.56522859 644.0318533a366.65501012 366.65501012 0 1 0-61.73503038 65.64040943L917.55859375 984.40065827z m-856.17925347-493.12920861a284.19142939 284.19142939 0 1 1 283.89101562 284.19142939A284.49184317 284.49184317 0 0 1 125.06706019 427.73393664z" fill="" p-id="2079" data-spm-anchor-id="a313x.7781069.0.i2"></path></svg></a></li>
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/movies/">电影</a></li>
+      
+    
+      
+        <li><a href="/books/">阅读</a></li>
+      
+    
+      
+        <li><a href="/archives/">归档</a></li>
+      
+    
+      
+        <li><a href="/friends/">友圈</a></li>
+      
+    
+      
+        <li><a href="/about/">关于</a></li>
+      
+    
+      
+        <li><a href="https://nav.blueisle.cf/">导航</a></li>
+      
+    
+  </ul>
+</nav>
+
+        <span class="menu-trigger hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+          </svg>
+        </span>
+      
+      <span class="theme-toggle">
+        <svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+
+      </span>
+    </span>
+  </span>
+</header>
+
+
+
+
+      <div class="content">
+        
+  
+  
+  
+  
+  <div class="post coding">
+    <div  class="breadcrumb">
+  
+
+  
+
+  
+
+  
+
+<li>
+  <a href="https://blueisle.cf/">首页</a>
+</li>
+
+
+<li>
+  <a href="https://blueisle.cf/posts/">文章</a>
+</li>
+
+
+<li>
+  <a href="https://blueisle.cf/posts/coding/">折腾</a>
+</li>
+
+
+<li class="active">
+  <a href="https://blueisle.cf/hugo-add-breadcrumb/">Hugo 添加面包屑导航</a>
+</li>
+
+</div>
+
+
+  
+    <h2 class="post-title"><a href="https://blueisle.cf/hugo-add-breadcrumb/">Hugo 添加面包屑导航</a></h2>
+    <div class="post-meta">
+      
+        <span class="post-date">2020-03-31 21:59:00</span><span> / <span id="twikoo_visitors">0</span> 阅读</span><span> / <a href="#twikoo"><span id="twikoo_count">0 条评论</span></a></span>
+        
+          
+        
+      
+    </div>
+
+    
+  
+    <div class="post-content">
+      <figure>
+    <img src="https://pic.edui.fun/images/2020/03/breadcrumb-1.png" width="50%"/><img src="https://pic.edui.fun/images/2020/03/breadcrumb-2.png" width="50%" />
+    <figcaption>黑+白，疗效好</figcaption>
+  </figure>
+<p>「不问明天，悠然浪费」，多少年前看到的一句话，一直作为博客的 Slogan ，如同“谶语”般的存在！ 😷</p>
+<p>说回正题，折腾流程如下：</p>
+<h3 id="主题代码-themes">主题代码 Themes</h3>
+<pre tabindex="0"><code>Hugo/themes
+└── hello-friend
+    ├── layouts
+    │   ├── partials
+    │   │   └── breadcrumb.html  # 功能代码
+    │   ├── _default
+    │   │   └── single.html # 文章页调用
+    │   ├── archives
+    │   │   └── list.html # 归档页调用
+    │   ├── posts
+    │   │   └── list.html # 文章页调用
+    │   └── tags
+    │       └── list.html # 标签页调用
+    └── static
+        └── style.css # 添加样式代码
+</code></pre><p><code>breadcrumb.html</code> 代码如下（来自官网，具体含义我也不懂）：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">div</span>  <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;breadcrumb&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  {{ template &#34;breadcrumbnav&#34; (dict &#34;p1&#34; . &#34;p2&#34; .) }}
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>{{ define &#34;breadcrumbnav&#34; }}
+</span></span><span style="display:flex;"><span>{{ if .p1.Parent }}
+</span></span><span style="display:flex;"><span>  {{ template &#34;breadcrumbnav&#34; (dict &#34;p1&#34; .p1.Parent &#34;p2&#34; .p2 )  }}
+</span></span><span style="display:flex;"><span>{{ else if not .p1.IsHome }}
+</span></span><span style="display:flex;"><span>  {{ template &#34;breadcrumbnav&#34; (dict &#34;p1&#34; .p1.Site.Home &#34;p2&#34; .p2 )  }}
+</span></span><span style="display:flex;"><span>{{ end }}
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">li</span><span style="color:#960050;background-color:#1e0010">{{</span> <span style="color:#a6e22e">if</span> <span style="color:#a6e22e">eq</span> <span style="color:#960050;background-color:#1e0010">.</span><span style="color:#a6e22e">p1</span> <span style="color:#960050;background-color:#1e0010">.</span><span style="color:#a6e22e">p2</span> <span style="color:#960050;background-color:#1e0010">}}</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;active&#34;</span><span style="color:#960050;background-color:#1e0010">{{</span> <span style="color:#a6e22e">end</span> <span style="color:#960050;background-color:#1e0010">}}</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .p1.Permalink }}&#34;</span>&gt;{{ .p1.Title }}&lt;/<span style="color:#f92672">a</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">li</span>&gt;
+</span></span><span style="display:flex;"><span>{{ end }}
+</span></span></code></pre></div><p><code>single.html</code> 和各 <code>list.html</code> 插入调用代码，当然只插 single 也OK啦：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>{{ partial &#34;breadcrumb.html&#34; . }}
+</span></span></code></pre></div><p><code>style.css</code> 样式代码（来自 <a href="https://www.rectcircle.cn/posts/blog-migration/#%e5%ae%9e%e7%8e%b0%e7%b3%bb%e5%88%97%e6%96%87%e7%ab%a0">@rectcircle</a>）：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#75715e">/* breadcrumb */</span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">breadcrumb</span> {<span style="color:#66d9ef">background</span>: <span style="color:#ae81ff">#fafafa</span>;<span style="color:#66d9ef">padding</span>:<span style="color:#ae81ff">4</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">15</span><span style="color:#66d9ef">px</span>; <span style="color:#66d9ef">margin-bottom</span>:<span style="color:#ae81ff">40</span><span style="color:#66d9ef">px</span>; <span style="color:#66d9ef">list-style</span>:<span style="color:#66d9ef">none</span>;<span style="color:#66d9ef">border-radius</span>: <span style="color:#ae81ff">5</span><span style="color:#66d9ef">px</span>; }
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">breadcrumb</span><span style="color:#f92672">&gt;</span><span style="color:#f92672">li</span>{<span style="color:#66d9ef">display</span>:<span style="color:#66d9ef">inline-block</span>;<span style="color:#66d9ef">opacity</span>:<span style="color:#ae81ff">.7</span>;}
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">breadcrumb</span><span style="color:#f92672">&gt;</span><span style="color:#f92672">li</span><span style="color:#f92672">+</span><span style="color:#f92672">li</span>:<span style="color:#a6e22e">before</span> {<span style="color:#66d9ef">padding</span>:<span style="color:#ae81ff">0</span> <span style="color:#ae81ff">5</span><span style="color:#66d9ef">px</span>; <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#ccc</span>; <span style="color:#66d9ef">content</span>: <span style="color:#e6db74">&#34;&gt;&#34;</span>; }
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">breadcrumb</span> <span style="color:#f92672">li</span> <span style="color:#f92672">a</span>{<span style="color:#66d9ef">text-decoration</span>:<span style="color:#66d9ef">none</span>;}
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">dark-theme</span> .<span style="color:#a6e22e">breadcrumb</span> {<span style="color:#66d9ef">background</span>: <span style="color:#ae81ff">#252627</span>;}
+</span></span></code></pre></div><h3 id="内容标题-content">内容标题 Content</h3>
+<p>以上功能和样式折腾完毕之后，显示的是这样的：</p>
+<pre tabindex="0"><code>木木木木木 &gt; posts &gt; coding &gt; Hugo 添加面包屑导航
+</code></pre><p>所以，需要配合 <code>_index.md </code> 食用！</p>
+<pre tabindex="0"><code>---
+title: &#34;首页&#34;
+---
+</code></pre><p>个人是指定 posts 为内容文件夹，并且建了 4个子文件夹，相当于分了 4 类文章。</p>
+<pre tabindex="0"><code>Hugo/content
+├── _index.md # title: &#34;首页&#34;
+├── archives
+│   └── _index.md # title: &#34;归档&#34;
+└── tags
+│   └── _index.md # title: &#34;标签&#34;
+├── posts
+      ├── _index.md # title: &#34;文章&#34;
+      ├── chat
+      │   └── _index.md # title: &#34;词穷&#34;
+      ├── coding
+      │   └── _index.md # title: &#34;折腾&#34;
+      ├── daily
+      │   └── _index.md # title: &#34;日常&#34;
+      └── reading
+        └── _index.md # title: &#34;育人&#34;
+</code></pre><p>累到忘我！如，酒到微醺，甚是美好！ 🌀</p>
+      
+    </div>
+  
+    
+
+    
+      <span class="post-tags">
+        
+          #<a href="https://blueisle.cf/tags/%E6%8A%98%E8%85%BE/">折腾</a>&nbsp;
+        
+      </span>
+    
+  
+    <div class="clear"></div>
+    
+    
+      
+        <div class="pagination">
+          <div class="pagination__title">
+            
+              <a class="pagination__title-h" href="https://github.com/lmm214/immmmm/edit/master/content/posts/coding/hugo-add-breadcrumb.md" target="_blank" rel="noopener">阅读更多</a>
+            
+            <hr />
+          </div>
+          <div class="pagination__buttons">
+            
+              <span class="button previous">
+                <a href="https://blueisle.cf/hugo-template-code/">
+                  <span class="button__icon">←</span>
+                  <span class="button__text">Hugo 主题常用的代码片段</span>
+                </a>
+              </span>
+            
+            
+              <span class="button next">
+                <a href="https://blueisle.cf/noto-serif-sc-by-google-fonts/">
+                  <span class="button__text">添加 Google Fonts 思源宋体</span>
+                  <span class="button__icon">→</span>
+                </a>
+              </span>
+            
+          </div>
+        </div>
+      
+    
+
+
+    
+        <div class="pagination__title">
+  <span class="pagination__title-h">欢迎评论</span>
+  <hr />
+</div>
+  <div id="tcomment"></div>
+  <script src="https://cdn.jsdelivr.net/npm/twikoo@1.5.0/dist/twikoo.all.min.js"></script>
+  <script>twikoo.init({ envId: 'twikoo-2g36bkuz88660f27', el: '#tcomment' })</script>
+
+  <script type="text/javascript" src='https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js'></script>
+  <script type="text/javascript">
+    jQuery(document).ready(function($){
+      var checkComments = setInterval(function() {
+        var counts = $('.tk-comments-title').find('span').first().text();
+        if (counts) {
+          $('#twikoo_count').text(counts)
+          clearInterval(checkComments);
+        }
+      }, 1000);
+      if(window.location.hash){
+        var checkExist = setInterval(function() {
+          if ($(window.location.hash).length) {
+            $('html, body').animate({scrollTop: $(window.location.hash).offset().top-90}, 1000);
+            clearInterval(checkExist);
+          }
+        }, 100);
+      }
+    });
+  </script>
+    
+
+    </div>
+
+      </div>
+
+      
+        
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+
+
+
+
+
+
+
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="copyright copyright-font">
+      <span>共 75227 字 <br/> 写完一本 鲁迅 的</br>《呐喊》了！</span>
+    </div>
+    <a class="dark-wormhole" href="https://www.foreverblog.cn/go.html" target="_blank"> <img src="/wormhole_1.gif" alt="" style="width:auto;height:32px;" title="穿梭虫洞-随机访问十年之约友链博客"> </a>
+    <a class="light-wormhole" href="https://www.foreverblog.cn/go.html" target="_blank" > <img src="/wormhole_3.gif" alt="" style="width:auto;height:32px;" title="穿梭虫洞-随机访问十年之约友链博客"> </a>
+    
+      <div class="copyright">
+        <span>© 2022 Powered by <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a> Theme by <a href="https://twitter.com/panr" target="_blank" rel="noopener">Panr</a></span>
+      </div>
+    
+  </div>
+</footer>
+
+<script type="text/javascript" src="/main.js?t=20220124"></script>
+
+<script type="text/javascript" src='https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js'></script>
+<script type="text/javascript" src="/lately2.min.js"></script>
+<script type="text/javascript" src="/jquery.vticker.js"></script>
+<script type="text/javascript" src="/waterfall.min.js"></script>
+<script type="text/javascript" src="/slimbox2.min.js"></script>
+<script type="text/javascript" src="/main-diy-0325.js"></script>
+      
+    </div>
+  </body>
+</html>

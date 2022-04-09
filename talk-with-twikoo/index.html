@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+      <title>你言我语 By Twikoo :: 明礼至卓</title>
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta charset="UTF-8"/>
+<meta name="renderer" content="webkit"/>
+<meta name="force-rendering" content="webkit"/>
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+<script>if ( false || (!!window.MSInputMethodContext && !!document.documentMode)) document.write('\x3Cscript id="_iealwn_js" data-outver="11" src="https://support.dmeng.net/ie-alert-warning/latest.js">\x3C/script>'); </script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="效果见： https://immmmm.com/talk/
+主要做了两件事：一是前端魔改，二是后端加API。
+"/>
+<meta name="keywords" content=""/>
+<link rel="canonical" href="https://blueisle.cf/talk-with-twikoo/" />
+<link rel="stylesheet" href="/main.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:500&display=swap" media="print" onload="this.media='all'">
+<link rel="shortcut icon" href="https://blueisle.cf/favicon.ico">
+
+<meta property="og:title" content="你言我语 By Twikoo" />
+<meta property="og:description" content="效果见： https://immmmm.com/talk/
+主要做了两件事：一是前端魔改，二是后端加API。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blueisle.cf/talk-with-twikoo/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-06-21T17:55:51+08:00" />
+<meta property="article:modified_time" content="2021-06-21T17:55:51+08:00" />
+
+
+
+
+    
+  <link rel="prefetch" href="https://blueisle.cf/2021-07-26/">
+  <link rel="prefetch" href="https://blueisle.cf/2021-05-23/">
+
+  </head>
+  <body class="dark-theme">
+    <div class="container">
+      <header class="header">
+  <span class="header__inner">
+    <a href="https://blueisle.cf" class="logo" style="text-decoration: none;">
+  
+    <span class="logo__text">明礼至卓</span>
+    <span class="logo__cursor"></span>
+  
+</a>
+
+    <span class="header__right">
+      
+        <nav class="menu hidden">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/movies/">电影</a></li>
+        
+      
+        
+          <li><a href="/books/">阅读</a></li>
+        
+      
+        
+          <li><a href="/archives/">归档</a></li>
+        
+      
+        
+          <li><a href="/friends/">友圈</a></li>
+        
+      
+        
+          <li><a href="/about/">关于</a></li>
+        
+      
+        
+          <li><a href="https://nav.blueisle.cf/">导航</a></li>
+        
+      
+    
+
+                <li><a href="/search/"><svg t="1556783211810" class="search-box-icon" class="icon" style="" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2078" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><style type="text/css"></style></defs><path d="M981.39652054 920.86314525L704.56522859 644.0318533a366.65501012 366.65501012 0 1 0-61.73503038 65.64040943L917.55859375 984.40065827z m-856.17925347-493.12920861a284.19142939 284.19142939 0 1 1 283.89101562 284.19142939A284.49184317 284.49184317 0 0 1 125.06706019 427.73393664z" fill="" p-id="2079" data-spm-anchor-id="a313x.7781069.0.i2"></path></svg></a></li>
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/movies/">电影</a></li>
+      
+    
+      
+        <li><a href="/books/">阅读</a></li>
+      
+    
+      
+        <li><a href="/archives/">归档</a></li>
+      
+    
+      
+        <li><a href="/friends/">友圈</a></li>
+      
+    
+      
+        <li><a href="/about/">关于</a></li>
+      
+    
+      
+        <li><a href="https://nav.blueisle.cf/">导航</a></li>
+      
+    
+  </ul>
+</nav>
+
+        <span class="menu-trigger hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+          </svg>
+        </span>
+      
+      <span class="theme-toggle">
+        <svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+
+      </span>
+    </span>
+  </span>
+</header>
+
+
+
+
+      <div class="content">
+        
+  
+  
+  
+  
+  <div class="post coding">
+    <div  class="breadcrumb">
+  
+
+  
+
+  
+
+  
+
+<li>
+  <a href="https://blueisle.cf/">首页</a>
+</li>
+
+
+<li>
+  <a href="https://blueisle.cf/posts/">文章</a>
+</li>
+
+
+<li>
+  <a href="https://blueisle.cf/posts/coding/">折腾</a>
+</li>
+
+
+<li class="active">
+  <a href="https://blueisle.cf/talk-with-twikoo/">你言我语 By Twikoo</a>
+</li>
+
+</div>
+
+
+  
+    <h2 class="post-title"><a href="https://blueisle.cf/talk-with-twikoo/">你言我语 By Twikoo</a></h2>
+    <div class="post-meta">
+      
+        <span class="post-date">2021-06-21 17:55:51</span><span> / <span id="twikoo_visitors">0</span> 阅读</span><span> / <a href="#twikoo"><span id="twikoo_count">0 条评论</span></a></span>
+        
+          
+        
+      
+    </div>
+
+    
+      
+        <img loading='lazy' src="https://pic.edui.fun/images/2021/06/yanyu-3.png" class="post-cover" />
+      
+    
+  
+    <div class="post-content">
+      <p>效果见： <a href="https://immmmm.com/talk/">https://immmmm.com/talk/</a></p>
+<p>主要做了两件事：一是前端魔改，二是后端加API。</p>
+<p>注明：以内样式、功能代码基于 <strong>Twikoo v1.4.5</strong></p>
+<h3 id="前端魔改">前端魔改</h3>
+<p><code>twikoo.js</code> 里的子评论是否显示 “展开” 是根据高度来判断的 <code>[&quot;tk-replies&quot;].scrollHeight&gt;200</code> ，这会出现当高度不到 200 时，不会显示 “展开” 这个按钮，如果单纯通过 css 直接隐藏，藏是藏了，没有“展开”给我们点击……</p>
+<p>换思路，先直接都给 200 高度，把“展开”骗出来！点击之后，再它个 <code>class=&quot;tk-replies-height&quot;</code> 恢复其对应的子评论高度。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>  .<span style="color:#a6e22e">tk-replies</span> .<span style="color:#a6e22e">tk-comment</span>{<span style="color:#66d9ef">margin</span>:<span style="color:#ae81ff">0.5</span><span style="color:#66d9ef">em</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span><span style="color:#75715e">!important</span>;<span style="color:#66d9ef">height</span>:<span style="color:#ae81ff">200</span><span style="color:#66d9ef">px</span>;}
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">tk-replies</span>.<span style="color:#a6e22e">tk-replies-height</span> .<span style="color:#a6e22e">tk-comment</span>{<span style="color:#66d9ef">max-height</span>:<span style="color:#66d9ef">none</span> <span style="color:#75715e">!important</span>;<span style="color:#66d9ef">height</span>: <span style="color:#66d9ef">auto</span> <span style="color:#75715e">!important</span>;}
+</span></span></code></pre></div><p>完整样式代码如下，最新改动直接查看页面源码：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#f92672">&lt;</span><span style="color:#f92672">style</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">tk-comments</span> .<span style="color:#a6e22e">tk-submit</span><span style="color:#f92672">,</span>.<span style="color:#a6e22e">tk-comments-count</span> <span style="color:#f92672">span</span>:<span style="color:#a6e22e">nth-child</span><span style="color:#f92672">(</span><span style="color:#f92672">2</span><span style="color:#f92672">),</span>.<span style="color:#a6e22e">tk-comments-container</span> .<span style="color:#a6e22e">tk-comment</span> .<span style="color:#a6e22e">tk-avatar</span><span style="color:#f92672">,</span>.<span style="color:#a6e22e">tk-comments-container</span> .<span style="color:#a6e22e">tk-comment</span> .<span style="color:#a6e22e">tk-nick</span><span style="color:#f92672">,</span>.<span style="color:#a6e22e">tk-comments-container</span> .<span style="color:#a6e22e">tk-replies</span> .<span style="color:#a6e22e">tk-comment</span> .<span style="color:#a6e22e">tk-time</span><span style="color:#f92672">,</span>.<span style="color:#a6e22e">tk-extra-text</span><span style="color:#f92672">,</span>.<span style="color:#a6e22e">tk-replies</span> .<span style="color:#a6e22e">tk-meta</span><span style="color:#f92672">,</span>.<span style="color:#a6e22e">tk-replies</span> .<span style="color:#a6e22e">tk-extra</span><span style="color:#f92672">,</span>.<span style="color:#a6e22e">tk-extras</span> .<span style="color:#a6e22e">tk-extra</span>:<span style="color:#a6e22e">nth-child</span><span style="color:#f92672">(</span><span style="color:#f92672">2</span><span style="color:#f92672">)</span>{<span style="color:#66d9ef">display</span>:<span style="color:#66d9ef">none</span> <span style="color:#75715e">!important</span>;}
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">tk-comment</span> .<span style="color:#a6e22e">tk-submit</span><span style="color:#f92672">,</span>.<span style="color:#a6e22e">tk-comments-container</span> .<span style="color:#a6e22e">tk-replies</span> .<span style="color:#a6e22e">tk-comment</span> .<span style="color:#a6e22e">tk-avatar</span>{<span style="color:#66d9ef">display</span>:<span style="color:#66d9ef">block</span> <span style="color:#75715e">!important</span>;}
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">tk-comments-container</span> .<span style="color:#a6e22e">tk-replies</span> .<span style="color:#a6e22e">tk-comment</span> .<span style="color:#a6e22e">tk-nick</span>{<span style="color:#66d9ef">display</span>:<span style="color:#66d9ef">inline-block</span> <span style="color:#75715e">!important</span>;}
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">tk-comments-count</span>{<span style="color:#66d9ef">font-size</span>:<span style="color:#ae81ff">15</span><span style="color:#66d9ef">px</span>;}
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">tk-comments-count</span>::<span style="color:#a6e22e">before</span> {<span style="color:#66d9ef">content</span>:<span style="color:#e6db74">&#34;共 &#34;</span>;}
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">tk-comments-count</span>::<span style="color:#a6e22e">after</span> {<span style="color:#66d9ef">content</span>:<span style="color:#e6db74">&#34; 条&#34;</span>;}
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">tk-time</span>{<span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#fafafa</span>;<span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">0.75</span><span style="color:#66d9ef">em</span>;<span style="color:#66d9ef">font-style</span>: <span style="color:#66d9ef">italic</span>;<span style="color:#66d9ef">background-color</span>: <span style="color:#ae81ff">#3b3d42</span>;<span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">inline-block</span>;<span style="color:#66d9ef">padding</span>:<span style="color:#ae81ff">0.25</span><span style="color:#66d9ef">em</span> <span style="color:#ae81ff">1</span><span style="color:#66d9ef">em</span> <span style="color:#ae81ff">0.2</span><span style="color:#66d9ef">em</span> <span style="color:#ae81ff">1</span><span style="color:#66d9ef">em</span>;}
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">tk-comment</span>{<span style="color:#66d9ef">margin</span>:<span style="color:#ae81ff">1</span><span style="color:#66d9ef">em</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">4</span><span style="color:#66d9ef">em</span> <span style="color:#75715e">!important</span>;}
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">tk-replies</span> .<span style="color:#a6e22e">tk-comment</span>{<span style="color:#66d9ef">margin</span>:<span style="color:#ae81ff">0.5</span><span style="color:#66d9ef">em</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span><span style="color:#75715e">!important</span>;<span style="color:#66d9ef">height</span>:<span style="color:#ae81ff">200</span><span style="color:#66d9ef">px</span>;}
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">tk-content</span>{<span style="color:#66d9ef">margin</span>:<span style="color:#ae81ff">1</span><span style="color:#66d9ef">em</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0.5</span><span style="color:#66d9ef">em</span><span style="color:#75715e">!important</span>;}
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">tk-content</span> <span style="color:#f92672">blockquote</span>:<span style="color:#a6e22e">before</span>{<span style="color:#66d9ef">content</span>:<span style="color:#e6db74">&#34;&#34;</span>}
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">tk-replies</span>{<span style="color:#66d9ef">max-height</span>:<span style="color:#ae81ff">0</span><span style="color:#66d9ef">px</span> <span style="color:#75715e">!important</span>;}
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">tk-replies</span> .<span style="color:#a6e22e">tk-action</span>{<span style="color:#66d9ef">position</span>: <span style="color:#66d9ef">absolute</span>;<span style="color:#66d9ef">right</span>:<span style="color:#ae81ff">0</span>;<span style="color:#66d9ef">top</span>:<span style="color:#ae81ff">20</span><span style="color:#66d9ef">px</span>;}
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">tk-replies</span>.<span style="color:#a6e22e">tk-replies-expand</span>{<span style="color:#66d9ef">max-height</span>:<span style="color:#66d9ef">none</span> <span style="color:#75715e">!important</span>;}
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">tk-replies</span>.<span style="color:#a6e22e">tk-replies-expand</span>.<span style="color:#a6e22e">tk-replies-height</span> .<span style="color:#a6e22e">tk-comment</span>{<span style="color:#66d9ef">max-height</span>:<span style="color:#66d9ef">none</span> <span style="color:#75715e">!important</span>;<span style="color:#66d9ef">height</span>: <span style="color:#66d9ef">auto</span> <span style="color:#75715e">!important</span>;}
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">tk-expand</span>{<span style="color:#66d9ef">margin</span>:<span style="color:#ae81ff">-25</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span>;<span style="color:#66d9ef">font-size</span>:<span style="color:#ae81ff">1</span><span style="color:#66d9ef">em</span>;<span style="color:#66d9ef">font-weight</span>:<span style="color:#ae81ff">800</span>;<span style="color:#66d9ef">float</span>: <span style="color:#66d9ef">right</span>;<span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">60</span><span style="color:#66d9ef">px</span> <span style="color:#75715e">!important</span>;}
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">tk-expand</span>.<span style="color:#a6e22e">_collapse</span>{<span style="color:#66d9ef">margin</span>:<span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span>;}
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">tk-extras</span>{<span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">flex</span> <span style="color:#75715e">!important</span>;}
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">tk-replies</span> .<span style="color:#a6e22e">tk-avatar</span>{<span style="color:#66d9ef">margin</span>:<span style="color:#ae81ff">1</span><span style="color:#66d9ef">em</span> <span style="color:#ae81ff">0.5</span><span style="color:#66d9ef">rem</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span>;}
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">tk-avatar</span>.<span style="color:#a6e22e">tk-has-avatar</span>{<span style="color:#66d9ef">border-radius</span>:<span style="color:#ae81ff">50</span><span style="color:#66d9ef">%</span>;}
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">tk-replies</span> .<span style="color:#a6e22e">tk-main</span>{<span style="color:#66d9ef">font-size</span>:<span style="color:#ae81ff">14</span><span style="color:#66d9ef">px</span> <span style="color:#75715e">!important</span>;<span style="color:#66d9ef">position</span>:<span style="color:#66d9ef">relative</span>;}
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">tk-replies</span> .<span style="color:#a6e22e">tk-content</span>{<span style="color:#66d9ef">font-size</span>:<span style="color:#ae81ff">1</span><span style="color:#66d9ef">em</span> <span style="color:#75715e">!important</span>;}
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">tk-row</span>{<span style="color:#66d9ef">border-bottom</span>: <span style="color:#ae81ff">1</span><span style="color:#66d9ef">px</span> <span style="color:#66d9ef">solid</span> <span style="color:#ae81ff">#3b3d42</span>;}
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">tk-submit</span>{<span style="color:#66d9ef">margin-bottom</span>:<span style="color:#ae81ff">3</span><span style="color:#66d9ef">em</span>;}
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">tk-replies</span> .<span style="color:#a6e22e">tk-row</span><span style="color:#f92672">,</span>.<span style="color:#a6e22e">tk-submit</span> .<span style="color:#a6e22e">tk-row</span>{<span style="color:#66d9ef">border-bottom</span>:<span style="color:#66d9ef">none</span>;}
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">dark-theme</span> .<span style="color:#a6e22e">tk-time</span>{<span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#aaa</span>;}
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">tk-row</span>.<span style="color:#a6e22e">actions</span>{<span style="color:#66d9ef">margin-left</span>:<span style="color:#ae81ff">0</span> <span style="color:#75715e">!important</span>;}
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/</span><span style="color:#f92672">style</span><span style="color:#f92672">&gt;</span>
+</span></span></code></pre></div><p>由此也拾起最陌生的陌生人——原生 JavaScript</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-JavaScript" data-lang="JavaScript"><span style="display:flex;"><span><span style="color:#f92672">&lt;</span><span style="color:#a6e22e">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdn.jsdelivr.net/npm/twikoo@1.4.5/dist/twikoo.all.min.js&#34;</span><span style="color:#f92672">&gt;&lt;</span><span style="color:#960050;background-color:#1e0010">/script&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;</span><span style="color:#a6e22e">script</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">twikoo</span>.<span style="color:#a6e22e">init</span>({
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">envId</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;twikoo-123456&#39;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">el</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;#tcomment&#39;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">onCommentLoaded</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span> () {
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">myShow</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelector</span>(<span style="color:#e6db74">&#39;.tk-comments-title &gt; .tk-icon&#39;</span>),<span style="color:#a6e22e">mySubmit</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelector</span>(<span style="color:#e6db74">&#39;.tk-comments &gt; .tk-submit&#39;</span>)
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">myShow</span> <span style="color:#f92672">!==</span> <span style="color:#66d9ef">null</span>){
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">mySubmit</span>.<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">setProperty</span>(<span style="color:#e6db74">&#39;display&#39;</span>,<span style="color:#e6db74">&#39;block&#39;</span>,<span style="color:#e6db74">&#39;important&#39;</span>)
+</span></span><span style="display:flex;"><span>      }<span style="color:#66d9ef">else</span>{
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">mySubmit</span>.<span style="color:#a6e22e">remove</span>()
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">tkMain</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementsByClassName</span>(<span style="color:#e6db74">&#39;tk-main&#39;</span>),<span style="color:#a6e22e">tkReplies</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementsByClassName</span>(<span style="color:#e6db74">&#39;tk-replies&#39;</span>);
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">i</span><span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>;<span style="color:#a6e22e">i</span><span style="color:#f92672">&lt;</span><span style="color:#a6e22e">tkMain</span>.<span style="color:#a6e22e">length</span>;<span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>){
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">tkMain</span>[<span style="color:#a6e22e">i</span>].<span style="color:#a6e22e">index</span><span style="color:#f92672">=</span><span style="color:#a6e22e">i</span>;<span style="color:#a6e22e">tkMain</span>[<span style="color:#a6e22e">i</span>].<span style="color:#a6e22e">onclick</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span> () {<span style="color:#a6e22e">tkReplies</span>[<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">index</span>].<span style="color:#a6e22e">classList</span>.<span style="color:#a6e22e">add</span>(<span style="color:#e6db74">&#34;tk-replies-height&#34;</span>);}
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  })
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/script&gt;</span>
+</span></span></code></pre></div><h3 id="后端api">后端API</h3>
+<p>注：已停更，太复杂，兼容性差……（其实懒）</p>
+<p>思路与 「哔哔点啥」 相同，用 <code>key</code> 作为验证，传参数 <code>text</code> <code>from</code> 并调用我们的主角云函数 <code>twikoo</code> 发布主评论！</p>
+<p>先部署 「talk-twikoo」云函数 <a href="https://github.com/lmm214/talk-twikoo">https://github.com/lmm214/talk-twikoo</a></p>
+<p>再在云函数 <code>twikoo</code> 中添加下面两段代码，第一段是三行代码，加了一个 <code>TAlK_COMMENT_SUBMIT</code> 事件。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-JavaScript" data-lang="JavaScript"><span style="display:flex;"><span>      <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#39;GET_RECENT_COMMENTS&#39;</span><span style="color:#f92672">:</span> <span style="color:#75715e">// &gt;= 0.2.7
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#a6e22e">res</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">getRecentComments</span>(<span style="color:#a6e22e">event</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">break</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e">//加入下面三行
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#39;TAlK_COMMENT_SUBMIT&#39;</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">res</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">talkCommentSubmit</span>(<span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">talkcontext</span>,<span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">talkfrom</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">break</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">default</span><span style="color:#f92672">:</span>
+</span></span></code></pre></div><p>第二段直接加在最后，功能函数里是对不同 <code>from</code> 设置不同的 UA。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-JavaScript" data-lang="JavaScript"><span style="display:flex;"><span><span style="color:#75715e">//加入功能函数
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">async</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">talkCommentSubmit</span> (<span style="color:#a6e22e">talkcontext</span>,<span style="color:#a6e22e">talkfrom</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">res</span> <span style="color:#f92672">=</span> {}
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">talkUA</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">talkfrom</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;微信公众号&#39;</span>){
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">talkUA</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; Touch; LCTE; rv:11.0)&#39;</span>
+</span></span><span style="display:flex;"><span>  }<span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">talkfrom</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;request&#39;</span>){
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">talkUA</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Mozilla/5.0 (X11; Linux i686; rv:21.0) Gecko/20100101 Firefox/21.0&#39;</span>
+</span></span><span style="display:flex;"><span>  }<span style="color:#66d9ef">else</span>{
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">talkUA</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Mozilla/5.0 (iPhone; CPU iPhone OS 15 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko) Mobile/11B554a&#39;</span>
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">data</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">talkParse</span>(<span style="color:#a6e22e">talkcontext</span>,<span style="color:#a6e22e">talkUA</span>)
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">comment</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">save</span>(<span style="color:#a6e22e">data</span>)
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">id</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">comment</span>.<span style="color:#a6e22e">id</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">res</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 将评论转为数据库存储格式
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">async</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">talkParse</span>(<span style="color:#a6e22e">talkcontext</span>,<span style="color:#a6e22e">talkUA</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">timestamp</span> <span style="color:#f92672">=</span> Date.<span style="color:#a6e22e">now</span>()
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">commentDo</span> <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">uid</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;b4dc894b82284197bd4316d707936ea2&#39;</span>, <span style="color:#75715e">//comment数据库里有
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">nick</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;林木木&#39;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">mail</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;mm@xx.com&#39;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">mailMd5</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;ba83fa02fc4b2ba621514941307e21be&#39;</span>, <span style="color:#75715e">//comment数据库里有
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">link</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;&#39;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">ua</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">talkUA</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">ip</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;&#39;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">master</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">url</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;/talk/&#39;</span>, <span style="color:#75715e">//页面路径
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">href</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;https://immmmm.com/talk/&#39;</span>, <span style="color:#75715e">//页面路径
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">comment</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">talkcontext</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">isSpam</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">created</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">timestamp</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">updated</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">timestamp</span>
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">commentDo</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="正则更新">正则更新</h3>
+<p><a href="https://github.com/lmm214/bber/blob/main/bber.js">bber.js</a> 内更新正则代码，匹配多种图片标签识别。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-JavaScript" data-lang="JavaScript"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">urlToLink</span>(<span style="color:#a6e22e">str</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">//去除&lt;img&gt;标签，留 src 链接
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">re_forimg</span> <span style="color:#f92672">=</span><span style="color:#e6db74">/\&lt;[img|IMG].*?src=[\&#39;|\&#34;](https\:\/\/.*?(?:[\.jpg|\.jpeg|\.png|\.gif|\.bmp]))[\&#39;|\&#34;].*?[\/]?&gt;/g</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">str</span> <span style="color:#f92672">=</span><span style="color:#a6e22e">str</span>.<span style="color:#a6e22e">replace</span>(<span style="color:#a6e22e">re_forimg</span>,<span style="color:#e6db74">&#39;$1&#39;</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">//去 ![]() 标签，留图片链接
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">re_formd</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">/^!\[(.*)\]\((.*)\)/g</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">str</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">str</span>.<span style="color:#a6e22e">replace</span>(<span style="color:#a6e22e">re_formd</span>,<span style="color:#e6db74">&#39;$2&#39;</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">//处理图片链接，添加 a 标签共添加灯箱效果
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">re_forpic</span> <span style="color:#f92672">=</span><span style="color:#e6db74">/\bhttps?:[^:&lt;&gt;&#34;]*\/([^:&lt;&gt;&#34;]*)(\.(jpeg)|(png)|(jpg)|(webp))/g</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">str</span> <span style="color:#f92672">=</span><span style="color:#a6e22e">str</span>.<span style="color:#a6e22e">replace</span>(<span style="color:#a6e22e">re_forpic</span>,<span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">imgurl</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#39;&lt;a href=&#34;&#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">imgurl</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;&#34;&gt;&lt;img src=&#34;&#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">imgurl</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;&#34; /&gt;&lt;/a&gt;&#39;</span>;
+</span></span><span style="display:flex;"><span>  });
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">//处理普通链接，添加 a 标签供跳转
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">re</span> <span style="color:#f92672">=</span><span style="color:#e6db74">/\bhttps?:\/\/(?!\S+(?:jpe?g|png|bmp|gif|webp|gif))\S+/g</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">str</span> <span style="color:#f92672">=</span><span style="color:#a6e22e">str</span>.<span style="color:#a6e22e">replace</span>(<span style="color:#a6e22e">re</span>,<span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">website</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34; &lt;a href=&#39;&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">website</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;&#39;rel=&#39;noopener&#39; target=&#39;_blank&#39;&gt;↘链接↙&lt;/a&gt; &#34;</span>;
+</span></span><span style="display:flex;"><span>  });
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">//微信表情
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#a6e22e">str</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">qqWechatEmotionParser</span>(<span style="color:#a6e22e">str</span>)
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">str</span>; 
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div>
+      
+    </div>
+  
+    
+
+    
+      <span class="post-tags">
+        
+          #<a href="https://blueisle.cf/tags/%E6%8A%98%E8%85%BE/">折腾</a>&nbsp;
+        
+      </span>
+    
+  
+    <div class="clear"></div>
+    
+    
+      
+        <div class="pagination">
+          <div class="pagination__title">
+            
+              <a class="pagination__title-h" href="https://github.com/lmm214/immmmm/edit/master/content/posts/coding/talk-with-twikoo.md" target="_blank" rel="noopener">阅读更多</a>
+            
+            <hr />
+          </div>
+          <div class="pagination__buttons">
+            
+              <span class="button previous">
+                <a href="https://blueisle.cf/2021-07-26/">
+                  <span class="button__icon">←</span>
+                  <span class="button__text">2021-07-26</span>
+                </a>
+              </span>
+            
+            
+              <span class="button next">
+                <a href="https://blueisle.cf/2021-05-23/">
+                  <span class="button__text">2021-05-23</span>
+                  <span class="button__icon">→</span>
+                </a>
+              </span>
+            
+          </div>
+        </div>
+      
+    
+
+
+    
+        <div class="pagination__title">
+  <span class="pagination__title-h">欢迎评论</span>
+  <hr />
+</div>
+  <div id="tcomment"></div>
+  <script src="https://cdn.jsdelivr.net/npm/twikoo@1.5.0/dist/twikoo.all.min.js"></script>
+  <script>twikoo.init({ envId: 'twikoo-2g36bkuz88660f27', el: '#tcomment' })</script>
+
+  <script type="text/javascript" src='https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js'></script>
+  <script type="text/javascript">
+    jQuery(document).ready(function($){
+      var checkComments = setInterval(function() {
+        var counts = $('.tk-comments-title').find('span').first().text();
+        if (counts) {
+          $('#twikoo_count').text(counts)
+          clearInterval(checkComments);
+        }
+      }, 1000);
+      if(window.location.hash){
+        var checkExist = setInterval(function() {
+          if ($(window.location.hash).length) {
+            $('html, body').animate({scrollTop: $(window.location.hash).offset().top-90}, 1000);
+            clearInterval(checkExist);
+          }
+        }, 100);
+      }
+    });
+  </script>
+    
+
+    </div>
+
+      </div>
+
+      
+        
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+
+
+
+
+
+
+
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="copyright copyright-font">
+      <span>共 75227 字 <br/> 写完一本 鲁迅 的</br>《呐喊》了！</span>
+    </div>
+    <a class="dark-wormhole" href="https://www.foreverblog.cn/go.html" target="_blank"> <img src="/wormhole_1.gif" alt="" style="width:auto;height:32px;" title="穿梭虫洞-随机访问十年之约友链博客"> </a>
+    <a class="light-wormhole" href="https://www.foreverblog.cn/go.html" target="_blank" > <img src="/wormhole_3.gif" alt="" style="width:auto;height:32px;" title="穿梭虫洞-随机访问十年之约友链博客"> </a>
+    
+      <div class="copyright">
+        <span>© 2022 Powered by <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a> Theme by <a href="https://twitter.com/panr" target="_blank" rel="noopener">Panr</a></span>
+      </div>
+    
+  </div>
+</footer>
+
+<script type="text/javascript" src="/main.js?t=20220124"></script>
+
+<script type="text/javascript" src='https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js'></script>
+<script type="text/javascript" src="/lately2.min.js"></script>
+<script type="text/javascript" src="/jquery.vticker.js"></script>
+<script type="text/javascript" src="/waterfall.min.js"></script>
+<script type="text/javascript" src="/slimbox2.min.js"></script>
+<script type="text/javascript" src="/main-diy-0325.js"></script>
+      
+    </div>
+  </body>
+</html>
