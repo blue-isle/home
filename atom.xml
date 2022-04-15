@@ -7,7 +7,7 @@
             <link href="https://blueisle.cf/atom.xml" rel="self" type="application/rss+xml" title="atom" />
             <link href="https://blueisle.cf/" rel="alternate" type="text/html" title="HTML" />
             <link href="https://blueisle.cf/index.json" rel="alternate" type="application/json" title="JSON" />
-    <updated>2022-04-15T22:50:03+00:00</updated>
+    <updated>2022-04-15T22:52:01+00:00</updated>
     
     
     
@@ -99,6 +99,81 @@
     
         
         <entry>
+            <title type="html"><![CDATA[《财富自由之路》读后记]]></title>
+            <link href="https://blueisle.cf/book-isbn-9787121320309/" rel="alternate" type="text/html" />
+            
+                <id>https://blueisle.cf/book-isbn-9787121320309/</id>
+            
+            
+            <published>2022-03-13T09:19:51+08:00</published>
+            <updated>2022-03-13T09:19:51+08:00</updated>
+            
+            
+            <content type="html"><![CDATA[<p><a href="https://book.douban.com/subject/27094706/">https://book.douban.com/subject/27094706/</a></p>
+<p>如同作者原话：</p>
+<blockquote>
+<p>事实上，这本书的全部内容就是从各个角度逐步系统地阐述成长方法论的。</p>
+</blockquote>
+<p>的确“标题党”，因为“自由之路”是作者的自述，对读者，算个看客。</p>
+<h3 id="or-or-">Or or &amp;</h3>
+<p>同时间，也刷完了《小狗钱钱》和《被讨厌的勇气》，频繁浮现一句广告：</p>
+<blockquote>
+<p>Young or Rich</p>
+</blockquote>
+<p>是 <code>or</code> ，不是 <code>&amp;</code> ！</p>
+<p>但，迅速回想：</p>
+<blockquote>
+<p>no young no rich no problem.</p>
+</blockquote>
+<p>太多时候就是这样，岁月静好，心无波澜。</p>
+<p>作为看着，阅毕，愿意喝下以下满满两大碗：</p>
+<h3 id="注意力">注意力</h3>
+<blockquote>
+<p>注意力 ＞ 时间 ＞金钱</p>
+</blockquote>
+<p>花钱买自己的时间，花时间换取注意力的持续。因为，注意力是我们唯一可以随意调用且能有所产出的资源。</p>
+<p>比如，对各种“效率”工具的折腾，对各种博客功能的“优化”……的确能有效提升我们的折腾优化水平，但丢了最初的目的，即：有效输出。</p>
+<h3 id="教育">教育</h3>
+<blockquote>
+<p>耳濡目染：激发需求</p>
+</blockquote>
+<p>需求是个乘数，若无真正需求，最终得数都是 0 。对娃、对已都是如此，而且“说教”是最偷懒、最无效、最令人厌烦的方式，没有之一。</p>
+<p>那怎么激活需求呢？想象！强烈地想象到脑海中有清晰无比的画面。或者，清楚地看到过这个场景。比如，想象自己上台分享得到热烈掌声、看到别人从零基础做到了。</p>
+<p>所以，这清晰的需求成了强大可持续的努力的“动机”。</p>
+<blockquote>
+<p>融会贯通：概念联结</p>
+</blockquote>
+<p>过两点仅有一条线段，而每增加一个节点，线段增加数为？</p>
+<p>同时，概念节点受易也受限于语言（符号），比如，没有“上火”概念会怎样？没有“退休”概念又会产生什么变化？</p>
+<p>所以，多掌握一门语言（包括编程语言）或是探个头张望一下，都是有益无害。</p>
+<blockquote>
+<p>终生学习：行动思维</p>
+</blockquote>
+<p>人生意义也许就在于此吧，停止学习意味着放弃生长，放弃着放弃着……</p>
+<p>相反，用行动刺激思考，用思考改良行动。比如，带娃。不学习，只会两招：骂、打。</p>
+<h3 id="后话">后话</h3>
+<p>阅读真是一件私密的事。</p>
+<p>最后送上人工校对版 EPUB ：<a href="https://send.ioiox.com/download/1356657c42040e83/#4PQ9VdF8z3dX5xa17-fJ6w">https://send.ioiox.com/download/1356657c42040e83/#4PQ9VdF8z3dX5xa17-fJ6w</a></p>
+<p>友情提示：对书里的投资策略不要崇拜，更不要作为指导法则。</p>]]></content>
+            
+                 
+                    
+                 
+                    
+                         
+                        
+                            
+                             
+                                <category scheme="https://blueisle.cf/tags/%E8%82%B2%E4%BA%BA" term="%E8%82%B2%E4%BA%BA" label="育人" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        
+        <entry>
             <title type="html"><![CDATA[获取图片主色脚本：Rgbaster.js]]></title>
             <link href="https://blueisle.cf/rgbaster-js/" rel="alternate" type="text/html" />
             
@@ -173,139 +248,6 @@ services:
 docker-compose down
 docker-compose up -d
 </code></pre>]]></content>
-            
-                 
-                    
-                 
-                    
-                         
-                        
-                            
-                             
-                                <category scheme="https://blueisle.cf/tags/%E6%8A%98%E8%85%BE" term="%E6%8A%98%E8%85%BE" label="折腾" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-        
-        <entry>
-            <title type="html"><![CDATA[Hi，My Friends（Public Beta）]]></title>
-            <link href="https://blueisle.cf/hi-friends-circle/" rel="alternate" type="text/html" />
-            
-                <id>https://blueisle.cf/hi-friends-circle/</id>
-            
-            
-            <published>2022-02-11T15:12:46+08:00</published>
-            <updated>2022-02-11T15:12:46+08:00</updated>
-            
-            
-            <content type="html"><![CDATA[<blockquote>
-<p>你是否经常烦恼于友链过多但没有时间浏览？那么友链朋友圈将解决这一痛点。你可以随时获取友链网站的更新内容，并了解友链的活跃情况 。 —— <a href="https://hexo-circle-of-friends-doc.vercel.app/">「友链朋友圈」</a></p>
-</blockquote>
-<p>在线预览：<a href="https://immmmm.com/friends/">https://immmmm.com/friends/</a></p>
-<h3 id="快速部署">快速部署</h3>
-<h4 id="挂载前端代码">挂载前端代码</h4>
-<p>博客新建一个页面，放入以下代码：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- 挂载友链朋友圈的容器 --&gt;</span>
-</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;cf-container&#34;</span>&gt;与主机通讯中……&lt;/<span style="color:#f92672">div</span>&gt;
-</span></span><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- 加样式和功能代码 --&gt;</span>
-</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdn.jsdelivr.net/gh/lmm214/immmmm/themes/hello-friend/static/fcircle-beta.css&#34;</span>&gt;
-</span></span><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- 匹配自己的友链或加载后端数据
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">&lt;script type=&#34;text/javascript&#34;&gt;
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">  var fdataUser = {
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">    jsonurl: &#39;https://cdn.edui.fun/lmm.json&#39;,  //【推荐】json 匹配模式
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">    //apiurl: &#39;https://hexo-circle-of-friends-lmm214.vercel.app/&#39;,  //自部署api
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">  }
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">&lt;/script&gt;
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">--&gt;</span>
-</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/javascript&#34;</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdn.jsdelivr.net/gh/lmm214/immmmm/themes/hello-friend/static/fcircle-beta.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
-</span></span></code></pre></div><p>这样就搞定啦，默认看到的是 750+ feeds 的公共库（数据来自 <a href="https://github.com/saveweb/rss-list">saveweb</a>）。</p>
-<h4 id="匹配自己的友链">匹配自己的友链</h4>
-<p>当然，我们也想拥有一个纯自己友联的文章更新情况。来，取消注释，推荐采用第一种 <code>jsonurl</code> 方式。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/javascript&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">fdataUser</span> <span style="color:#f92672">=</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">jsonurl</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;https://cdn.edui.fun/lmm.json&#39;</span>,  <span style="color:#75715e">//【推荐】json 匹配模式
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">//apiurl: &#39;https://hexo-circle-of-friends-lmm214.vercel.app/&#39;,  //自部署api
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">//initnumber: 20,  //首次加载文章数
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">//stepnumber: 10,  //更多加载文章数
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">//article_sort: &#39;created&#39;, //文章排序 updated or created
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">//error_img: &#39;https://sdn.geekzu.org/avatar/57d8260dfb55501c37dde588e7c3852c&#39;
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  }
-</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">script</span>&gt;
-</span></span></code></pre></div><p>其实 <code>lmm.json</code> 就是个 link 的数组，原理是把这数组与公共库进行匹配，返回对应的文章列表。</p>
-<p>这也是 <a href="https://github.com/Rock-Candy-Tea">「Rock-Candy-Tea」</a> 持之以恒，努力抛弃后端的成果！</p>
-<h3 id="可选后端配置">[可选]后端配置</h3>
-<p>见最新文档：<a href="https://hexo-circle-of-friends-doc.vercel.app/">https://hexo-circle-of-friends-doc.vercel.app/</a></p>
-<h3 id="项目历程">项目历程</h3>
-<blockquote>
-<p>致敬，用爱发电er</p>
-</blockquote>
-<table>
-<thead>
-<tr>
-<th>名称</th>
-<th>主页</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>冰老师</td>
-<td><a href="https://zfe.space/">https://zfe.space/</a></td>
-<td>友链朋友圈理念奠基人，初代前后端方案编写者，冰老师YYDS！</td>
-</tr>
-<tr>
-<td>Akilar</td>
-<td><a href="https://akilar.top/">https://akilar.top/</a></td>
-<td>为历代友链朋友圈提供前端方案，npm插件方案编写者</td>
-</tr>
-<tr>
-<td>heo</td>
-<td><a href="https://blog.zhheo.com/">https://blog.zhheo.com/</a></td>
-<td>友链朋友圈前端方案、视觉设计，UI 方案多样化</td>
-</tr>
-<tr>
-<td>贰猹</td>
-<td><a href="https://noionion.top/">https://noionion.top/</a></td>
-<td>历代友链朋友圈后端维护者，3.0方案编写者，多主题友链抓取适配，朋友圈售后中流砥柱，公共库方案、api编写者</td>
-</tr>
-<tr>
-<td>RaXianch</td>
-<td><a href="https://blog.raxianch.moe/">https://blog.raxianch.moe/</a></td>
-<td>友链朋友圈后端维护，多主题友链抓取适配</td>
-</tr>
-<tr>
-<td>yyyz</td>
-<td><a href="https://www.yyyzyyyz.cn/">https://www.yyyzyyyz.cn/</a></td>
-<td>4.0方案编写者，多主题友链抓取适配，服务器部署方案编写者，友链朋友圈现维护者</td>
-</tr>
-<tr>
-<td>林木木</td>
-<td><a href="https://immmmm.com/">https://immmmm.com/</a></td>
-<td>新版友链朋友圈前端方案编写者</td>
-</tr>
-<tr>
-<td>Fox</td>
-<td><a href="https://foolishfox.cn/">https://foolishfox.cn/</a></td>
-<td>提供sql api与sql存储本地化方案</td>
-</tr>
-</tbody>
-</table>
-<p>个人编写的 <a href="https://cdn.jsdelivr.net/gh/lmm214/immmmm/themes/hello-friend/static/fcircle-beta.js">fcircle-beta.js</a> 源自 <a href="https://cdn.jsdelivr.net/gh/Rock-Candy-Tea/hexo-friendcircle-demo@main/js/fetch.js">fetch.js</a> 和 <a href="https://cdn.jsdelivr.net/gh/Rock-Candy-Tea/hexo-friendcircle-demo@main/js/fcircle.js">fcircle.js</a>，从最初的简单合并实现了“第一次打开即能显示相应内容”，之后一天天的 commit 几乎是逼着强力后端 <a href="https://noionion.top/">@贰猹</a> 做了一个全新的 API，实现了很多全新的交互。</p>
-<h3 id="前端交互说明">前端交互说明</h3>
-<h4 id="点击订阅随机显示博客卡片">点击「订阅」，随机显示博客卡片</h4>
-<p><img loading='lazy' src="https://pic.edui.fun/images/2022/02/cf-beta-5.gif" alt="cf-beta-5"  /></p>
-<h4 id="点击活跃切换公共库和个人库">点击「活跃」，切换公共库和个人库</h4>
-<p><img loading='lazy' src="https://pic.edui.fun/images/2022/02/cf-beta-6.gif" alt="cf-beta-6"  /></p>
-<h4 id="点击头像随机此博客卡片">点击头像，随机此博客卡片</h4>
-<p><img loading='lazy' src="https://pic.edui.fun/images/2022/02/cf-beta-7.gif" alt="cf-beta-7"  /></p>
-<h4 id="点击日志清空本地缓存数据">点击「日志」，清空本地缓存数据。</h4>
-<p>更新后端后使用。</p>
-<h3 id="css-样式命名说明">CSS 样式命名说明</h3>
-<p><a href="https://cdn.jsdelivr.net/gh/lmm214/immmmm/themes/hello-friend/static/fcircle-beta.css">fcircle-beta.css</a> 统一命名格式，以 <code>cf-</code> 做标识。</p>]]></content>
             
                  
                     
