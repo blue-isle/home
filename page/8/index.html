@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-	<meta name="generator" content="Hugo 0.96.0" />
+	<meta name="generator" content="Hugo 0.97.0" />
     
       <title>明礼至卓</title>
     
@@ -146,180 +146,6 @@
   <div id="bber-talk"></div>
   
   <div class="posts">
-    
-    
-    <div class="post on-list chat">
-    
-            <div class="post-meta">
-        
-          <span class="post-date">
-            2020-04-04 00:02:33
-          </span>
-        
-
-        
-        <span class="">
-          
-            #<a href="https://blueisle.cf/tags/%E8%AF%8D%E7%A9%B7/">词穷</a>&nbsp;
-          
-        </span>
-        
-      </div>
-      <div class="post-content $PostCate">
-        <a href="https://blueisle.cf/2020-04-04/" rel="link"><img loading="lazy" class="post-avatar avatar" src=https://gravatar.loli.net/avatar/ba83fa02fc4b2ba621514941307e21be ></a>
-          404
-      </div>
-    
-    </div>
-    
-    
-    <div class="post on-list coding">
-    
-      <h1 class="post-title"><a href="https://blueisle.cf/hugo-template-code/">Hugo 主题常用的代码片段</a></h1>
-      <div class="post-meta">
-        
-          <span class="post-date">
-            2020-04-01 09:46:00
-          </span>
-        
-
-        
-        <span class="">
-          
-            #<a href="https://blueisle.cf/tags/%E6%8A%98%E8%85%BE/">折腾</a>&nbsp;
-          
-        </span>
-        
-      </div>
-
-      
-
-      <div class="post-content $PostCate">
-      
-        <h3 id="全站-site">全站 Site</h3>
-<p>网址：<code>.Site.BaseURL</code></p>
-<p>标题：<code>.Site.Title</code>，示例：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ $.Site.BaseURL }}&#34;</span>&gt;{{ $.Site.Title }}&lt;/<span style="color:#f92672">a</span>&gt;
-</span></span></code></pre></div><p>副标题：<code>.Site.Params.description</code></p>
-<p>关键词：<code>.Site.Params.keywords</code></p>
-<p>头部菜单：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>{{ range $.Site.Menus.main }}
-</span></span><span style="display:flex;"><span>	&lt;<span style="color:#f92672">li</span>&gt;&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .URL }}&#34;</span>&gt;{{ .Name }}&lt;/<span style="color:#f92672">a</span>&gt;&lt;/<span style="color:#f92672">li</span>&gt;
-</span></span><span style="display:flex;"><span>{{ end }}
-</span></span></code></pre></div>
-        <div><a class="read-more button" href="/hugo-template-code/">阅读全文 →</a></div>
-      
-      </div>
-    
-    </div>
-    
-    
-    <div class="post on-list coding">
-    
-      <h1 class="post-title"><a href="https://blueisle.cf/hugo-add-breadcrumb/">Hugo 添加面包屑导航</a></h1>
-      <div class="post-meta">
-        
-          <span class="post-date">
-            2020-03-31 21:59:00
-          </span>
-        
-
-        
-        <span class="">
-          
-            #<a href="https://blueisle.cf/tags/%E6%8A%98%E8%85%BE/">折腾</a>&nbsp;
-          
-        </span>
-        
-      </div>
-
-      
-
-      <div class="post-content $PostCate">
-      
-        <figure>
-    <img src="https://pic.edui.fun/images/2020/03/breadcrumb-1.png" width="50%"/><img src="https://pic.edui.fun/images/2020/03/breadcrumb-2.png" width="50%" />
-    <figcaption>黑+白，疗效好</figcaption>
-  </figure>
-<p>「不问明天，悠然浪费」，多少年前看到的一句话，一直作为博客的 Slogan ，如同“谶语”般的存在！ 😷</p>
-<p>说回正题，折腾流程如下：</p>
-        <div><a class="read-more button" href="/hugo-add-breadcrumb/">阅读全文 →</a></div>
-      
-      </div>
-    
-    </div>
-    
-    
-    <div class="post on-list coding">
-    
-      <h1 class="post-title"><a href="https://blueisle.cf/noto-serif-sc-by-google-fonts/">添加 Google Fonts 思源宋体</a></h1>
-      <div class="post-meta">
-        
-          <span class="post-date">
-            2020-03-30 12:24:00
-          </span>
-        
-
-        
-        <span class="">
-          
-            #<a href="https://blueisle.cf/tags/%E6%8A%98%E8%85%BE/">折腾</a>&nbsp;
-          
-        </span>
-        
-      </div>
-
-      
-        
-          <img loading='lazy' src="https://pic.edui.fun/images/2020/03/google-fonts-1.png" class="post-cover" />
-        
-      
-
-      <div class="post-content $PostCate">
-      
-        <p>谷婶大法好，在线字体都支持中文咯！ 👍</p>
-<p>访问 <a href="https://fonts.google.com/?subset=chinese-simplified">Google Fonts</a>，点选需要的字体，简单设置能获得样式链接。<del>虽听闻字体服务器国内也有节点，但还是启用 loli 的 CDN，感谢！</del></p>
-        <div><a class="read-more button" href="/noto-serif-sc-by-google-fonts/">阅读全文 →</a></div>
-      
-      </div>
-    
-    </div>
-    
-    
-    <div class="post on-list coding">
-    
-      <h1 class="post-title"><a href="https://blueisle.cf/hugo-github-editpath/">前端编辑 Hugo 文章</a></h1>
-      <div class="post-meta">
-        
-          <span class="post-date">
-            2020-03-29 23:15:00
-          </span>
-        
-
-        
-        <span class="">
-          
-            #<a href="https://blueisle.cf/tags/%E6%8A%98%E8%85%BE/">折腾</a>&nbsp;
-          
-        </span>
-        
-      </div>
-
-      
-
-      <div class="post-content $PostCate">
-      
-        <p>目前发文是直接在 Github 前端进行，Hugo 的构建交给 <a href="https://immmmm.com/hugo-github-actions/">Github Actions</a> 实现自动化部署。因此，产生个需求，文章里改个错别字什么的，能不能一键直达 GIthub 编辑页面？</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span># 当面页面链接
-</span></span><span style="display:flex;"><span>https://immmmm.com/hugo-themes/
-</span></span><span style="display:flex;"><span># Github 编辑页面链接
-</span></span><span style="display:flex;"><span>https://github.com/lmm214/immmmm/edit/master/content/posts/coding/hugo-themes.md
-</span></span></code></pre></div>
-        <div><a class="read-more button" href="/hugo-github-editpath/">阅读全文 →</a></div>
-      
-      </div>
-    
-    </div>
     
     
     <div class="post on-list coding">
@@ -479,6 +305,705 @@
 $ docker run -d --name rsshub -p 1200:1200 diygod/rsshub
 </code></pre><p>用宝塔面板的话，放行 1200 端口。浏览器打开 http://IP:1200/ ，看到成功页面。✅</p>
         <div><a class="read-more button" href="/rsshub-docker/">阅读全文 →</a></div>
+      
+      </div>
+    
+    </div>
+    
+    
+    <div class="post on-list coding">
+    
+      <h1 class="post-title"><a href="https://blueisle.cf/hugo-github-actions/">Hugo + Github Actions 实现自动化部署</a></h1>
+      <div class="post-meta">
+        
+          <span class="post-date">
+            2020-03-19 00:00:00
+          </span>
+        
+
+        
+        <span class="">
+          
+            #<a href="https://blueisle.cf/tags/%E6%8A%98%E8%85%BE/">折腾</a>&nbsp;
+          
+        </span>
+        
+      </div>
+
+      
+
+      <div class="post-content $PostCate">
+      
+        <p>不折腾点东西总觉得浑浑噩噩，折腾点东西搞得脑袋晕晕乎乎！</p>
+<h3 id="折腾需求">折腾需求</h3>
+<p>为更新 <a href="https://edui.fun/">https://edui.fun/</a> 导航站能随手些，造了 <a href="https://immmmm.com/gridea-theme-webstack/">Gridea Theme WebStack</a> 。每次得源文件切换加载，但只为加几行代码，等等等；</p>
+<p>折腾一天，已实现直接在 GitHub  <code>master</code> 添加代码，<code>Github Actions </code> 自动构建 <code>Hugo</code> 静态文件到 <code>gh-pages</code> 分支，外加同步 webhook 到自己的服务器。</p>
+<p>再也不用 git 来 git 去！</p>
+        <div><a class="read-more button" href="/hugo-github-actions/">阅读全文 →</a></div>
+      
+      </div>
+    
+    </div>
+    
+    
+    <div class="post on-list coding">
+    
+      <h1 class="post-title"><a href="https://blueisle.cf/post-show-douban-item-localstorage-cache/">文章内显示豆瓣条目（LocalStorage 缓存版）</a></h1>
+      <div class="post-meta">
+        
+          <span class="post-date">
+            2020-03-17 00:00:00
+          </span>
+        
+
+        
+        <span class="">
+          
+            #<a href="https://blueisle.cf/tags/%E6%8A%98%E8%85%BE/">折腾</a>&nbsp;
+          
+        </span>
+        
+      </div>
+
+      
+
+      <div class="post-content $PostCate">
+      
+        <p><a href="https://movie.douban.com/subject/30206389/">https://movie.douban.com/subject/30206389/</a></p>
+<p><img loading='lazy' src="https://pic.edui.fun/images/2020/03/douban-ls.png" alt="douban-ls"  /></p>
+<p>具体使用说明同：<a href="https://immmmm.com/post-show-douban-item/">https://immmmm.com/post-show-douban-item/</a></p>
+        <div><a class="read-more button" href="/post-show-douban-item-localstorage-cache/">阅读全文 →</a></div>
+      
+      </div>
+    
+    </div>
+    
+    
+    <div class="post on-list /">
+    
+      <h1 class="post-title"><a href="https://blueisle.cf/about/">关于</a></h1>
+      <div class="post-meta">
+        
+          <span class="post-date">
+            2020-03-14 12:41:27
+          </span>
+        
+
+        
+      </div>
+
+      
+
+      <div class="post-content $PostCate">
+      
+        <h3 id="我的朋友">我的朋友</h3>
+
+<div class="archive-item links-item cf-friends">
+	<img loading="lazy" class="archive-list-image avatar" src="https://gravatar.loli.net/avatar/ec9435af3f1cd6d7fca626d649928e7a"/>
+	<a href=https://blog.shuiba.co>水八口记</a>
+</div>
+
+
+<div class="archive-item links-item cf-friends">
+	<img loading="lazy" class="archive-list-image avatar" src="https://gravatar.loli.net/avatar/8739f7670165df16199e9eae4413e81b"/>
+	<a href=https://blog.fueis.com>小F</a>
+</div>
+
+
+<div class="archive-item links-item cf-friends">
+	<img loading="lazy" class="archive-list-image avatar" src="https://gravatar.loli.net/avatar/62321464730fea19c80f2026aef08a53"/>
+	<a href=http://xiaohudie.net/>小蝴蝶</a>
+</div>
+
+
+<div class="archive-item links-item cf-friends">
+	<img loading="lazy" class="archive-list-image avatar" src="https://gravatar.loli.net/avatar/f65df4d87240feb1cb247857a621a48f"/>
+	<a href=https://elizen.me/>Elizen</a>
+</div>
+
+
+<div class="archive-item links-item cf-friends">
+	<img loading="lazy" class="archive-list-image avatar" src="https://gravatar.loli.net/avatar/388b0c85beede5d94b978833e2a51965"/>
+	<a href=https://fatesinger.com/>大发贱志</a>
+</div>
+
+
+<div class="archive-item links-item cf-friends">
+	<img loading="lazy" class="archive-list-image avatar" src="https://gravatar.loli.net/avatar/fc2c9b067f65c9e2d7057ba797f7cfca"/>
+	<a href=https://www.heson10.com/>黑石博客</a>
+</div>
+
+
+<div class="archive-item links-item cf-friends">
+	<img loading="lazy" class="archive-list-image avatar" src="https://gravatar.loli.net/avatar/a8907e723e36cf8f37cd45636b1f0af4"/>
+	<a href=https://ttys3.net/>荒野無燈</a>
+</div>
+
+
+<div class="archive-item links-item cf-friends">
+	<img loading="lazy" class="archive-list-image avatar" src="https://gravatar.loli.net/avatar/9d7a1fd054cb532d3daac3b19aa70ed3"/>
+	<a href=https://zww.me/>ZWWoOoOo</a>
+</div>
+
+
+<div class="archive-item links-item cf-friends">
+	<img loading="lazy" class="archive-list-image avatar" src="https://gravatar.loli.net/avatar/185fee0851b940ea7fc29006d3b76aa4"/>
+	<a href=https://sunbox.cc/>A哥</a>
+</div>
+
+
+<div class="archive-item links-item cf-friends">
+	<img loading="lazy" class="archive-list-image avatar" src="https://gravatar.loli.net/avatar/e87b264d88631de777ecfe2abb602de6"/>
+	<a href=https://willin.wang>Willin</a>
+</div>
+
+
+<div class="archive-item links-item cf-friends">
+	<img loading="lazy" class="archive-list-image avatar" src="https://gravatar.loli.net/avatar/7f0462ffcbb90ae9942bc86157dead61"/>
+	<a href=https://dearroy.com/>亲爱的罗伊</a>
+</div>
+
+
+<div class="archive-item links-item cf-friends">
+	<img loading="lazy" class="archive-list-image avatar" src="https://gravatar.loli.net/avatar/7a3666b87e0dfb5d76fd1a0ea7779d9b"/>
+	<a href=https://imzl.com/>周良粥凉</a>
+</div>
+
+
+<div class="archive-item links-item cf-friends">
+	<img loading="lazy" class="archive-list-image avatar" src="https://gravatar.loli.net/avatar/c1c19d714393cd9b8ea3a1e955db8521"/>
+	<a href=https://axiu.me/>Axiu</a>
+</div>
+
+
+<div class="archive-item links-item cf-friends">
+	<img loading="lazy" class="archive-list-image avatar" src="https://gravatar.loli.net/avatar/d9cc49ea0301640d7a19b6a1e77012dd"/>
+	<a href=https://lms.im/>不亦乐乎</a>
+</div>
+
+
+<div class="archive-item links-item cf-friends">
+	<img loading="lazy" class="archive-list-image avatar" src="https://gravatar.loli.net/avatar/2672e294218856ef973af5821565a158"/>
+	<a href=https://www.ithmz.com/>从良未遂</a>
+</div>
+
+
+<div class="archive-item links-item cf-friends">
+	<img loading="lazy" class="archive-list-image avatar" src="https://gravatar.loli.net/avatar/4ba509f9ec541ab4d316299727b3e3ab"/>
+	<a href=https://qfsyj.com/>秦大叔</a>
+</div>
+
+
+<div class="archive-item links-item cf-friends">
+	<img loading="lazy" class="archive-list-image avatar" src="https://gravatar.loli.net/avatar/338aab9b039236de24c1d8a5def2dc77"/>
+	<a href=http://bestcherish.com/>灰常记忆</a>
+</div>
+
+
+<div class="archive-item links-item cf-friends">
+	<img loading="lazy" class="archive-list-image avatar" src="https://gravatar.loli.net/avatar/6cb00a3ed13460e8317bec9745d6c8d8"/>
+	<a href=http://www.anandalue.com/>Andalue</a>
+</div>
+
+
+<div class="archive-item links-item cf-friends">
+	<img loading="lazy" class="archive-list-image avatar" src="https://gravatar.loli.net/avatar/63900087ce5ba22f6377309fa50962d0"/>
+	<a href=https://aotxland.com/>AoTxLand</a>
+</div>
+
+
+<div class="archive-item links-item cf-friends">
+	<img loading="lazy" class="archive-list-image avatar" src="https://gravatar.loli.net/avatar/4cc893d113dd74ceca73f9863f2c5446"/>
+	<a href=https://www.vwmwv.cn/>冰微未来</a>
+</div>
+
+
+<div class="archive-item links-item cf-friends">
+	<img loading="lazy" class="archive-list-image avatar" src="https://gravatar.loli.net/avatar/ee5c49f4d0339f71e1a3ded340bc1b98"/>
+	<a href=https://sosilent.top/>SoSilent</a>
+</div>
+
+
+<div class="archive-item links-item cf-friends">
+	<img loading="lazy" class="archive-list-image avatar" src="https://gravatar.loli.net/avatar/f27fba4d7d92056cf3db0e577761ad01"/>
+	<a href=https://imwgh.com/>大大的小熊</a>
+</div>
+
+
+<div class="archive-item links-item cf-friends">
+	<img loading="lazy" class="archive-list-image avatar" src="https://gravatar.loli.net/avatar/c686821c00797f9390732f8fe2c82b5f"/>
+	<a href=https://eallion.com/>大大的小蜗牛</a>
+</div>
+
+
+<div class="archive-item links-item cf-friends">
+	<img loading="lazy" class="archive-list-image avatar" src="https://gravatar.loli.net/avatar/020d365ea2596ef6d516143bb0552704"/>
+	<a href=https://nuoea.com/>归臧</a>
+</div>
+
+
+<div class="archive-item links-item cf-friends">
+	<img loading="lazy" class="archive-list-image avatar" src="https://gravatar.loli.net/avatar/65106752d27bc6065e29a8a8d39bdbc2"/>
+	<a href=https://novcu.com/>山卜方</a>
+</div>
+
+
+<div class="archive-item links-item cf-friends">
+	<img loading="lazy" class="archive-list-image avatar" src="https://gravatar.loli.net/avatar/55be217893c75baf8571837197de4a3e"/>
+	<a href=https://www.boyhu.cn/>胡家小子</a>
+</div>
+
+
+<div class="archive-item links-item cf-friends">
+	<img loading="lazy" class="archive-list-image avatar" src="https://gravatar.loli.net/avatar/4463036638cb7140058a588641659fdc"/>
+	<a href=https://xwlearn.com/>xwlearn</a>
+</div>
+
+
+<div class="archive-item links-item cf-friends">
+	<img loading="lazy" class="archive-list-image avatar" src="https://gravatar.loli.net/avatar/e323e158cc1b16465d87f035dae01544"/>
+	<a href=https://kn007.net/>kn007</a>
+</div>
+
+
+<div class="archive-item links-item cf-friends">
+	<img loading="lazy" class="archive-list-image avatar" src="https://gravatar.loli.net/avatar/eece4ac89edd4a2d86e69314a3ba7fd9"/>
+	<a href=https://www.jinbo123.com/>佐仔志</a>
+</div>
+
+
+<div class="archive-item links-item cf-friends">
+	<img loading="lazy" class="archive-list-image avatar" src="https://gravatar.loli.net/avatar/cbbe656c7bb46772f589c9b18a7c747e"/>
+	<a href=https://www.shephe.com/>牧羊人</a>
+</div>
+
+
+<div class="archive-item links-item cf-friends">
+	<img loading="lazy" class="archive-list-image avatar" src="https://gravatar.loli.net/avatar/eacbb84f0052902f36c59873b4ff7975"/>
+	<a href=https://imjiayin.com/>JiaYin‘s Life</a>
+</div>
+
+
+<div class="archive-item links-item cf-friends">
+	<img loading="lazy" class="archive-list-image avatar" src="https://gravatar.loli.net/avatar/d8ed89f2081f6bda63f9f5fef7d8822f"/>
+	<a href=https://www.ianisme.com/>IAN博客</a>
+</div>
+
+
+<div class="archive-item links-item cf-friends">
+	<img loading="lazy" class="archive-list-image avatar" src="https://gravatar.loli.net/avatar/f713666d2485ae4ec6cab07f5dea18ea"/>
+	<a href=http://xptt.com/>郑永博客</a>
+</div>
+
+
+<div class="archive-item links-item cf-friends">
+	<img loading="lazy" class="archive-list-image avatar" src="https://gravatar.loli.net/avatar/ef0a84e8fb973390d0a7eb34f3d35ef3"/>
+	<a href=https://kenengba.com/>可能吧</a>
+</div>
+
+
+<div class="archive-item links-item cf-friends">
+	<img loading="lazy" class="archive-list-image avatar" src="https://gravatar.loli.net/avatar/57d8260dfb55501c37dde588e7c3852c"/>
+	<a href=https://catbaron.com/blog/>Catbaron‘s Palace</a>
+</div>
+
+
+<div class="archive-item links-item cf-friends">
+	<img loading="lazy" class="archive-list-image avatar" src="https://gravatar.loli.net/avatar/9e543b9d68c191fdc484c3bbe9f953a4"/>
+	<a href=https://www.ihewro.com/>友人C</a>
+</div>
+
+
+<div class="archive-item links-item cf-friends">
+	<img loading="lazy" class="archive-list-image avatar" src="https://gravatar.loli.net/avatar/f4648a5fb8b1a100ee7f5e85fc73d65a"/>
+	<a href=https://get233.com/>Hran</a>
+</div>
+
+
+<div class="archive-item links-item cf-friends">
+	<img loading="lazy" class="archive-list-image avatar" src="https://gravatar.loli.net/avatar/d4c7f2a2b5700dd56bdb611bc6ea258e"/>
+	<a href=https://blce.me/>蓝冰</a>
+</div>
+
+
+<div class="archive-item links-item cf-friends">
+	<img loading="lazy" class="archive-list-image avatar" src="https://gravatar.loli.net/avatar/808b2d2bcf421a7f3d99310c0dc3271a"/>
+	<a href=https://foolishfox.cn/>FF</a>
+</div>
+
+
+<div class="archive-item links-item cf-friends">
+	<img loading="lazy" class="archive-list-image avatar" src="https://gravatar.loli.net/avatar/abe12c11884304431dbe6288fd4f9d50"/>
+	<a href=https://bwskyer.com/>生活的左上角</a>
+</div>
+
+
+<div class="archive-item links-item cf-friends">
+	<img loading="lazy" class="archive-list-image avatar" src="https://gravatar.loli.net/avatar/762085ba7c69ce3d315d281913fd6124"/>
+	<a href=https://o0o0o0.cn/>三十三言</a>
+</div>
+
+
+<div class="archive-item links-item cf-friends">
+	<img loading="lazy" class="archive-list-image avatar" src="https://gravatar.loli.net/avatar/5cc114213dee7cdf2d3364a15b090586"/>
+	<a href=https://www.wanghao.me/>小王子</a>
+</div>
+
+
+<div class="archive-item links-item cf-friends">
+	<img loading="lazy" class="archive-list-image avatar" src="https://gravatar.loli.net/avatar/b41bd82dd1936605a992d4ded120c7d7"/>
+	<a href=https://0375.me/>平顶山</a>
+</div>
+
+
+<div class="archive-item links-item cf-friends">
+	<img loading="lazy" class="archive-list-image avatar" src="https://gravatar.loli.net/avatar/57d8260dfb55501c37dde588e7c3852c"/>
+	<a href=https://buyivi.xyz/>不一止集</a>
+</div>
+
+
+<div class="archive-item links-item cf-friends">
+	<img loading="lazy" class="archive-list-image avatar" src="https://gravatar.loli.net/avatar/5227ee83f9f62c28edeed5554923d09c"/>
+	<a href=https://yiws.net/>忆往事</a>
+</div>
+
+
+<div class="archive-item links-item cf-friends">
+	<img loading="lazy" class="archive-list-image avatar" src="https://gravatar.loli.net/avatar/c3fb4bb4d5101284ddd672fb722cdd7d"/>
+	<a href=https://www.skyue.com/>SKYue</a>
+</div>
+
+
+<div class="archive-item links-item cf-friends">
+	<img loading="lazy" class="archive-list-image avatar" src="https://gravatar.loli.net/avatar/0e99ef2ad07f02eee35584d7a9263696"/>
+	<a href=http://www.quanzi.de/>权子</a>
+</div>
+
+
+<div class="archive-item links-item cf-friends">
+	<img loading="lazy" class="archive-list-image avatar" src="https://gravatar.loli.net/avatar/ffa9ac42c56fd4776ccef37c57664965"/>
+	<a href=https://www.yzmb.me/>羽中漫步</a>
+</div>
+
+
+<div class="archive-item links-item cf-friends">
+	<img loading="lazy" class="archive-list-image avatar" src="https://gravatar.loli.net/avatar/57d8260dfb55501c37dde588e7c3852c"/>
+	<a href=http://emuia.com/>弋牧</a>
+</div>
+
+
+<div class="archive-item links-item cf-friends">
+	<img loading="lazy" class="archive-list-image avatar" src="https://gravatar.loli.net/avatar/a1eb974f6d93c9a9af88bf48a55176ba"/>
+	<a href=https://www.863134.com/>Litchi</a>
+</div>
+
+
+<div class="archive-item links-item cf-friends">
+	<img loading="lazy" class="archive-list-image avatar" src="https://gravatar.loli.net/avatar/c49121896a04c519134e1ae721ebcab7"/>
+	<a href=https://www.lanka.cn/>蓝卡</a>
+</div>
+
+
+<div class="archive-item links-item cf-friends">
+	<img loading="lazy" class="archive-list-image avatar" src="https://gravatar.loli.net/avatar/9a377c01c6ce230242afa0f902a5682d"/>
+	<a href=https://fxpai.com/>非学·派</a>
+</div>
+
+
+<div class="archive-item links-item cf-friends">
+	<img loading="lazy" class="archive-list-image avatar" src="https://img.codesky.me/uPic/fr2_20191011_182607-a9FlKd.png"/>
+	<a href=https://xsky.me/>敖天羽</a>
+</div>
+
+
+<div class="archive-item links-item cf-friends">
+	<img loading="lazy" class="archive-list-image avatar" src="https://favicon.yandex.net/favicon/v2/jdeal.cn?size=32"/>
+	<a href=https://www.jdeal.cn/>Jdeal</a>
+</div>
+
+
+<div class="archive-item links-item cf-friends">
+	<img loading="lazy" class="archive-list-image avatar" src="https://bbs.v2fy.com/user_avatar/bbs.v2fy.com/zhaoolee/120/3_2.png"/>
+	<a href=https://www.v2fy.com/>V2方圆</a>
+</div>
+
+
+<div class="archive-item links-item cf-friends">
+	<img loading="lazy" class="archive-list-image avatar" src="https://blog.imalan.cn/logo.jpg"/>
+	<a href=https://blog.imalan.cn/>失眠海峡</a>
+</div>
+
+
+<div class="archive-item links-item cf-friends">
+	<img loading="lazy" class="archive-list-image avatar" src="https://cdn.jsdelivr.net/gh/DIYgod/hexo-theme-sagiri/source/images/DIYgod-avatar2.webp"/>
+	<a href=https://diygod.me/>DIYgod</a>
+</div>
+
+
+<div class="archive-item links-item cf-friends">
+	<img loading="lazy" class="archive-list-image avatar" src="https://favicon.yandex.net/favicon/v2/xinsenz.com?size=32"/>
+	<a href=https://xinsenz.com/>Xinsenz茶話</a>
+</div>
+
+
+<div class="archive-item links-item cf-friends">
+	<img loading="lazy" class="archive-list-image avatar" src="https://favicon.yandex.net/favicon/v2/fffou.com?size=32"/>
+	<a href=https://fffou.com/>浮游笔记</a>
+</div>
+
+
+<div class="archive-item links-item cf-friends">
+	<img loading="lazy" class="archive-list-image avatar" src="https://mednoter.com/images/scribble.png"/>
+	<a href=https://mednoter.com/>吕小荣</a>
+</div>
+
+
+<div class="archive-item links-item cf-friends">
+	<img loading="lazy" class="archive-list-image avatar" src="https://ileyar.com/apple-touch-icon.png"/>
+	<a href=https://ileyar.com/>Leyar</a>
+</div>
+
+
+<div class="archive-item links-item cf-friends">
+	<img loading="lazy" class="archive-list-image avatar" src="https://zfe.space/images/headimage.png"/>
+	<a href=https://zfe.space/>小冰博客</a>
+</div>
+
+
+<div class="archive-item links-item cf-friends">
+	<img loading="lazy" class="archive-list-image avatar" src="https://favicon.yandex.net/favicon/v2/akilar.top?size=32"/>
+	<a href=https://akilar.top/>Akilarの糖果屋</a>
+</div>
+
+
+<div class="archive-item links-item cf-friends">
+	<img loading="lazy" class="archive-list-image avatar" src="https://blog.zhheo.com/img/avatar.png"/>
+	<a href=https://blog.zhheo.com/>Heo</a>
+</div>
+
+
+<div class="archive-item links-item cf-friends">
+	<img loading="lazy" class="archive-list-image avatar" src="https://noionion-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/head.jpg"/>
+	<a href=https://noionion.top/>贰猹の小窝</a>
+</div>
+
+
+<div class="archive-item links-item cf-friends">
+	<img loading="lazy" class="archive-list-image avatar" src="https://q1.qlogo.cn/g?b=qq&amp;nk=1025212779&amp;s=5"/>
+	<a href=https://blog.raxianch.moe/>羿潇贤鱼の窝</a>
+</div>
+
+
+<div class="archive-item links-item cf-friends">
+	<img loading="lazy" class="archive-list-image avatar" src="https://cdn.jsdelivr.net/gh/hiltay/imgcdn/img/202111191951780.JPG"/>
+	<a href=https://www.yyyzyyyz.cn/>Black Flies</a>
+</div>
+
+
+<div class="archive-item links-item cf-friends">
+	<img loading="lazy" class="archive-list-image avatar" src="https://sunguoqi.com/images/avatar.jpg"/>
+	<a href=https://sunguoqi.com/>小孙同学</a>
+</div>
+
+
+<div class="archive-item links-item cf-friends">
+	<img loading="lazy" class="archive-list-image avatar" src="https://npm.elemecdn.com/chenyfan-cdn@2.0.0/img/avatar.png"/>
+	<a href=https://blog.cyfan.top/>ChenYFanのSite</a>
+</div>
+
+
+<div class="archive-item links-item cf-friends">
+	<img loading="lazy" class="archive-list-image avatar" src="https://public.cdn.nesxc.com/avatar.jpg"/>
+	<a href=https://www.nesxc.com/>小N同学</a>
+</div>
+
+
+<div class="archive-item links-item cf-friends">
+	<img loading="lazy" class="archive-list-image avatar" src="https://home.dreamfall.cn/source/img/avatar.jpg"/>
+	<a href=https://blog.dreamfall.cn/>梦落の小屋</a>
+</div>
+
+
+<div class="archive-item links-item cf-friends">
+	<img loading="lazy" class="archive-list-image avatar" src="https://gitee.com/youthlql/randombg/raw/master/avatar/1.jpg"/>
+	<a href=https://imlql.cn/>风祈的时光录</a>
+</div>
+
+
+<div class="archive-item links-item cf-friends">
+	<img loading="lazy" class="archive-list-image avatar" src="https://img1.tianli0.top/logo.png"/>
+	<a href=https://tianli-blog.club/>Tianli&#39;s blog</a>
+</div>
+
+
+<div class="archive-item links-item cf-friends">
+	<img loading="lazy" class="archive-list-image avatar" src="https://www.impdx.vip/imgs/avatar.png"/>
+	<a href=https://www.impdx.vip/>impdx的博客</a>
+</div>
+
+
+<div class="archive-item links-item cf-friends">
+	<img loading="lazy" class="archive-list-image avatar" src="https://favicon.yandex.net/favicon/v2/hin.cool?size=32"/>
+	<a href=https://hin.cool/>W4J1e&#39;s blog</a>
+</div>
+
+
+<div class="archive-item links-item cf-friends">
+	<img loading="lazy" class="archive-list-image avatar" src="https://pub.gahotx.cn/photo/cat.jpg"/>
+	<a href=https://gahotx.cn/>Gahotx</a>
+</div>
+
+
+<div class="archive-item links-item cf-friends">
+	<img loading="lazy" class="archive-list-image avatar" src="https://hesifan.top/medias/avatar.jpg"/>
+	<a href=https://hesifan.top/>FanHeart</a>
+</div>
+
+
+<div class="archive-item links-item cf-friends">
+	<img loading="lazy" class="archive-list-image avatar" src="https://unpkg.com/fivefirex-assets/avatar.jpeg"/>
+	<a href=https://fivefirex.github.io/>FiveFire的博客</a>
+</div>
+
+
+<div class="archive-item links-item cf-friends">
+	<img loading="lazy" class="archive-list-image avatar" src="https://cravatar.cn/avatar/05bb2aa29c9da6ef65fabd321135e7b6?s=200"/>
+	<a href=https://www.imaegoo.com/>iMaeGoo’s Blog</a>
+</div>
+
+
+<div class="archive-item links-item cf-friends">
+	<img loading="lazy" class="archive-list-image avatar" src="https://tnxg.loyunet.cn/assets/images/favicon.png"/>
+	<a href=https://tnxg.loyunet.cn/>TNXG&#39;s Blog</a>
+</div>
+
+
+<div class="archive-item links-item cf-friends">
+	<img loading="lazy" class="archive-list-image avatar" src="https://bu.dusays.com/2021/12/21/4f20cbfa55e12.png"/>
+	<a href=https://blog.dominoh.com/>多米诺的blog</a>
+</div>
+
+
+<div class="archive-item links-item cf-friends">
+	<img loading="lazy" class="archive-list-image avatar" src="https://lanyundev.vercel.app/img/logo2.jpg"/>
+	<a href=https://lanyundev.vercel.app/>LanYunのBlog</a>
+</div>
+
+
+<div class="archive-item links-item cf-friends">
+	<img loading="lazy" class="archive-list-image avatar" src="https://npm.elemecdn.com/iyuancdn@latest/img/avatar.jpg"/>
+	<a href=https://o0.work/>iYuan&#39;s Blog</a>
+</div>
+
+
+<div class="archive-item links-item cf-friends">
+	<img loading="lazy" class="archive-list-image avatar" src="https://s4.ax1x.com/2021/12/11/oTDujJ.jpg"/>
+	<a href=https://226yzy.com/>星空下的YZY</a>
+</div>
+
+
+<div class="archive-item links-item cf-friends">
+	<img loading="lazy" class="archive-list-image avatar" src="https://npm.elemecdn.com/perorepe-cdn@1.0.0/v1/static-files/avatar.webp"/>
+	<a href=https://blog.slqwq.cn/>Hajeekn&#39;s Blog</a>
+</div>
+
+
+<div class="archive-item links-item cf-friends">
+	<img loading="lazy" class="archive-list-image avatar" src="https://bu.dusays.com/2022/01/24/445fb4d1af3e6.jpg"/>
+	<a href=https://blog.nalex.top/>Rootlex&#39;s Blog</a>
+</div>
+
+
+<div class="archive-item links-item cf-friends">
+	<img loading="lazy" class="archive-list-image avatar" src="https://gravatar.loli.net/avatar/32f210c5e3cd76fdf677981974274dfd"/>
+	<a href=https://imnerd.org/>怡红公子</a>
+</div>
+
+
+<div class="archive-item links-item cf-friends">
+	<img loading="lazy" class="archive-list-image avatar" src="https://cdn.jsdelivr.net/npm/kang-static@latest/avatar.jpg"/>
+	<a href=https://www.antmoe.com/>小康博客</a>
+</div>
+
+
+<div class="archive-item links-item cf-friends">
+	<img loading="lazy" class="archive-list-image avatar" src="https://gravatar.loli.net/avatar/77a4ed5175b2c4995dc55c32310949a6"/>
+	<a href=https://www.foryuanbo.com/>远博</a>
+</div>
+
+<h3 id="博客程序">博客程序</h3>
+<p>Hugo：<a href="https://gohugo.io/">https://gohugo.io/</a></p>
+<h3 id="主题分享">主题分享</h3>
+<p>Gridea 主题：<a href="https://github.com/lmm214/gridea-theme-motify">「Motify」</a>、<a href="https://github.com/lmm214/gridea-theme-webstack">「Webstack」</a>、<a href="https://github.com/lmm214/gridea-theme-breek">「Breek」</a>、<a href="https://github.com/lmm214/gridea-theme-puti">「Puti」</a></p>
+        <div><a class="read-more button" href="/about/">阅读全文 →</a></div>
+      
+      </div>
+    
+    </div>
+    
+    
+    <div class="post on-list coding">
+    
+      <h1 class="post-title"><a href="https://blueisle.cf/gridea-theme-motify/">Gridea Theme Motify</a></h1>
+      <div class="post-meta">
+        
+          <span class="post-date">
+            2020-03-13 00:00:00
+          </span>
+        
+
+        
+        <span class="">
+          
+            #<a href="https://blueisle.cf/tags/%E6%8A%98%E8%85%BE/">折腾</a>&nbsp;
+          
+        </span>
+        
+      </div>
+
+      
+
+      <div class="post-content $PostCate">
+      
+        <p>自用 N 年主题转制 Gridea 完成！</p>
+<p><img loading='lazy' src="https://pic.edui.fun/images/2020/03/motify-1.png" alt="Motify 20.03.13"  /></p>
+<p>仓库下载：<a href="https://github.com/lmm214/gridea-theme-motify">https://github.com/lmm214/gridea-theme-motify</a></p>
+        <div><a class="read-more button" href="/gridea-theme-motify/">阅读全文 →</a></div>
+      
+      </div>
+    
+    </div>
+    
+    
+    <div class="post on-list coding">
+    
+      <h1 class="post-title"><a href="https://blueisle.cf/jsdelivr-gridea/">使用 jsDelivr 加速 Gridea</a></h1>
+      <div class="post-meta">
+        
+          <span class="post-date">
+            2020-03-13 00:00:00
+          </span>
+        
+
+        
+        <span class="">
+          
+            #<a href="https://blueisle.cf/tags/%E6%8A%98%E8%85%BE/">折腾</a>&nbsp;
+          
+        </span>
+        
+      </div>
+
+      
+
+      <div class="post-content $PostCate">
+      
+        <p>如果有博客托管在 GitHub 的话，加载速度着实感人，使用 jsDelivr 的 CDN 大法能有效改善，操作也简单，把原网址替换一下就能搞定！</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">https</span><span style="color:#f92672">:</span><span style="color:#75715e">//lmm214.github.io/immmmm/media/js/jquery.min.js
+</span></span></span></code></pre></div><p>改为：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">https</span><span style="color:#f92672">:</span><span style="color:#75715e">//cdn.jsdelivr.net/gh/lmm214/immmmm/media/js/jquery.min.js
+</span></span></span></code></pre></div><p>其中 <code>lmm214</code> 和 <code>immmmm</code> 分别为 GitHub 的用户名和仓库名，之后的 <code>/media/js/jquery.min.js</code> 为静态文件地址。</p>
+        <div><a class="read-more button" href="/jsdelivr-gridea/">阅读全文 →</a></div>
       
       </div>
     
@@ -892,32 +1417,6 @@ $ docker run -d --name rsshub -p 1200:1200 diygod/rsshub
 
     
 
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
 
 
 
@@ -929,7 +1428,7 @@ $ docker run -d --name rsshub -p 1200:1200 diygod/rsshub
 <footer class="footer">
   <div class="footer__inner">
     <div class="copyright copyright-font">
-      <span>共 99144 字 <br/> 写完一本 林海音 的</br>《城南旧事》了！</span>
+      <span>共 75227 字 <br/> 写完一本 鲁迅 的</br>《呐喊》了！</span>
     </div>
     <a class="dark-wormhole" href="https://www.foreverblog.cn/go.html" target="_blank"> <img src="/wormhole_1.gif" alt="" style="width:auto;height:32px;" title="穿梭虫洞-随机访问十年之约友链博客"> </a>
     <a class="light-wormhole" href="https://www.foreverblog.cn/go.html" target="_blank" > <img src="/wormhole_3.gif" alt="" style="width:auto;height:32px;" title="穿梭虫洞-随机访问十年之约友链博客"> </a>
