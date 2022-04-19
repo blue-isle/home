@@ -30,7 +30,9 @@
 
 
     
-    
+  <link rel="prefetch" href="https://blueisle.cf/friends/">
+  <link rel="prefetch" href="https://blueisle.cf/photos/">
+
   </head>
   <body class="dark-theme">
     <div class="container">
@@ -131,101 +133,83 @@
 
       <div class="content">
         
-<div class="post">
-  <h2 class="post-title">哔哔点啥</h2>
-  <div class="post-content">
-    <div id="bber"></div>
-  </div>
+  
+  
+  
+  
+  <div class="post bb.md">
+    <div  class="breadcrumb">
+  
+
+  
+
+<li>
+  <a href="https://blueisle.cf/">首页</a>
+</li>
+
+
+<li class="active">
+  <a href="https://blueisle.cf/bb/">哔哔点啥</a>
+</li>
+
 </div>
-<div class="search-box">
-  <input type="text" id="searchBoxInput" placeholder="搜点回忆……">
+
+
+  
+    <h2 class="post-title"><a href="https://blueisle.cf/bb/">哔哔点啥</a></h2>
+    <div class="post-meta">
+      
+    </div>
+
+    
+  
+    <div class="post-content">
+      
+      
+    </div>
+  
+    
+
+    
+  
+    <div class="clear"></div>
+    
+    
+
+
+    
+        <div class="pagination__title">
+  <span class="pagination__title-h">欢迎评论</span>
+  <hr />
 </div>
-<style>
-  .timeline ul {margin:0;}
-  .timeline ul li {background:#3b3d42;list-style-type:none;position:relative;width:3px;margin-left:2em;padding:0.8em 0 2em;}
-  .timeline ul li::after {transform: rotate(45deg);content:'';background-color: #3b3d42;display: block;position: absolute;top: 10px;left: -5px;width: 0.8em;height: 0.8em;outline: 15px solid #fff;}
-  .timeline ul li div {position:relative;top:-13px;left:3em;width:670px;padding:0px 16px 0px;}
-  .timeline ul li p.datatime{color: #fafafa;font-size: 0.75em;font-style: italic;background-color: #3b3d42;display: inline-block;padding:0.25em 1em 0.2em 1em;}
-  .timeline ul li p.datacont{white-space: pre-wrap;margin:0.65em 0 0.3em;}
-  .timeline ul li p.datacont img{display:block;max-height:340px !important;}
-  .timeline ul li p.datacont img[src*="emotion"]{display:inline-block;width:auto;}
-  .timeline ul li p.datafrom{color: #aaa;font-size: 0.75em !important;font-style: italic;}
-  .timeline ul li p{margin:0;font-size:16px;letter-spacing:1px;color: #3b3d42;}
-  button{border-radius:0;}
-  .dark-theme .timeline ul li div p{color:#fafafa;}
-  .dark-theme .timeline ul li div p svg{fill:#fafafa;}
-  .dark-theme .timeline ul li p.datafrom{color: #aaa;}
-  .dark-theme .timeline ul li{background:#3b3d42;}
-  .dark-theme .timeline ul li::after{outline: 15px solid #292a2d;}
-  @media (max-width:860px) {
-    .timeline ul li{margin-left:0;}
-    .timeline ul li div{width:calc(100vw - 75px);left:30px;}
-  }
-</style>
+  <div id="tcomment"></div>
+  <script src="https://cdn.jsdelivr.net/npm/twikoo@1.5.3/dist/twikoo.all.min.js"></script>
+  <script>twikoo.init({ envId: 'https://twikoo-ten-alpha.vercel.app/', el: '#tcomment' })</script>
 
-<script src="https://cdn.bootcss.com/vue/2.6.11/vue.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/leancloud-storage@4.5.3/dist/av-min.js"></script>
-<script type="text/javascript">
-    var {
-        Query
-    } = AV;
-    AV.init({
-        appId: "AXFk1GWAvgkbxMLcwiop3laU-MdYXbMMI", 
-        appKey: "6OdliuIxPkw778teAXiCJz2S", 
-        
-    });
-
-    var query = new AV.Query('content');
-
-    var app = new Vue({
-        el: '#app',
-        data: {
-            page: 0,
-            count: 0,
-            contents: []
-        },
-        methods: {
-            loadMore: function(event) {
-                getData(++this.page);
-            }
+  <script type="text/javascript" src='https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js'></script>
+  <script type="text/javascript">
+    jQuery(document).ready(function($){
+      var checkComments = setInterval(function() {
+        var counts = $('.tk-comments-title').find('span').first().text();
+        if (counts) {
+          $('#twikoo_count').text(counts)
+          clearInterval(checkComments);
         }
-    })
+      }, 1000);
+      if(window.location.hash){
+        var checkExist = setInterval(function() {
+          if ($(window.location.hash).length) {
+            $('html, body').animate({scrollTop: $(window.location.hash).offset().top-90}, 1000);
+            clearInterval(checkExist);
+          }
+        }, 100);
+      }
+    });
+  </script>
 
-    function urlToLink(str) {
-        var re = /(http|ftp|https):\/\/[\w-]+(.[\w-]+)+([\w-.,@?^=%&:/~+#]*[\w-\@?^=%&/~+#])?/g;;
+    
 
-        str = str.replace(re, function(website) {
-            return "<a href='" + website + "' target='_blank'> <i class='iconfont icon-lianjie-copy'></i>链接 </a>";
-        });
-        return str;
-    }
-
-    function getData(page = 0) {
-        query.descending('createdAt').skip(page * 20).limit(20).find().then(function(results) {
-            if (results.length == 0) {
-                alert('之前没 b 过了')
-            } else {
-                let resC = results;
-                reqData = false;
-                resC.forEach((i) => {
-                    let dateTmp = new Date(i.createdAt);
-                    i.attributes.time = `${dateTmp.getFullYear()}-${(dateTmp.getMonth() + 1) < 10 ? ('0' + (dateTmp.getMonth()+1)) : dateTmp.getMonth()+1}-${(dateTmp.getDate() + 1) < 10 ? ('0' + dateTmp.getDate()) : dateTmp.getDate()} ${(dateTmp.getHours() + 1) <= 10 ? ('0' + dateTmp.getHours()) : dateTmp.getHours()}:${(dateTmp.getMinutes() + 1) <= 10 ? ('0' + dateTmp.getMinutes()) : dateTmp.getMinutes()}`;
-                    i.attributes.content = "<pre>" + urlToLink(i.attributes.content) + "</pre>";
-                    app.contents.push(i);
-                })
-            }
-
-        }, function(error) {});
-    }
-
-    getData(0);
-
-    query.count().then(function(count) {
-        app.count = count;
-    }, function(error) {});
-</script>
-
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/lmm214/bber@0.0.6/bber.js"></script>
+    </div>
 
       </div>
 
