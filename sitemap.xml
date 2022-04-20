@@ -632,8 +632,6 @@
   </url><url>
     <loc>https://blueisle.cf/friends/</loc>
   </url><url>
-    <loc>https://blueisle.cf/bb/</loc>
-  </url><url>
     <loc>https://blueisle.cf/archives/</loc>
   </url><url>
     <loc>https://blueisle.cf/photos/</loc>
@@ -643,5 +641,7 @@
   </url><url>
     <loc>https://blueisle.cf/books/</loc>
     <priority>0.1</priority>
+  </url><url>
+    <loc>https://blueisle.cf/bb/</loc>
   </url>
 </urlset>
