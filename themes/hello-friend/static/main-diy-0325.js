@@ -67,8 +67,9 @@ jQuery(document).ready(function ($) {
     var replace_href = this_href.replace(parse_url, '$3');
     if (this_href != replace_href && location_href != replace_href) { $(this).attr('target', '_blank'); }
   });
-//依赖 jQuery 库，其中 jsonUrl 改为自己的
-$(document).ready(function(){
+
+  //依赖 jQuery 库，其中 jsonUrl 改为自己的
+
   if ( $("#bber-talk").length > 0 ) {
     jsonUrl = "https://6262-bber-2g7ermpk59a5cc41-1300799087.tcb.qcloud.la/json/bber.json"
     $.getJSON(jsonUrl+"?t="+Date.parse( new Date()),function(res){
