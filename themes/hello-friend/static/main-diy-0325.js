@@ -69,7 +69,6 @@ jQuery(document).ready(function ($) {
   });
 
 //依赖 jQuery 库，其中 jsonUrl 改为自己的
-$(document).ready(function(){
   if ( $("#bber-talk").length > 0 ) {
     jsonUrl = "https://6262-bber-2g7ermpk59a5cc41-1300799087.tcb.qcloud.la/json/bber.json"
     $.getJSON(jsonUrl+"?t="+Date.parse( new Date()),function(res){
