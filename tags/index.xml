@@ -43,5 +43,14 @@
       <description></description>
     </item>
     
+    <item>
+      <title>blog</title>
+      <link>https://blueisle.cf/tags/blog/</link>
+      <pubDate>Thu, 22 Jul 2021 21:23:55 +0800</pubDate>
+      
+      <guid>https://blueisle.cf/tags/blog/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

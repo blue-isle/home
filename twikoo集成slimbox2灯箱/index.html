@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+      <title>Twikoo 集成 Slimbox2 灯箱插件 :: 明礼至卓</title>
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta charset="UTF-8"/>
+<meta name="renderer" content="webkit"/>
+<meta name="force-rendering" content="webkit"/>
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+<script>if ( false || (!!window.MSInputMethodContext && !!document.documentMode)) document.write('\x3Cscript id="_iealwn_js" data-outver="11" src="https://support.dmeng.net/ie-alert-warning/latest.js">\x3C/script>'); </script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="浏览 Twikoo 的开发者『iMaeGoo』个人博客的时候，里面有一篇文章 《集成 Twikoo 与 lightGallery 插件，实现评论图片的点击放大》 提到了 Twikoo 集成 lightGallery 灯箱插件。 本博客使用的是 Slimbox2 灯箱插件，按照 iMaeGoo 的思路，利用 Twikoo 的 API onCommentLoaded，很方便的开启的评论的图片灯箱效果。 主要代码是： @eallion/eallion.com &amp;lt;script&amp;gt; twikoo.init ({ //envId: &amp;#34;eallion-###&amp;#34;, //el: &amp;#34;#tcomment&amp;#34;, //...... onCommentLoaded: function ()"/>
+<meta name="keywords" content=""/>
+<link rel="canonical" href="https://blueisle.cf/twikoo%E9%9B%86%E6%88%90slimbox2%E7%81%AF%E7%AE%B1/" />
+<link rel="stylesheet" href="/main.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:500&display=swap" media="print" onload="this.media='all'">
+<link rel="shortcut icon" href="https://blueisle.cf/favicon.ico">
+
+<meta property="og:title" content="Twikoo 集成 Slimbox2 灯箱插件" />
+<meta property="og:description" content="浏览 Twikoo 的开发者『iMaeGoo』个人博客的时候，里面有一篇文章 《集成 Twikoo 与 lightGallery 插件，实现评论图片的点击放大》 提到了 Twikoo 集成 lightGallery 灯箱插件。 本博客使用的是 Slimbox2 灯箱插件，按照 iMaeGoo 的思路，利用 Twikoo 的 API onCommentLoaded，很方便的开启的评论的图片灯箱效果。 主要代码是： @eallion/eallion.com &lt;script&gt; twikoo.init ({ //envId: &#34;eallion-###&#34;, //el: &#34;#tcomment&#34;, //...... onCommentLoaded: function ()" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blueisle.cf/twikoo%E9%9B%86%E6%88%90slimbox2%E7%81%AF%E7%AE%B1/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-07-22T21:23:55+08:00" />
+<meta property="article:modified_time" content="2021-07-22T21:23:55+08:00" />
+
+
+
+
+    
+  <link rel="prefetch" href="https://blueisle.cf/2021-07-26/">
+  <link rel="prefetch" href="https://blueisle.cf/talk-with-twikoo/">
+
+  </head>
+  <body class="dark-theme">
+    <div class="container">
+      <header class="header">
+  <span class="header__inner">
+    <a href="https://blueisle.cf" class="logo" style="text-decoration: none;">
+  
+    <span class="logo__text">明礼至卓</span>
+    <span class="logo__cursor"></span>
+  
+</a>
+
+    <span class="header__right">
+      
+        <nav class="menu hidden">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/movies/">电影</a></li>
+        
+      
+        
+          <li><a href="/books/">阅读</a></li>
+        
+      
+        
+          <li><a href="/archives/">归档</a></li>
+        
+      
+        
+          <li><a href="/photos/">照片</a></li>
+        
+      
+        
+          <li><a href="/about/">关于</a></li>
+        
+      
+        
+          <li><a href="https://nav.blueisle.cf/">导航</a></li>
+        
+      
+    
+
+                <li><a href="/search/"><svg t="1556783211810" class="search-box-icon" class="icon" style="" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2078" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><style type="text/css"></style></defs><path d="M981.39652054 920.86314525L704.56522859 644.0318533a366.65501012 366.65501012 0 1 0-61.73503038 65.64040943L917.55859375 984.40065827z m-856.17925347-493.12920861a284.19142939 284.19142939 0 1 1 283.89101562 284.19142939A284.49184317 284.49184317 0 0 1 125.06706019 427.73393664z" fill="" p-id="2079" data-spm-anchor-id="a313x.7781069.0.i2"></path></svg></a></li>
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/movies/">电影</a></li>
+      
+    
+      
+        <li><a href="/books/">阅读</a></li>
+      
+    
+      
+        <li><a href="/archives/">归档</a></li>
+      
+    
+      
+        <li><a href="/photos/">照片</a></li>
+      
+    
+      
+        <li><a href="/about/">关于</a></li>
+      
+    
+      
+        <li><a href="https://nav.blueisle.cf/">导航</a></li>
+      
+    
+  </ul>
+</nav>
+
+        <span class="menu-trigger hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+          </svg>
+        </span>
+      
+      <span class="theme-toggle">
+        <svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+
+      </span>
+    </span>
+  </span>
+</header>
+
+
+
+
+      <div class="content">
+        
+  
+  
+  
+  
+  <div class="post coding">
+    <div  class="breadcrumb">
+  
+
+  
+
+  
+
+  
+
+<li>
+  <a href="https://blueisle.cf/">首页</a>
+</li>
+
+
+<li>
+  <a href="https://blueisle.cf/posts/">文章</a>
+</li>
+
+
+<li>
+  <a href="https://blueisle.cf/posts/coding/">折腾</a>
+</li>
+
+
+<li class="active">
+  <a href="https://blueisle.cf/twikoo%E9%9B%86%E6%88%90slimbox2%E7%81%AF%E7%AE%B1/">Twikoo 集成 Slimbox2 灯箱插件</a>
+</li>
+
+</div>
+
+
+  
+    <h2 class="post-title"><a href="https://blueisle.cf/twikoo%E9%9B%86%E6%88%90slimbox2%E7%81%AF%E7%AE%B1/">Twikoo 集成 Slimbox2 灯箱插件</a></h2>
+    <div class="post-meta">
+      
+        <span class="post-date">2021-07-22 21:23:55</span><span> / <span id="twikoo_visitors">0</span> 阅读</span><span> / <a href="#twikoo"><span id="twikoo_count">0 条评论</span></a></span>
+        
+          
+        
+      
+    </div>
+
+    
+  
+    <div class="post-content">
+      <p>浏览 Twikoo 的开发者『<a href="https://www.imaegoo.com/">iMaeGoo</a>』个人博客的时候，里面有一篇文章 <a href="https://www.imaegoo.com/2021/twikoo-lightgallery/">《集成 Twikoo 与 lightGallery 插件，实现评论图片的点击放大》</a> 提到了 Twikoo 集成 lightGallery 灯箱插件。</p>
+<p>本博客使用的是 Slimbox2 灯箱插件，按照 iMaeGoo 的思路，利用 Twikoo 的 <a href="https://twikoo.js.org/api.html#on-comment-loaded">API</a> <code>onCommentLoaded</code>，很方便的开启的评论的图片灯箱效果。</p>
+<p>主要代码是：<br>
+@<a href="https://github.com/eallion/eallion.com/blob/main/themes/hello-friend/layouts/partials/comments.html#L210-L216">eallion/eallion.com</a></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">twikoo</span>.<span style="color:#a6e22e">init</span> ({
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">//envId: &#34;eallion-###&#34;,
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#75715e">//el: &#34;#tcomment&#34;,
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#75715e">//......
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#a6e22e">onCommentLoaded</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span> () {
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">$</span>(<span style="color:#e6db74">&#34;.tk-content img:not (.tk-avatar-img)&#34;</span>).<span style="color:#a6e22e">each</span> (<span style="color:#66d9ef">function</span> () {
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">_b</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">$</span>(<span style="color:#e6db74">&#34;&lt;a&gt;&lt;/a&gt;&#34;</span>).<span style="color:#a6e22e">attr</span> (<span style="color:#e6db74">&#34;href&#34;</span>, <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">src</span>);
+</span></span><span style="display:flex;"><span>                <span style="color:#a6e22e">$</span>(<span style="color:#66d9ef">this</span>).<span style="color:#a6e22e">wrap</span> (<span style="color:#a6e22e">_b</span>);
+</span></span><span style="display:flex;"><span>            })
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">$</span>(<span style="color:#e6db74">&#34;.tk-content a [rel!=link]:has (img)&#34;</span>).<span style="color:#a6e22e">slimbox</span> ();
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    });
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span></code></pre></div><p>当 Twikoo 评论加载完成后，查找 Selector <code>.tk-content</code> 里面是否有图片，如果有图片，就为图片添加一个图片地址 <code>src</code> 本身的 <code>&lt;a&gt;</code> 标签超链接，同时排除 <code>.tk-avatar-img</code> 头像元素。</p>
+<p>此方法适合使用 <a href="https://github.com/panr/hugo-theme-hello-friend"><code>Hello Friend</code></a> 主题的站点使用，使用 Slimbox2 作为灯箱插件的站点也可参考。</p>
+<p>特此记录，备忘。</p>
+<blockquote>
+<p>本博客主要是在『<a href="https://immmmm.com/">木木老师</a>』的二次开发的基础上再二次开发。因本人时间、精力、能力有限，没有完整的 ChangeLog ，修改过程并没有记录多少笔记，我都忘记改了些什么，现在就是让我自己复现我也做不到。起初我以为随便改改就能开始用了，没想到越改越多，越改越多，重构了很多破坏性的代码，代码越来越不友好。如果对本博客的代码或功能有需求的可以直接参考本博客完整的源码：<a href="https://github.com/eallion/eallion.com">eallion/eallion.com</a>，当然直接问我我也会很乐意回答。</p>
+</blockquote>
+
+      
+    </div>
+  
+    
+
+    
+      <span class="post-tags">
+        
+          #<a href="https://blueisle.cf/tags/blog/">blog</a>&nbsp;
+        
+          #<a href="https://blueisle.cf/tags/code/">code</a>&nbsp;
+        
+          #<a href="https://blueisle.cf/tags/slimbox/">slimbox</a>&nbsp;
+        
+          #<a href="https://blueisle.cf/tags/twikoo/">twikoo</a>&nbsp;
+        
+          #<a href="https://blueisle.cf/tags/%E5%A4%87%E5%BF%98/">备忘</a>&nbsp;
+        
+      </span>
+    
+  
+    <div class="clear"></div>
+    
+    
+      
+        <div class="pagination">
+          <div class="pagination__title">
+            
+              <a class="pagination__title-h" href="https://github.com/blue-isle/home/edit/master/content/posts/coding/twikoo%e9%9b%86%e6%88%90slimbox2%e7%81%af%e7%ae%b1.md" target="_blank" rel="noopener">阅读更多</a>
+            
+            <hr />
+          </div>
+          <div class="pagination__buttons">
+            
+              <span class="button previous">
+                <a href="https://blueisle.cf/2021-07-26/">
+                  <span class="button__icon">←</span>
+                  <span class="button__text">2021-07-26</span>
+                </a>
+              </span>
+            
+            
+              <span class="button next">
+                <a href="https://blueisle.cf/talk-with-twikoo/">
+                  <span class="button__text">你言我语 By Twikoo</span>
+                  <span class="button__icon">→</span>
+                </a>
+              </span>
+            
+          </div>
+        </div>
+      
+    
+
+
+    
+        <div class="pagination__title">
+  <span class="pagination__title-h">欢迎评论</span>
+  <hr />
+</div>
+  <div id="tcomment"></div>
+  <script src="https://cdn.jsdelivr.net/npm/twikoo@1.5.3/dist/twikoo.all.min.js"></script>
+  <script>twikoo.init({ envId: 'https://twikoo-ten-alpha.vercel.app/', el: '#tcomment' })</script>
+
+  <script type="text/javascript" src='https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js'></script>
+  <script type="text/javascript">
+    jQuery(document).ready(function($){
+      var checkComments = setInterval(function() {
+        var counts = $('.tk-comments-title').find('span').first().text();
+        if (counts) {
+          $('#twikoo_count').text(counts)
+          clearInterval(checkComments);
+        }
+      }, 1000);
+      if(window.location.hash){
+        var checkExist = setInterval(function() {
+          if ($(window.location.hash).length) {
+            $('html, body').animate({scrollTop: $(window.location.hash).offset().top-90}, 1000);
+            clearInterval(checkExist);
+          }
+        }, 100);
+      }
+    });
+  </script>
+    
+
+    </div>
+
+      </div>
+
+      
+        
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+
+
+
+
+
+
+
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="copyright copyright-font">
+      <span>共 99616 字 <br/> 写完一本 林海音 的</br>《城南旧事》了！</span>
+    </div>
+    
+    
+      <div class="copyright">
+        <span>© 2022 Powered by <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a> Theme by <a href="https://twitter.com/panr" target="_blank" rel="noopener">Panr</a></span>
+      </div>
+    
+  </div>
+</footer>
+
+<script type="text/javascript" src="/main.js?t=20220124"></script>
+
+<script type="text/javascript" src='https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js'></script>
+<script type="text/javascript" src="/lately2.min.js"></script>
+<script type="text/javascript" src="/jquery.vticker.js"></script>
+<script type="text/javascript" src="/waterfall.min.js"></script>
+<script type="text/javascript" src="/slimbox2.min.js"></script>
+<script type="text/javascript" src="/main-diy-0325.js"></script>
+      
+    </div>
+  </body>
+</html>
