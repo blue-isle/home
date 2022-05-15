@@ -4,22 +4,22 @@
     
     
     
-            <link href="https://blueisle.cf/atom.xml" rel="self" type="application/rss+xml" title="atom" />
-            <link href="https://blueisle.cf/" rel="alternate" type="text/html" title="HTML" />
-            <link href="https://blueisle.cf/index.json" rel="alternate" type="application/json" title="JSON" />
-    <updated>2022-05-10T11:33:22+00:00</updated>
+            <link href="https://blue-isle.github.io/home/atom.xml" rel="self" type="application/rss+xml" title="atom" />
+            <link href="https://blue-isle.github.io/home/" rel="alternate" type="text/html" title="HTML" />
+            <link href="https://blue-isle.github.io/home/index.json" rel="alternate" type="application/json" title="JSON" />
+    <updated>2022-05-15T10:11:37+00:00</updated>
     
     
     
     
-        <id>https://blueisle.cf/atom.xml</id>
+        <id>https://blue-isle.github.io/home/atom.xml</id>
     
         
         <entry>
             <title type="html"><![CDATA[文章内显示豆瓣条目]]></title>
-            <link href="https://blueisle.cf/post-show-douban-item/" rel="alternate" type="text/html" />
+            <link href="https://blue-isle.github.io/home/post-show-douban-item/" rel="alternate" type="text/html" />
             
-                <id>https://blueisle.cf/post-show-douban-item/</id>
+                <id>https://blue-isle.github.io/home/post-show-douban-item/</id>
             
             
             <published>2022-03-24T23:16:34+08:00</published>
@@ -56,7 +56,7 @@
                         
                             
                              
-                                <category scheme="https://blueisle.cf/tags/%E6%8A%98%E8%85%BE" term="%E6%8A%98%E8%85%BE" label="折腾" />
+                                <category scheme="https://blue-isle.github.io/home/tags/%E6%8A%98%E8%85%BE" term="%E6%8A%98%E8%85%BE" label="折腾" />
                             
                         
                     
@@ -67,9 +67,9 @@
         
         <entry>
             <title type="html"><![CDATA[「电影 / 阅读」页面，顶！]]></title>
-            <link href="https://blueisle.cf/doumark-action/" rel="alternate" type="text/html" />
+            <link href="https://blue-isle.github.io/home/doumark-action/" rel="alternate" type="text/html" />
             
-                <id>https://blueisle.cf/doumark-action/</id>
+                <id>https://blue-isle.github.io/home/doumark-action/</id>
             
             
             <published>2022-03-22T23:32:16+08:00</published>
@@ -89,7 +89,7 @@
                         
                             
                              
-                                <category scheme="https://blueisle.cf/tags/%E6%8A%98%E8%85%BE" term="%E6%8A%98%E8%85%BE" label="折腾" />
+                                <category scheme="https://blue-isle.github.io/home/tags/%E6%8A%98%E8%85%BE" term="%E6%8A%98%E8%85%BE" label="折腾" />
                             
                         
                     
@@ -100,9 +100,9 @@
         
         <entry>
             <title type="html"><![CDATA[《财富自由之路》读后记]]></title>
-            <link href="https://blueisle.cf/book-isbn-9787121320309/" rel="alternate" type="text/html" />
+            <link href="https://blue-isle.github.io/home/book-isbn-9787121320309/" rel="alternate" type="text/html" />
             
-                <id>https://blueisle.cf/book-isbn-9787121320309/</id>
+                <id>https://blue-isle.github.io/home/book-isbn-9787121320309/</id>
             
             
             <published>2022-03-13T09:19:51+08:00</published>
@@ -164,7 +164,7 @@
                         
                             
                              
-                                <category scheme="https://blueisle.cf/tags/%E8%82%B2%E4%BA%BA" term="%E8%82%B2%E4%BA%BA" label="育人" />
+                                <category scheme="https://blue-isle.github.io/home/tags/%E8%82%B2%E4%BA%BA" term="%E8%82%B2%E4%BA%BA" label="育人" />
                             
                         
                     
@@ -175,9 +175,9 @@
         
         <entry>
             <title type="html"><![CDATA[获取图片主色脚本：Rgbaster.js]]></title>
-            <link href="https://blueisle.cf/rgbaster-js/" rel="alternate" type="text/html" />
+            <link href="https://blue-isle.github.io/home/rgbaster-js/" rel="alternate" type="text/html" />
             
-                <id>https://blueisle.cf/rgbaster-js/</id>
+                <id>https://blue-isle.github.io/home/rgbaster-js/</id>
             
             
             <published>2022-03-06T11:10:11+08:00</published>
@@ -204,7 +204,7 @@
                         
                             
                              
-                                <category scheme="https://blueisle.cf/tags/%E6%8A%98%E8%85%BE" term="%E6%8A%98%E8%85%BE" label="折腾" />
+                                <category scheme="https://blue-isle.github.io/home/tags/%E6%8A%98%E8%85%BE" term="%E6%8A%98%E8%85%BE" label="折腾" />
                             
                         
                     
@@ -215,9 +215,9 @@
         
         <entry>
             <title type="html"><![CDATA[书签导航应用：Flare ]]></title>
-            <link href="https://blueisle.cf/startpage-flare/" rel="alternate" type="text/html" />
+            <link href="https://blue-isle.github.io/home/startpage-flare/" rel="alternate" type="text/html" />
             
-                <id>https://blueisle.cf/startpage-flare/</id>
+                <id>https://blue-isle.github.io/home/startpage-flare/</id>
             
             
             <published>2022-02-26T16:11:24+08:00</published>
@@ -257,7 +257,7 @@ docker-compose up -d
                         
                             
                              
-                                <category scheme="https://blueisle.cf/tags/%E6%8A%98%E8%85%BE" term="%E6%8A%98%E8%85%BE" label="折腾" />
+                                <category scheme="https://blue-isle.github.io/home/tags/%E6%8A%98%E8%85%BE" term="%E6%8A%98%E8%85%BE" label="折腾" />
                             
                         
                     

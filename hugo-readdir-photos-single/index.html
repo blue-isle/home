@@ -17,10 +17,10 @@
 {{ if .Params.path }} {{$Path := .Params.path}} {{- range (readDir (printf &amp;#34;%s%s&amp;#34; &amp;#34;./static/images/&amp;#34; $Path )) -}}&amp;lt;img loading=&amp;#39;lazy&amp;#39; src=&amp;#34;{{(printf &amp;#34;/images/%s/%s&amp;#34; $Path .Name ) | absURL}}&amp;#34; /&amp;gt;{{- end -}} {{ end }} 当文章中写了 path: 2004gd 表示 Hugo 遍历根目录 /static/images/2004gd 内的图片并显示。
 "/>
 <meta name="keywords" content=""/>
-<link rel="canonical" href="https://blueisle.cf/hugo-readdir-photos-single/" />
+<link rel="canonical" href="https://blue-isle.github.io/home/hugo-readdir-photos-single/" />
 <link rel="stylesheet" href="/main.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:500&display=swap" media="print" onload="this.media='all'">
-<link rel="shortcut icon" href="https://blueisle.cf/favicon.ico">
+<link rel="shortcut icon" href="https://blue-isle.github.io/home/favicon.ico">
 
 <meta property="og:title" content="Hugo 显示指定文件夹内图片" />
 <meta property="og:description" content="效果见文章底部，这些图片非手动一张张插入，文章头部一句 path: 2004gd 搞定！
@@ -31,7 +31,7 @@
 {{ end }}
 当文章中写了 path: 2004gd 表示 Hugo 遍历根目录 /static/images/2004gd 内的图片并显示。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://blueisle.cf/hugo-readdir-photos-single/" /><meta property="article:section" content="posts" />
+<meta property="og:url" content="https://blue-isle.github.io/home/hugo-readdir-photos-single/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2020-04-10T20:38:16+08:00" />
 <meta property="article:modified_time" content="2020-04-10T20:38:16+08:00" />
 
@@ -39,15 +39,15 @@
 
 
     
-  <link rel="prefetch" href="https://blueisle.cf/hugo-diy-post-type/">
-  <link rel="prefetch" href="https://blueisle.cf/hugo-total-count/">
+  <link rel="prefetch" href="https://blue-isle.github.io/home/hugo-diy-post-type/">
+  <link rel="prefetch" href="https://blue-isle.github.io/home/hugo-total-count/">
 
   </head>
   <body class="dark-theme">
     <div class="container">
       <header class="header">
   <span class="header__inner">
-    <a href="https://blueisle.cf" class="logo" style="text-decoration: none;">
+    <a href="https://blue-isle.github.io/home/" class="logo" style="text-decoration: none;">
   
     <span class="logo__text">明礼至卓</span>
     <span class="logo__cursor"></span>
@@ -61,28 +61,43 @@
     
       
         
-          <li><a href="/movies/">电影</a></li>
+          <li><a href="/home/movies/">电影</a></li>
         
       
         
-          <li><a href="/books/">阅读</a></li>
+          <li><a href="/home/books/">阅读</a></li>
         
       
         
-          <li><a href="/archives/">归档</a></li>
+          <li><a href="/home/archives/">归档</a></li>
         
       
         
-          <li><a href="/photos/">照片</a></li>
+          <li><a href="/home/photos/">照片</a></li>
         
       
-        
-          <li><a href="/about/">关于</a></li>
-        
       
-        
-          <li><a href="https://nav.blueisle.cf/">导航</a></li>
-        
+        <ul class="menu__sub-inner">
+          <li class="menu__sub-inner-more-trigger">
+            更多
+            <span class="menu__sub-inner-more-trigger-icon"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" viewBox="0 0 44 44">
+  <path fill="none" d="M15 8l14.729 14.382L15 35.367"/>
+</svg>
+</span>
+          </li>
+
+          <ul class="menu__sub-inner-more hidden">
+            
+              
+                <li><a href="/home/about/">关于</a></li>
+              
+            
+              
+                <li><a href="https://https://blue-isle.github.io/nav/">导航</a></li>
+              
+            
+          </ul>
+        </ul>
       
     
 
@@ -92,27 +107,27 @@
   <ul class="menu__inner menu__inner--mobile">
     
       
-        <li><a href="/movies/">电影</a></li>
+        <li><a href="/home/movies/">电影</a></li>
       
     
       
-        <li><a href="/books/">阅读</a></li>
+        <li><a href="/home/books/">阅读</a></li>
       
     
       
-        <li><a href="/archives/">归档</a></li>
+        <li><a href="/home/archives/">归档</a></li>
       
     
       
-        <li><a href="/photos/">照片</a></li>
+        <li><a href="/home/photos/">照片</a></li>
       
     
       
-        <li><a href="/about/">关于</a></li>
+        <li><a href="/home/about/">关于</a></li>
       
     
       
-        <li><a href="https://nav.blueisle.cf/">导航</a></li>
+        <li><a href="https://https://blue-isle.github.io/nav/">导航</a></li>
       
     
   </ul>
@@ -157,29 +172,29 @@
   
 
 <li>
-  <a href="https://blueisle.cf/">首页</a>
+  <a href="https://blue-isle.github.io/home/">首页</a>
 </li>
 
 
 <li>
-  <a href="https://blueisle.cf/posts/">文章</a>
+  <a href="https://blue-isle.github.io/home/posts/">文章</a>
 </li>
 
 
 <li>
-  <a href="https://blueisle.cf/posts/coding/">折腾</a>
+  <a href="https://blue-isle.github.io/home/posts/coding/">折腾</a>
 </li>
 
 
 <li class="active">
-  <a href="https://blueisle.cf/hugo-readdir-photos-single/">Hugo 显示指定文件夹内图片</a>
+  <a href="https://blue-isle.github.io/home/hugo-readdir-photos-single/">Hugo 显示指定文件夹内图片</a>
 </li>
 
 </div>
 
 
   
-    <h2 class="post-title"><a href="https://blueisle.cf/hugo-readdir-photos-single/">Hugo 显示指定文件夹内图片</a></h2>
+    <h2 class="post-title"><a href="https://blue-isle.github.io/home/hugo-readdir-photos-single/">Hugo 显示指定文件夹内图片</a></h2>
     <div class="post-meta">
       
         <span class="post-date">2020-04-10 20:38:16</span><span> / <span id="twikoo_visitors">0</span> 阅读</span><span> / <a href="#twikoo"><span id="twikoo_count">0 条评论</span></a></span>
@@ -208,7 +223,7 @@
 </code></pre><p>注：代码仅实现功能，灯箱效果什么的需要自行适配主题。</p>
       
     
-    <photos><img class="avatar" loading='lazy' src="https://blueisle.cf/images/2004gd/gd-01.jpeg" /><img class="avatar" loading='lazy' src="https://blueisle.cf/images/2004gd/gd-02.jpeg" /><img class="avatar" loading='lazy' src="https://blueisle.cf/images/2004gd/gd-03.jpeg" /><img class="avatar" loading='lazy' src="https://blueisle.cf/images/2004gd/gd-04.jpeg" /><img class="avatar" loading='lazy' src="https://blueisle.cf/images/2004gd/gd-05.jpeg" /><img class="avatar" loading='lazy' src="https://blueisle.cf/images/2004gd/gd-06.jpeg" /></photos>
+    <photos><img class="avatar" loading='lazy' src="https://blue-isle.github.io/images/2004gd/gd-01.jpeg" /><img class="avatar" loading='lazy' src="https://blue-isle.github.io/images/2004gd/gd-02.jpeg" /><img class="avatar" loading='lazy' src="https://blue-isle.github.io/images/2004gd/gd-03.jpeg" /><img class="avatar" loading='lazy' src="https://blue-isle.github.io/images/2004gd/gd-04.jpeg" /><img class="avatar" loading='lazy' src="https://blue-isle.github.io/images/2004gd/gd-05.jpeg" /><img class="avatar" loading='lazy' src="https://blue-isle.github.io/images/2004gd/gd-06.jpeg" /></photos>
 
     </div>
   
@@ -217,7 +232,7 @@
     
       <span class="post-tags">
         
-          #<a href="https://blueisle.cf/tags/%E6%8A%98%E8%85%BE/">折腾</a>&nbsp;
+          #<a href="https://blue-isle.github.io/home/tags/%E6%8A%98%E8%85%BE/">折腾</a>&nbsp;
         
       </span>
     
@@ -236,7 +251,7 @@
           <div class="pagination__buttons">
             
               <span class="button previous">
-                <a href="https://blueisle.cf/hugo-diy-post-type/">
+                <a href="https://blue-isle.github.io/home/hugo-diy-post-type/">
                   <span class="button__icon">←</span>
                   <span class="button__text">Hugo 自定义文章样式</span>
                 </a>
@@ -244,7 +259,7 @@
             
             
               <span class="button next">
-                <a href="https://blueisle.cf/hugo-total-count/">
+                <a href="https://blue-isle.github.io/home/hugo-total-count/">
                   <span class="button__text">Hugo 总文章数和总字数</span>
                   <span class="button__icon">→</span>
                 </a>

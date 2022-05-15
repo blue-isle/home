@@ -15,31 +15,31 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 <meta name="description" content=""/>
 <meta name="keywords" content=""/>
-<link rel="canonical" href="https://blueisle.cf/" />
+<link rel="canonical" href="https://blue-isle.github.io/home/" />
 <link rel="stylesheet" href="/main.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:500&display=swap" media="print" onload="this.media='all'">
-<link rel="shortcut icon" href="https://blueisle.cf/favicon.ico">
+<link rel="shortcut icon" href="https://blue-isle.github.io/home/favicon.ico">
 
 <meta property="og:title" content="首页" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://blueisle.cf/" />
+<meta property="og:url" content="https://blue-isle.github.io/home/" />
 
 
 
-<link rel="alternate" type="application/rss+xml" href="/atom.xml" title="明礼至卓" />
-<link rel="alternate" type="application/json" href="/index.json" title="明礼至卓" />
+<link rel="alternate" type="application/rss+xml" href="/home/atom.xml" title="明礼至卓" />
+<link rel="alternate" type="application/json" href="/home/index.json" title="明礼至卓" />
 
     
-  <link rel="prefetch" href="/page/8/">
-  <link rel="prefetch" href="/page/10/">
+  <link rel="prefetch" href="/home/page/8/">
+  <link rel="prefetch" href="/home/page/10/">
 
   </head>
   <body class="dark-theme">
     <div class="container">
       <header class="header">
   <span class="header__inner">
-    <a href="https://blueisle.cf" class="logo" style="text-decoration: none;">
+    <a href="https://blue-isle.github.io/home/" class="logo" style="text-decoration: none;">
   
     <span class="logo__text">明礼至卓</span>
     <span class="logo__cursor"></span>
@@ -53,28 +53,43 @@
     
       
         
-          <li><a href="/movies/">电影</a></li>
+          <li><a href="/home/movies/">电影</a></li>
         
       
         
-          <li><a href="/books/">阅读</a></li>
+          <li><a href="/home/books/">阅读</a></li>
         
       
         
-          <li><a href="/archives/">归档</a></li>
+          <li><a href="/home/archives/">归档</a></li>
         
       
         
-          <li><a href="/photos/">照片</a></li>
+          <li><a href="/home/photos/">照片</a></li>
         
       
-        
-          <li><a href="/about/">关于</a></li>
-        
       
-        
-          <li><a href="https://nav.blueisle.cf/">导航</a></li>
-        
+        <ul class="menu__sub-inner">
+          <li class="menu__sub-inner-more-trigger">
+            更多
+            <span class="menu__sub-inner-more-trigger-icon"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" viewBox="0 0 44 44">
+  <path fill="none" d="M15 8l14.729 14.382L15 35.367"/>
+</svg>
+</span>
+          </li>
+
+          <ul class="menu__sub-inner-more hidden">
+            
+              
+                <li><a href="/home/about/">关于</a></li>
+              
+            
+              
+                <li><a href="https://https://blue-isle.github.io/nav/">导航</a></li>
+              
+            
+          </ul>
+        </ul>
       
     
 
@@ -84,27 +99,27 @@
   <ul class="menu__inner menu__inner--mobile">
     
       
-        <li><a href="/movies/">电影</a></li>
+        <li><a href="/home/movies/">电影</a></li>
       
     
       
-        <li><a href="/books/">阅读</a></li>
+        <li><a href="/home/books/">阅读</a></li>
       
     
       
-        <li><a href="/archives/">归档</a></li>
+        <li><a href="/home/archives/">归档</a></li>
       
     
       
-        <li><a href="/photos/">照片</a></li>
+        <li><a href="/home/photos/">照片</a></li>
       
     
       
-        <li><a href="/about/">关于</a></li>
+        <li><a href="/home/about/">关于</a></li>
       
     
       
-        <li><a href="https://nav.blueisle.cf/">导航</a></li>
+        <li><a href="https://https://blue-isle.github.io/nav/">导航</a></li>
       
     
   </ul>
@@ -150,7 +165,7 @@
     
     <div class="post on-list coding">
     
-      <h1 class="post-title"><a href="https://blueisle.cf/rsshub-docker/">RSSHub 部署笔记</a></h1>
+      <h1 class="post-title"><a href="https://blue-isle.github.io/home/rsshub-docker/">RSSHub 部署笔记</a></h1>
       <div class="post-meta">
         
           <span class="post-date">
@@ -161,7 +176,7 @@
         
         <span class="">
           
-            #<a href="https://blueisle.cf/tags/%E6%8A%98%E8%85%BE/">折腾</a>&nbsp;
+            #<a href="https://blue-isle.github.io/home/tags/%E6%8A%98%E8%85%BE/">折腾</a>&nbsp;
           
         </span>
         
@@ -178,7 +193,7 @@
 <pre tabindex="0"><code>$ docker pull diygod/rsshub
 $ docker run -d --name rsshub -p 1200:1200 diygod/rsshub
 </code></pre><p>用宝塔面板的话，放行 1200 端口。浏览器打开 http://IP:1200/ ，看到成功页面。✅</p>
-        <div><a class="read-more button" href="/rsshub-docker/">阅读全文 →</a></div>
+        <div><a class="read-more button" href="/home/rsshub-docker/">阅读全文 →</a></div>
       
       </div>
     
@@ -187,7 +202,7 @@ $ docker run -d --name rsshub -p 1200:1200 diygod/rsshub
     
     <div class="post on-list coding">
     
-      <h1 class="post-title"><a href="https://blueisle.cf/hugo-github-actions/">Hugo + Github Actions 实现自动化部署</a></h1>
+      <h1 class="post-title"><a href="https://blue-isle.github.io/home/hugo-github-actions/">Hugo + Github Actions 实现自动化部署</a></h1>
       <div class="post-meta">
         
           <span class="post-date">
@@ -198,7 +213,7 @@ $ docker run -d --name rsshub -p 1200:1200 diygod/rsshub
         
         <span class="">
           
-            #<a href="https://blueisle.cf/tags/%E6%8A%98%E8%85%BE/">折腾</a>&nbsp;
+            #<a href="https://blue-isle.github.io/home/tags/%E6%8A%98%E8%85%BE/">折腾</a>&nbsp;
           
         </span>
         
@@ -213,7 +228,7 @@ $ docker run -d --name rsshub -p 1200:1200 diygod/rsshub
 <p>为更新 <a href="https://edui.fun/">https://edui.fun/</a> 导航站能随手些，造了 <a href="https://immmmm.com/gridea-theme-webstack/">Gridea Theme WebStack</a> 。每次得源文件切换加载，但只为加几行代码，等等等；</p>
 <p>折腾一天，已实现直接在 GitHub  <code>master</code> 添加代码，<code>Github Actions </code> 自动构建 <code>Hugo</code> 静态文件到 <code>gh-pages</code> 分支，外加同步 webhook 到自己的服务器。</p>
 <p>再也不用 git 来 git 去！</p>
-        <div><a class="read-more button" href="/hugo-github-actions/">阅读全文 →</a></div>
+        <div><a class="read-more button" href="/home/hugo-github-actions/">阅读全文 →</a></div>
       
       </div>
     
@@ -222,7 +237,7 @@ $ docker run -d --name rsshub -p 1200:1200 diygod/rsshub
     
     <div class="post on-list coding">
     
-      <h1 class="post-title"><a href="https://blueisle.cf/post-show-douban-item-localstorage-cache/">文章内显示豆瓣条目（LocalStorage 缓存版）</a></h1>
+      <h1 class="post-title"><a href="https://blue-isle.github.io/home/post-show-douban-item-localstorage-cache/">文章内显示豆瓣条目（LocalStorage 缓存版）</a></h1>
       <div class="post-meta">
         
           <span class="post-date">
@@ -233,7 +248,7 @@ $ docker run -d --name rsshub -p 1200:1200 diygod/rsshub
         
         <span class="">
           
-            #<a href="https://blueisle.cf/tags/%E6%8A%98%E8%85%BE/">折腾</a>&nbsp;
+            #<a href="https://blue-isle.github.io/home/tags/%E6%8A%98%E8%85%BE/">折腾</a>&nbsp;
           
         </span>
         
@@ -246,7 +261,7 @@ $ docker run -d --name rsshub -p 1200:1200 diygod/rsshub
         <p><a href="https://movie.douban.com/subject/30206389/">https://movie.douban.com/subject/30206389/</a></p>
 <p><img loading='lazy' src="https://pic.edui.fun/images/2020/03/douban-ls.png" alt="douban-ls"  /></p>
 <p>具体使用说明同：<a href="https://immmmm.com/post-show-douban-item/">https://immmmm.com/post-show-douban-item/</a></p>
-        <div><a class="read-more button" href="/post-show-douban-item-localstorage-cache/">阅读全文 →</a></div>
+        <div><a class="read-more button" href="/home/post-show-douban-item-localstorage-cache/">阅读全文 →</a></div>
       
       </div>
     
@@ -255,7 +270,7 @@ $ docker run -d --name rsshub -p 1200:1200 diygod/rsshub
     
     <div class="post on-list /">
     
-      <h1 class="post-title"><a href="https://blueisle.cf/about/">关于</a></h1>
+      <h1 class="post-title"><a href="https://blue-isle.github.io/home/about/">关于</a></h1>
       <div class="post-meta">
         
           <span class="post-date">
@@ -809,7 +824,7 @@ $ docker run -d --name rsshub -p 1200:1200 diygod/rsshub
 <p>Hugo：<a href="https://gohugo.io/">https://gohugo.io/</a></p>
 <h3 id="主题分享">主题分享</h3>
 <p>Gridea 主题：<a href="https://github.com/lmm214/gridea-theme-motify">「Motify」</a>、<a href="https://github.com/lmm214/gridea-theme-webstack">「Webstack」</a>、<a href="https://github.com/lmm214/gridea-theme-breek">「Breek」</a>、<a href="https://github.com/lmm214/gridea-theme-puti">「Puti」</a></p>
-        <div><a class="read-more button" href="/about/">阅读全文 →</a></div>
+        <div><a class="read-more button" href="/home/about/">阅读全文 →</a></div>
       
       </div>
     
@@ -818,7 +833,7 @@ $ docker run -d --name rsshub -p 1200:1200 diygod/rsshub
     
     <div class="post on-list reading">
     
-      <h1 class="post-title"><a href="https://blueisle.cf/book-isbn-9787613337624/">《医学大神》读中记</a></h1>
+      <h1 class="post-title"><a href="https://blue-isle.github.io/home/book-isbn-9787613337624/">《医学大神》读中记</a></h1>
       <div class="post-meta">
         
           <span class="post-date">
@@ -829,7 +844,7 @@ $ docker run -d --name rsshub -p 1200:1200 diygod/rsshub
         
         <span class="">
           
-            #<a href="https://blueisle.cf/tags/%E8%82%B2%E4%BA%BA/">育人</a>&nbsp;
+            #<a href="https://blue-isle.github.io/home/tags/%E8%82%B2%E4%BA%BA/">育人</a>&nbsp;
           
         </span>
         
@@ -852,7 +867,7 @@ $ docker run -d --name rsshub -p 1200:1200 diygod/rsshub
     
     <div class="post on-list coding">
     
-      <h1 class="post-title"><a href="https://blueisle.cf/gridea-theme-motify/">Gridea Theme Motify</a></h1>
+      <h1 class="post-title"><a href="https://blue-isle.github.io/home/gridea-theme-motify/">Gridea Theme Motify</a></h1>
       <div class="post-meta">
         
           <span class="post-date">
@@ -863,7 +878,7 @@ $ docker run -d --name rsshub -p 1200:1200 diygod/rsshub
         
         <span class="">
           
-            #<a href="https://blueisle.cf/tags/%E6%8A%98%E8%85%BE/">折腾</a>&nbsp;
+            #<a href="https://blue-isle.github.io/home/tags/%E6%8A%98%E8%85%BE/">折腾</a>&nbsp;
           
         </span>
         
@@ -876,7 +891,7 @@ $ docker run -d --name rsshub -p 1200:1200 diygod/rsshub
         <p>自用 N 年主题转制 Gridea 完成！</p>
 <p><img loading='lazy' src="https://pic.edui.fun/images/2020/03/motify-1.png" alt="Motify 20.03.13"  /></p>
 <p>仓库下载：<a href="https://github.com/lmm214/gridea-theme-motify">https://github.com/lmm214/gridea-theme-motify</a></p>
-        <div><a class="read-more button" href="/gridea-theme-motify/">阅读全文 →</a></div>
+        <div><a class="read-more button" href="/home/gridea-theme-motify/">阅读全文 →</a></div>
       
       </div>
     
@@ -885,7 +900,7 @@ $ docker run -d --name rsshub -p 1200:1200 diygod/rsshub
     
     <div class="post on-list coding">
     
-      <h1 class="post-title"><a href="https://blueisle.cf/jsdelivr-gridea/">使用 jsDelivr 加速 Gridea</a></h1>
+      <h1 class="post-title"><a href="https://blue-isle.github.io/home/jsdelivr-gridea/">使用 jsDelivr 加速 Gridea</a></h1>
       <div class="post-meta">
         
           <span class="post-date">
@@ -896,7 +911,7 @@ $ docker run -d --name rsshub -p 1200:1200 diygod/rsshub
         
         <span class="">
           
-            #<a href="https://blueisle.cf/tags/%E6%8A%98%E8%85%BE/">折腾</a>&nbsp;
+            #<a href="https://blue-isle.github.io/home/tags/%E6%8A%98%E8%85%BE/">折腾</a>&nbsp;
           
         </span>
         
@@ -911,7 +926,7 @@ $ docker run -d --name rsshub -p 1200:1200 diygod/rsshub
 </span></span></span></code></pre></div><p>改为：</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">https</span><span style="color:#f92672">:</span><span style="color:#75715e">//cdn.jsdelivr.net/gh/lmm214/immmmm/media/js/jquery.min.js
 </span></span></span></code></pre></div><p>其中 <code>lmm214</code> 和 <code>immmmm</code> 分别为 GitHub 的用户名和仓库名，之后的 <code>/media/js/jquery.min.js</code> 为静态文件地址。</p>
-        <div><a class="read-more button" href="/jsdelivr-gridea/">阅读全文 →</a></div>
+        <div><a class="read-more button" href="/home/jsdelivr-gridea/">阅读全文 →</a></div>
       
       </div>
     
@@ -930,13 +945,13 @@ $ docker run -d --name rsshub -p 1200:1200 diygod/rsshub
         
         <span class="">
           
-            #<a href="https://blueisle.cf/tags/%E8%AF%8D%E7%A9%B7/">词穷</a>&nbsp;
+            #<a href="https://blue-isle.github.io/home/tags/%E8%AF%8D%E7%A9%B7/">词穷</a>&nbsp;
           
         </span>
         
       </div>
       <div class="post-content $PostCate">
-        <a href="https://blueisle.cf/2020-03-09/" rel="link"><img loading="lazy" class="post-avatar avatar" src=https://gravatar.loli.net/avatar/ba83fa02fc4b2ba621514941307e21be ></a>
+        <a href="https://blue-isle.github.io/home/2020-03-09/" rel="link"><img loading="lazy" class="post-avatar avatar" src=https://gravatar.loli.net/avatar/ba83fa02fc4b2ba621514941307e21be ></a>
           复学遥遥无期，总得找点事打发时间，花了一下午从 Bitcron 迁移到 Gridea，主要是日志meta匹配和主题转制，目前感觉甚好！🎧
       </div>
     
@@ -945,7 +960,7 @@ $ docker run -d --name rsshub -p 1200:1200 diygod/rsshub
     
     <div class="post on-list daily">
     
-      <h1 class="post-title"><a href="https://blueisle.cf/waiting-for-spring/">春</a></h1>
+      <h1 class="post-title"><a href="https://blue-isle.github.io/home/waiting-for-spring/">春</a></h1>
       <div class="post-meta">
         
           <span class="post-date">
@@ -956,7 +971,7 @@ $ docker run -d --name rsshub -p 1200:1200 diygod/rsshub
         
         <span class="">
           
-            #<a href="https://blueisle.cf/tags/%E6%97%A5%E5%B8%B8/">日常</a>&nbsp;
+            #<a href="https://blue-isle.github.io/home/tags/%E6%97%A5%E5%B8%B8/">日常</a>&nbsp;
           
         </span>
         
@@ -973,7 +988,7 @@ $ docker run -d --name rsshub -p 1200:1200 diygod/rsshub
         <blockquote>
 <p>春水初生，春林初盛。春风十里，不如你。 ——《春》冯唐</p>
 </blockquote>
-        <div><a class="read-more button" href="/waiting-for-spring/">阅读全文 →</a></div>
+        <div><a class="read-more button" href="/home/waiting-for-spring/">阅读全文 →</a></div>
       
       </div>
     
@@ -982,7 +997,7 @@ $ docker run -d --name rsshub -p 1200:1200 diygod/rsshub
     
     <div class="post on-list daily">
     
-      <h1 class="post-title"><a href="https://blueisle.cf/happy-birthday-2020/">庆生</a></h1>
+      <h1 class="post-title"><a href="https://blue-isle.github.io/home/happy-birthday-2020/">庆生</a></h1>
       <div class="post-meta">
         
           <span class="post-date">
@@ -993,7 +1008,7 @@ $ docker run -d --name rsshub -p 1200:1200 diygod/rsshub
         
         <span class="">
           
-            #<a href="https://blueisle.cf/tags/%E6%97%A5%E5%B8%B8/">日常</a>&nbsp;
+            #<a href="https://blue-isle.github.io/home/tags/%E6%97%A5%E5%B8%B8/">日常</a>&nbsp;
           
         </span>
         
@@ -1012,7 +1027,7 @@ $ docker run -d --name rsshub -p 1200:1200 diygod/rsshub
     <figcaption>庆生</figcaption>
 </figure>
 <p>生，活着，当下异常值得庆祝！祝，自己生日快乐！祝，家人平安健康！</p>
-        <div><a class="read-more button" href="/happy-birthday-2020/">阅读全文 →</a></div>
+        <div><a class="read-more button" href="/home/happy-birthday-2020/">阅读全文 →</a></div>
       
       </div>
     
@@ -1022,7 +1037,7 @@ $ docker run -d --name rsshub -p 1200:1200 diygod/rsshub
   <div class="pagination__buttons">
     
       <span class="button previous">
-        <a href="/page/8/">
+        <a href="/home/page/8/">
           <span class="button__icon">←</span>
           <span class="button__text">上 一 页</span>
         </a>
@@ -1030,7 +1045,7 @@ $ docker run -d --name rsshub -p 1200:1200 diygod/rsshub
     
     
       <span class="button next">
-        <a href="/page/10/">
+        <a href="/home/page/10/">
           <span class="button__text">下 一 页</span>
           <span class="button__icon">→</span>
         </a>
