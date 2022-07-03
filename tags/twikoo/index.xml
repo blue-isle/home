@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>twikoo on 明礼至卓</title>
-    <link>https://blue-isle.github.io/home/tags/twikoo/</link>
+    <link>https://blueisle.cf/tags/twikoo/</link>
     <description>Recent content in twikoo on 明礼至卓</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 22 Jul 2021 21:23:55 +0800</lastBuildDate><atom:link href="https://blue-isle.github.io/home/tags/twikoo/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 22 Jul 2021 21:23:55 +0800</lastBuildDate><atom:link href="https://blueisle.cf/tags/twikoo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Twikoo 集成 Slimbox2 灯箱插件</title>
-      <link>https://blue-isle.github.io/home/twikoo%E9%9B%86%E6%88%90slimbox2%E7%81%AF%E7%AE%B1/</link>
+      <link>https://blueisle.cf/twikoo%E9%9B%86%E6%88%90slimbox2%E7%81%AF%E7%AE%B1/</link>
       <pubDate>Thu, 22 Jul 2021 21:23:55 +0800</pubDate>
       
-      <guid>https://blue-isle.github.io/home/twikoo%E9%9B%86%E6%88%90slimbox2%E7%81%AF%E7%AE%B1/</guid>
+      <guid>https://blueisle.cf/twikoo%E9%9B%86%E6%88%90slimbox2%E7%81%AF%E7%AE%B1/</guid>
       <description>浏览 Twikoo 的开发者『iMaeGoo』个人博客的时候，里面有一篇文章 《集成 Twikoo 与 lightGallery 插件，实现评论图片的点击放大》 提到了 Twikoo 集成 lightGallery 灯箱插件。 本博客使用的是 Slimbox2 灯箱插件，按照 iMaeGoo 的思路，利用 Twikoo 的 API onCommentLoaded，很方便的开启的评论的图片灯箱效果。 主要代码是： @eallion/eallion.com &amp;lt;script&amp;gt; twikoo.init ({ //envId: &amp;#34;eallion-###&amp;#34;, //el: &amp;#34;#tcomment&amp;#34;, //...... onCommentLoaded: function ()</description>
     </item>
     

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>折腾 on 明礼至卓</title>
-    <link>https://blue-isle.github.io/home/posts/coding/</link>
+    <link>https://blueisle.cf/posts/coding/</link>
     <description>Recent content in 折腾 on 明礼至卓</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 24 Mar 2022 23:16:34 +0800</lastBuildDate><atom:link href="https://blue-isle.github.io/home/posts/coding/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 24 Mar 2022 23:16:34 +0800</lastBuildDate><atom:link href="https://blueisle.cf/posts/coding/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>文章内显示豆瓣条目</title>
-      <link>https://blue-isle.github.io/home/post-show-douban-item/</link>
+      <link>https://blueisle.cf/post-show-douban-item/</link>
       <pubDate>Thu, 24 Mar 2022 23:16:34 +0800</pubDate>
       
-      <guid>https://blue-isle.github.io/home/post-show-douban-item/</guid>
+      <guid>https://blueisle.cf/post-show-douban-item/</guid>
       <description>&lt;p&gt;小众豆瓣已成刚需，电影、图书看完都会标记下，写日志时常会提到，老想着在文章内「优雅」地展示，官方 API 已废，&lt;del&gt;幸好还有给力的 &lt;a href=&#34;https://mufeng.me/&#34;&gt;@mufeng&lt;/a&gt; 兄，以下功能就使用其提供的轮子。&lt;/del&gt;&lt;/p&gt;
 &lt;p&gt;换用轮子：&lt;a href=&#34;https://github.com/cxfksword/douban-api-rs&#34;&gt;https://github.com/cxfksword/douban-api-rs&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;效果如下&#34;&gt;效果如下&lt;/h3&gt;
@@ -22,19 +22,19 @@
     
     <item>
       <title>「电影 / 阅读」页面，顶！</title>
-      <link>https://blue-isle.github.io/home/doumark-action/</link>
+      <link>https://blueisle.cf/doumark-action/</link>
       <pubDate>Tue, 22 Mar 2022 23:32:16 +0800</pubDate>
       
-      <guid>https://blue-isle.github.io/home/doumark-action/</guid>
+      <guid>https://blueisle.cf/doumark-action/</guid>
       <description>&lt;p&gt;来自于 &lt;a href=&#34;https://imnerd.org/doumark.html&#34;&gt;@怡红公子&lt;/a&gt; 的自制轮子：&lt;a href=&#34;https://github.com/lizheming/doumark-action&#34;&gt;doumark-action&lt;/a&gt; ，豆瓣书影音同步 GitHub Action。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>获取图片主色脚本：Rgbaster.js</title>
-      <link>https://blue-isle.github.io/home/rgbaster-js/</link>
+      <link>https://blueisle.cf/rgbaster-js/</link>
       <pubDate>Sun, 06 Mar 2022 11:10:11 +0800</pubDate>
       
-      <guid>https://blue-isle.github.io/home/rgbaster-js/</guid>
+      <guid>https://blueisle.cf/rgbaster-js/</guid>
       <description>&lt;figure&gt;
     &lt;img src=&#34;https://cdn.edui.fun/images/2022/03/rgbaster-rili.png&#34; width=&#34;50%&#34;/&gt;&lt;img src=&#34;https://cdn.edui.fun/images/2022/03/rgbaster-rili2.png&#34; width=&#34;50%&#34; /&gt;
     &lt;figcaption&gt;单向历&lt;/figcaption&gt;
@@ -45,10 +45,10 @@
     
     <item>
       <title>书签导航应用：Flare </title>
-      <link>https://blue-isle.github.io/home/startpage-flare/</link>
+      <link>https://blueisle.cf/startpage-flare/</link>
       <pubDate>Sat, 26 Feb 2022 16:11:24 +0800</pubDate>
       
-      <guid>https://blue-isle.github.io/home/startpage-flare/</guid>
+      <guid>https://blueisle.cf/startpage-flare/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;Flame 是服务器的自托管起始页。使用内置编辑器轻松管理您的应用程序和书签。 —— &lt;a href=&#34;https://github.com/pawelmalak/flame&#34;&gt;Flame&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -57,10 +57,10 @@
     
     <item>
       <title>Hi，My Friends（Public Beta）</title>
-      <link>https://blue-isle.github.io/home/hi-friends-circle/</link>
+      <link>https://blueisle.cf/hi-friends-circle/</link>
       <pubDate>Fri, 11 Feb 2022 15:12:46 +0800</pubDate>
       
-      <guid>https://blue-isle.github.io/home/hi-friends-circle/</guid>
+      <guid>https://blueisle.cf/hi-friends-circle/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;你是否经常烦恼于友链过多但没有时间浏览？那么友链朋友圈将解决这一痛点。你可以随时获取友链网站的更新内容，并了解友链的活跃情况 。 —— &lt;a href=&#34;https://hexo-circle-of-friends-doc.vercel.app/&#34;&gt;「友链朋友圈」&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
