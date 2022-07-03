@@ -39,7 +39,7 @@ rssLimit = 5
   weight="5"
   [[menu.main]]
   name="导航"
-  url="https://blue-isle.github.io/nav/"
+  url="https://s.blueisle.cf/"
   weight="6"
 
 [params]
